@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-webworker-packer",
+  "name": "@fde2e/len-experimental-webworker-packer",
   "description": "Build-time packer for the browser runtime's base VFS image and ordered data-overlay archives",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -34,12 +34,12 @@
   "license": "MIT",
   "dependencies": {
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-experimental-webworker-runtime": "workspace:*",
-    "@deepseek-ai/dsh-official-bundles": "workspace:*",
-    "@deepseek-ai/dsh-session-format": "workspace:*",
-    "@deepseek-ai/dsh-session-format-catalog": "workspace:*",
-    "@deepseek-ai/dsh-session-format-v3-to-v4": "workspace:*",
+    "@fde2e/len-app-boot": "workspace:*",
+    "@fde2e/len-experimental-webworker-runtime": "workspace:*",
+    "@fde2e/len-official-bundles": "workspace:*",
+    "@fde2e/len-session-format": "workspace:*",
+    "@fde2e/len-session-format-catalog": "workspace:*",
+    "@fde2e/len-session-format-v3-to-v4": "workspace:*",
     "js-yaml": "^4.3.2",
     "picomatch": "^4.0.7"
   },

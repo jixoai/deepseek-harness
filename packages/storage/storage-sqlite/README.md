@@ -3,7 +3,7 @@ description: "SQLite storage backend for hosts and maintainers choosing, configu
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-storage-sqlite
+# @fde2e/len-storage-sqlite
 
 English | [中文](README.zh.md)
 
@@ -36,11 +36,11 @@ Choose it when writes are frequent and point-sized — each key maps to one data
 Two fields: the database path and the journal mode. `:memory:` opens an in-process database whose contents disappear with the process.
 
 ```yaml
-- name: '@deepseek-ai/dsh-storage'
-- name: '@deepseek-ai/dsh-storage-sqlite'
+- name: '@fde2e/len-storage'
+- name: '@fde2e/len-storage-sqlite'
   config:
     path: /var/lib/dsh/data.db
-- name: '@deepseek-ai/dsh-storage-domain'
+- name: '@fde2e/len-storage-domain'
   config:
     backend: sqlite
 ```

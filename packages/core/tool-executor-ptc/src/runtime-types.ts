@@ -1,8 +1,8 @@
 /** Host PTC dispatch policy declarations with live Agent and tool execution types. @module */
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { ContentBlock, ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { Scoped } from '@deepseek-ai/dsh-scope'
-import type { ToolExecution, ToolsService } from '@deepseek-ai/dsh-tools'
+import type { Agent } from '@fde2e/len-agent'
+import type { ContentBlock, ToolCallId } from '@fde2e/len-llm'
+import type { Scoped } from '@fde2e/len-scope'
+import type { ToolExecution, ToolsService } from '@fde2e/len-tools'
 
 /**
  * One settled `run_code` sub-dispatch about to be logged, as seen by the
@@ -39,7 +39,7 @@ declare module '@deepseek-ai/cordis' {
      * logged copy is affected — the program already received the complete
      * value, and the model sees neither. A throwing listener is contained:
      * the bridge falls back to logging the original settled content.
-     * Scope-filtered dispatch (`@deepseek-ai/dsh-scope`): agent-scoped listeners receive only that agent's dispatches.
+     * Scope-filtered dispatch (`@fde2e/len-scope`): agent-scoped listeners receive only that agent's dispatches.
      * @param dispatch - the parent execution, sub-call identity, and the settled content to log.
      * @mode waterfall
      */

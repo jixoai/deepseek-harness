@@ -29,14 +29,14 @@ describe('desktop package-set selection', () => {
 
   it('includes only the available internal production closure', () => {
     const available = new Map<string, PackedDesktopPackage>([
-      ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh', {
-        dependencies: { '@deepseek-ai/dsh-base': '^1.0.0', external: '^2.0.0' },
+      ['@fde2e/len', packed('@fde2e/len', {
+        dependencies: { '@fde2e/len-base': '^1.0.0', external: '^2.0.0' },
         optionalDependencies: { '@deepseek-ai/platform-package': '1.0.0', '@deepseek-ai/missing-platform': '1.0.0' },
       })],
-      ['@deepseek-ai/dsh-desktop-host', packed('@deepseek-ai/dsh-desktop-host', {
-        dependencies: { '@deepseek-ai/dsh': '^1.0.0' },
+      ['@fde2e/len-desktop-host', packed('@fde2e/len-desktop-host', {
+        dependencies: { '@fde2e/len': '^1.0.0' },
       })],
-      ['@deepseek-ai/dsh-base', packed('@deepseek-ai/dsh-base', {
+      ['@fde2e/len-base', packed('@fde2e/len-base', {
         peerDependencies: { '@deepseek-ai/cordis': '^1.0.0' },
       })],
       ['@deepseek-ai/cordis', packed('@deepseek-ai/cordis')],
@@ -45,42 +45,42 @@ describe('desktop package-set selection', () => {
     ])
     expect(selectDesktopPackageClosure(available, { platform: 'win32', arch: 'x64' }).map(entry => entry.manifest.name)).toEqual([
       '@deepseek-ai/cordis',
-      '@deepseek-ai/dsh',
-      '@deepseek-ai/dsh-base',
-      '@deepseek-ai/dsh-desktop-host',
+      '@fde2e/len',
+      '@fde2e/len-base',
+      '@fde2e/len-desktop-host',
       '@deepseek-ai/platform-package',
     ])
   })
 
   it.each([
-    '@deepseek-ai/dsh-base', '@deepseek-ai/cordis', '@deepseek-ai/node-addon-system',
+    '@fde2e/len-base', '@deepseek-ai/cordis', '@deepseek-ai/node-addon-system',
   ])('rejects required prepared package %s absent from the packed release inputs', (dependency) => {
     const available = new Map<string, PackedDesktopPackage>([
-      ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh', {
+      ['@fde2e/len', packed('@fde2e/len', {
         dependencies: { [dependency]: '^1.0.0' },
       })],
-      ['@deepseek-ai/dsh-desktop-host', packed('@deepseek-ai/dsh-desktop-host', {
-        dependencies: { '@deepseek-ai/dsh': '^1.0.0' },
+      ['@fde2e/len-desktop-host', packed('@fde2e/len-desktop-host', {
+        dependencies: { '@fde2e/len': '^1.0.0' },
       })],
     ])
     expect(() => selectDesktopPackageClosure(available, { platform: 'win32', arch: 'x64' })).toThrow(/unpacked package/u)
     expect(() => selectDesktopPackageClosure(new Map([
-      ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh')],
+      ['@fde2e/len', packed('@fde2e/len')],
     ]), { platform: 'win32', arch: 'x64' })).toThrow(/omit @deepseek-ai\/dsh-desktop-host/u)
   })
 
   it('leaves independently published Office packages to npm resolution', () => {
     const available = new Map<string, PackedDesktopPackage>([
-      ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh', {
+      ['@fde2e/len', packed('@fde2e/len', {
         dependencies: {
           '@deepseek-ai/libreoffice-kit': '0.0.1',
           '@deepseek-ai/libreoffice-kit-wasm': '0.0.1',
         },
       })],
-      ['@deepseek-ai/dsh-desktop-host', packed('@deepseek-ai/dsh-desktop-host')],
+      ['@fde2e/len-desktop-host', packed('@fde2e/len-desktop-host')],
     ])
     expect(selectDesktopPackageClosure(available, { platform: 'win32', arch: 'x64' }).map(entry => entry.manifest.name)).toEqual([
-      '@deepseek-ai/dsh', '@deepseek-ai/dsh-desktop-host',
+      '@fde2e/len', '@fde2e/len-desktop-host',
     ])
   })
 
@@ -99,15 +99,15 @@ describe('desktop package-set selection', () => {
   })
 })
 
-const macProvider = '@deepseek-ai/dsh-experimental-cua-macos'
-const cuaBundle = '@deepseek-ai/dsh-cua-bundle'
+const macProvider = '@fde2e/len-experimental-cua-macos'
+const cuaBundle = '@fde2e/len-cua-bundle'
 const targetManifests = () => new Map<string, PackedDesktopPackage>([
-  ['@deepseek-ai/dsh', packed('@deepseek-ai/dsh', { dependencies: { [cuaBundle]: '1.0.0' } })],
-  ['@deepseek-ai/dsh-desktop-host', packed('@deepseek-ai/dsh-desktop-host')],
+  ['@fde2e/len', packed('@fde2e/len', { dependencies: { [cuaBundle]: '1.0.0' } })],
+  ['@fde2e/len-desktop-host', packed('@fde2e/len-desktop-host')],
   [cuaBundle, packed(cuaBundle, {
-    optionalDependencies: { [macProvider]: '1.0.0' }, dependencies: { '@deepseek-ai/dsh-cua': '1.0.0' },
+    optionalDependencies: { [macProvider]: '1.0.0' }, dependencies: { '@fde2e/len-cua': '1.0.0' },
   })],
-  ['@deepseek-ai/dsh-cua', packed('@deepseek-ai/dsh-cua')],
+  ['@fde2e/len-cua', packed('@fde2e/len-cua')],
   [macProvider, packed(macProvider, { os: ['darwin'] })],
 ])
 
@@ -116,7 +116,7 @@ it.each([
 ] as const)('selects the CUA native tarball for target %s/%s independently of the host', (platform, arch, included) => {
   const selected = selectDesktopPackageClosure(targetManifests(), { platform, arch }).map(entry => entry.manifest.name)
   expect(selected.includes(macProvider)).toBe(included)
-  expect(selected).toContain('@deepseek-ai/dsh-cua')
+  expect(selected).toContain('@fde2e/len-cua')
   expect(selected).toContain(cuaBundle)
 })
 
@@ -147,7 +147,7 @@ it('copies no macOS tarball into the Windows package set', () => {
     const folder = join(root, stem, 'package')
     mkdirSync(folder, { recursive: true })
     writeFileSync(join(folder, 'package.json'), JSON.stringify(entry.manifest))
-    if (name === '@deepseek-ai/dsh-desktop-host') {
+    if (name === '@fde2e/len-desktop-host') {
       for (const file of DESKTOP_HOST_RUNTIME_FILES) {
         mkdirSync(join(folder, file, '..'), { recursive: true })
         writeFileSync(join(folder, file), '')

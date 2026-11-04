@@ -18,9 +18,9 @@ harness 需要面向模型的 web 工具，但不能将模型约定绑定到某�
 
 Web 访问是一个一等能力 seam，遵循[能力 seam Agent Note](2026-06-13-capability-seams.zh.md)：
 
-1. `@deepseek-ai/dsh-web`（`packages/web/web`）拥有 `ctx.web`、提供方注册、提供方选择、共享的请求/结果词汇，以及 web 特有的错误。
-2. 提供方包实现具体后端并向 `ctx.web` 注册能力，例如 `@deepseek-ai/dsh-web-search-deepseek`、`@deepseek-ai/dsh-web-deepseek-api` 和 `@deepseek-ai/dsh-web-fetch-http`。
-3. `@deepseek-ai/dsh-tool-web`（`packages/web/tool-web`）拥有面向模型的 `web_search` 和 `web_fetch` 工具 schema、提示词段落、参数校验、结果格式化，以及通过 `ctx.web` 实现的工具展示。
+1. `@fde2e/len-web`（`packages/web/web`）拥有 `ctx.web`、提供方注册、提供方选择、共享的请求/结果词汇，以及 web 特有的错误。
+2. 提供方包实现具体后端并向 `ctx.web` 注册能力，例如 `@fde2e/len-web-search-deepseek`、`@fde2e/len-web-deepseek-api` 和 `@fde2e/len-web-fetch-http`。
+3. `@fde2e/len-tool-web`（`packages/web/tool-web`）拥有面向模型的 `web_search` 和 `web_fetch` 工具 schema、提示词段落、参数校验、结果格式化，以及通过 `ctx.web` 实现的工具展示。
 
 提供方不注册工具。提供方注册能力。`dsh-tool-web` 是面向模型的名称、描述、提示词引导、JSON Schema、展示的唯一所有者。
 
@@ -43,11 +43,11 @@ Web 访问是一个一等能力 seam，遵循[能力 seam Agent Note](2026-06-13
 依赖方向与 bash 和 filesystem 一致：
 
 ```text
-@deepseek-ai/dsh-tool-web  --depends on-->  @deepseek-ai/dsh-web  <--depends on--  @deepseek-ai/dsh-web-search-deepseek
+@fde2e/len-tool-web  --depends on-->  @fde2e/len-web  <--depends on--  @fde2e/len-web-search-deepseek
         consumer                                 interface                       implementation
-                                                                 <--depends on--  @deepseek-ai/dsh-web-deepseek-api
+                                                                 <--depends on--  @fde2e/len-web-deepseek-api
                                                                                   implementation
-                                                                 <--depends on--  @deepseek-ai/dsh-web-fetch-http
+                                                                 <--depends on--  @fde2e/len-web-fetch-http
                                                                                   implementation
 ```
 
@@ -55,19 +55,19 @@ Web 访问是一个一等能力 seam，遵循[能力 seam Agent Note](2026-06-13
 
 ```mermaid
 flowchart LR
-  deepseek["@deepseek-ai/dsh-web-search-deepseek"] -->|registerSearchProvider| web["@deepseek-ai/dsh-web / ctx.web"]
-  deepseekApi["@deepseek-ai/dsh-web-deepseek-api"] -->|registerSearchProvider / registerFetchProvider| web
-  fetchLocal["@deepseek-ai/dsh-web-fetch-http"] -->|registerFetchProvider| web
-  toolWeb["@deepseek-ai/dsh-tool-web"] -->|search/fetch| web
+  deepseek["@fde2e/len-web-search-deepseek"] -->|registerSearchProvider| web["@fde2e/len-web / ctx.web"]
+  deepseekApi["@fde2e/len-web-deepseek-api"] -->|registerSearchProvider / registerFetchProvider| web
+  fetchLocal["@fde2e/len-web-fetch-http"] -->|registerFetchProvider| web
+  toolWeb["@fde2e/len-tool-web"] -->|search/fetch| web
   toolWeb -->|ctx.tools.register| webSearch["tool: web_search"]
   toolWeb -->|ctx.tools.register| webFetch["tool: web_fetch"]
 ```
 
-`@deepseek-ai/dsh-web` 仅依赖 Cordis 和底层 harness 支持，其中包括其 Remote 方法所用的 Typert 协议。它声明 `ctx.web`、提供方接口、请求/结果类型、提供方可用性约定和错误码。它不导入工具、agent（智能体）、会话、LLM 或提供方包。
+`@fde2e/len-web` 仅依赖 Cordis 和底层 harness 支持，其中包括其 Remote 方法所用的 Typert 协议。它声明 `ctx.web`、提供方接口、请求/结果类型、提供方可用性约定和错误码。它不导入工具、agent（智能体）、会话、LLM 或提供方包。
 
 提供方包依赖 `dsh-web`、Cordis 及其凭据和配置函数。它们拥有凭证、端点、协议格式映射、解析和 `WebError` 转换，使用平台 `fetch`。每个提供方注入共享服务并注册后端；只有 `dsh-web` 拥有 `ctx.web` 键。提供方私有的协议形状不会产生对 `ctx.llm` 或 Cordis HTTP 服务的依赖。
 
-`@deepseek-ai/dsh-tool-web` 依赖 `@deepseek-ai/dsh-web`、`@deepseek-ai/dsh-tools`、`@deepseek-ai/dsh-system-prompt` 和 Cordis。它从不导入具体的提供方包。
+`@fde2e/len-tool-web` 依赖 `@fde2e/len-web`、`@fde2e/len-tools`、`@fde2e/len-system-prompt` 和 Cordis。它从不导入具体的提供方包。
 
 ## `ctx.web` 约定
 
@@ -76,7 +76,7 @@ flowchart LR
 ```ts
 import type {
   WebFetchRequest, WebFetchResult, WebProviderInfo, WebProviderList, WebSearchRequest, WebSearchResult,
-} from '@deepseek-ai/dsh-web'
+} from '@fde2e/len-web'
 
 interface WebSearchProvider {
   readonly id: string
@@ -132,22 +132,22 @@ interface WebRuntime {
 
 ```yaml
 - id: web
-  name: '@deepseek-ai/dsh-web'
+  name: '@fde2e/len-web'
   config:
     searchProvider: deepseek-search-api
     fetchProvider: http
 
 - id: web-search-deepseek
-  name: '@deepseek-ai/dsh-web-search-deepseek'
+  name: '@fde2e/len-web-search-deepseek'
 
 - id: web-deepseek-api
-  name: '@deepseek-ai/dsh-web-deepseek-api'
+  name: '@fde2e/len-web-deepseek-api'
 
 - id: web-fetch-http
-  name: '@deepseek-ai/dsh-web-fetch-http'
+  name: '@fde2e/len-web-fetch-http'
 
 - id: tool-web
-  name: '@deepseek-ai/dsh-tool-web'
+  name: '@fde2e/len-tool-web'
 ```
 
 运维覆盖走同一条显式选择路径：`DSH_WEB_SEARCH_PROVIDER=deepseek-search-api` 等同于配置 `searchProvider: deepseek-search-api`，而非 `dsh-tool-web` 内部的隐式优先级链。

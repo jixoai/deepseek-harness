@@ -3,7 +3,7 @@ description: "dsh Web 客户端插件页上的网页搜索与获取设置页：S
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-ui-settings-web-search
+# @fde2e/len-client-ui-settings-web-search
 
 [English](README.md) | 中文
 

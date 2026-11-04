@@ -1,15 +1,15 @@
 /**
  * Internal sandbox-result classification helpers — deliberate call-for-call
- * mirror of `@deepseek-ai/dsh-bash-sandbox/src/helpers.ts` (the pwsh twin of
+ * mirror of `@fde2e/len-bash-sandbox/src/helpers.ts` (the pwsh twin of
  * the bash consumer shares the identical classification dialect).
  *
- * @module @deepseek-ai/dsh-pwsh-sandbox/helpers
+ * @module @fde2e/len-pwsh-sandbox/helpers
  */
 
 /* jscpd:ignore-start */
 import { accessSync, constants, statSync } from 'node:fs'
-import type { ShellRunResult } from '@deepseek-ai/dsh-shell'
-import type { RunnerFailureRule } from '@deepseek-ai/dsh-sandbox'
+import type { ShellRunResult } from '@fde2e/len-shell'
+import type { RunnerFailureRule } from '@fde2e/len-sandbox'
 
 /** Node-local spawn codes proven to identify executable resolution or permission failure. */
 const EXECUTABLE_SPAWN_CODES = new Set(['EACCES', 'ENOENT'])

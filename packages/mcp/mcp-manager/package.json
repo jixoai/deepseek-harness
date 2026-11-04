@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-mcp-manager",
+  "name": "@fde2e/len-mcp-manager",
   "description": "MCP server manager: a settings-driven fleet of mcp-client instances with runtime status, restart, and probe",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -46,32 +46,32 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-mcp-client": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-util-values": "workspace:*",
+    "@fde2e/len-mcp-client": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
+    "@fde2e/len-util-values": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@fde2e/len-timeout": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@modelcontextprotocol/client": "2.2.0",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
-    "@deepseek-ai/dsh-mcp-client": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-util-values": "workspace:*",
+    "@fde2e/len-credentials": "workspace:*",
+    "@fde2e/len-mcp-client": "workspace:*",
+    "@fde2e/len-settings": "workspace:*",
+    "@fde2e/len-system-prompt": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
+    "@fde2e/len-util-values": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-config-editor": "workspace:*",
-    "@deepseek-ai/dsh-hmr": "workspace:*",
+    "@fde2e/len-app-boot": "workspace:*",
+    "@fde2e/len-config-editor": "workspace:*",
+    "@fde2e/len-hmr": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-timer": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*"
   }
 }

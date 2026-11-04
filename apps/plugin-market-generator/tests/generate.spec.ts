@@ -91,17 +91,17 @@ it('lists every bundle version from the registry document that is neither deprec
   const packages: Packages = {
     'dsh-a': {
       '0.9.0': { time: '2026-01-01T00:00:00.000Z' },
-      '1.0.0': { time: '2026-02-01T00:00:00.000Z', manifest: { ...BUNDLE, keywords: ['old'], engines: { dsh: '>=0.2.0' }, peerDependencies: { '@deepseek-ai/dsh': '9' } } },
+      '1.0.0': { time: '2026-02-01T00:00:00.000Z', manifest: { ...BUNDLE, keywords: ['old'], engines: { dsh: '>=0.2.0' }, peerDependencies: { '@fde2e/len': '9' } } },
       '1.1.0': { time: '2026-03-01T00:00:00.000Z', manifest: { ...BUNDLE, deprecated: 'broken' } },
       '1.1.5': { time: '2026-03-15T00:00:00.000Z', manifest: { ...BUNDLE, private: true } },
       '1.2.0': {
         time: '2026-04-01T00:00:00.000Z',
         manifest: {
           ...BUNDLE, deprecated: '',
-          peerDependencies: { '@deepseek-ai/dsh': '>=0.2.0', '@deepseek-ai/dsh-agent': '>=0.2.0', '@deepseek-ai/dsh-tools': '^0.2.0 || ^0.3.0', react: '18' },
+          peerDependencies: { '@fde2e/len': '>=0.2.0', '@fde2e/len-agent': '>=0.2.0', '@fde2e/len-tools': '^0.2.0 || ^0.3.0', react: '18' },
         },
       },
-      '1.3.0': { time: '2026-05-01T00:00:00.000Z', manifest: { ...BUNDLE, peerDependencies: { '@deepseek-ai/dsh-agent': 'workspace:>=1' } } },
+      '1.3.0': { time: '2026-05-01T00:00:00.000Z', manifest: { ...BUNDLE, peerDependencies: { '@fde2e/len-agent': 'workspace:>=1' } } },
       '1.4.0': { manifest: BUNDLE },
       '2.0.0-rc.1': {
         time: '2026-06-01T00:00:00.000Z',

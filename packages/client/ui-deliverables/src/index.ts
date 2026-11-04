@@ -5,7 +5,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-workspace-changes/types'
+import type {} from '@fde2e/len-workspace-changes/types'
 import { registerPresentOpen } from './present-open.ts'
 
 /** Services required for change summaries and authenticated native opens. */

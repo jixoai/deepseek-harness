@@ -2,24 +2,24 @@
  * Shared service mounting, real AgentLoop drivers, and structural Agent stubs
  * for agent-loop tests. Callers retain ownership of their contexts, adapters,
  * optional plugins, agents, and teardown.
- * @module @deepseek-ai/dsh-agent-loop-testkit
+ * @module @fde2e/len-agent-loop-testkit
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent, AgentOptions, Inbox, InboxTarget } from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
-import SessionStore from '@deepseek-ai/dsh-session'
-import type { SessionHeader, SessionId, UserMessage } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import type { Config as SystemPromptConfig } from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
-import * as PtcToolExecutor from '@deepseek-ai/dsh-tool-executor-ptc'
-import FsLocal from '@deepseek-ai/dsh-fs-local'
-import WorkingDirectory from '@deepseek-ai/dsh-working-directory'
+import AgentRegistry from '@fde2e/len-agent'
+import type { Agent, AgentOptions, Inbox, InboxTarget } from '@fde2e/len-agent'
+import AgentLoop from '@fde2e/len-agent-loop'
+import LlmRuntime from '@fde2e/len-llm'
+import SessionStore from '@fde2e/len-session'
+import type { SessionHeader, SessionId, UserMessage } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import type { Config as SystemPromptConfig } from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
+import * as PtcToolExecutor from '@fde2e/len-tool-executor-ptc'
+import FsLocal from '@fde2e/len-fs-local'
+import WorkingDirectory from '@fde2e/len-working-directory'
 
 export { createInboxStub, unsupportedInbox } from './inbox.ts'
 export { unsupportedModel } from './model.ts'

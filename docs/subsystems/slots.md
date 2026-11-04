@@ -28,9 +28,9 @@ Registrations and declarations follow Cordis effect lifetimes. Disposing an entr
 
 ```tsx ignore-check
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type { PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type {} from '@fde2e/len-client-ui-conversation/client'
+import type {} from '@fde2e/len-client-ui-session/client'
+import type { PropsRuntime } from '@fde2e/len-client-ui-slots'
 
 type HeaderActionProps = PropsRuntime<'conversation.session.header.actions'>
 

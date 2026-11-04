@@ -1,8 +1,8 @@
 /** AgentHandle disposal must release blocking browser work before waiting for idle. */
 
 import { Context } from '@deepseek-ai/cordis'
-import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@fde2e/len-agent-loop-testkit'
+import { SessionId } from '@fde2e/len-session'
 import { expect, it, vi } from 'vitest'
 import { SessionResources } from '../src/index.ts'
 

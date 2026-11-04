@@ -1,6 +1,6 @@
 /**
  * Browser-safe Workspace path and display helpers.
- * @module @deepseek-ai/dsh-util-workspace-path
+ * @module @fde2e/len-util-workspace-path
  */
 import { sessionFileAddress } from './file-address.ts'
 

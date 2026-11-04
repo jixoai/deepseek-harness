@@ -3,7 +3,7 @@ description: "The model-facing read, read_image, write, and edit tools for users
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-fs
+# @fde2e/len-tool-fs
 
 English | [中文](README.zh.md)
 
@@ -34,9 +34,9 @@ Mount the tools after a `ctx.fs` backend and, for read-before-write/edit behavio
 A backend, the policy plugin, then the tools; the attachment store is optional and enables `read_image`.
 
 ```yaml
-- name: '@deepseek-ai/dsh-fs-local'
-- name: '@deepseek-ai/dsh-fs-observation-policy'
-- name: '@deepseek-ai/dsh-tool-fs'
+- name: '@fde2e/len-fs-local'
+- name: '@fde2e/len-fs-observation-policy'
+- name: '@fde2e/len-tool-fs'
 ```
 
 The policy plugin is optional: without it the tools run against the bare provider (unconditional write, overwrite, edit, and patch with no observed state), which is how the shipped compositions run — [`dsh-base`](../../bundle/base/cordis.patch.yml) lists the `fs-observation-policy` row `disabled: true`; set it to `false` to require prior reads and reject stale versions for every mutating tool. `read_image` registers only while a durable `ctx.attachments` service is mounted; execution additionally refuses on a route whose exact model does not declare image input, so a text route's durable history stays free of image blocks.

@@ -82,7 +82,7 @@ const MAX_RANGE_ALTERNATIVES = 256
 
 /**
  * The `engines.dsh` range an index lists for a manifest: its own `engines.dsh` string, otherwise the conjunction of
- * its `@deepseek-ai/dsh` and `@deepseek-ai/dsh-*` peer ranges. A peer of exactly `workspace:*`, `workspace:^`, or
+ * its `@fde2e/len` and `@fde2e/len-*` peer ranges. A peer of exactly `workspace:*`, `workspace:^`, or
  * `workspace:~` means the running DSH version, and a `*` range admits every version; both impose nothing. A single
  * remaining range is listed as written. Several ranges are combined: the conjunction combines one `||` alternative of
  * each range, keeps each comparator once, and drops combinations that no version satisfies, prereleases included.

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tools",
+  "name": "@fde2e/len-tools",
   "description": "Tool registry and execution pipeline for the DeepSeek Harness",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -41,29 +41,29 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-scope": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-system-prompt": "workspace:*",
+    "@fde2e/len-user-approval": "workspace:*"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-util-values": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
+    "@fde2e/len-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tool-executor-native": "workspace:*",
-    "@deepseek-ai/dsh-tool-testkit": "workspace:*",
-    "@deepseek-ai/dsh-user-approval": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-scope": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-system-prompt": "workspace:*",
+    "@fde2e/len-tool-executor-native": "workspace:*",
+    "@fde2e/len-tool-testkit": "workspace:*",
+    "@fde2e/len-user-approval": "workspace:*",
+    "@fde2e/len-agent-loop-testkit": "workspace:*"
   }
 }

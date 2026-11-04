@@ -18,9 +18,9 @@ There is also a provider-selection question. Existing `tool-bash` and `tool-fs` 
 
 Web access is a first-class capability seam following [the capability-seam Agent Note](2026-06-13-capability-seams.md):
 
-1. `@deepseek-ai/dsh-web` (`packages/web/web`) owns `ctx.web`, provider registration, provider selection, shared request/result vocabulary, and web-specific errors.
-2. Provider packages implement concrete backends and register capabilities with `ctx.web`, for example `@deepseek-ai/dsh-web-search-deepseek`, `@deepseek-ai/dsh-web-deepseek-api`, and `@deepseek-ai/dsh-web-fetch-http`.
-3. `@deepseek-ai/dsh-tool-web` (`packages/web/tool-web`) owns the model-facing `web_search` and `web_fetch` tool schemas, prompt sections, argument validation, result formatting, and tool-owned presentation over `ctx.web`.
+1. `@fde2e/len-web` (`packages/web/web`) owns `ctx.web`, provider registration, provider selection, shared request/result vocabulary, and web-specific errors.
+2. Provider packages implement concrete backends and register capabilities with `ctx.web`, for example `@fde2e/len-web-search-deepseek`, `@fde2e/len-web-deepseek-api`, and `@fde2e/len-web-fetch-http`.
+3. `@fde2e/len-tool-web` (`packages/web/tool-web`) owns the model-facing `web_search` and `web_fetch` tool schemas, prompt sections, argument validation, result formatting, and tool-owned presentation over `ctx.web`.
 
 Providers do not register tools. Providers register capabilities. `dsh-tool-web` is the only owner of model-facing names, descriptions, prompt guidance, JSON schemas, and presentation.
 
@@ -43,11 +43,11 @@ The three-package Service Definition / Service Provider / Consumer split follows
 The dependency direction mirrors bash and filesystem:
 
 ```text
-@deepseek-ai/dsh-tool-web  --depends on-->  @deepseek-ai/dsh-web  <--depends on--  @deepseek-ai/dsh-web-search-deepseek
+@fde2e/len-tool-web  --depends on-->  @fde2e/len-web  <--depends on--  @fde2e/len-web-search-deepseek
         consumer                                 interface                       implementation
-                                                                 <--depends on--  @deepseek-ai/dsh-web-deepseek-api
+                                                                 <--depends on--  @fde2e/len-web-deepseek-api
                                                                                   implementation
-                                                                 <--depends on--  @deepseek-ai/dsh-web-fetch-http
+                                                                 <--depends on--  @fde2e/len-web-fetch-http
                                                                                   implementation
 ```
 
@@ -55,19 +55,19 @@ At runtime, provider packages register capabilities with `ctx.web`; `tool-web` r
 
 ```mermaid
 flowchart LR
-  deepseek["@deepseek-ai/dsh-web-search-deepseek"] -->|registerSearchProvider| web["@deepseek-ai/dsh-web / ctx.web"]
-  deepseekApi["@deepseek-ai/dsh-web-deepseek-api"] -->|registerSearchProvider / registerFetchProvider| web
-  fetchLocal["@deepseek-ai/dsh-web-fetch-http"] -->|registerFetchProvider| web
-  toolWeb["@deepseek-ai/dsh-tool-web"] -->|search/fetch| web
+  deepseek["@fde2e/len-web-search-deepseek"] -->|registerSearchProvider| web["@fde2e/len-web / ctx.web"]
+  deepseekApi["@fde2e/len-web-deepseek-api"] -->|registerSearchProvider / registerFetchProvider| web
+  fetchLocal["@fde2e/len-web-fetch-http"] -->|registerFetchProvider| web
+  toolWeb["@fde2e/len-tool-web"] -->|search/fetch| web
   toolWeb -->|ctx.tools.register| webSearch["tool: web_search"]
   toolWeb -->|ctx.tools.register| webFetch["tool: web_fetch"]
 ```
 
-`@deepseek-ai/dsh-web` depends only on Cordis and low-level harness support, including the Typert protocol for its Remote method. It declares `ctx.web`, provider interfaces, request/result types, the provider availability contract, and error codes. It does not import tool, agent, session, LLM, or provider packages.
+`@fde2e/len-web` depends only on Cordis and low-level harness support, including the Typert protocol for its Remote method. It declares `ctx.web`, provider interfaces, request/result types, the provider availability contract, and error codes. It does not import tool, agent, session, LLM, or provider packages.
 
 Provider packages depend on `dsh-web`, Cordis, and their credential/configuration helpers. They own credentials, endpoints, wire mapping, parsing, and `WebError` translation, using platform `fetch`. Each provider injects the shared service and registers a backend; only `dsh-web` owns the `ctx.web` key. Provider-private protocol shapes do not create dependencies on `ctx.llm` or a Cordis HTTP service.
 
-`@deepseek-ai/dsh-tool-web` depends on `@deepseek-ai/dsh-web`, `@deepseek-ai/dsh-tools`, `@deepseek-ai/dsh-system-prompt`, and Cordis. It never imports concrete provider packages.
+`@fde2e/len-tool-web` depends on `@fde2e/len-web`, `@fde2e/len-tools`, `@fde2e/len-system-prompt`, and Cordis. It never imports concrete provider packages.
 
 ## `ctx.web` contract
 
@@ -76,7 +76,7 @@ Provider packages depend on `dsh-web`, Cordis, and their credential/configuratio
 ```ts
 import type {
   WebFetchRequest, WebFetchResult, WebProviderInfo, WebProviderList, WebSearchRequest, WebSearchResult,
-} from '@deepseek-ai/dsh-web'
+} from '@fde2e/len-web'
 
 interface WebSearchProvider {
   readonly id: string
@@ -132,22 +132,22 @@ The "single provider auto-selects" rule is for tests, demos, and simple deployme
 
 ```yaml
 - id: web
-  name: '@deepseek-ai/dsh-web'
+  name: '@fde2e/len-web'
   config:
     searchProvider: deepseek-search-api
     fetchProvider: http
 
 - id: web-search-deepseek
-  name: '@deepseek-ai/dsh-web-search-deepseek'
+  name: '@fde2e/len-web-search-deepseek'
 
 - id: web-deepseek-api
-  name: '@deepseek-ai/dsh-web-deepseek-api'
+  name: '@fde2e/len-web-deepseek-api'
 
 - id: web-fetch-http
-  name: '@deepseek-ai/dsh-web-fetch-http'
+  name: '@fde2e/len-web-fetch-http'
 
 - id: tool-web
-  name: '@deepseek-ai/dsh-tool-web'
+  name: '@fde2e/len-tool-web'
 ```
 
 Operational overrides feed the same explicit selection path: `DSH_WEB_SEARCH_PROVIDER=deepseek-search-api` is equivalent to config `searchProvider: deepseek-search-api`, not a hidden priority chain inside `dsh-tool-web`.

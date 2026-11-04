@@ -32,14 +32,14 @@ import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
 import type { Browser, Page } from 'playwright'
 import { expect, it } from 'vitest'
-import { OPTIONAL_BUNDLES } from '@deepseek-ai/dsh-official-bundles'
+import { OPTIONAL_BUNDLES } from '@fde2e/len-official-bundles'
 import {
   packPreviewFixture, packRepositoryImage, previewFixtures, WRAPPER_CONTRACT,
-} from '@deepseek-ai/dsh-experimental-webworker-packer'
+} from '@fde2e/len-experimental-webworker-packer'
 import {
   IMAGE_FILE_NAME, IMAGE_MANIFEST_PATH, parseImageManifest, parseTar, PREVIEW_FIXTURE_MANIFEST_FILE,
   PREVIEW_FIXTURE_MANIFEST_VERSION, type ImageManifest, type PreviewFixtureManifest,
-} from '@deepseek-ai/dsh-experimental-webworker-runtime'
+} from '@fde2e/len-experimental-webworker-runtime'
 import {
   VFS_EXAMPLE_SESSION_IDS,
   VFS_EXAMPLE_REASONING,
@@ -64,15 +64,15 @@ const SNAPSHOT_MODE = webSnapshotMode()
 const PROFILE = 'web'
 
 /** Optional bundle whose patch layer disables a base row and inserts its replacement. */
-const SESSION_TITLES_BUNDLE = '@deepseek-ai/dsh-experimental-session-titles-bundle'
-const BASE_TITLE_MODULE = '@deepseek-ai/dsh-session-title-first-prompt-llm'
-const BUNDLE_TITLE_MODULE = '@deepseek-ai/dsh-session-title-all-prompts-llm'
-const INSPECTOR_BUNDLE = '@deepseek-ai/dsh-experimental-inspector-profile'
-const INSPECTOR_MODULE = '@deepseek-ai/dsh-experimental-inspector'
-const SESSION_INSPECTOR_MODULE = '@deepseek-ai/dsh-experimental-session-inspector'
+const SESSION_TITLES_BUNDLE = '@fde2e/len-experimental-session-titles-bundle'
+const BASE_TITLE_MODULE = '@fde2e/len-session-title-first-prompt-llm'
+const BUNDLE_TITLE_MODULE = '@fde2e/len-session-title-all-prompts-llm'
+const INSPECTOR_BUNDLE = '@fde2e/len-experimental-inspector-profile'
+const INSPECTOR_MODULE = '@fde2e/len-experimental-inspector'
+const SESSION_INSPECTOR_MODULE = '@fde2e/len-experimental-session-inspector'
 
 /** Package whose terminal chunk the page requests through `require.async`. */
-const TERMINAL_PACKAGE = '@deepseek-ai/dsh-client-ui-sidebar-terminal'
+const TERMINAL_PACKAGE = '@fde2e/len-client-ui-sidebar-terminal'
 const TERMINAL_CHUNK = `node_modules/${TERMINAL_PACKAGE}/lib/client.terminal.js`
 
 /** Stable labels authored by the deterministic VFS example fixture. */
@@ -617,10 +617,10 @@ async function toggleOptionalBundles(page: Page): Promise<void> {
   expect(listed.filter(name => name !== null && OPTIONAL_BUNDLES.includes(name)).length).toBeGreaterThan(0)
   // Package assets resolve from the Worker image: ui-chat's injected mask is a Blob URL that decodes.
   const mask = await page.evaluate(async () => {
-    const styles = [...document.querySelectorAll('style[data-plugin="@deepseek-ai/dsh-client-ui-chat"]')]
+    const styles = [...document.querySelectorAll('style[data-plugin="@fde2e/len-client-ui-chat"]')]
       .map(style => style.textContent).join('\n')
     const url = /url\((blob:[^)]+)\)/u.exec(styles)?.[1]
-    const unresolved = styles.includes('plugins/@deepseek-ai/dsh-client-ui-chat/assets/')
+    const unresolved = styles.includes('plugins/@fde2e/len-client-ui-chat/assets/')
     if (url === undefined) return { url: null, width: 0, unresolved }
     const image = new Image()
     image.src = url
@@ -676,7 +676,7 @@ async function toggleOptionalBundles(page: Page): Promise<void> {
     // the same patch batch without racing the declaration service; the ordinary Web scaffold covers
     // that bundle's enable/disable path (plugin-manager.e2e.ts), so the packed toggle list skips it.
     for (const entry of bundles.filter(candidate => candidate.optional
-      && candidate.name !== '@deepseek-ai/dsh-experimental-liveshare')) {
+      && candidate.name !== '@fde2e/len-experimental-liveshare')) {
       const enable = await remote<{ application: string; error?: unknown }>('pluginManager/setBundleEnabled', { name: entry.name, enabled: true })
       const plugins = await remote<Plugin[]>('pluginManager/listPlugins', {})
       const disable = await remote<{ application: string }>('pluginManager/setBundleEnabled', { name: entry.name, enabled: false })
@@ -706,18 +706,18 @@ async function toggleOptionalBundles(page: Page): Promise<void> {
   expect(result.optional.map(entry => entry.name).sort()).toEqual([...OPTIONAL_BUNDLES].sort())
   expect(result.optional.filter(entry => entry.enabled || entry.availability !== 'installation')).toEqual([])
   expect(result.optional.filter(entry => entry.error !== null)).toEqual([
-    expect.objectContaining({ name: '@deepseek-ai/dsh-cua-bundle', error: { code: 'unsupported-platform' } }),
+    expect.objectContaining({ name: '@fde2e/len-cua-bundle', error: { code: 'unsupported-platform' } }),
   ])
   // Metadata resolves through the Worker's Node internal modules: every optional bundle shows its title and icon.
   expect(result.optional.filter(entry => entry.metaError !== null || entry.title !== 'object' || entry.icon !== 'string')).toEqual([])
   expect(result.inventoryErrors).toEqual([])
   console.info(`preview boot: optional bundle toggles ${JSON.stringify(result.toggles.map(({ name, enable, disable, error }) => ({ name, enable, disable, error })))}`)
-  expect(result.toggles.find(toggle => toggle.name === '@deepseek-ai/dsh-cua-bundle')).toMatchObject({
+  expect(result.toggles.find(toggle => toggle.name === '@fde2e/len-cua-bundle')).toMatchObject({
     enable: 'failed', disable: 'applied', error: { code: 'unsupported-platform' },
     changed: 0, inactive: [], restored: true,
   })
   // Computer Use refuses enablement on this non-macOS worker Host, as asserted above, so the generic check omits it.
-  const supported = result.toggles.filter(toggle => toggle.name !== '@deepseek-ai/dsh-cua-bundle')
+  const supported = result.toggles.filter(toggle => toggle.name !== '@fde2e/len-cua-bundle')
   expect(supported.filter(toggle => toggle.enable !== 'applied' || toggle.disable !== 'applied')
     .map(({ name, enable, disable }) => ({ name, enable, disable }))).toEqual([])
   // Each bundle changes Loader rows, every enabled row it changes runs, and switching it off restores the prior rows.

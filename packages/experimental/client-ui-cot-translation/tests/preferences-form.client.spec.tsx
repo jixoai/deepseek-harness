@@ -1,10 +1,10 @@
 // @vitest-environment jsdom
 /** Preferences remain staged until one explicit Settings save. */
-import type { TranslationProvider } from '@deepseek-ai/dsh-experimental-translator/types'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import type { TranslationProvider } from '@fde2e/len-experimental-translator/types'
+import { createSnapshotStore } from '@fde2e/len-client-store'
 import { afterEach, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import { bindSnapshotSelector, makeTranslate, stubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
+import { bindSnapshotSelector, makeTranslate, stubConfigForm } from '@fde2e/len-client-test-runtime'
 import { TranslationPreferencesForm } from '../src/client/preferences-form.ts'
 import { TranslationSettings, type TranslationSettingsProps } from '../src/client/TranslationSettings.tsx'
 import type { CotTranslationPreferences } from '../src/preferences.ts'

@@ -1,17 +1,17 @@
-import AgentRegistry from '@deepseek-ai/dsh-agent'
+import AgentRegistry from '@fde2e/len-agent'
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import LlmRuntime, { createUserMessage, markAgentLoopRequest } from '@deepseek-ai/dsh-llm'
-import { deepFreeze } from '@deepseek-ai/dsh-util-values'
-import SessionStore, { SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import LlmRuntime, { createUserMessage, markAgentLoopRequest } from '@fde2e/len-llm'
+import { deepFreeze } from '@fde2e/len-util-values'
+import SessionStore, { SessionId, SessionSeq } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
 import SessionTitleService, {
   SessionTitleProviderId,
   type SessionTitleProvider,
   type SessionTitleProviderRequest,
   type SessionTitleProviderResult,
   type SessionTitleSnapshot,
-} from '@deepseek-ai/dsh-session-title'
+} from '@fde2e/len-session-title'
 
 const CONFIG = {
   fallbackMaxWords: 5,

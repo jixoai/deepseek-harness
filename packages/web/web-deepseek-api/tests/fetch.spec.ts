@@ -1,9 +1,9 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import WebRuntime from '@deepseek-ai/dsh-web'
-import { DeepSeekFetchApiProvider, type DeepSeekFetchApiOptions } from '@deepseek-ai/dsh-web-deepseek-api'
-import * as webApiPlugin from '@deepseek-ai/dsh-web-deepseek-api'
-import { DSH_LAUNCH_ENVIRONMENT_KEY, createLaunchEnvironmentSnapshot } from '@deepseek-ai/dsh-launch-environment'
+import WebRuntime from '@fde2e/len-web'
+import { DeepSeekFetchApiProvider, type DeepSeekFetchApiOptions } from '@fde2e/len-web-deepseek-api'
+import * as webApiPlugin from '@fde2e/len-web-deepseek-api'
+import { DSH_LAUNCH_ENVIRONMENT_KEY, createLaunchEnvironmentSnapshot } from '@fde2e/len-launch-environment'
 import { customGuidance } from './guidance.ts'
 const fetchProvider = (options: DeepSeekFetchApiOptions) => new DeepSeekFetchApiProvider(() => options)
 const options = { auth: { apiKey: 'ds-key' }, baseURL: 'https://api.deepseek.test/api/v1/tools', guidance: customGuidance('fetch') }

@@ -12,7 +12,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConversationLocation, ConversationNodeContext, ConversationNodeDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@fde2e/len-client-ui-conversation/client'
 import type {
   StatsCompactionState, StatsEventMetrics, StatsStepState, StatsViewNode,
 } from './stats-contract.ts'

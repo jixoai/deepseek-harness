@@ -9,18 +9,18 @@
  */
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { TestRemote } from '@deepseek-ai/dsh-client-test-runtime'
-import { remoteDefaultResponses } from '@deepseek-ai/dsh-client-test-runtime/src/assembly/remote-default-responses.ts'
-import { RemoteMock } from '@deepseek-ai/dsh-remote-mock'
-import { apply as settingsApply, inject as settingsInject } from '@deepseek-ai/dsh-client-ui-settings/client'
-import type { CommandDecoration, PopupSelectSpec } from '@deepseek-ai/dsh-client-ui-commands/client'
-import { PopupSelectController } from '@deepseek-ai/dsh-client-ui-commands/client'
+import { SlotRegistry } from '@fde2e/len-client-ui-renderer/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import { LocaleRuntime } from '@fde2e/len-client-locale/client'
+import { TestRemote } from '@fde2e/len-client-test-runtime'
+import { remoteDefaultResponses } from '@fde2e/len-client-test-runtime/src/assembly/remote-default-responses.ts'
+import { RemoteMock } from '@fde2e/len-remote-mock'
+import { apply as settingsApply, inject as settingsInject } from '@fde2e/len-client-ui-settings/client'
+import type { CommandDecoration, PopupSelectSpec } from '@fde2e/len-client-ui-commands/client'
+import { PopupSelectController } from '@fde2e/len-client-ui-commands/client'
 import type {
   PermissionCatalog, PermissionSelection,
-} from '@deepseek-ai/dsh-permission-presets/client'
+} from '@fde2e/len-permission-presets/client'
 import {
   PermissionRow, type PermissionRowInjected,
 } from '../src/client/PermissionRow.tsx'

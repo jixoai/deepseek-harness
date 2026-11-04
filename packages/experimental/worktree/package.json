@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-worktree",
+  "name": "@fde2e/len-experimental-worktree",
   "description": "Creates a named Git worktree and changes the calling Session working directory",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -30,31 +30,31 @@
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
-    "@deepseek-ai/dsh-timeout": "workspace:*"
+    "@fde2e/len-timeout": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-subprocess": "workspace:*",
+    "@fde2e/len-working-directory": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-local": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-agent-loop-testkit": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-fs-local": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-local": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-subprocess": "workspace:*",
+    "@fde2e/len-subprocess-local": "workspace:*",
+    "@fde2e/len-system-prompt": "workspace:*",
+    "@fde2e/len-working-directory": "workspace:*"
   }
 }

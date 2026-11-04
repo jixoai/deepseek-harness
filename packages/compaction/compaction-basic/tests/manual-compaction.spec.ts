@@ -1,17 +1,17 @@
-import { imageOffloadProjection } from '@deepseek-ai/dsh-compaction-image-offload/projection'
+import { imageOffloadProjection } from '@fde2e/len-compaction-image-offload/projection'
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import { CommandId } from '@deepseek-ai/dsh-commands/brand'
-import { BasicCompactionEngine } from '@deepseek-ai/dsh-compaction-basic'
-import { CompactionId, isCompactCheckpointSource, ManualCompactionError } from '@deepseek-ai/dsh-compaction'
-import type { CompactionResult } from '@deepseek-ai/dsh-compaction'
+import AgentLoop from '@fde2e/len-agent-loop'
+import { mountAgentLoopTestDependencies } from '@fde2e/len-agent-loop-testkit'
+import { CommandId } from '@fde2e/len-commands/brand'
+import { BasicCompactionEngine } from '@fde2e/len-compaction-basic'
+import { CompactionId, isCompactCheckpointSource, ManualCompactionError } from '@fde2e/len-compaction'
+import type { CompactionResult } from '@fde2e/len-compaction'
 import {
   createAssistantMessage,
   createUserMessage,
   LlmAdapter,
-} from '@deepseek-ai/dsh-llm'
+} from '@fde2e/len-llm'
 import type {
   ContentBlock,
   LlmResolvedModelInfo,
@@ -19,19 +19,19 @@ import type {
   RequestMessage,
   StreamChunk,
   TokenUsage,
-} from '@deepseek-ai/dsh-llm'
-import SessionStore, { buildForkSeed, Session, SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-import TokenMeter from '@deepseek-ai/dsh-token-meter'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+} from '@fde2e/len-llm'
+import SessionStore, { buildForkSeed, Session, SessionId, type SessionEvent } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import LlmRuntime from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
+import TokenMeter from '@fde2e/len-token-meter'
+import type { Agent } from '@fde2e/len-agent'
 import type {
   SummarizationInput,
   SummaryResult,
-} from '@deepseek-ai/dsh-compaction-basic/src/summarizer.ts'
+} from '@fde2e/len-compaction-basic/src/summarizer.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'listener': { kind: 'listener' } & ContextFormed
     'rival': { kind: 'rival' } & ContextFormed

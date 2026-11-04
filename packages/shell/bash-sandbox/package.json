@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-bash-sandbox",
+  "name": "@fde2e/len-bash-sandbox",
   "description": "Sandbox-consuming implementation of the DeepSeek Harness bash executor seam (confines every command via ctx.sandbox, reports denial/enforcement result facts)",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,21 +29,21 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-bash-local": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@fde2e/len-shell": "workspace:*",
+    "@fde2e/len-bash-local": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-bash-local": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-local": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
+    "@fde2e/len-shell": "workspace:*",
+    "@fde2e/len-bash-local": "workspace:*",
+    "@fde2e/len-subprocess-local": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-local": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/node-addon-system": "workspace:~",
-    "@deepseek-ai/dsh-session-projection": "workspace:*"
+    "@fde2e/len-session-projection": "workspace:*"
   }
 }

@@ -1,9 +1,9 @@
 /** Client scope generations route local events independently of Host Agent residency. */
 import { Context as CordisContext } from '@deepseek-ai/cordis'
 import type { Context, Fiber } from '@deepseek-ai/cordis'
-import type { ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { TypertRemoteScopeApi } from '@deepseek-ai/dsh-typert-protocol'
+import type { ClientRemote } from '@fde2e/len-api-gateway/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { TypertRemoteScopeApi } from '@fde2e/len-typert-protocol'
 
 /** Client Cordis Context carrying one Agent identity and its scoped Remote namespaces. */
 export type AgentContext = Omit<Context, 'remote'> & {

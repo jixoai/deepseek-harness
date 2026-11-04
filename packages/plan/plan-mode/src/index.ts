@@ -19,31 +19,31 @@
  *
  * See packages/plan/plan-mode/README.md.
  *
- * @module @deepseek-ai/dsh-plan-mode
+ * @module @fde2e/len-plan-mode
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import { brandString } from '@deepseek-ai/dsh-brand'
+import { brandString } from '@fde2e/len-brand'
 import { z as zod } from 'zod'
 import type { ZodType } from 'zod'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-import type { Session, UserMessage } from '@deepseek-ai/dsh-session'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import { UserQuestionError, type AskUserQuestionAnswer } from '@deepseek-ai/dsh-user-questions'
-import type { CommandDefinitionId, CommandId } from '@deepseek-ai/dsh-commands'
-import type {} from '@deepseek-ai/dsh-session-projection'
-import type { ProjectionDefinition, ProjectionHandle } from '@deepseek-ai/dsh-session-projection'
+import type { Agent, PreStepDecision } from '@fde2e/len-agent'
+import { createUserMessage } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
+import type { Session, UserMessage } from '@fde2e/len-session'
+import { defineTool } from '@fde2e/len-tools'
+import { UserQuestionError, type AskUserQuestionAnswer } from '@fde2e/len-user-questions'
+import type { CommandDefinitionId, CommandId } from '@fde2e/len-commands'
+import type {} from '@fde2e/len-session-projection'
+import type { ProjectionDefinition, ProjectionHandle } from '@fde2e/len-session-projection'
 import type { PlanProjection, PlanUnitState } from './types.ts'
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'plan-mode': { kind: 'plan-mode' } & ContextFormed
   }
 }
 export type * from './types.ts'
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@fde2e/len-session/types' {
   interface SessionEventMap {
     /**
      * Whether plan mode is in force from this point on: log-only, non-surface,
@@ -231,7 +231,7 @@ export class PlanModeController extends Service {
     // The command child activates only when a command registry is composed.
     ctx.inject(['commands'], (commandCtx) => {
       commandCtx.commands.register({
-        definitionId: brandString<CommandDefinitionId>('@deepseek-ai/dsh-plan-mode'),
+        definitionId: brandString<CommandDefinitionId>('@fde2e/len-plan-mode'),
         name: 'plan',
         description: 'Enter or leave plan mode',
         input: { hint: '[off|message]', attachments: true },

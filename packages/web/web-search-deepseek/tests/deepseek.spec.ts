@@ -4,25 +4,25 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import LocalCredentialProvider from '@deepseek-ai/dsh-credentials-local'
-import { createLaunchEnvironmentSnapshot, DSH_LAUNCH_ENVIRONMENT_KEY } from '@deepseek-ai/dsh-launch-environment'
-import type { DeepSeekAccount } from '@deepseek-ai/dsh-deepseek-account'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import WebRuntime, { WebError, type WebSearchResult } from '@deepseek-ai/dsh-web'
+import AgentRegistry from '@fde2e/len-agent'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import type { Agent } from '@fde2e/len-agent'
+import { credentialRef } from '@fde2e/len-credentials'
+import LocalCredentialProvider from '@fde2e/len-credentials-local'
+import { createLaunchEnvironmentSnapshot, DSH_LAUNCH_ENVIRONMENT_KEY } from '@fde2e/len-launch-environment'
+import type { DeepSeekAccount } from '@fde2e/len-deepseek-account'
+import SessionStore, { SessionId } from '@fde2e/len-session'
+import WebRuntime, { WebError, type WebSearchResult } from '@fde2e/len-web'
 import {
   DeepSeekSearchProvider,
   DEEPSEEK_PROVIDER_ID,
-} from '@deepseek-ai/dsh-web-search-deepseek'
-import * as deepseekPlugin from '@deepseek-ai/dsh-web-search-deepseek'
+} from '@fde2e/len-web-search-deepseek'
+import * as deepseekPlugin from '@fde2e/len-web-search-deepseek'
 import { citationSnippets, mapAnthropicResponse } from '../src/provider.ts'
-import type { AnthropicResponse } from '@deepseek-ai/dsh-web-search-deepseek/src/types.ts'
+import type { AnthropicResponse } from '@fde2e/len-web-search-deepseek/src/types.ts'
 
 /** Construct the provider over a fixed options value; production passes a live thunk. */
-import type { DeepSeekSearchProviderOptions } from '@deepseek-ai/dsh-web-search-deepseek'
+import type { DeepSeekSearchProviderOptions } from '@fde2e/len-web-search-deepseek'
 
 const searchProvider = (options: DeepSeekSearchProviderOptions): DeepSeekSearchProvider =>
   new DeepSeekSearchProvider(() => options)

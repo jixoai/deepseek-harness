@@ -2,8 +2,8 @@
 
 import { afterEach, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import LlmRuntime, { userAgent } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import LlmRuntime, { userAgent } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
 import * as PiAi from '../src/index.ts'
 import { assemble } from './assemble.ts'
 import { closeMockServers, mockServer, textEvents } from './mock-server.ts'

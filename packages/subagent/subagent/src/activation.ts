@@ -1,10 +1,10 @@
 /** Execution-period records, capacity slots, child serialization, and local output capture.
- * @module @deepseek-ai/dsh-subagent/activation
+ * @module @fde2e/len-subagent/activation
  */
 
-import type { Agent, AgentHandle } from '@deepseek-ai/dsh-agent'
-import type { SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import type { Agent, AgentHandle } from '@fde2e/len-agent'
+import type { SessionId, SessionLogOffset } from '@fde2e/len-session'
+import { assertNever } from '@fde2e/len-util-values'
 import { finalAssistantOutput } from './assistant-output.ts'
 import { epochStopReason } from './lifecycle.ts'
 import { SubagentError } from './error.ts'

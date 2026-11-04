@@ -12,7 +12,7 @@ import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
 import {
   createAssistantMessage, createMessage, createUserMessage, ToolCallId,
   type AssistantStreamRecord, type TokenUsage,
-} from '@deepseek-ai/dsh-llm'
+} from '@fde2e/len-llm'
 import {
   assertFixtureInventory, captureStableAria, compareOrRefreshGolden,
   launchWebScaffold, watchConsole, webSnapshotMode, type WebScaffold,
@@ -52,7 +52,7 @@ function stream(firstTokenAt: number): AssistantStreamRecord[] {
 describe('Statistics view overlay', () => {
   it('mounts the experimental client plugin over the shipped Web surface', () => {
     expect(profileEntries(OVERLAY)).toEqual([{
-      insert: [{ id: 'ui-client-ui-stats', name: '@deepseek-ai/dsh-experimental-client-ui-stats' }],
+      insert: [{ id: 'ui-client-ui-stats', name: '@fde2e/len-experimental-client-ui-stats' }],
     }])
   })
 })

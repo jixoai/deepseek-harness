@@ -6,16 +6,16 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { promisify } from 'node:util'
 import { FiberState } from '@deepseek-ai/cordis'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import type {} from '@deepseek-ai/dsh-experimental-worktree'
-import type {} from '@deepseek-ai/dsh-experimental-client-ui-forge'
+import { ToolCallId } from '@fde2e/len-llm'
+import type {} from '@fde2e/len-experimental-worktree'
+import type {} from '@fde2e/len-experimental-client-ui-forge'
 import { chromium } from 'playwright'
 import { expect, it, onTestFailed, onTestFinished } from 'vitest'
 import { launchWebScaffold, watchConsole } from './scaffold.ts'
 import { connectFreshWorkspace, newEnglishPage, PLUGIN_TOGGLE_SETTLE_MS, saveFailureShot } from './support.ts'
 
-const BUNDLE = '@deepseek-ai/dsh-experimental-forge-bundle'
-const STANDALONE = '@deepseek-ai/dsh-experimental-tool-worktree'
+const BUNDLE = '@fde2e/len-experimental-forge-bundle'
+const STANDALONE = '@fde2e/len-experimental-tool-worktree'
 const exec = promisify(execFile)
 
 it('persists the unified review and worktree switch and retains checkouts after disabling', async () => {

@@ -1,14 +1,14 @@
 /** Browser plugin owning ZIP download and Markdown copy state, plus feedback controls. */
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-commands/client'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type {} from '@deepseek-ai/dsh-client-ui-message-feedback/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import type { SessionId } from '@fde2e/len-session/types'
+import type {} from '@fde2e/len-client-locale/client'
+import type {} from '@fde2e/len-client-ui-commands/client'
+import type {} from '@fde2e/len-client-ui-conversation/client'
+import type {} from '@fde2e/len-client-ui-renderer/client'
+import type {} from '@fde2e/len-client-ui-session/client'
+import type {} from '@fde2e/len-client-ui-message-feedback/client'
+import { createSnapshotStore } from '@fde2e/len-client-store'
 import { SessionLogDownloadController } from './controller.ts'
 import { SessionMarkdownCopyController } from './copy-controller.ts'
 import { SessionMarkdownCopyToast, type SessionMarkdownCopyToastInjected } from './CopyToast.tsx'
@@ -21,7 +21,7 @@ declare module '@deepseek-ai/cordis' {
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@fde2e/len-client-ui-slots' {
   interface LocaleNamespaceMap {
     'session-log-download': SessionLogDownloadKey
   }

@@ -3,7 +3,7 @@ description: "面向模型的 read、read_image、write 与 edit 工具：供组
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-fs
+# @fde2e/len-tool-fs
 
 [English](README.md) | 中文
 
@@ -34,9 +34,9 @@ kind: "package-reference"
 一个后端、策略插件，然后是工具；附件存储为可选，用于启用 `read_image`。
 
 ```yaml
-- name: '@deepseek-ai/dsh-fs-local'
-- name: '@deepseek-ai/dsh-fs-observation-policy'
-- name: '@deepseek-ai/dsh-tool-fs'
+- name: '@fde2e/len-fs-local'
+- name: '@fde2e/len-fs-observation-policy'
+- name: '@fde2e/len-tool-fs'
 ```
 
 策略插件是可选的：省略时，工具直接使用裸提供方（无条件写入、覆盖、编辑与补丁，无已观察状态），随发行版交付的组合就是这样运行的——[`dsh-base`](../../bundle/base/cordis.patch.yml) 中的 `fs-observation-policy` 行写着 `disabled: true`；改为 `false` 即对所有修改工具要求先读并拒绝过期版本。`read_image` 只在持久 `ctx.attachments` 服务已挂载时注册；执行时还拒绝确切模型未声明图像输入的路由，因此文本路由的持久历史不会出现图像块。

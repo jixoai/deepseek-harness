@@ -14,9 +14,9 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import { SessionAlreadyOwnedError } from '@deepseek-ai/dsh-session-persistence'
-import * as JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import { SessionId, SessionSeq } from '@fde2e/len-session'
+import { SessionAlreadyOwnedError } from '@fde2e/len-session-persistence'
+import * as JsonlSessionPersistence from '@fde2e/len-session-persistence-jsonl'
 
 const SESSION = 'two-process-lease'
 

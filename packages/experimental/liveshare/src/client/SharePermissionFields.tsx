@@ -2,12 +2,12 @@
  * The session permission, fork switch, and per-plugin endpoint selection shared by the create form
  * and the stored-share editor.
  *
- * @module @deepseek-ai/dsh-experimental-liveshare/src/client/SharePermissionFields
+ * @module @fde2e/len-experimental-liveshare/src/client/SharePermissionFields
  */
 
 import type { ReactNode } from 'react'
-import { SegmentedControl, Switch } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
+import { SegmentedControl, Switch } from '@fde2e/len-client-ui-primitives'
+import type { PropsLocale } from '@fde2e/len-client-ui-slots'
 import type { NS } from './locales.ts'
 import { ShareCapabilitiesPicker, type PluginAccess } from './ShareCapabilitiesPicker.tsx'
 import { sessionModeOptions } from './share-options.ts'

@@ -1,8 +1,8 @@
 /** Client menu contributions and explicit gesture targets. */
-import type { ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/client'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { PaneId, TabRecord } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { ShortcutCommandId } from '@fde2e/len-client-shortcuts/client'
+import type { ObservableSnapshot } from '@fde2e/len-client-store'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { PaneId, TabRecord } from '@fde2e/len-client-ui-dockkit'
 import type { HTMLAttributes } from 'react'
 
 /** DOM handlers bound to an explicit object; existing handlers can prevent menu activation. */

@@ -2,8 +2,8 @@
 
 import { afterEach, expect, it, onTestFinished, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { SessionId } from '@fde2e/len-session'
+import { makeTranslate } from '@fde2e/len-client-test-runtime'
 import {
   TeamDisableConfirmation, type TeamDisableConfirmationProps, type TeamDisableRequest,
 } from '../src/client/TeamDisableConfirmation.tsx'

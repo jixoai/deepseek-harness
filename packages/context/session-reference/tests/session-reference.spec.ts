@@ -1,14 +1,14 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry, { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
-import { CompactionId, compactCheckpointSource } from '@deepseek-ai/dsh-compaction'
-import LlmRuntime, { createDeveloperMessage, createMessage, createSystemMessage, createToolResultMessage, createUserMessage, LlmError, ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-import SessionStore, { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SessionQueryEngine from '@deepseek-ai/dsh-session-query'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
+import AgentRegistry, { agentEvents, type Agent } from '@fde2e/len-agent'
+import { CompactionId, compactCheckpointSource } from '@fde2e/len-compaction'
+import LlmRuntime, { createDeveloperMessage, createMessage, createSystemMessage, createToolResultMessage, createUserMessage, LlmError, ToolCallId } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
+import SessionStore, { Session, SessionId, SessionSeq } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SessionQueryEngine from '@fde2e/len-session-query'
+import SessionTitleService from '@fde2e/len-session-title'
+import SystemPrompt from '@fde2e/len-system-prompt'
 import SessionReferenceResolver, {
   decodeSessionReferenceUri,
   encodeSessionReferenceUri,
@@ -16,11 +16,11 @@ import SessionReferenceResolver, {
   parseSessionReferenceText,
   type Config,
   type SessionReferenceErrorCode,
-} from '@deepseek-ai/dsh-session-reference'
+} from '@fde2e/len-session-reference'
 import { stringifyTagSafeJson } from '../src/serialization.ts'
-import { SpillLocator, SpillStore, type SaveTextSpill, type SpillRef } from '@deepseek-ai/dsh-spill'
+import { SpillLocator, SpillStore, type SaveTextSpill, type SpillRef } from '@fde2e/len-spill'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
     'workspace': { kind: 'workspace' } & ContextFormed

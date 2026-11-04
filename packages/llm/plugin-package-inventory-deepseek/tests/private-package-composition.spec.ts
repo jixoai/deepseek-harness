@@ -7,9 +7,9 @@ import { afterEach, expect, it } from 'vitest'
 import { Context, FiberState } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import AgentRegistry from '@fde2e/len-agent'
+import DeepSeekLlmApiExtensionRegistry from '@fde2e/len-deepseek-llm-api-extensions'
 import * as PluginInventory from '../src/index.ts'
 
 let root: string | undefined

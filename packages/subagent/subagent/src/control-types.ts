@@ -2,16 +2,16 @@
  * Client-safe recursive catalog rows and browser continuation requests,
  * receipts, and failures.
  *
- * @module @deepseek-ai/dsh-subagent/control-types
+ * @module @fde2e/len-subagent/control-types
  */
 
-import type { PromptContentPart } from '@deepseek-ai/dsh-attachment/types'
-import type { Branded } from '@deepseek-ai/dsh-brand'
-import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { PromptContentPart } from '@fde2e/len-attachment/types'
+import type { Branded } from '@fde2e/len-brand'
+import type { MessageId } from '@fde2e/len-llm/brand'
+import type { SessionId } from '@fde2e/len-session/types'
 import type { KnownSubagentCatalogFields } from './projection-types.ts'
 // Type-only: the Workspace registry's archive-admission family map this runtime merges `subagent` into.
-import type {} from '@deepseek-ai/dsh-workspace/types'
+import type {} from '@fde2e/len-workspace/types'
 
 /**
  * Client-minted identity of one browser prompt, persisted on the exact accepted
@@ -104,14 +104,14 @@ export interface SubagentInterruptReceipt {
  * Failure details the control surface answers with. Prompts and interrupts
  * share these failures with the Client Remote result.
  */
-declare module '@deepseek-ai/dsh-workspace/types' {
+declare module '@fde2e/len-workspace/types' {
   interface SessionActivityKindMap {
     /** A subagent session delegated from this session (at any depth) is inside a turn. */
     subagent: true
   }
 }
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@fde2e/len-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** A browser-supplied zone is neither UTC nor a canonical IANA name. */
     'subagent/invalid-time-zone': { readonly value: string }

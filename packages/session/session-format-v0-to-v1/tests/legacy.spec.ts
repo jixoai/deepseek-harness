@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { SessionFormatUnsupportedMigrationError } from '@deepseek-ai/dsh-session-format'
+import { SessionFormatUnsupportedMigrationError } from '@fde2e/len-session-format'
 import {
   sessionFormatV0ToV1,
 } from '../src/index.ts'

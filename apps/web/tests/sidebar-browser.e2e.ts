@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import type {} from '@deepseek-ai/dsh-agent'
+import type {} from '@fde2e/len-agent'
 import {
   assertFixtureInventory,
   compareOrRefreshGolden,

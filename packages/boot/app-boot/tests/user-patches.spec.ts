@@ -46,12 +46,12 @@ describe('loadOptionalPatches', () => {
     const dir = tmp()
     writeFileSync(join(dir, PROFILE_PATCH_FILENAME), [
       '- id: agent-loop',
-      "  name: '@deepseek-ai/dsh-agent-loop'",
+      "  name: '@fde2e/len-agent-loop'",
       '  config:',
       '    model: !!js process.env.DSH_SPEC_MODEL',
       '- insert:',
       '    - id: llm',
-      "      name: '@deepseek-ai/dsh-llm-pi-ai'",
+      "      name: '@fde2e/len-llm-pi-ai'",
       '',
     ].join('\n'))
     const patches = loadOptionalPatches(NAME, join(dir, PROFILE_PATCH_FILENAME))
@@ -77,7 +77,7 @@ describe('loadOptionalPatches', () => {
       { insert: [
         { id: 'absolute', name: pluginPath },
         { id: 'url', name: pluginUrl },
-        { id: 'bare', name: '@deepseek-ai/dsh-system-prompt' },
+        { id: 'bare', name: '@fde2e/len-system-prompt' },
         { id: 'nested', name: 'cordis:group', group: true, config: [
           { id: 'child', name: pluginPath },
         ] },
@@ -86,7 +86,7 @@ describe('loadOptionalPatches', () => {
     const patches = load(NAME, patchPath)!
     expect(patches[0]?.name).toBe(pluginPath)
     expect(patches[1]?.insert?.map(entry => entry.name)).toEqual([
-      pluginUrl, pluginUrl, '@deepseek-ai/dsh-system-prompt', 'cordis:group',
+      pluginUrl, pluginUrl, '@fde2e/len-system-prompt', 'cordis:group',
     ])
     expect((patches[1]?.insert?.[3]?.config as { name: string }[])[0]?.name).toBe(pluginUrl)
 

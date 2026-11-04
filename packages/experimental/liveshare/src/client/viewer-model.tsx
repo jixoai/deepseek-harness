@@ -7,16 +7,16 @@
  * before the catalog arrives, and with the effort the next request would use. It renders through
  * {@link ViewerSeat}, whose `readOnly` switch is what keeps it a label.
  *
- * @module @deepseek-ai/dsh-experimental-liveshare/src/client/viewer-model
+ * @module @fde2e/len-experimental-liveshare/src/client/viewer-model
  */
 
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from 'react'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-api-session-controller/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
+import type {} from '@fde2e/len-api-remotes/client'
+import type {} from '@fde2e/len-api-session-controller/client'
+import type {} from '@fde2e/len-client-ui-renderer/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { PropsLocale } from '@fde2e/len-client-ui-slots'
 import { NS } from './locales.ts'
 import { ViewerSeat, VIEWER_SEAT_PRIORITY } from './viewer-seat.tsx'
 

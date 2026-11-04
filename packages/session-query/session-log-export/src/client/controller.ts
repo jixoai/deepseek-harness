@@ -1,7 +1,7 @@
 /** Browser download state shared by the Session Header button and `/export`. */
 
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import { createSnapshotStore, type SnapshotStore } from '@fde2e/len-client-store'
+import type { SessionId } from '@fde2e/len-session/types'
 import { SESSION_LOG_EXPORT_ROUTE } from '../routes.ts'
 
 /** Download phases presented by the shared modal. */

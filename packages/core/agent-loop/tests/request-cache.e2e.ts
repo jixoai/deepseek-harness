@@ -1,17 +1,17 @@
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
+import { createUserMessage } from '@fde2e/len-llm'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
+import LlmRuntime from '@fde2e/len-llm'
+import SessionStore, { SessionId } from '@fde2e/len-session'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
+import { defineContentToolFixture } from '@fde2e/len-tool-testkit'
+import AgentRegistry, { type Agent } from '@fde2e/len-agent'
 
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import AgentLoop from '@fde2e/len-agent-loop'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import * as LlmDeepSeek from '@fde2e/len-llm-deepseek-api-key'
 
 /**
  * With-key proof that log-derived requests translate into real provider cache hits: a

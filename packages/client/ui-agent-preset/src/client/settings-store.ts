@@ -8,9 +8,9 @@
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 // Type-only: pulls the ctx.remote merge into this program.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { AgentPresetRoster } from '@deepseek-ai/dsh-agent-preset-registry/types'
+import type {} from '@fde2e/len-api-remotes/client'
+import { createSnapshotStore, type SnapshotStore } from '@fde2e/len-client-store'
+import type { AgentPresetRoster } from '@fde2e/len-agent-preset-registry/types'
 import { isBuiltInPreset } from './locales.ts'
 
 /** The agent-preset settings namespace on the host wire. */

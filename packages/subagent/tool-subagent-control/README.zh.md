@@ -3,7 +3,7 @@ description: "通过消息、中断和收件箱等待发现并协调 subagent �
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-subagent-control
+# @fde2e/len-tool-subagent-control
 
 [English](README.md) | 中文
 
@@ -32,12 +32,12 @@ kind: "package-reference"
 所需服务可用后，加载 subagent 服务、一个后端、委派工具和此包，即可提供全部四个控制与发现工具：
 
 ```yaml
-- name: '@deepseek-ai/dsh-subagent'
-- name: '@deepseek-ai/dsh-subagent-spawn-in-process'
-- name: '@deepseek-ai/dsh-tool-subagent'
+- name: '@fde2e/len-subagent'
+- name: '@fde2e/len-subagent-spawn-in-process'
+- name: '@fde2e/len-tool-subagent'
   config:
     provider: spawn
-- name: '@deepseek-ai/dsh-tool-subagent-control'
+- name: '@fde2e/len-tool-subagent-control'
 ```
 
 设置 `config.interrupt: false` 可省略 `interrupt_agent`。默认值为 `true`。其余三个工具和 `ctx.subagents.interrupt()` 仍然可用。参见生成的[配置目录](../../../docs/config-catalog.zh.md#deepseek-aidsh-tool-subagent-control)。

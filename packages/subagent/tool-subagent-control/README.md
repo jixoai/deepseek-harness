@@ -3,7 +3,7 @@ description: "Discover and coordinate a subagent tree through messaging, interru
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-subagent-control
+# @fde2e/len-tool-subagent-control
 
 English | [中文](README.zh.md)
 
@@ -32,12 +32,12 @@ Mount this package once per tool scope. It requires `tools`, `subagents`, `agent
 With the required services available, load the subagent service, a backend, the delegation tool, and this package to expose all four control and discovery tools:
 
 ```yaml
-- name: '@deepseek-ai/dsh-subagent'
-- name: '@deepseek-ai/dsh-subagent-spawn-in-process'
-- name: '@deepseek-ai/dsh-tool-subagent'
+- name: '@fde2e/len-subagent'
+- name: '@fde2e/len-subagent-spawn-in-process'
+- name: '@fde2e/len-tool-subagent'
   config:
     provider: spawn
-- name: '@deepseek-ai/dsh-tool-subagent-control'
+- name: '@fde2e/len-tool-subagent-control'
 ```
 
 Set `config.interrupt: false` to omit `interrupt_agent`. The default is `true`. The other three tools and `ctx.subagents.interrupt()` remain available. See the generated [configuration catalog](../../../docs/config-catalog.md#deepseek-aidsh-tool-subagent-control).

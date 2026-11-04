@@ -13,9 +13,9 @@ import { fileURLToPath } from 'node:url'
 import type { Browser, Locator, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import { ToolCallId, type StreamChunk } from '@deepseek-ai/dsh-llm'
-import type { ReplayEntry } from '@deepseek-ai/dsh-llm-replay'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
+import { ToolCallId, type StreamChunk } from '@fde2e/len-llm'
+import type { ReplayEntry } from '@fde2e/len-llm-replay'
+import type { SessionEvent, SessionId } from '@fde2e/len-session'
 import {
   assertFixtureInventory, captureStableAria, compareOrRefreshGolden, launchWebScaffold, readPersistedEvents,
   watchConsole, webSnapshotMode, type WebScaffold,

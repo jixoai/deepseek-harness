@@ -1,31 +1,31 @@
 // @vitest-environment jsdom
-import { apply as applyMenus, inject as injectMenus } from '@deepseek-ai/dsh-client-ui-context-menu/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { apply as applyMenus, inject as injectMenus } from '@fde2e/len-client-ui-context-menu/client'
+import { createSnapshotStore } from '@fde2e/len-client-store'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { act, fireEvent, render } from '@testing-library/react'
 import { useRef } from 'react'
 import {
   SlotTestRuntime, stubConfigForm, usePinnedBrowserLanguages,
-} from '@deepseek-ai/dsh-client-test-runtime'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { resolveSlotLabel } from '@deepseek-ai/dsh-client-ui-slots'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { SessionBinding } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { WorkspaceId } from '@deepseek-ai/dsh-workspace/types'
+} from '@fde2e/len-client-test-runtime'
+import { LocaleRuntime } from '@fde2e/len-client-locale/client'
+import { resolveSlotLabel } from '@fde2e/len-client-ui-slots'
+import type { ObservableSnapshot } from '@fde2e/len-client-store'
+import type { SessionBinding } from '@fde2e/len-api-session-controller/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { WorkspaceId } from '@fde2e/len-workspace/types'
 import {
   apply as applyConversation, inject as injectConversation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@fde2e/len-client-ui-conversation/client'
 import type {
   ConversationLocationDataSource, ConversationLocationDataStore, ConversationTurnDataMap,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@fde2e/len-client-ui-conversation/client'
 import {
   apply as applyChat, EMPTY_CHAT_SNAPSHOT, inject as injectChat,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@fde2e/len-client-ui-chat/client'
 import type {
   ChatFlowInjected, ChatNodeInjected, ChatSnapshot, TranscriptViewRowInjected, UseChatNodeTurnData, UseDisclosure,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { QuotaNoticeInjected } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@fde2e/len-client-ui-chat/client'
+import type { QuotaNoticeInjected } from '@fde2e/len-client-ui-chat/client'
 import type { PerformanceUsageRowInjected } from '../src/client/settings/PerformanceUsageRow.tsx'
 import { CHAT_SETTINGS_NAMESPACE, type ChatSettings } from '../src/chat-settings.ts'
 import { ActivityPill, UsagePill } from '../src/client/chat/StatsPills.tsx'
@@ -33,7 +33,7 @@ import { createFlowMotion, type InputFoldDriver } from '../src/client/chat/flow-
 import { CHAT_FLOW_INJECT, CHAT_NODE_INJECT } from '../src/client/apply.ts'
 import { UserContent } from '../src/client/chat/UserContent.tsx'
 
-declare module '@deepseek-ai/dsh-client-ui-conversation/client' {
+declare module '@fde2e/len-client-ui-conversation/client' {
   interface ConversationTurnDataMap {
     metric: number
   }

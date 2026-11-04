@@ -14,15 +14,15 @@ import {
   IconListPenOutlineRegular, IconNowrapFillRegular, IconRightUpOutlineRegular, IconWorkspaceTreeOutlineRegular, IconWrapFillRegular,
   Menu, StateDot, Tooltip,
   type MenuEntry,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { HostObservable, InjectFace, PropsLocale, PropsRuntime, PropsStore } from '@deepseek-ai/dsh-client-ui-slots'
-import type { SidebarRightTabInfo } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
-import { fileAddressFor, pathPartsOf } from '@deepseek-ai/dsh-util-workspace-path'
+} from '@fde2e/len-client-ui-primitives'
+import type { HostObservable, InjectFace, PropsLocale, PropsRuntime, PropsStore } from '@fde2e/len-client-ui-slots'
+import type { SidebarRightTabInfo } from '@fde2e/len-client-ui-sidebar-right/client'
+import type { RemoteResult } from '@fde2e/len-typert-protocol'
+import { fileAddressFor, pathPartsOf } from '@fde2e/len-util-workspace-path'
 import type {
   ForgeChangeRequestDiff, ForgeDiffFile, ForgeLocalDiff, ForgeLocalScope, ForgePanelChangeRequest, ForgePanelState,
 } from '../types.ts'
-import type { ForgeReviewRequest, ForgeReviewResult } from '@deepseek-ai/dsh-experimental-forge/types'
+import type { ForgeReviewRequest, ForgeReviewResult } from '@fde2e/len-experimental-forge/types'
 import { sameReviewSource, type ReviewQueue } from './review-queue.ts'
 import { ReviewThread, useFileReview } from './ReviewThread.tsx'
 import type { ReviewActions } from './ReviewComposer.tsx'

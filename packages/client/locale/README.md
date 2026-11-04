@@ -3,7 +3,7 @@ description: "Localization for the web GUI: language preferences, browser-derive
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-locale
+# @fde2e/len-client-locale
 
 English | [中文](README.zh.md)
 

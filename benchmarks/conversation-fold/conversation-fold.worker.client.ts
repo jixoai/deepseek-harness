@@ -2,12 +2,12 @@
 
 import { performance } from 'node:perf_hooks'
 import { Context } from '@deepseek-ai/cordis'
-import { AssistantStreamAccumulator } from '@deepseek-ai/dsh-llm/assistant-stream'
-import { LlmAttemptId, ToolCallId } from '@deepseek-ai/dsh-llm/brand'
-import type { StreamChunk } from '@deepseek-ai/dsh-llm'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
-import type { ChatNode, ChatSnapshot } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { SessionEventLikeEntry } from '@deepseek-ai/dsh-api-session-controller/client'
+import { AssistantStreamAccumulator } from '@fde2e/len-llm/assistant-stream'
+import { LlmAttemptId, ToolCallId } from '@fde2e/len-llm/brand'
+import type { StreamChunk } from '@fde2e/len-llm'
+import type { SessionEvent } from '@fde2e/len-session/types'
+import type { ChatNode, ChatSnapshot } from '@fde2e/len-client-ui-chat/client'
+import type { SessionEventLikeEntry } from '@fde2e/len-api-session-controller/client'
 // These Client-only fold modules have no plain-Node package export and are compiled into this worker.
 import { ConversationNodeAssembler } from '../../packages/client/ui-conversation/src/client/conversation/assembler.ts'
 import { ConversationEventRegistry } from '../../packages/client/ui-conversation/src/client/conversation/event-registry.ts'
@@ -340,12 +340,12 @@ function streamingText(assembler: ConversationNodeAssembler, blockType: Streamin
 }
 
 assertBuiltBenchmarkRuntime(import.meta.url, {
-  '@deepseek-ai/dsh-brand': import.meta.resolve('@deepseek-ai/dsh-brand'),
-  '@deepseek-ai/dsh-client-store': import.meta.resolve('@deepseek-ai/dsh-client-store'),
-  '@deepseek-ai/dsh-llm/assistant-stream': import.meta.resolve('@deepseek-ai/dsh-llm/assistant-stream'),
-  '@deepseek-ai/dsh-session/surface': import.meta.resolve('@deepseek-ai/dsh-session/surface'),
-  '@deepseek-ai/dsh-token-meter/client': import.meta.resolve('@deepseek-ai/dsh-token-meter/client'),
-  '@deepseek-ai/dsh-util-values': import.meta.resolve('@deepseek-ai/dsh-util-values'),
+  '@fde2e/len-brand': import.meta.resolve('@fde2e/len-brand'),
+  '@fde2e/len-client-store': import.meta.resolve('@fde2e/len-client-store'),
+  '@fde2e/len-llm/assistant-stream': import.meta.resolve('@fde2e/len-llm/assistant-stream'),
+  '@fde2e/len-session/surface': import.meta.resolve('@fde2e/len-session/surface'),
+  '@fde2e/len-token-meter/client': import.meta.resolve('@fde2e/len-token-meter/client'),
+  '@fde2e/len-util-values': import.meta.resolve('@fde2e/len-util-values'),
 })
 const scope = new Context()
 try {

@@ -1,7 +1,7 @@
 /** Session-local object references used by the Chat Inspector's detail tree. */
 
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { ObservableSnapshot } from '@fde2e/len-client-store'
 
 /**
  * Inspector-owned coordinates read from DOM attributes or Chat's string-keyed snapshots.

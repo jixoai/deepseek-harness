@@ -1,8 +1,8 @@
 /** On-demand official-plugin catalog for explicit product-use needs. */
 import { readFile } from 'node:fs/promises'
 import type { Context } from '@deepseek-ai/cordis'
-import { BUNDLED_SKILL_RANK, type SkillCandidate } from '@deepseek-ai/dsh-skill'
-import type { BundleInfo } from '@deepseek-ai/dsh-plugin-manager/types'
+import { BUNDLED_SKILL_RANK, type SkillCandidate } from '@fde2e/len-skill'
+import type { BundleInfo } from '@fde2e/len-plugin-manager/types'
 
 /** Shipped optional plugins only; no arbitrary install target is accepted.
  * @param bundle - a profile bundle as the plugin manager reports it.

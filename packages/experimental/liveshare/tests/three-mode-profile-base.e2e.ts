@@ -17,7 +17,7 @@ import { join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { execa } from 'execa'
 import { describe, expect, it } from 'vitest'
-import { resolveExampleLaunch } from '@deepseek-ai/dsh-loader-smoke'
+import { resolveExampleLaunch } from '@fde2e/len-loader-smoke'
 
 const dshBinScript = fileURLToPath(new URL('../../../../apps/cli/src/bin.ts', import.meta.url))
 const tsconfigPath = fileURLToPath(new URL('../../../../tsconfig.json', import.meta.url))
@@ -91,8 +91,8 @@ describe('three-mode acceptance: real-profile base', () => {
       await writeFile(join(profileDir, 'package.json'), JSON.stringify({
         name: 'dsh-profile-headless',
         private: true,
-        dependencies: { '@deepseek-ai/dsh-experimental-liveshare': 'workspace:^' },
-        dsh: { profile: { bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-headless'] } },
+        dependencies: { '@fde2e/len-experimental-liveshare': 'workspace:^' },
+        dsh: { profile: { bundles: ['@fde2e/len-base', '@fde2e/len-headless'] } },
       }, undefined, 2) + '\n')
       await writeFile(join(profileDir, 'cordis.patch.yml'), [
         '- id: llm-deepseek',

@@ -4,10 +4,10 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium, type Browser, type BrowserContext } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
-import { createAssistantMessage, createUserMessage } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { createSettlementMessage } from '@deepseek-ai/dsh-subagent/src/continuation-messages.ts'
-import type { SubagentStopReason } from '@deepseek-ai/dsh-subagent'
+import { createAssistantMessage, createUserMessage } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
+import { createSettlementMessage } from '@fde2e/len-subagent/src/continuation-messages.ts'
+import type { SubagentStopReason } from '@fde2e/len-subagent'
 import {
   acknowledgeReloadConnectionLoss, assertFixtureInventory, captureStableAria, compareOrRefreshGolden,
   launchWebScaffold, watchConsole, webSnapshotMode,

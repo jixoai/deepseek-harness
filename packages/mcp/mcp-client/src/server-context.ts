@@ -1,12 +1,12 @@
 /**
  * Publish connection-owned MCP resources and literal server instructions.
  *
- * @module @deepseek-ai/dsh-mcp-client
+ * @module @fde2e/len-mcp-client
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { McpResourceProvider } from '@deepseek-ai/dsh-mcp-resources'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import type { McpResourceProvider } from '@fde2e/len-mcp-resources'
+import type {} from '@fde2e/len-system-prompt'
 
 /** Connection-owned values used by the resource and prompt consumers. */
 export interface ServerContext {

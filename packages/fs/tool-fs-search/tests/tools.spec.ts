@@ -9,25 +9,25 @@
  * formatted-result spill handoff, and the no-background-job invariant.
  * Real-`rg` behavior is pinned separately in integration.spec.ts.
  */
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
 
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
+import { provideWorkingDirectoryFixture } from '@fde2e/len-agent-loop-testkit'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createScope, type Scope } from '@deepseek-ai/dsh-scope'
+import { createScope, type Scope } from '@fde2e/len-scope'
 import { join, sep } from 'node:path'
-import { createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { TOOL_ABORTED_BEFORE_DISPATCH, type ToolExecution, type ToolExecutionToken } from '@deepseek-ai/dsh-tools'
-import { SubprocessRuntime } from '@deepseek-ai/dsh-subprocess'
-import type { SubprocessCollectedOutputs, SubprocessHandle, SubprocessOutcome, SubprocessOutputRead, SubprocessOutputReader, SubprocessSpawnSpec } from '@deepseek-ai/dsh-subprocess'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+import { createUserMessage, ToolCallId } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
+import SystemPrompt, { renderPrompt } from '@fde2e/len-system-prompt'
+import ToolRuntime, { TOOL_ABORTED_BEFORE_DISPATCH, type ToolExecution, type ToolExecutionToken } from '@fde2e/len-tools'
+import { SubprocessRuntime } from '@fde2e/len-subprocess'
+import type { SubprocessCollectedOutputs, SubprocessHandle, SubprocessOutcome, SubprocessOutputRead, SubprocessOutputReader, SubprocessSpawnSpec } from '@fde2e/len-subprocess'
+import { MAX_TIMER_DELAY_MS } from '@fde2e/len-timeout'
 import { rgPath } from '@vscode/ripgrep'
-import { SpillLocator, SpillStore } from '@deepseek-ai/dsh-spill'
-import type { SaveTextSpill, SpillRef } from '@deepseek-ai/dsh-spill'
-import * as ToolFsSearch from '@deepseek-ai/dsh-tool-fs-search'
+import { SpillLocator, SpillStore } from '@fde2e/len-spill'
+import type { SaveTextSpill, SpillRef } from '@fde2e/len-spill'
+import * as ToolFsSearch from '@fde2e/len-tool-fs-search'
 import {
   buildGlobCommand,
   buildGrepCommand,
@@ -42,9 +42,9 @@ import {
   runRipgrep,
   sampleAcrossTopLevel,
   toWorkdirRelative,
-} from '@deepseek-ai/dsh-tool-fs-search'
+} from '@fde2e/len-tool-fs-search'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

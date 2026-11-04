@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-api-remote-access",
+  "name": "@fde2e/len-api-remote-access",
   "description": "Method-level Remote access control for non-owner Peers and the per-Peer access snapshot",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -41,11 +41,11 @@
   "dsh": {
     "client": {
       "external": [
-        "@deepseek-ai/dsh-api-gateway/client"
+        "@fde2e/len-api-gateway/client"
       ],
       "inject": [
-        "@deepseek-ai/dsh-api-gateway",
-        "@deepseek-ai/dsh-client-ui-renderer"
+        "@fde2e/len-api-gateway",
+        "@fde2e/len-client-ui-renderer"
       ],
       "platform": "web"
     }
@@ -67,7 +67,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "zod": "4.4.3"
   },
   "peerDependencies": {
@@ -75,11 +75,11 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
-    "@deepseek-ai/dsh-host-webserver": "workspace:*",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*"
+    "@fde2e/len-api-gateway": "workspace:*",
+    "@fde2e/len-client-connection": "workspace:*",
+    "@fde2e/len-client-ui-renderer": "workspace:*",
+    "@fde2e/len-client-ui-slots": "workspace:*",
+    "@fde2e/len-host-webserver": "workspace:*",
+    "@fde2e/len-typert-registry": "workspace:*"
   }
 }

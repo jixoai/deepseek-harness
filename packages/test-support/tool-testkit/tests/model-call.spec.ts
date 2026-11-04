@@ -1,8 +1,8 @@
 /** Model-call fixtures preserve raw JSON input and reject incomplete execution. */
 import { Context } from '@deepseek-ai/cordis'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import Tools, { type ToolExecutor } from '@deepseek-ai/dsh-tools'
+import { ToolCallId } from '@fde2e/len-llm'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import Tools, { type ToolExecutor } from '@fde2e/len-tools'
 import { expect, it, onTestFinished } from 'vitest'
 import { executeModelToolFixture } from '../src/index.ts'
 

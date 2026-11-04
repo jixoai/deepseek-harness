@@ -13,7 +13,7 @@ description: "Timer 包装函数的 TypeScript 返回类型为 void，释放后�
 
 调用 `.dispose()` 或释放所属 fiber 会取消待执行的工作，并使后续包装函数调用不再执行。此前已释放的 throttle 包装函数仍可能执行前沿调用；debounce 包装函数在释放后已经会忽略调用。
 
-`@deepseek-ai/dsh-cordis-client-runner/client` 入口不再导出 `ClientTimerService`。runner 安装的是 `@deepseek-ai/cordis-plugin-timer` 中的共享 `TimerService`。
+`@fde2e/len-cordis-client-runner/client` 入口不再导出 `ClientTimerService`。runner 安装的是 `@deepseek-ai/cordis-plugin-timer` 中的共享 `TimerService`。
 
 ## 迁移
 

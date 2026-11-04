@@ -1,7 +1,7 @@
 /** Schedule creation, prompt prefill, and editing through the shipped Web composition. */
 import { chromium } from 'playwright'
 import { expect, it } from 'vitest'
-import type { ScheduleTiming } from '@deepseek-ai/dsh-schedule/client'
+import type { ScheduleTiming } from '@fde2e/len-schedule/client'
 import { launchWebScaffold, watchConsole } from './scaffold.ts'
 import { writeComposerDraft } from './support.ts'
 

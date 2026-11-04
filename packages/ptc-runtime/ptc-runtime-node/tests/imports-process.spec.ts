@@ -16,7 +16,7 @@ async function customBootstrap(asyncDecisions = false) {
   const directory = await mkdtemp(join(tmpdir(), 'dsh-ptc-import-runner-'))
   onTestFinished(async () => { await rm(directory, { recursive: true, force: true }) })
   const bootstrapPath = join(directory, 'runner.mjs')
-  const subprocess = dirname(fileURLToPath(import.meta.resolve('@deepseek-ai/dsh-subprocess/package.json')))
+  const subprocess = dirname(fileURLToPath(import.meta.resolve('@fde2e/len-subprocess/package.json')))
   await writeFile(bootstrapPath, `
     import { openInheritedControlChannel } from ${JSON.stringify(pathToFileURL(join(subprocess, 'src/control.ts')).href)};
     import { runNodeMain } from ${JSON.stringify(new URL('../src/process.ts', import.meta.url).href)};

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-plugin-manager",
+  "name": "@fde2e/len-client-ui-plugin-manager",
   "description": "Plugin management for the dsh web client: the sidebar Plugins panel installs, enables, disables, retries, and composes installed plugin packages",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -37,10 +37,10 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-remotes",
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-layout",
-        "@deepseek-ai/dsh-client-ui-sidebar"
+        "@fde2e/len-api-remotes",
+        "@fde2e/len-client-locale",
+        "@fde2e/len-client-ui-layout",
+        "@fde2e/len-client-ui-sidebar"
       ],
       "platform": "web"
     }
@@ -55,26 +55,26 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-api-remote-access": "workspace:*",
-    "@deepseek-ai/dsh-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
-    "@deepseek-ai/dsh-client-test-runtime": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-layout": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-sidebar": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
-    "@deepseek-ai/dsh-official-bundles": "workspace:*",
-    "@deepseek-ai/dsh-package-manifest": "workspace:*",
+    "@fde2e/len-api-remote-access": "workspace:*",
+    "@fde2e/len-api-remotes": "workspace:*",
+    "@fde2e/len-client-locale": "workspace:*",
+    "@fde2e/len-client-store": "workspace:*",
+    "@fde2e/len-client-test-runtime": "workspace:*",
+    "@fde2e/len-client-ui-layout": "workspace:*",
+    "@fde2e/len-client-ui-primitives": "workspace:*",
+    "@fde2e/len-client-ui-renderer": "workspace:*",
+    "@fde2e/len-client-ui-sidebar": "workspace:*",
+    "@fde2e/len-client-ui-slots": "workspace:*",
+    "@fde2e/len-official-bundles": "workspace:*",
+    "@fde2e/len-package-manifest": "workspace:*",
     "@testing-library/react": "^16.3.3",
     "clsx": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@deepseek-ai/dsh-util-crypto": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-settings": "workspace:*",
-    "@deepseek-ai/dsh-plugin-manager": "workspace:*",
-    "@deepseek-ai/dsh-client-product-analytics": "workspace:*"
+    "@fde2e/len-util-crypto": "workspace:*",
+    "@fde2e/len-client-ui-settings": "workspace:*",
+    "@fde2e/len-plugin-manager": "workspace:*",
+    "@fde2e/len-client-product-analytics": "workspace:*"
   },
   "files": [
     "locale/*.json",
@@ -87,9 +87,9 @@
     "lib/typert.remote-client.d.ts"
   ],
   "dependencies": {
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@fde2e/len-timeout": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "4.4.3",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*"
   }
 }

@@ -1,5 +1,5 @@
 /**
- * @deepseek-ai/dsh-web-app — the browser-surface bundle's runtime glue plugin
+ * @fde2e/len-web-app — the browser-surface bundle's runtime glue plugin
  * plus the bundle patch (`cordis.patch.yml`, declared by the `dsh.bundle.patch`
  * manifest field). The plugin owns the browser-surface glue: it resolves
  * the built frontend dist (workspace knowledge of this bundle, never user
@@ -9,7 +9,7 @@
  * `publicUrl` replaces the published bind-address URL. Non-loopback
  * HTTP binds trigger an exposure warning. App command-line values arrive
  * through the `webStartup` service expressions in the bundle patch.
- * @module @deepseek-ai/dsh-web-app
+ * @module @fde2e/len-web-app
  */
 
 import { spawn, type ChildProcess } from 'node:child_process'
@@ -17,14 +17,14 @@ import { createRequire } from 'node:module'
 import { dirname, join } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { auditStartupEntries } from '@deepseek-ai/dsh-app-boot'
-import type {} from '@deepseek-ai/dsh-client-connection'
-import * as FrontendStatic from '@deepseek-ai/dsh-host-frontend-static'
-import { bindUrlHost, isLoopbackHost } from '@deepseek-ai/dsh-host-webserver'
-import { launchedThroughSsh, launchEnvironmentOf } from '@deepseek-ai/dsh-launch-environment'
-import { scrubbedParentEnv } from '@deepseek-ai/dsh-subprocess'
+import { auditStartupEntries } from '@fde2e/len-app-boot'
+import type {} from '@fde2e/len-client-connection'
+import * as FrontendStatic from '@fde2e/len-host-frontend-static'
+import { bindUrlHost, isLoopbackHost } from '@fde2e/len-host-webserver'
+import { launchedThroughSsh, launchEnvironmentOf } from '@fde2e/len-launch-environment'
+import { scrubbedParentEnv } from '@fde2e/len-subprocess'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import type {} from '@deepseek-ai/dsh-shell-env'
+import type {} from '@fde2e/len-shell-env'
 import { parsePublicUrl } from './public-url.ts'
 
 /** The Web GUI this process serves, provided by the `web-runtime` row. */
@@ -123,10 +123,10 @@ try {
 function resolveDistIndex(): string {
   const require = createRequire(import.meta.url)
   try {
-    return join(dirname(require.resolve('@deepseek-ai/dsh-web-frontend/package.json')), 'dist', 'index.html')
+    return join(dirname(require.resolve('@fde2e/len-web-frontend/package.json')), 'dist', 'index.html')
   } catch {
     /* v8 ignore next 2 -- reachable only when the frontend package is absent from the checkout */
-    throw new Error('web-app: @deepseek-ai/dsh-web-frontend is not resolvable from this composition')
+    throw new Error('web-app: @fde2e/len-web-frontend is not resolvable from this composition')
   }
 }
 

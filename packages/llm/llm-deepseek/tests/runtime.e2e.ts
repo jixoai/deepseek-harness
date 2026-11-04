@@ -1,4 +1,4 @@
-import * as Protocol from '@deepseek-ai/dsh-llm-deepseek'
+import * as Protocol from '@fde2e/len-llm-deepseek'
 import { readFileSync } from 'node:fs'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
@@ -7,12 +7,12 @@ import { randomBytes } from 'node:crypto'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import LlmRuntime, { createToolResultMessage, createUserMessage, ToolCallId, ReasoningEffortId, createMessage, createSystemMessage } from '@deepseek-ai/dsh-llm'
-import type { Message, ToolSchema } from '@deepseek-ai/dsh-llm'
-import AttachmentStore, { AttachmentId, ImageVariantId } from '@deepseek-ai/dsh-attachment'
-import LocalAttachments from '@deepseek-ai/dsh-attachment-local'
+import AgentRegistry from '@fde2e/len-agent'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import LlmRuntime, { createToolResultMessage, createUserMessage, ToolCallId, ReasoningEffortId, createMessage, createSystemMessage } from '@fde2e/len-llm'
+import type { Message, ToolSchema } from '@fde2e/len-llm'
+import AttachmentStore, { AttachmentId, ImageVariantId } from '@fde2e/len-attachment'
+import LocalAttachments from '@fde2e/len-attachment-local'
 import type {
   ImageAttachmentLimits,
   ImageAttachmentRef,
@@ -20,14 +20,14 @@ import type {
   RequestImageAttachment,
   SaveImageAttachment,
   StoredImageAttachment,
-} from '@deepseek-ai/dsh-attachment'
-import { LocalCredentialProvider } from '@deepseek-ai/dsh-credentials-local'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
-import * as PluginPackageInventoryDeepSeek from '@deepseek-ai/dsh-plugin-package-inventory-deepseek'
-import * as SessionLogDeepSeek from '@deepseek-ai/dsh-session-log-deepseek'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import type { Options as Config } from '@deepseek-ai/dsh-llm-deepseek'
+} from '@fde2e/len-attachment'
+import { LocalCredentialProvider } from '@fde2e/len-credentials-local'
+import SessionStore, { SessionId } from '@fde2e/len-session'
+import DeepSeekLlmApiExtensionRegistry from '@fde2e/len-deepseek-llm-api-extensions'
+import * as PluginPackageInventoryDeepSeek from '@fde2e/len-plugin-package-inventory-deepseek'
+import * as SessionLogDeepSeek from '@fde2e/len-session-log-deepseek'
+import * as LlmDeepSeek from '@fde2e/len-llm-deepseek-api-key'
+import type { Options as Config } from '@fde2e/len-llm-deepseek'
 import type { WireRequest } from '../src/wire-types.ts'
 import { assemble, type AssembledResult } from './assemble.ts'
 

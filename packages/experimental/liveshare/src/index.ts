@@ -1,6 +1,6 @@
 /**
  * Owner-side Liveshare Web bundle plugin.
- * @module @deepseek-ai/dsh-experimental-liveshare
+ * @module @fde2e/len-experimental-liveshare
  */
 
 export { apply, name, inject, type Config } from './host/share-host.ts'

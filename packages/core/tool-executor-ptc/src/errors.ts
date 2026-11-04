@@ -1,5 +1,5 @@
 /** Program execution failures reported by PTC. @module */
-import { HarnessError } from '@deepseek-ai/dsh-llm'
+import { HarnessError } from '@fde2e/len-llm'
 
 /**
  * Thrown by `run_code` when the program run itself failed — a program

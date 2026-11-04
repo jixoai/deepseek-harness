@@ -1,7 +1,7 @@
 /** Production Owner reader behind the privacy artifact fixture's neutral bridge. */
 import { Context } from '@deepseek-ai/cordis'
-import RemoteAccessService from '@deepseek-ai/dsh-api-remote-access'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
+import RemoteAccessService from '@fde2e/len-api-remote-access'
+import TypertRegistry from '@fde2e/len-typert-registry'
 import { createViewerAccessPolicy } from '../src/host/viewer-access-policy.ts'
 import { createViewerReadService } from '../src/host/viewer-read.ts'
 import type { ForkShareState } from '../src/host/fork-policy.ts'

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-deliverables",
+  "name": "@fde2e/len-client-ui-deliverables",
   "description": "Changed-files card with per-file comparison tabs, delivery cards, and clickable final-response file references for Web",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,16 +29,16 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-remotes",
-        "@deepseek-ai/dsh-client-connection",
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-chat",
-        "@deepseek-ai/dsh-client-ui-conversation",
-        "@deepseek-ai/dsh-client-ui-renderer",
-        "@deepseek-ai/dsh-client-ui-sidebar-right",
-        "@deepseek-ai/dsh-client-ui-tool",
-        "@deepseek-ai/dsh-client-ui-settings",
-        "@deepseek-ai/dsh-client-ui-context-menu"
+        "@fde2e/len-api-remotes",
+        "@fde2e/len-client-connection",
+        "@fde2e/len-client-locale",
+        "@fde2e/len-client-ui-chat",
+        "@fde2e/len-client-ui-conversation",
+        "@fde2e/len-client-ui-renderer",
+        "@fde2e/len-client-ui-sidebar-right",
+        "@fde2e/len-client-ui-tool",
+        "@fde2e/len-client-ui-settings",
+        "@fde2e/len-client-ui-context-menu"
       ],
       "platform": "web"
     }
@@ -52,37 +52,37 @@
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
-    "@deepseek-ai/dsh-client-test-runtime": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-chat": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-conversation": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-dockkit": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-sidebar-right": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
+    "@fde2e/len-api-remotes": "workspace:*",
+    "@fde2e/len-client-connection": "workspace:*",
+    "@fde2e/len-client-locale": "workspace:*",
+    "@fde2e/len-client-store": "workspace:*",
+    "@fde2e/len-client-test-runtime": "workspace:*",
+    "@fde2e/len-client-ui-chat": "workspace:*",
+    "@fde2e/len-client-ui-conversation": "workspace:*",
+    "@fde2e/len-client-ui-dockkit": "workspace:*",
+    "@fde2e/len-client-ui-renderer": "workspace:*",
+    "@fde2e/len-client-ui-sidebar-right": "workspace:*",
+    "@fde2e/len-client-ui-slots": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "react": "^18.2.0",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-session-query": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-tool": "workspace:*",
-    "@deepseek-ai/dsh-tool-present": "workspace:*",
-    "@deepseek-ai/dsh-workspace-changes": "workspace:*",
-    "@deepseek-ai/dsh-api-session-controller": "workspace:*",
-    "@deepseek-ai/dsh-util-values": "workspace:*",
-    "@deepseek-ai/dsh-util-workspace-path": "workspace:*",
-    "@deepseek-ai/dsh-api-workspace-files": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-settings": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-context-menu": "workspace:*"
+    "@fde2e/len-client-ui-primitives": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-system-prompt": "workspace:*",
+    "@fde2e/len-session-query": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-client-ui-tool": "workspace:*",
+    "@fde2e/len-tool-present": "workspace:*",
+    "@fde2e/len-workspace-changes": "workspace:*",
+    "@fde2e/len-api-session-controller": "workspace:*",
+    "@fde2e/len-util-values": "workspace:*",
+    "@fde2e/len-util-workspace-path": "workspace:*",
+    "@fde2e/len-api-workspace-files": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-fs-local": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-client-ui-settings": "workspace:*",
+    "@fde2e/len-client-ui-context-menu": "workspace:*"
   },
   "files": [
     "locale/*.json",
@@ -91,6 +91,6 @@
     "lib/types/**/*.d.ts"
   ],
   "dependencies": {
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*"
   }
 }

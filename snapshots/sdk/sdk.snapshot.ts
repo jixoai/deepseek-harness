@@ -1,7 +1,7 @@
 /**
  * Keyless snapshot coverage for the TypeScript SDK path: each scenario spawns
  * the real `dsh --profile sdk` or `sdk-minimal` runtime through
- * `@deepseek-ai/dsh-sdk-client`, drives recorded turns and standalone commands over stdio JSON-RPC,
+ * `@fde2e/len-sdk-client`, drives recorded turns and standalone commands over stdio JSON-RPC,
  * and pins the SDK `RunResult`, the complete notification stream, and the
  * persisted session logs. Replay serves recorded model
  * responses via `llm-replay` (`cordis.snapshot.yml`); `DSH_SNAPSHOT=record`
@@ -54,7 +54,7 @@ import {
   type NormalizeContext,
   type SnapshotManifest,
   type WorkspaceSnapshotEntry,
-} from '@deepseek-ai/dsh-session-snapshot'
+} from '@fde2e/len-session-snapshot'
 import {
   DeepSeekHarness,
   type HarnessNotification,
@@ -63,9 +63,9 @@ import {
   type SdkPromptContentBlock,
   type SdkUserQuestionRequest,
   type SdkUserQuestionResult,
-} from '@deepseek-ai/dsh-sdk-client'
-import { SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
-import { deriveReplayScript, parseSessionLog } from '@deepseek-ai/dsh-llm-replay'
+} from '@fde2e/len-sdk-client'
+import { SESSION_FORMAT_VERSION } from '@fde2e/len-session'
+import { deriveReplayScript, parseSessionLog } from '@fde2e/len-llm-replay'
 
 const corpusRoot = fileURLToPath(new URL('../', import.meta.url))
 

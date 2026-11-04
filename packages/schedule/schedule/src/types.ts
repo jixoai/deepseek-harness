@@ -1,14 +1,14 @@
 /**
  * Durable and model-facing Schedule value types.
- * @module @deepseek-ai/dsh-schedule/types
+ * @module @fde2e/len-schedule/types
  */
 
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
-import type { Branded } from '@deepseek-ai/dsh-brand'
-import type {} from '@deepseek-ai/dsh-typert-protocol'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { MessageId } from '@fde2e/len-llm/brand'
+import type { Branded } from '@fde2e/len-brand'
+import type {} from '@fde2e/len-typert-protocol'
 // Type-only: the Workspace registry's archive-admission family map this plugin merges `schedule` into.
-import type {} from '@deepseek-ai/dsh-workspace/types'
+import type {} from '@fde2e/len-workspace/types'
 
 /** Stable globally unique reminder identity. */
 export type ScheduleId = Branded<'ScheduleId'>
@@ -594,7 +594,7 @@ export interface ScheduleExecutionPendingResult {
 /** Task state after a manual delivery, or a non-mutating miss or refusal. */
 export type ScheduleRunResult = ScheduleCatalogEntry | ScheduleNotFoundResult | ScheduleExecutionPendingResult
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@fde2e/len-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** The Schedule request failed validation before it was stored. */
     'schedule/input-invalid': { readonly code: ScheduleInputErrorCode }
@@ -609,14 +609,14 @@ export interface ScheduleDeleteInactiveResult {
   readonly deleted: number
 }
 
-declare module '@deepseek-ai/dsh-workspace/types' {
+declare module '@fde2e/len-workspace/types' {
   interface SessionActivityKindMap {
     /** A scheduled follow-up for this session is still active. */
     schedule: true
   }
 }
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@fde2e/len-session/types' {
   interface SessionEventMap {
     /**
      * Historical version-1 Session-local reminder mutation. New tasks live in Host storage;

@@ -3,13 +3,13 @@ description: "Preset-scoped scheduled task tools (schedule_create, schedule_list
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-schedule
+# @fde2e/len-tool-schedule
 
 English | [中文](README.zh.md)
 
 ## Summary
 
-Use `dsh-tool-schedule` to let an agent create, list, view, update, and delete Host scheduled tasks through `schedule_create`, `schedule_list`, `schedule_view`, and `schedule_edit`. A scheduled task delivers its instruction to a target Session at each occurrence of its recurrence rule. The package registers the four tools in the preset or Agent scope that mounts it; `minimal` keeps none. Tasks belong to the Host: the tools read and change any task by id, and only the delivery target names a Session. The Host `@deepseek-ai/dsh-schedule` service owns storage, scheduling, and delivery. Failures return one structured error code.
+Use `dsh-tool-schedule` to let an agent create, list, view, update, and delete Host scheduled tasks through `schedule_create`, `schedule_list`, `schedule_view`, and `schedule_edit`. A scheduled task delivers its instruction to a target Session at each occurrence of its recurrence rule. The package registers the four tools in the preset or Agent scope that mounts it; `minimal` keeps none. Tasks belong to the Host: the tools read and change any task by id, and only the delivery target names a Session. The Host `@fde2e/len-schedule` service owns storage, scheduling, and delivery. Failures return one structured error code.
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ Add the row below to a preset's plugin list when that preset's agents should man
 
 ### When to choose it
 
-Choose it for any preset whose agents need to schedule future work, and load `@deepseek-ai/dsh-schedule` in the same process: this package is only the model-facing consumer of that service. A preset that should stay capability-poor — `minimal` is the shipped example — omits the row, and its agents see no Schedule tool at all.
+Choose it for any preset whose agents need to schedule future work, and load `@fde2e/len-schedule` in the same process: this package is only the model-facing consumer of that service. A preset that should stay capability-poor — `minimal` is the shipped example — omits the row, and its agents see no Schedule tool at all.
 
 ### User authorization
 
@@ -47,7 +47,7 @@ One shared `tool:schedule` system-prompt section requires explicit user authoriz
 ### Minimal configuration
 
 ```yaml
-- name: '@deepseek-ai/dsh-tool-schedule'
+- name: '@fde2e/len-tool-schedule'
 ```
 
 The package declares no `Config` fields. It injects `ctx.tools` and `ctx.systemPrompt` and registers the four tools and their shared guidance once the scope resolves the Host `ctx.schedule` service, so a composition that keeps that service off mounts no Schedule tool. Each call acts for the Agent that dispatched it.
@@ -143,7 +143,7 @@ Append-only; newly visible content follows the reusable request prefix and does 
 - **Every tool reaches every Host task** — `schedule_list` returns tasks that other Sessions created, and `schedule_view` and `schedule_edit` read, change, and delete any task by id. The authorization sentence guides model behavior; the Host does not validate user intent or add ownership checks per Session. A preset whose agents must not manage Host tasks omits the row.
 - **Deletion does not retract a queued message** — a message that the Host already delivered stays in the target Session inbox after a `schedule_edit` delete.
 - **Task timing belongs to the Host** — the tools expose no clock source, delivery retry, or execution result; those limits are the service's.
-- **Every tool refuses a delegated caller** — each of the four tools reads the calling Agent's delegation depth before it calls the service and returns `{ code: 'subagent_session', message: 'A delegated subagent cannot use scheduled tasks.' }` when that depth is above zero. The guard lives in this package and reads `delegationDepthOf` from `@deepseek-ai/dsh-subagent`, the same accounting the delegation cap enforces, so it holds under any preset that mounts the tools.
+- **Every tool refuses a delegated caller** — each of the four tools reads the calling Agent's delegation depth before it calls the service and returns `{ code: 'subagent_session', message: 'A delegated subagent cannot use scheduled tasks.' }` when that depth is above zero. The guard lives in this package and reads `delegationDepthOf` from `@fde2e/len-subagent`, the same accounting the delegation cap enforces, so it holds under any preset that mounts the tools.
 - **A delegated child still sees the four tools** — a child joins its parent's preset, so its requests carry the four schemas and their token cost; the refusal above, not schema omission, keeps the child from managing tasks.
 
 <a id="dev-note"></a>

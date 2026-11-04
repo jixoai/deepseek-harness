@@ -3,21 +3,21 @@ import { mkdtemp, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import TypertGatewayService from '@deepseek-ai/dsh-api-gateway'
-import type { RemoteAccessBinding } from '@deepseek-ai/dsh-api-remote-access'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import * as JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
-import type { PeerId, PeerScope, Principal } from '@deepseek-ai/dsh-typert-protocol'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
+import AgentLoop from '@fde2e/len-agent-loop'
+import { mountAgentLoopTestDependencies } from '@fde2e/len-agent-loop-testkit'
+import TypertGatewayService from '@fde2e/len-api-gateway'
+import type { RemoteAccessBinding } from '@fde2e/len-api-remote-access'
+import { SessionId } from '@fde2e/len-session'
+import * as JsonlSessionPersistence from '@fde2e/len-session-persistence-jsonl'
+import SubagentRuntime from '@fde2e/len-subagent'
+import type { PeerId, PeerScope, Principal } from '@fde2e/len-typert-protocol'
+import TypertRegistry from '@fde2e/len-typert-registry'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { MockAdapter } from '../../../core/agent-loop/tests/mock-adapter.ts'
 import { mountWorkingDirectoryFixture } from '../../../subagent/subagent/tests/working-directory-fixture.ts'
 import { createSessionTestController } from './test-remote.ts'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@fde2e/len-typert-protocol' {
   interface PrincipalMap {
     /** Test-only non-owner caller shared by the access specs. */
     'test-guest': { readonly kind: 'test-guest'; readonly guest: string }

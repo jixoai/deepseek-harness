@@ -1,22 +1,22 @@
 /**
- * @deepseek-ai/dsh-harness-dev-context — model context for an agent that can
+ * @fde2e/len-harness-dev-context — model context for an agent that can
  * inspect and extend the DeepSeek Harness serving its Web GUI. It registers
  * path- and URL-free prompt sections and states the current implementation
  * checkout and Web GUI URL as runtime context, so a process started from
  * another checkout, port, or installation leaves the system prompt unchanged.
  * A Session whose admitted prompt holds the paragraphs that embedded those
  * values keeps them verbatim, so resuming it never rewrites its logged prompt.
- * @module @deepseek-ai/dsh-harness-dev-context
+ * @module @fde2e/len-harness-dev-context
  */
 
 import { fileURLToPath } from 'node:url'
 import type { Context } from '@deepseek-ai/cordis'
 import { z as zod } from 'zod'
-import type {} from '@deepseek-ai/dsh-agent'
-import type {} from '@deepseek-ai/dsh-web-app'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-session-projection'
-import type { AssembleContext } from '@deepseek-ai/dsh-system-prompt'
+import type {} from '@fde2e/len-agent'
+import type {} from '@fde2e/len-web-app'
+import type { SessionEvent } from '@fde2e/len-session'
+import type {} from '@fde2e/len-session-projection'
+import type { AssembleContext } from '@fde2e/len-system-prompt'
 
 /** Stable Cordis plugin name. */
 export const name = 'harness-dev-context'

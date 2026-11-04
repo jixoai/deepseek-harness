@@ -6,10 +6,10 @@ import { join } from 'node:path'
 import type { Browser, Locator, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import type { ReplayOverrideDoc } from '@deepseek-ai/dsh-llm-replay'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { formatSessionReferenceMention } from '@deepseek-ai/dsh-session-reference'
-import { formatQuoteText } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { ReplayOverrideDoc } from '@fde2e/len-llm-replay'
+import { SessionId } from '@fde2e/len-session'
+import { formatSessionReferenceMention } from '@fde2e/len-session-reference'
+import { formatQuoteText } from '@fde2e/len-client-ui-primitives'
 import {
   assertFixtureInventory, captureStableAria, compareOrRefreshGolden, launchWebScaffold,
   parseSeedFixture, renderSeedFixture, seedSession, selectedSessionFixture, watchConsole, webSnapshotMode,

@@ -154,7 +154,7 @@ export function verifyProductUse(
     if (target !== undefined) scanSource(target, reach)
     else if (pkg !== undefined && !/\.(?:json|css|svg|ya?ml)$/.test(specifier)) {
       failures.push(`${display(from)}: ${specifier} does not resolve to workspace source; add a tsconfig.base.json paths mapping`)
-    } else if (pkg === undefined && specifier.startsWith('@deepseek-ai/dsh-')) {
+    } else if (pkg === undefined && specifier.startsWith('@fde2e/len-')) {
       failures.push(`${display(from)}: unknown workspace package ${specifier}`)
     }
   }

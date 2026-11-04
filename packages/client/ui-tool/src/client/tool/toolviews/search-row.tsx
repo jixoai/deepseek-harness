@@ -1,6 +1,6 @@
 import type { Context } from '@deepseek-ai/cordis'
-import { IconSearchOutlineRegular } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
+import { IconSearchOutlineRegular } from '@fde2e/len-client-ui-primitives'
+import type { PropsLocale } from '@fde2e/len-client-ui-slots'
 import type { ToolCallViewProps } from '../../contract/slots.ts'
 import { searchCardModel } from '../models/search-card-model.ts'
 import { toolRowModel } from '../models/tool-call-model.ts'

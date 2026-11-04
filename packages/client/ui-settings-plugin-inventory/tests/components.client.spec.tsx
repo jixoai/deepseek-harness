@@ -1,10 +1,10 @@
 // @vitest-environment jsdom
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { ClientEntryState } from '@deepseek-ai/dsh-client-modules/client'
-import type { PluginEntryId } from '@deepseek-ai/dsh-api-remotes/client'
+import { createSnapshotStore } from '@fde2e/len-client-store'
+import type { ClientEntryState } from '@fde2e/len-client-modules/client'
+import type { PluginEntryId } from '@fde2e/len-api-remotes/client'
 import { Context } from '@deepseek-ai/cordis'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-test-runtime'
+import { LocaleRuntime } from '@fde2e/len-client-locale/client'
+import { bindSnapshotSelector } from '@fde2e/len-client-test-runtime'
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { PluginInventorySettingsTab } from '../src/client/PluginInventorySettingsTab.tsx'
@@ -59,8 +59,8 @@ const SNAPSHOT = {
     { entryId: 'timer', moduleName: 'cordis:timer', enabled: true, fiberPhase: 'active' },
     { entryId: '8a1b2c3d', moduleName: '@deepseek-ai/cordis-plugin-hmr', enabled: true, fiberPhase: 'active' },
     { entryId: 'unobserved', moduleName: '@fixture/unobserved-name', enabled: true, fiberPhase: null },
-    { entryId: 'bash-host', moduleName: '@deepseek-ai/dsh-tool-bash', enabled: false, fiberPhase: null },
-    { entryId: 'fs-host', moduleName: '@deepseek-ai/dsh-tool-fs', enabled: false, fiberPhase: null },
+    { entryId: 'bash-host', moduleName: '@fde2e/len-tool-bash', enabled: false, fiberPhase: null },
+    { entryId: 'fs-host', moduleName: '@fde2e/len-tool-fs', enabled: false, fiberPhase: null },
     { entryId: 'dormant', moduleName: '@fixture/dormant', enabled: false, fiberPhase: null },
   ],
   agentPresets: [
@@ -69,8 +69,8 @@ const SNAPSHOT = {
       name: '标准模式',
       isDefault: true,
       rows: [
-        { entryId: 'bash', moduleName: '@deepseek-ai/dsh-tool-bash', enabled: true, fiberPhase: 'active' },
-        { entryId: 'fs', moduleName: '@deepseek-ai/dsh-tool-fs', enabled: true, fiberPhase: null },
+        { entryId: 'bash', moduleName: '@fde2e/len-tool-bash', enabled: true, fiberPhase: 'active' },
+        { entryId: 'fs', moduleName: '@fde2e/len-tool-fs', enabled: true, fiberPhase: null },
         {
           entryId: 'pwsh',
           moduleName: '@fixture/pwsh',
@@ -87,9 +87,9 @@ const SNAPSHOT = {
       id: 'ptc',
       isDefault: false,
       rows: [
-        { entryId: 'bash', moduleName: '@deepseek-ai/dsh-tool-bash', enabled: true, fiberPhase: null },
-        { entryId: 'bash-fork', moduleName: '@deepseek-ai/dsh-tool-bash', enabled: true, fiberPhase: null },
-        { entryId: 'fs', moduleName: '@deepseek-ai/dsh-tool-fs', enabled: 'conditional', fiberPhase: null },
+        { entryId: 'bash', moduleName: '@fde2e/len-tool-bash', enabled: true, fiberPhase: null },
+        { entryId: 'bash-fork', moduleName: '@fde2e/len-tool-bash', enabled: true, fiberPhase: null },
+        { entryId: 'fs', moduleName: '@fde2e/len-tool-fs', enabled: 'conditional', fiberPhase: null },
       ],
     },
     { id: 'shattered', name: '坏预设', isDefault: false, broken: 'the composition file is missing', rows: [] },
@@ -109,9 +109,9 @@ const presetToggle = (): HTMLElement => screen.getByRole('button', { name: en.pr
 describe('PluginInventorySettingsTab', () => {
   it.each(['global', 'preset'])('shortens package and module name fallbacks in the %s inventory', async (scope) => {
     const names = [
-      ['@deepseek-ai/dsh-tool-subagent', 'tool-subagent'],
-      ['@deepseek-ai/dsh-host-web', 'web'],
-      ['@deepseek-ai/dsh-client-tabs', 'tabs'],
+      ['@fde2e/len-tool-subagent', 'tool-subagent'],
+      ['@fde2e/len-host-web', 'web'],
+      ['@fde2e/len-client-tabs', 'tabs'],
       ['@deepseek-ai/cordis-plugin-hmr', 'hmr'],
       ['cordis:timer', 'timer'],
       ['@acme/dsh-sidebar/navigation', 'sidebar/navigation'],
@@ -143,7 +143,7 @@ describe('PluginInventorySettingsTab', () => {
       }
     }
     fireEvent.change(screen.getByRole('searchbox', { name: en.search }), {
-      target: { value: '@deepseek-ai/dsh-tool-subagent' },
+      target: { value: '@fde2e/len-tool-subagent' },
     })
     expect(screen.getAllByRole('listitem')).toHaveLength(2)
     expect(screen.getAllByRole('button', { name: /^tool-subagent, include:short-0-/ })).toHaveLength(2)
@@ -400,8 +400,8 @@ describe('PluginInventorySettingsTab', () => {
         id: 'same-module',
         isDefault: true,
         rows: [
-          { entryId: 'tool-subagent-primary', moduleName: '@deepseek-ai/dsh-tool-subagent', enabled: true, fiberPhase: null },
-          { entryId: longId, moduleName: '@deepseek-ai/dsh-tool-subagent', enabled: false, fiberPhase: null },
+          { entryId: 'tool-subagent-primary', moduleName: '@fde2e/len-tool-subagent', enabled: true, fiberPhase: null },
+          { entryId: longId, moduleName: '@fde2e/len-tool-subagent', enabled: false, fiberPhase: null },
         ],
       }],
     })

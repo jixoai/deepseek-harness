@@ -12,18 +12,18 @@
  * source here, and the Client entries that import them (the Remote assembly and the remote-access
  * plugin) are answered through `vi.doMock` before the roster is first imported.
  *
- * @module @deepseek-ai/dsh-experimental-liveshare/tests/viewer-page
+ * @module @fde2e/len-experimental-liveshare/tests/viewer-page
  */
 
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { Context } from '@deepseek-ai/cordis'
-import { AppWebEntry } from '@deepseek-ai/dsh-client-web'
-import { createClientModuleSystem } from '@deepseek-ai/dsh-client-modules/client'
+import { AppWebEntry } from '@fde2e/len-client-web'
+import { createClientModuleSystem } from '@fde2e/len-client-modules/client'
 import type {
   ClientBundleRegistration, ClientModuleCreateOptions, ClientModuleLoaderTarget, WebBootGraph,
-} from '@deepseek-ai/dsh-client-modules/client'
+} from '@fde2e/len-client-modules/client'
 import { installViewerCarrier } from '../../liveshare-protocol/src/viewer-carrier.ts'
 import { act } from '@testing-library/react'
 import { afterAll, vi } from 'vitest'
@@ -35,7 +35,7 @@ const workspaceRoot = resolve(testsDir, '../../../..')
 /** Staging parent for generated faces; inside the workspace so their `zod` import resolves. */
 const stagingParent = resolve(testsDir, '../lib')
 /** Package whose Client plugin mounts its own generated Remote face rather than the assembly's. */
-const REMOTE_ACCESS_PACKAGE = '@deepseek-ai/dsh-api-remote-access'
+const REMOTE_ACCESS_PACKAGE = '@fde2e/len-api-remote-access'
 /** Read budget the carrier receives; production pages receive the Relay's configured value. */
 const READ_TIMEOUT_MS = 30_000
 
@@ -54,8 +54,8 @@ afterAll(() => {
 
 /**
  * Generate every Host package's `./remote` face from source, then answer the Remote assembly
- * (`@deepseek-ai/dsh-api-remotes/client`) and the self-mounting remote-access Client plugin
- * (`@deepseek-ai/dsh-api-remote-access/client`) with their own sources whose `/remote` imports name
+ * (`@fde2e/len-api-remotes/client`) and the self-mounting remote-access Client plugin
+ * (`@fde2e/len-api-remote-access/client`) with their own sources whose `/remote` imports name
  * the generated faces.
  * @returns Resolves once the faces are mocked for later dynamic imports.
  */
@@ -75,7 +75,7 @@ async function generateRemoteFaces(): Promise<void> {
     })
   const assemblyFile = join(dir, 'api-remotes-client.ts')
   writeFileSync(assemblyFile, assembly)
-  vi.doMock('@deepseek-ai/dsh-api-remotes/client', () => import(/* @vite-ignore */ assemblyFile))
+  vi.doMock('@fde2e/len-api-remotes/client', () => import(/* @vite-ignore */ assemblyFile))
   const accessFace = faces.get(REMOTE_ACCESS_PACKAGE)
   if (accessFace === undefined) throw new Error(`viewer page: no generated Remote face for ${REMOTE_ACCESS_PACKAGE}`)
   // The plugin's own `/remote` import must name the generated face in its source: module resolution

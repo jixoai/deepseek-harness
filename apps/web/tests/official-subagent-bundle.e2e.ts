@@ -6,11 +6,11 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium, type Browser, type Page } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import { startMockLlmServer, type MockLlmServer } from '@deepseek-ai/dsh-llm-mock-server'
-import { parseSessionHeader } from '@deepseek-ai/dsh-llm-replay'
-import type {} from '@deepseek-ai/dsh-plugin-manager'
-import type {} from '@deepseek-ai/dsh-tools'
-import type {} from '@deepseek-ai/dsh-subagent'
+import { startMockLlmServer, type MockLlmServer } from '@fde2e/len-llm-mock-server'
+import { parseSessionHeader } from '@fde2e/len-llm-replay'
+import type {} from '@fde2e/len-plugin-manager'
+import type {} from '@fde2e/len-tools'
+import type {} from '@fde2e/len-subagent'
 import {
   assertFinalWorkspaceSnapshot, assertFixtureInventory, captureExpandedTurnProcessAria, compareOrRefreshGolden,
   fixtureUserPrompts, launchWebScaffold, seedSession, selectedSessionFixture, watchConsole, webSnapshotMode, type WebScaffold,
@@ -20,7 +20,7 @@ import { connectFreshWorkspace, newEnglishPage, saveFailureShot } from './suppor
 const DIR = fileURLToPath(new URL('../../../snapshots/web/official-subagent-bundle', import.meta.url))
 const FIXTURE = join(DIR, 'session.v4.jsonl')
 const PACKAGE = fileURLToPath(new URL('../../../packages/subagent/subagent-claude-code', import.meta.url))
-const BUNDLE = '@deepseek-ai/dsh-subagent-claude-code'
+const BUNDLE = '@fde2e/len-subagent-claude-code'
 const RESPONSE = 'OFFICIAL_SUBAGENT_OK'
 const MODE = webSnapshotMode()
 

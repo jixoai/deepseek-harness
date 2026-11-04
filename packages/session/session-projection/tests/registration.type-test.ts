@@ -1,10 +1,10 @@
 /** Compile-time registration checks for local state inference and client view declarations. */
 import { expectTypeOf } from 'vitest'
 import { z } from 'zod'
-import type { Session } from '@deepseek-ai/dsh-session'
-import type { ProjectionDefinition, ProjectionHandle, SessionProjectionRegistry } from '@deepseek-ai/dsh-session-projection'
+import type { Session } from '@fde2e/len-session'
+import type { ProjectionDefinition, ProjectionHandle, SessionProjectionRegistry } from '@fde2e/len-session-projection'
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@fde2e/len-session-projection/types' {
   interface SessionProjectionMap {
     'type-test/label': { label: string }
   }

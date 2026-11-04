@@ -1,9 +1,9 @@
 /** Capability-driven transcript updates through the real pi-ai serializers and shared runtime. */
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import LlmRuntime, { createAssistantMessage, createDeveloperMessage, createMessage, createUserMessage, ReasoningEffortId } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, ToolSchema, ToolUpdate } from '@deepseek-ai/dsh-llm'
-import * as LlmPiAi from '@deepseek-ai/dsh-llm-pi-ai'
+import LlmRuntime, { createAssistantMessage, createDeveloperMessage, createMessage, createUserMessage, ReasoningEffortId } from '@fde2e/len-llm'
+import type { GenerateOptions, ToolSchema, ToolUpdate } from '@fde2e/len-llm'
+import * as LlmPiAi from '@fde2e/len-llm-pi-ai'
 import type { Api, Model } from '@earendil-works/pi-ai'
 import { resolveProfiles } from '../src/config.ts'
 import { memoryAuth } from './auth-double.ts'

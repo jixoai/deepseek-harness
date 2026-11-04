@@ -7,7 +7,7 @@
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
   "license": "MIT",
-  "name": "@deepseek-ai/dsh-client-ui-plugin-recommendations",
+  "name": "@fde2e/len-client-ui-plugin-recommendations",
   "description": "Official plugin card body with catalog text and enabling",
   "repository": {
     "type": "git",
@@ -31,10 +31,10 @@
     "client": {
       "platform": "web",
       "inject": [
-        "@deepseek-ai/dsh-api-remotes",
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-plugin-manager",
-        "@deepseek-ai/dsh-client-ui-action-cards"
+        "@fde2e/len-api-remotes",
+        "@fde2e/len-client-locale",
+        "@fde2e/len-client-ui-plugin-manager",
+        "@fde2e/len-client-ui-action-cards"
       ]
     }
   },
@@ -43,22 +43,22 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-api-remotes": "workspace:*",
+    "@fde2e/len-client-locale": "workspace:*",
+    "@fde2e/len-client-ui-slots": "workspace:*",
+    "@fde2e/len-client-ui-primitives": "workspace:*",
     "react": "^18.2.0",
-    "@deepseek-ai/dsh-plugin-recommendations": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-plugin-manager": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-package-manifest": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-action-cards": "workspace:*",
-    "@deepseek-ai/dsh-action-cards": "workspace:*",
+    "@fde2e/len-plugin-recommendations": "workspace:*",
+    "@fde2e/len-client-store": "workspace:*",
+    "@fde2e/len-client-ui-plugin-manager": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
+    "@fde2e/len-package-manifest": "workspace:*",
+    "@fde2e/len-client-ui-action-cards": "workspace:*",
+    "@fde2e/len-action-cards": "workspace:*",
     "zod": "4.4.3",
-    "@deepseek-ai/dsh-client-test-runtime": "workspace:*"
+    "@fde2e/len-client-test-runtime": "workspace:*"
   },
   "files": [
     "locale/*.json",

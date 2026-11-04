@@ -1,20 +1,20 @@
-import { executeToolFixture, executeModelToolFixture } from '@deepseek-ai/dsh-tool-testkit'
+import { executeToolFixture, executeModelToolFixture } from '@fde2e/len-tool-testkit'
 import { mountWorkingDirectoryFixture } from './working-directory-fixture.ts'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createUserMessage, ToolCallId, type ContentBlock, type GenerateOptions } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import type {} from '@deepseek-ai/dsh-system-prompt'
+import { createUserMessage, ToolCallId, type ContentBlock, type GenerateOptions } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
+import AgentLoop from '@fde2e/len-agent-loop'
+import { mountAgentLoopTestDependencies } from '@fde2e/len-agent-loop-testkit'
+import type {} from '@fde2e/len-system-prompt'
 import SubagentRuntime, {
   type SubagentStartRequest,
   type SubagentActivation,
   type SubagentResult,
-} from '@deepseek-ai/dsh-subagent'
-import type { ObjectJsonSchema } from '@deepseek-ai/dsh-tools'
-import { RUN_CODE_NAME } from '@deepseek-ai/dsh-tools'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tool-testkit'
+} from '@fde2e/len-subagent'
+import type { ObjectJsonSchema } from '@fde2e/len-tools'
+import { RUN_CODE_NAME } from '@fde2e/len-tools'
+import { defineContentToolFixture } from '@fde2e/len-tool-testkit'
 import { MockAdapter, textResponse, toolCallResponse } from '../../../core/agent-loop/tests/mock-adapter.ts'
 import { TestSessionQuery } from './test-session-query.ts'
 import { mountLocalActivations, startTestActivation } from './local-activation.ts'
@@ -56,7 +56,7 @@ async function setup(script: Script, options: SetupOptions = {}) {
     ctx.provide('ptcRuntime', {
       language: 'typescript',
       isolation: 'test',
-      resolve: (request: import('@deepseek-ai/dsh-ptc-runtime').PtcRunRequest) => ({ ...request, cwd: request.cwd ?? process.cwd(), timeoutMs: 120_000 }),
+      resolve: (request: import('@fde2e/len-ptc-runtime').PtcRunRequest) => ({ ...request, cwd: request.cwd ?? process.cwd(), timeoutMs: 120_000 }),
       run: options.codeRun ?? (() => Promise.resolve({ logs: [] })),
     } as never)
   }

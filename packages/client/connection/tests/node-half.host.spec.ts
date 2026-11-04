@@ -6,9 +6,9 @@ import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
 import type { AddressInfo } from 'node:net'
 import type { IncomingMessage, ServerResponse } from 'node:http'
-import type { AttachmentStore } from '@deepseek-ai/dsh-attachment'
-import type { CredentialProvider } from '@deepseek-ai/dsh-credentials'
-import type { IndexInjection, WebServer, WebRoute, WebUpgradeRoute } from '@deepseek-ai/dsh-host-webserver'
+import type { AttachmentStore } from '@fde2e/len-attachment'
+import type { CredentialProvider } from '@fde2e/len-credentials'
+import type { IndexInjection, WebServer, WebRoute, WebUpgradeRoute } from '@fde2e/len-host-webserver'
 import {
   API_PATH,
   RpcId,

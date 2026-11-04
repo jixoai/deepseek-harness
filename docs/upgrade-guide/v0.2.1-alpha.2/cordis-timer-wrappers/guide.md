@@ -13,7 +13,7 @@ The functions returned by `ctx.throttle()` and `ctx.debounce()` now declare a `v
 
 Calling `.dispose()` or disposing the owning fiber cancels pending work and makes later wrapper calls inert. A disposed throttle wrapper previously could still execute a leading call; debounce wrappers already ignored calls after disposal.
 
-The `@deepseek-ai/dsh-cordis-client-runner/client` entry no longer exports `ClientTimerService`. The runner installs the shared `TimerService` from `@deepseek-ai/cordis-plugin-timer`.
+The `@fde2e/len-cordis-client-runner/client` entry no longer exports `ClientTimerService`. The runner installs the shared `TimerService` from `@deepseek-ai/cordis-plugin-timer`.
 
 ## Migration
 

@@ -6,8 +6,8 @@ import {
   type GenerateOptions,
   type LlmResolvedModelInfo,
   type StreamChunk,
-} from '@deepseek-ai/dsh-llm'
-import type {} from '@deepseek-ai/dsh-tools'
+} from '@fde2e/len-llm'
+import type {} from '@fde2e/len-tools'
 
 const HIGH = ReasoningEffortId('high')
 const OFF = ReasoningEffortId('off')

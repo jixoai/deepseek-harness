@@ -1,13 +1,13 @@
 /** Public plugin management records shared with clients. */
-import type { Branded } from '@deepseek-ai/dsh-brand'
-import type { PluginLocalizedMeta } from '@deepseek-ai/dsh-package-manifest'
-import type { PluginInventoryEntry } from '@deepseek-ai/dsh-host-plugin-inventory/types'
-export type { PluginEntryId } from '@deepseek-ai/dsh-host-plugin-inventory/types'
-import type { PluginEntryId } from '@deepseek-ai/dsh-host-plugin-inventory/types'
-import type {} from '@deepseek-ai/dsh-typert-protocol'
-import type { DetailFailureReason } from '@deepseek-ai/dsh-plugin-detail/types'
+import type { Branded } from '@fde2e/len-brand'
+import type { PluginLocalizedMeta } from '@fde2e/len-package-manifest'
+import type { PluginInventoryEntry } from '@fde2e/len-host-plugin-inventory/types'
+export type { PluginEntryId } from '@fde2e/len-host-plugin-inventory/types'
+import type { PluginEntryId } from '@fde2e/len-host-plugin-inventory/types'
+import type {} from '@fde2e/len-typert-protocol'
+import type { DetailFailureReason } from '@fde2e/len-plugin-detail/types'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@fde2e/len-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** The profile lists no such bundle, or its directory cannot be resolved. */
     'plugin-manager/unknown-bundle': { readonly name: string }

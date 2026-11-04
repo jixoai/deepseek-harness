@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-typert-registry",
+  "name": "@fde2e/len-typert-registry",
   "description": "Runtime registry for generated package reflection and Zod schemas",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -60,6 +60,6 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*"
   }
 }

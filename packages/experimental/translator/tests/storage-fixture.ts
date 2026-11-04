@@ -1,11 +1,11 @@
 /** Loader-owned anonymous provider, live Sessions, and restartable real JSONL storage. */
 import type { Context, Fiber } from '@deepseek-ai/cordis'
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
-import { boot } from '@deepseek-ai/dsh-app-boot'
-import { createAssistantMessage, createUserMessage } from '@deepseek-ai/dsh-llm'
-import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@deepseek-ai/dsh-session'
-import type { SessionHandle } from '@deepseek-ai/dsh-session-persistence'
-import * as JsonlPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import { boot } from '@fde2e/len-app-boot'
+import { createAssistantMessage, createUserMessage } from '@fde2e/len-llm'
+import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionSeq, type Session, type SessionEvent, type SessionHeader } from '@fde2e/len-session'
+import type { SessionHandle } from '@fde2e/len-session-persistence'
+import * as JsonlPersistence from '@fde2e/len-session-persistence-jsonl'
 import { once } from 'node:events'
 import { mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http'
@@ -95,16 +95,16 @@ export async function storageFixture(cleanups: Array<() => Promise<void>>, optio
   const origin = `http://127.0.0.1:${address.port}`, path = join(root, 'cordis.yml'), storedRoot = join(root, 'sessions')
   const config = { bingEndpoint: `${origin}/bing`, googleEndpoint: `${origin}/google`, timeoutMs: 60_000 }
   await writeFile(path, JSON.stringify([
-    ...options.withSessions === false ? [] : [{ id: 'sessions', name: '@deepseek-ai/dsh-session' }],
+    ...options.withSessions === false ? [] : [{ id: 'sessions', name: '@fde2e/len-session' }],
     ...options.withPersistence === false ? [] : [
-      { id: 'storage', name: '@deepseek-ai/dsh-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
+      { id: 'storage', name: '@fde2e/len-session-persistence-jsonl', config: { root: storedRoot, compression: 'none' } },
     ],
-    { id: 'translator', name: '@deepseek-ai/dsh-experimental-translator', config },
+    { id: 'translator', name: '@fde2e/len-experimental-translator', config },
   ]))
   const start = () => boot('translator-storage', path, [], (host) => {
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-session', SessionStore], ['@deepseek-ai/dsh-session-persistence-jsonl', JsonlPersistence],
-      ['@deepseek-ai/dsh-experimental-translator', Translator],
+      ['@fde2e/len-session', SessionStore], ['@fde2e/len-session-persistence-jsonl', JsonlPersistence],
+      ['@fde2e/len-experimental-translator', Translator],
     ])
     const loader: ModuleLoaderV2 = {
       version: 'v2', loadCache: new Map(),

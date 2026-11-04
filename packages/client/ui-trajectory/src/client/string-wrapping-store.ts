@@ -1,6 +1,6 @@
 import {
   createSnapshotStore, type SnapshotStore,
-} from '@deepseek-ai/dsh-client-store'
+} from '@fde2e/len-client-store'
 
 /**
  * Create the browser-wide default for expanded JSON strings.

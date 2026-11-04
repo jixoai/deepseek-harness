@@ -54,7 +54,7 @@ const ASSET_GLOBS = [
   'node_modules/**/package.json',
   'node_modules/**/*.json',
   // Plugin display metadata resolves these package-owned images at runtime.
-  'node_modules/@deepseek-ai/dsh-*/**/*.{svg,png,jpg,jpeg,webp}',
+  'node_modules/@fde2e/len-*/**/*.{svg,png,jpg,jpeg,webp}',
   // Package-owned Markdown includes runtime skill instructions.
   'node_modules/**/*.md',
   'node_modules/**/*.dylib',
@@ -66,9 +66,9 @@ const ASSET_GLOBS = [
   'node_modules/**/*.yaml',
   'node_modules/**/*.yml',
   // web-app builds this path dynamically, so pkg cannot discover the static frontend.
-  'node_modules/@deepseek-ai/dsh-web-frontend/dist/**/*',
+  'node_modules/@fde2e/len-web-frontend/dist/**/*',
   // The diagnosis provider extracts its PowerShell script for an external interpreter.
-  'node_modules/@deepseek-ai/dsh-sandbox-windows-acl/assets/**/*',
+  'node_modules/@fde2e/len-sandbox-windows-acl/assets/**/*',
 ]
 
 const PLATFORMS = ['linux', 'macos', 'win'] as const
@@ -422,7 +422,7 @@ class SingleExeBuild {
       const inputs = { version, target: `${target.platform === 'macos' ? 'mac' : target.platform}-${target.arch}`, office, pnpm }
       const identity = createHash('sha256').update(JSON.stringify({ ...inputs, primaryLock })).digest('hex')
       await writeFile(join(resources, 'downloads.json'), JSON.stringify({ ...inputs, identity }, undefined, 2) + '\n')
-      await prepareOfficeSkillAssets(join(this.staging, 'node_modules/@deepseek-ai/dsh-skill-office/assets'), join(resources, 'office-skills'))
+      await prepareOfficeSkillAssets(join(this.staging, 'node_modules/@fde2e/len-skill-office/assets'), join(resources, 'office-skills'))
     }
     if (target.platform !== 'macos') return [product, ripgrep, resources]
     const spawnHelper = `${product}-spawn-helper`

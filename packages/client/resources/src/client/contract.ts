@@ -14,11 +14,11 @@
  * consumer names the protocol as a type argument and receives the owner's value
  * type without importing the owner's runtime.
  */
-import type { RemoteFailure, RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { ResourceProtocolMap } from '@deepseek-ai/dsh-client-ui-slots'
+import type { RemoteFailure, RemoteResult } from '@fde2e/len-typert-protocol'
+import type { ObservableSnapshot } from '@fde2e/len-client-store'
+import type { ResourceProtocolMap } from '@fde2e/len-client-ui-slots'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@fde2e/len-client-ui-slots' {
   interface GlobalStandardProps {
     /** Live value of one address, resolved through the provider registered for its protocol. */
     useResource: UseResource

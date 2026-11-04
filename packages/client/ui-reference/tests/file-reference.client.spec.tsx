@@ -1,10 +1,10 @@
 // @vitest-environment jsdom
-import { contextMenuHook } from '@deepseek-ai/dsh-client-test-runtime'
+import { contextMenuHook } from '@fde2e/len-client-test-runtime'
 import { cleanup, fireEvent, render } from '@testing-library/react'
 import type { ComponentProps } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
-import { SessionId } from '@deepseek-ai/dsh-session/types'
+import { makeTranslate } from '@fde2e/len-client-test-runtime'
+import { SessionId } from '@fde2e/len-session/types'
 import { FileReference, FolderReference } from '../src/client/FileReference.tsx'
 import { en } from '../src/client/locales.ts'
 

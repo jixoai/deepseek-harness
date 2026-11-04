@@ -3,7 +3,7 @@ description: "The web search and fetch settings page on the dsh web client's Plu
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-client-ui-settings-web-search
+# @fde2e/len-client-ui-settings-web-search
 
 English | [中文](README.zh.md)
 

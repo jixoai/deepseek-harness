@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-cot-translation-bundle",
+  "name": "@fde2e/len-experimental-cot-translation-bundle",
   "description": "Experimental machine translation of expanded reasoning",
   "version": "0.2.2-alpha.3",
   "icon": "./icon.svg",
@@ -34,8 +34,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-experimental-translator": "workspace:*",
-    "@deepseek-ai/dsh-experimental-client-ui-cot-translation": "workspace:*"
+    "@fde2e/len-experimental-translator": "workspace:*",
+    "@fde2e/len-experimental-client-ui-cot-translation": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

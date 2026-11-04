@@ -10,8 +10,8 @@
  */
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { SlotTestRuntime } from '@deepseek-ai/dsh-client-test-runtime'
+import { LocaleRuntime } from '@fde2e/len-client-locale/client'
+import { SlotTestRuntime } from '@fde2e/len-client-test-runtime'
 import { afterEach, describe, expect, it, onTestFinished } from 'vitest'
 import { cleanup } from '@testing-library/react'
 import { en, NS, zh } from '../src/client/locales.ts'

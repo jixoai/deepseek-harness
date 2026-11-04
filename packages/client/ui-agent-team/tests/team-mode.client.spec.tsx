@@ -2,8 +2,8 @@
 
 import { afterEach, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen } from '@testing-library/react'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
+import { SessionId } from '@fde2e/len-session'
+import { makeTranslate } from '@fde2e/len-client-test-runtime'
 import { TeamModeToggle, type TeamModeToggleProps } from '../src/client/TeamModeToggle.tsx'
 import { de, en, es, fr, ja, pt, ru, zh } from '../src/client/locales.ts'
 

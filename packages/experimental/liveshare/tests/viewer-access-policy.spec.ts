@@ -9,10 +9,10 @@ import RemoteAccessService, {
   type RemoteAccessAction,
   type RemoteAccessGrant,
   type RemoteAccessResource,
-} from '@deepseek-ai/dsh-api-remote-access'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
-import { WorkspaceId } from '@deepseek-ai/dsh-workspace'
+} from '@fde2e/len-api-remote-access'
+import { SessionId } from '@fde2e/len-session'
+import TypertRegistry from '@fde2e/len-typert-registry'
+import { WorkspaceId } from '@fde2e/len-workspace'
 import type { ForkPromptDecision, ForkRecord } from '../src/host/fork-registry.ts'
 import type { ForkShareState, ViewerSessionMode } from '../src/host/fork-policy.ts'
 import {
@@ -21,7 +21,7 @@ import {
   readerWriteRefusal,
   type ViewerAccessFacts,
 } from '../src/host/viewer-access-policy.ts'
-import type { RemoteAccessEndpoint } from '@deepseek-ai/dsh-api-remote-access/types'
+import type { RemoteAccessEndpoint } from '@fde2e/len-api-remote-access/types'
 import type { ShareablePluginCatalog, ViewerPluginPolicy } from '../src/host/viewer-capability-types.ts'
 import { shareViewerPrincipal } from '../src/host/viewer-principal.ts'
 

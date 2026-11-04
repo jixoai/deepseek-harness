@@ -1,7 +1,7 @@
 /** Desktop renderer analytics sender; browser applications have no collection capability. */
 import { Service, type Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-api-gateway/client'
-export type {} from '@deepseek-ai/dsh-client-product-analytics/remote'
+import type {} from '@fde2e/len-api-gateway/client'
+export type {} from '@fde2e/len-client-product-analytics/remote'
 import type { ProductEvent, ProductEventMap } from '../events.ts'
 export type {
   AnalyticsPreset, EntryAnalyticsRegion, ProductEvent, ProductEventMap,

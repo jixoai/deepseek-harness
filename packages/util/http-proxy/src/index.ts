@@ -12,7 +12,7 @@
  * Five functions, one per way a caller needs the policy — install it, build a dispatcher with its
  * own transport choices, ask how to send one request, build a child's environment, and strip the
  * ambient one for a replay.
- * @module @deepseek-ai/dsh-http-proxy
+ * @module @fde2e/len-http-proxy
  */
 
 export {

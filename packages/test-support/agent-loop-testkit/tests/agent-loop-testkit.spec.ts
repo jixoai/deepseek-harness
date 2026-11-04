@@ -3,11 +3,11 @@ import { mkdtemp, realpath, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import FsLocal from '@deepseek-ai/dsh-fs-local'
-import { PtcRuntime, type PtcRunRequest, type PtcRunResult, type PtcRunSpec } from '@deepseek-ai/dsh-ptc-runtime'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import { Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
-import { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
+import FsLocal from '@fde2e/len-fs-local'
+import { PtcRuntime, type PtcRunRequest, type PtcRunResult, type PtcRunSpec } from '@fde2e/len-ptc-runtime'
+import { createUserMessage } from '@fde2e/len-llm'
+import { Session, SessionId, SessionSeq } from '@fde2e/len-session'
+import { renderPrompt } from '@fde2e/len-system-prompt'
 import {
   createInboxStub,
   mountAgentLoopTestDependencies,

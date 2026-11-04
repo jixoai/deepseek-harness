@@ -1,15 +1,15 @@
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry, { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
+import AgentRegistry, { agentEvents, type Agent } from '@fde2e/len-agent'
 import UserQuestionService, {
   TIMED_WAIT_PARAMETER,
   UserQuestionError,
   type AskUserQuestionAnswer,
   type AskUserQuestionRequest,
-} from '@deepseek-ai/dsh-user-questions'
-import { createToolResultMessage, createUserMessage, ToolCallId, type ToolSchema, type UserMessage } from '@deepseek-ai/dsh-llm'
-import { Session, SessionId, SESSION_FORMAT_VERSION, TOOL_OUTCOME_UNKNOWN } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+} from '@fde2e/len-user-questions'
+import { createToolResultMessage, createUserMessage, ToolCallId, type ToolSchema, type UserMessage } from '@fde2e/len-llm'
+import { Session, SessionId, SESSION_FORMAT_VERSION, TOOL_OUTCOME_UNKNOWN } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
 
 interface QuestionAnswerer {
   ask(request: AskUserQuestionRequest): Promise<AskUserQuestionAnswer>

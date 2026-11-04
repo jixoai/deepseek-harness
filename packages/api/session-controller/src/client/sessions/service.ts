@@ -1,15 +1,15 @@
 /** Client catalog and source-labelled ownership of exact Session generations. */
 import type { Context, Fiber } from '@deepseek-ai/cordis'
-import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
-import { SessionSeq, type SessionId } from '@deepseek-ai/dsh-session/types'
-import { workspaceTitleOf } from '@deepseek-ai/dsh-util-workspace-path'
-import type { WorkspaceId } from '@deepseek-ai/dsh-workspace/types'
+import type { SubagentAddress } from '@fde2e/len-subagent/client'
+import { SessionSeq, type SessionId } from '@fde2e/len-session/types'
+import { workspaceTitleOf } from '@fde2e/len-util-workspace-path'
+import type { WorkspaceId } from '@fde2e/len-workspace/types'
 import { SESSION_SEARCH_RESULT_LIMIT } from '../../types.ts'
-import type { SessionProjectionSummaryValues } from '@deepseek-ai/dsh-session-projection/types'
+import type { SessionProjectionSummaryValues } from '@fde2e/len-session-projection/types'
 import {
   createSnapshotStore, notifySubscribers, type ObservableSnapshot, type SnapshotStore,
-} from '@deepseek-ai/dsh-client-store'
-import type { RemoteFailure, RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+} from '@fde2e/len-client-store'
+import type { RemoteFailure, RemoteResult } from '@fde2e/len-typert-protocol'
 import type { SessionEventSource } from '../contract/events.ts'
 import type { SessionFace } from '../contract/session.ts'
 import type {

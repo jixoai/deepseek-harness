@@ -10,8 +10,8 @@ import {
   readProfileManifest,
   resolveProfileDir,
   writeProfileManifest,
-} from '@deepseek-ai/dsh-app-boot'
-import { PROFILE_TEMPLATES } from '@deepseek-ai/dsh-official-bundles'
+} from '@fde2e/len-app-boot'
+import { PROFILE_TEMPLATES } from '@fde2e/len-official-bundles'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { execa } from 'execa'
 import { initializeProfileFromDefault } from '../src/profile-boot.ts'

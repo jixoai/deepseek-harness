@@ -9,7 +9,7 @@ import {
   type ClientModuleLoader, type ClientModuleLoaderTarget, type DshWindow,
 } from '../src/client/index.ts'
 
-const MODULES_ID = '@deepseek-ai/dsh-client-modules'
+const MODULES_ID = '@fde2e/len-client-modules'
 
 // The host composes graph rows and batch descriptors as app-directory-relative
 // browser references, so these fixtures carry the same form.

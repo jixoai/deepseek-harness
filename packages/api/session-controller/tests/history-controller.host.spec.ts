@@ -1,6 +1,6 @@
 import { Context } from '@deepseek-ai/cordis'
-import { createMessage } from '@deepseek-ai/dsh-llm'
-import SessionStore, { SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
+import { createMessage } from '@fde2e/len-llm'
+import SessionStore, { SessionId, SessionSeq } from '@fde2e/len-session'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { HistoryController } from '../src/history/controller.ts'
 import { WebController } from '../src/web/controller.ts'

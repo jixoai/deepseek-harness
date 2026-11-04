@@ -1,30 +1,30 @@
-import { ToolExecutionPipeline } from '@deepseek-ai/dsh-tools/pipeline'
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import { ToolExecutionPipeline } from '@fde2e/len-tools/pipeline'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { afterAll, afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import AgentRegistry, { agentEvents } from '@deepseek-ai/dsh-agent'
-import type { Agent, AgentStatus, Inbox } from '@deepseek-ai/dsh-agent'
-import GoalService, { GoalId } from '@deepseek-ai/dsh-goal'
-import type { GoalRef } from '@deepseek-ai/dsh-goal'
-import { createUserMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
-import type { MessageSource } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import AgentRegistry, { agentEvents } from '@fde2e/len-agent'
+import type { Agent, AgentStatus, Inbox } from '@fde2e/len-agent'
+import GoalService, { GoalId } from '@fde2e/len-goal'
+import type { GoalRef } from '@fde2e/len-goal'
+import { createUserMessage, ToolCallId } from '@fde2e/len-llm'
+import type { MessageSource } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
 import SessionStore, {
   SESSION_FORMAT_VERSION,
   Session,
   SessionId,
   SessionLogOffset,
-} from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import type { ToolExecutionResult } from '@deepseek-ai/dsh-tools'
-import * as toolGoal from '@deepseek-ai/dsh-tool-goal'
-import { unsupportedModel, createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
+} from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
+import type { ToolExecutionResult } from '@fde2e/len-tools'
+import * as toolGoal from '@fde2e/len-tool-goal'
+import { unsupportedModel, createInboxStub } from '@fde2e/len-agent-loop-testkit'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

@@ -1,9 +1,9 @@
 /** Directory subscriptions and read settlements through the face's real store actions. */
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import type { Mock } from 'vitest'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { WorkspaceDirectoryListing } from '@deepseek-ai/dsh-api-workspace-files/types'
+import { RemoteError } from '@fde2e/len-client-test-runtime'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { WorkspaceDirectoryListing } from '@fde2e/len-api-workspace-files/types'
 import { canOpenOf, createList, filesFace } from '../src/client/face.ts'
 import type { FilesInjected, TabTypeRegistry, WorkspaceFilesListRemote } from '../src/client/face.ts'
 import { childPath } from '../src/client/store.ts'
@@ -11,8 +11,8 @@ import { createFilesStore } from '../src/client/store.ts'
 import type { DirLevel } from '../src/client/store.ts'
 import { DirectoryNode } from '../src/client/directory-node.ts'
 import { scriptedList } from './scripted-list.client.ts'
-import { sessionFileAddress } from '@deepseek-ai/dsh-util-workspace-path'
-import type { PaneId, TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import { sessionFileAddress } from '@fde2e/len-util-workspace-path'
+import type { PaneId, TabId } from '@fde2e/len-client-ui-dockkit'
 
 const SESSION = 's-1' as SessionId
 const ROOT = '/work/app'

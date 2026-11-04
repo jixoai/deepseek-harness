@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-token-meter",
+  "name": "@fde2e/len-token-meter",
   "description": "Replay-aware token measurement service (ctx.tokenMeter) for the DeepSeek Harness",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -39,25 +39,25 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-compaction": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-llm-retry": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-compaction-image-offload": "workspace:*"
+    "@fde2e/len-compaction": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-llm-retry": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-compaction-image-offload": "workspace:*"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-util-values": "workspace:*",
+    "@fde2e/len-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "4.4.3"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-compaction": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-llm-retry": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-compaction-image-offload": "workspace:*"
+    "@fde2e/len-compaction": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-llm-retry": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-compaction-image-offload": "workspace:*"
   }
 }

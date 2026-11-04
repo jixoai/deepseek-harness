@@ -1,5 +1,5 @@
 - insert:
     - id: worktree
-      name: '@deepseek-ai/dsh-experimental-worktree'
+      name: '@fde2e/len-experimental-worktree'
     - id: tool-worktree
-      name: '@deepseek-ai/dsh-experimental-tool-worktree'
+      name: '@fde2e/len-experimental-tool-worktree'

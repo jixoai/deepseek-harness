@@ -5,14 +5,14 @@
  * postmortem 0001.
  */
 
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import WebRuntime from '@deepseek-ai/dsh-web'
-import * as toolWeb from '@deepseek-ai/dsh-tool-web'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
+import WebRuntime from '@fde2e/len-web'
+import * as toolWeb from '@fde2e/len-tool-web'
 
 describe('dsh-tool-web real-load-path guard', () => {
   it('has no default export and keeps name/inject/Config through unwrapExports', () => {

@@ -7,17 +7,17 @@
  * imports no provider.
  *
  * Namespace plugin (named exports, no default export).
- * @module @deepseek-ai/dsh-tool-lsp
+ * @module @fde2e/len-tool-lsp
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@fde2e/len-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import { LspError } from '@deepseek-ai/dsh-lsp'
-import type {} from '@deepseek-ai/dsh-lsp'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { defineTool } from '@fde2e/len-tools'
+import { LspError } from '@fde2e/len-lsp'
+import type {} from '@fde2e/len-lsp'
+import { MAX_TIMER_DELAY_MS } from '@fde2e/len-timeout'
+import { assertNever } from '@fde2e/len-util-values'
 import {
   DEFAULT_MAX_LOCATIONS,
   DEFAULT_MAX_RESULT_CHARS,

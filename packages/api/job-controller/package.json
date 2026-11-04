@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-api-job-controller",
+  "name": "@fde2e/len-api-job-controller",
   "description": "Job Remote observation stream and the reference-counted client job-output service",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -41,11 +41,11 @@
   "dsh": {
     "client": {
       "external": [
-        "@deepseek-ai/dsh-api-gateway/client"
+        "@fde2e/len-api-gateway/client"
       ],
       "inject": [
-        "@deepseek-ai/dsh-api-gateway",
-        "@deepseek-ai/dsh-client-connection"
+        "@fde2e/len-api-gateway",
+        "@fde2e/len-client-connection"
       ],
       "platform": "web"
     }
@@ -67,7 +67,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "4.4.3"
   },
@@ -76,13 +76,13 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-store": "workspace:*",
-    "@deepseek-ai/dsh-jobs": "workspace:*",
-    "@deepseek-ai/dsh-jobs-local": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-api-gateway": "workspace:*",
+    "@fde2e/len-client-connection": "workspace:*",
+    "@fde2e/len-client-store": "workspace:*",
+    "@fde2e/len-jobs": "workspace:*",
+    "@fde2e/len-jobs-local": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-typert-registry": "workspace:*"
   }
 }

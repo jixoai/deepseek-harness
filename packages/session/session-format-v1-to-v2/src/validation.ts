@@ -4,14 +4,14 @@ import {
   SessionFormatUnsupportedMigrationError,
   sessionFormatCount,
   sessionFormatSafeInteger,
-} from '@deepseek-ai/dsh-session-format'
+} from '@fde2e/len-session-format'
 import type {
   SessionFormatArtifact,
   SessionFormatHeader,
   SessionFormatJsonObject,
   SessionFormatJsonValue,
-} from '@deepseek-ai/dsh-session-format'
-import { assertReleasedArtifactRelationships } from '@deepseek-ai/dsh-session-format-v0-to-v1'
+} from '@fde2e/len-session-format'
+import { assertReleasedArtifactRelationships } from '@fde2e/len-session-format-v0-to-v1'
 import { RELEASED_V2_EVENT_DISPOSITIONS } from './dispositions.ts'
 
 const HEADER_REQUIRED = ['version', 'id', 'createdAt', 'isSeeded', 'delegationDepth'] as const

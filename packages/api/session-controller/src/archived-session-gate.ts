@@ -10,9 +10,9 @@
  */
 
 import type { Context, Plugin } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { SessionId } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-workspace'
+import type { Agent } from '@fde2e/len-agent'
+import type { SessionId } from '@fde2e/len-session'
+import type {} from '@fde2e/len-workspace'
 
 /**
  * The gate as a plugin for `ctx.plugin(...)`: it loads once the Agent

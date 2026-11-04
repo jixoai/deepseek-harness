@@ -2,7 +2,7 @@
  * Surface retention selection and the shared log-recorded compaction
  * transaction for automatic open-turn and manual idle-session compaction.
  *
- * @module @deepseek-ai/dsh-compaction-basic/region
+ * @module @fde2e/len-compaction-basic/region
  */
 
 import { randomUUID } from 'node:crypto'
@@ -13,14 +13,14 @@ import {
   compactCheckpointSource,
   toolPairingBalancedAfter,
   toolPairingBalancedBefore,
-} from '@deepseek-ai/dsh-compaction'
-import type { CompactionResult } from '@deepseek-ai/dsh-compaction'
-import type { CommandId } from '@deepseek-ai/dsh-commands/brand'
-import { createUserMessage, errorChain } from '@deepseek-ai/dsh-llm'
-import type { Message, UserMessage } from '@deepseek-ai/dsh-llm'
-import type { TokenMeasurement, TokenMeter } from '@deepseek-ai/dsh-token-meter'
-import { SessionSeq, type Session, type SessionEvent } from '@deepseek-ai/dsh-session'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+} from '@fde2e/len-compaction'
+import type { CompactionResult } from '@fde2e/len-compaction'
+import type { CommandId } from '@fde2e/len-commands/brand'
+import { createUserMessage, errorChain } from '@fde2e/len-llm'
+import type { Message, UserMessage } from '@fde2e/len-llm'
+import type { TokenMeasurement, TokenMeter } from '@fde2e/len-token-meter'
+import { SessionSeq, type Session, type SessionEvent } from '@fde2e/len-session'
+import type { Agent } from '@fde2e/len-agent'
 import { frameSummary } from './summarizer.ts'
 import type { SummarizationInput, SummaryResult } from './summarizer.ts'
 interface RegionDependencies {

@@ -3,7 +3,7 @@ description: "读取用户配置的插件索引的 Host 服务，提供安装状
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-plugin-market
+# @fde2e/len-plugin-market
 
 [English](README.md) | 中文
 

@@ -5,8 +5,8 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { Session, SessionId, SESSION_FORMAT_VERSION } from '@deepseek-ai/dsh-session'
-import * as JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
+import { Session, SessionId, SESSION_FORMAT_VERSION } from '@fde2e/len-session'
+import * as JsonlSessionPersistence from '@fde2e/len-session-persistence-jsonl'
 import {
   runBuiltBenchmarkWorker,
   type BuiltBenchmarkWorkerRun,

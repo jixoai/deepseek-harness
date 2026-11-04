@@ -2,14 +2,14 @@
 
 import { isAbsolute, relative, sep } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
-import { generatedWorktreeName } from '@deepseek-ai/dsh-experimental-worktree'
-import type { CreatedWorktree, CreateWorktreePhase } from '@deepseek-ai/dsh-experimental-worktree'
-import { appendPluginRecord, pluginRecordOf } from '@deepseek-ai/dsh-session'
-import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'
-import type { ProjectionDefinition, ProjectionHandle } from '@deepseek-ai/dsh-session-projection'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type { Agent, PreStepDecision } from '@fde2e/len-agent'
+import { generatedWorktreeName } from '@fde2e/len-experimental-worktree'
+import type { CreatedWorktree, CreateWorktreePhase } from '@fde2e/len-experimental-worktree'
+import { appendPluginRecord, pluginRecordOf } from '@fde2e/len-session'
+import type { Session, SessionEvent } from '@fde2e/len-session'
+import type { ProjectionDefinition, ProjectionHandle } from '@fde2e/len-session-projection'
+import { assertNever } from '@fde2e/len-util-values'
+import type {} from '@fde2e/len-working-directory'
 import { z } from 'zod'
 import type {
   ForgeMissingWorktree, ForgeSessionWorktree, ForgeWorktreeCreation, ForgeWorktreeFailure, ForgeWorktreeRestoration, ForgeWorktreeState,

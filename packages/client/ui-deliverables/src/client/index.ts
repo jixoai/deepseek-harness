@@ -1,4 +1,4 @@
-import type {} from '@deepseek-ai/dsh-client-ui-context-menu/client'
+import type {} from '@fde2e/len-client-ui-context-menu/client'
 /**
  * Deliverables plugin, browser half: registers the changed-files card and
  * delivery cards into the chat view's turn-tail list, the `changes-review`
@@ -11,14 +11,14 @@ import type {} from '@deepseek-ai/dsh-client-ui-context-menu/client'
  */
 import './file-actions.ts'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-client-connection/client'
-import type { ChatFileMentions } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
+import type {} from '@fde2e/len-api-remotes/client'
+import type {} from '@fde2e/len-client-connection/client'
+import type { ChatFileMentions } from '@fde2e/len-client-ui-chat/client'
+import type {} from '@fde2e/len-client-locale/client'
+import type {} from '@fde2e/len-client-ui-conversation/client'
+import type {} from '@fde2e/len-client-ui-renderer/client'
+import type {} from '@fde2e/len-client-ui-sidebar-right/client'
+import type {} from '@fde2e/len-client-ui-settings/client'
 import { changesReviewAddress } from '../changes.ts'
 import { ChangesDiffStore } from './changes-diff.ts'
 import { ChangesSummaryStore } from './changes-summary.ts'
@@ -35,7 +35,7 @@ import {
 
 export type { PresentedOpenOutcome, PresentedOpenFailure } from './present-open.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@fde2e/len-client-ui-slots' {
   interface LocaleNamespaceMap {
     /** Changed-files card, review tab, delivery card, and file-mention copy. */
     'deliverables': DeliverablesKey
@@ -65,7 +65,7 @@ export function apply(ctx: ClientContext): void {
     'conversation.chat.turnTail',
     () => ctx.slots.register({
       name: 'conversation.chat.turnTail',
-      id: '@deepseek-ai/dsh-client-ui-deliverables',
+      id: '@fde2e/len-client-ui-deliverables',
       locale: NS,
       children: { 'deliverables.file.actions': { kind: 'list', scope: 'session' } },
       inject: (): DeliverablesInjected => ({

@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import SessionStore, { SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { Session, SessionSeq as SessionSeqType } from '@deepseek-ai/dsh-session'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
+import { createUserMessage } from '@fde2e/len-llm'
+import SessionStore, { SessionId, SessionLogOffset, SessionSeq } from '@fde2e/len-session'
+import type { Session, SessionSeq as SessionSeqType } from '@fde2e/len-session'
+import AgentRegistry from '@fde2e/len-agent'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SessionTitleService from '@fde2e/len-session-title'
 
 const CONFIG = { fallbackMaxWords: 8, fallbackMaxBytes: 64, maxTitleBytes: 256 }
 

@@ -3,7 +3,7 @@ description: "面向部署方与维护者的随产品交付 JSONL 会话持久�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-persistence-jsonl
+# @fde2e/len-session-persistence-jsonl
 
 [English](README.md) | 中文
 
@@ -34,8 +34,8 @@ kind: "package-reference"
 ### 最小配置
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
-- name: '@deepseek-ai/dsh-session-persistence-jsonl'
+- name: '@fde2e/len-session'
+- name: '@fde2e/len-session-persistence-jsonl'
   config:
     root: /absolute/path/to/session-logs
 ```
@@ -78,7 +78,7 @@ kind: "package-reference"
 
 当前代际扫描器在处理可恢复尾部之前，执行当前编解码器所有者的结构准入检查。已退役的必需 PTC 标签与 `request/header.header.system` 即使出现在较早的畸形行之后也会导致文件被拒绝；恢复绝不将它们作为普通损坏尾部数据截断。
 
-卸载后端时，会先等待经由 `sessionPersistence` 注入所触发的消费者卸载，再移除实时事件监听器、排空并关闭剩余句柄。消费者必须在该注入作用域中注册清理；无依赖关系的作用域，以及显式关闭的 Session 或句柄，各自遵循其生命周期。通过代码挂载时，使用插件命名空间（`import * as JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'`）调用 `ctx.plugin`，并通过 `ctx.sessionPersistence` 访问存储。
+卸载后端时，会先等待经由 `sessionPersistence` 注入所触发的消费者卸载，再移除实时事件监听器、排空并关闭剩余句柄。消费者必须在该注入作用域中注册清理；无依赖关系的作用域，以及显式关闭的 Session 或句柄，各自遵循其生命周期。通过代码挂载时，使用插件命名空间（`import * as JsonlSessionPersistence from '@fde2e/len-session-persistence-jsonl'`）调用 `ctx.plugin`，并通过 `ctx.sessionPersistence` 访问存储。
 
 ### 读取日志
 

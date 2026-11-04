@@ -2,34 +2,34 @@
 
 import { homedir } from 'node:os'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@fde2e/len-agent'
 import type {
   TypertRemoteEventDispatch,
   TypertRemoteEventInvocation,
   TypertRemoteEventOutcome,
   TypertRemoteEventSource,
-} from '@deepseek-ai/dsh-api-gateway'
-import { Deque } from '@deepseek-ai/dsh-deque'
-import { carrierKeyOf } from '@deepseek-ai/dsh-scope'
-import { isJsonValue, type JsonValue } from '@deepseek-ai/dsh-util-values'
+} from '@fde2e/len-api-gateway'
+import { Deque } from '@fde2e/len-deque'
+import { carrierKeyOf } from '@fde2e/len-scope'
+import { isJsonValue, type JsonValue } from '@fde2e/len-util-values'
 import { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'
 
 // The owner packages' client-safe `./types` exports carry the cordis `Events`
 // declarations for every allowlisted event. Pulling them into this face is what
 // makes the shape assertion below judge real signatures rather than an empty
 // event vocabulary.
-import type {} from '@deepseek-ai/dsh-commands/types'
-import type {} from '@deepseek-ai/dsh-cordis-host-runner/types'
-import type {} from '@deepseek-ai/dsh-credentials/types'
-import type {} from '@deepseek-ai/dsh-goal/types'
-import type {} from '@deepseek-ai/dsh-llm/types'
-import type {} from '@deepseek-ai/dsh-agent-preset-registry/types'
-import type {} from '@deepseek-ai/dsh-permission-presets/types'
-import type {} from '@deepseek-ai/dsh-settings/types'
-import type {} from '@deepseek-ai/dsh-user-approval'
-import type {} from '@deepseek-ai/dsh-user-questions'
-import type {} from '@deepseek-ai/dsh-web/types'
-export type {} from '@deepseek-ai/dsh-api-session-controller/types'
+import type {} from '@fde2e/len-commands/types'
+import type {} from '@fde2e/len-cordis-host-runner/types'
+import type {} from '@fde2e/len-credentials/types'
+import type {} from '@fde2e/len-goal/types'
+import type {} from '@fde2e/len-llm/types'
+import type {} from '@fde2e/len-agent-preset-registry/types'
+import type {} from '@fde2e/len-permission-presets/types'
+import type {} from '@fde2e/len-settings/types'
+import type {} from '@fde2e/len-user-approval'
+import type {} from '@fde2e/len-user-questions'
+import type {} from '@fde2e/len-web/types'
+export type {} from '@fde2e/len-api-session-controller/types'
 
 export { API_REMOTE_FORWARDED_EVENTS } from './remote-events.ts'
 export type { ApiRemoteForwardedEvent } from './types.ts'

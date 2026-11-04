@@ -1,8 +1,8 @@
 /** Account-route quota classification stays separate from API-key and third-party quota. */
 import { Context } from '@deepseek-ai/cordis'
-import { BlockAssembler, LlmRuntime } from '@deepseek-ai/dsh-llm'
-import type { DeepSeekAccount } from '@deepseek-ai/dsh-deepseek-account'
-import * as ApiKey from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import { BlockAssembler, LlmRuntime } from '@fde2e/len-llm'
+import type { DeepSeekAccount } from '@fde2e/len-deepseek-account'
+import * as ApiKey from '@fde2e/len-llm-deepseek-api-key'
 import { afterEach, expect, it, vi } from 'vitest'
 import * as Account from '../src/index.ts'
 

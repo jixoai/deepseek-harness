@@ -4,10 +4,10 @@ import { basename, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium, type Browser, type Locator, type Page } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import { ToolCallId, createAssistantMessage, createToolResultMessage, createUserMessage } from '@deepseek-ai/dsh-llm'
-import { SESSION_FORMAT_VERSION, Session, SessionId } from '@deepseek-ai/dsh-session'
-import { sessionFileAddress } from '@deepseek-ai/dsh-util-workspace-path'
-import type {} from '@deepseek-ai/dsh-session-title'
+import { ToolCallId, createAssistantMessage, createToolResultMessage, createUserMessage } from '@fde2e/len-llm'
+import { SESSION_FORMAT_VERSION, Session, SessionId } from '@fde2e/len-session'
+import { sessionFileAddress } from '@fde2e/len-util-workspace-path'
+import type {} from '@fde2e/len-session-title'
 import {
   assertFixtureInventory, captureStableAria, compareOrRefreshGolden,
   launchWebScaffold, seedSession, watchConsole, webSnapshotMode, type WebScaffold,

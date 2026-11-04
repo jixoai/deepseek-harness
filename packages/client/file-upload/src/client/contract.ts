@@ -1,6 +1,6 @@
-import type { ImageMediaType } from '@deepseek-ai/dsh-attachment/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import type { ImageMediaType } from '@fde2e/len-attachment/types'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { RemoteResult } from '@fde2e/len-typert-protocol'
 import type { FileUploadValue, ImageUploadValue } from '../types.ts'
 
 /** Browser request body accepted by the background file-upload service. */

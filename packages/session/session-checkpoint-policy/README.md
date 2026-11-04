@@ -3,7 +3,7 @@ description: "Semantic session durability checkpoints for users and maintainers 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-checkpoint-policy
+# @fde2e/len-session-checkpoint-policy
 
 English | [中文](README.zh.md)
 
@@ -37,10 +37,10 @@ No configuration fields exist; the plugin is a single load beside one persistenc
 
 ```yaml
 - id: session-persistence
-  name: '@deepseek-ai/dsh-session-persistence-jsonl'
+  name: '@fde2e/len-session-persistence-jsonl'
 
 - id: session-checkpoints
-  name: '@deepseek-ai/dsh-session-checkpoint-policy'
+  name: '@fde2e/len-session-checkpoint-policy'
 ```
 
 ### What becomes durable

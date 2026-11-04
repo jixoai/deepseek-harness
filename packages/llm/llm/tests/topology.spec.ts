@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import LlmRuntime, { LlmAdapter, LlmError } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, LlmConfigurableProvider, StreamChunk } from '@deepseek-ai/dsh-llm'
+import LlmRuntime, { LlmAdapter, LlmError } from '@fde2e/len-llm'
+import type { GenerateOptions, LlmConfigurableProvider, StreamChunk } from '@fde2e/len-llm'
 
 class NoopAdapter extends LlmAdapter {
 

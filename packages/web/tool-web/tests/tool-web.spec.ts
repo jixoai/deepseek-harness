@@ -1,18 +1,18 @@
-import { ToolExecutionPipeline } from '@deepseek-ai/dsh-tools/pipeline'
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import { ToolExecutionPipeline } from '@fde2e/len-tools/pipeline'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import type { Agent, ModelSelection } from '@deepseek-ai/dsh-agent'
-import { createScope, type Scope } from '@deepseek-ai/dsh-scope'
+import type { Agent, ModelSelection } from '@fde2e/len-agent'
+import { createScope, type Scope } from '@fde2e/len-scope'
 import TurndownService from 'turndown'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime, { type ResolvedToolSet, type ToolExecutionInput, type ToolExecutionResult } from '@deepseek-ai/dsh-tools'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import WebRuntime from '@deepseek-ai/dsh-web'
-import type { WebFetchProvider, WebSearchProvider, WebSearchResult } from '@deepseek-ai/dsh-web'
-import * as ToolWeb from '@deepseek-ai/dsh-tool-web'
+import { ToolCallId } from '@fde2e/len-llm'
+import SystemPrompt, { renderPrompt } from '@fde2e/len-system-prompt'
+import ToolRuntime, { type ResolvedToolSet, type ToolExecutionInput, type ToolExecutionResult } from '@fde2e/len-tools'
+import { SessionId } from '@fde2e/len-session'
+import WebRuntime from '@fde2e/len-web'
+import type { WebFetchProvider, WebSearchProvider, WebSearchResult } from '@fde2e/len-web'
+import * as ToolWeb from '@fde2e/len-tool-web'
 import {
   formatSearchOutput,
   formatFetchOutput,
@@ -27,9 +27,9 @@ import {
   fetchMetaFromResult,
   WEB_SEARCH_MAX_QUERIES,
   WEB_SEARCH_MAX_RESULTS,
-} from '@deepseek-ai/dsh-tool-web'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
-import type { ToolResult } from '@deepseek-ai/dsh-tools'
+} from '@fde2e/len-tool-web'
+import type { ContentBlock } from '@fde2e/len-llm'
+import type { ToolResult } from '@fde2e/len-tools'
 import { parseSearchArgs } from '../src/search.ts'
 
 const testToolSignal = new AbortController().signal

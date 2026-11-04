@@ -1,14 +1,14 @@
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { unsupportedModel, provideWorkingDirectoryFixture, unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedModel, provideWorkingDirectoryFixture, unsupportedInbox } from '@fde2e/len-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import { SESSION_FORMAT_VERSION, Session, SessionId } from '@deepseek-ai/dsh-session'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import TerminalSessionService from '@deepseek-ai/dsh-terminal'
+import { ToolCallId } from '@fde2e/len-llm'
+import { SESSION_FORMAT_VERSION, Session, SessionId } from '@fde2e/len-session'
+import AgentRegistry from '@fde2e/len-agent'
+import type { Agent } from '@fde2e/len-agent'
+import TerminalSessionService from '@fde2e/len-terminal'
 import type {
   TerminalBackend,
   TerminalBackendSession,
@@ -18,10 +18,10 @@ import type {
   TerminalSessionStatus,
   TerminalSignal,
   TerminalWaitReason,
-} from '@deepseek-ai/dsh-terminal'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRegistry from '@deepseek-ai/dsh-tools'
-import * as ToolPwshPersistent from '@deepseek-ai/dsh-tool-pwsh-persistent'
+} from '@fde2e/len-terminal'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRegistry from '@fde2e/len-tools'
+import * as ToolPwshPersistent from '@fde2e/len-tool-pwsh-persistent'
 
 const contexts: Context[] = []
 let callNumber = 0

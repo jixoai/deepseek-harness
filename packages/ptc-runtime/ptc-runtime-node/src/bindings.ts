@@ -1,7 +1,7 @@
 /** Validate and capture the binding names available to one program. */
-import { DUNDER_MEMBER, PORTABLE_RESERVED_WORDS, RESERVED_BINDING_GLOBALS, RESERVED_ERROR_MEMBERS } from '@deepseek-ai/dsh-ptc-runtime'
-import type { PtcBindingFunction, PtcBindingNamespace, PtcJsonValue, PtcRunRequest } from '@deepseek-ai/dsh-ptc-runtime'
-import { snapshotJsonValue } from '@deepseek-ai/dsh-util-values'
+import { DUNDER_MEMBER, PORTABLE_RESERVED_WORDS, RESERVED_BINDING_GLOBALS, RESERVED_ERROR_MEMBERS } from '@fde2e/len-ptc-runtime'
+import type { PtcBindingFunction, PtcBindingNamespace, PtcJsonValue, PtcRunRequest } from '@fde2e/len-ptc-runtime'
+import { snapshotJsonValue } from '@fde2e/len-util-values'
 import { encodePtcJsonWire, type PtcJsonWire } from './json-wire.ts'
 const IDENTIFIER = /^[A-Za-z_][A-Za-z0-9_]*$/
 /**

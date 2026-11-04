@@ -7,14 +7,14 @@
  * and which DSH built it. The Relay's own release stays a detail on that link rather than a second
  * identifier in the page's chrome.
  *
- * @module @deepseek-ai/dsh-experimental-liveshare/src/client/viewer-brand
+ * @module @fde2e/len-experimental-liveshare/src/client/viewer-brand
  */
 
 import { useSyncExternalStore, type ReactNode } from 'react'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import { FishLogo } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { SidebarBrandMarkOwnerProps } from '@deepseek-ai/dsh-client-ui-sidebar/client'
-import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
+import { FishLogo } from '@fde2e/len-client-ui-primitives'
+import type { SidebarBrandMarkOwnerProps } from '@fde2e/len-client-ui-sidebar/client'
+import type { PropsLocale } from '@fde2e/len-client-ui-slots'
 import { NS } from './locales.ts'
 import { identitySubjectLabel } from '../owner-identity.ts'
 import { viewerContextFacts } from './viewer-context.ts'

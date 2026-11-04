@@ -8,12 +8,12 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader, { type ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import LlmRuntime, { createMessage, createUserMessage, userAgent } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import AuthorizationService from '@deepseek-ai/dsh-authorization'
-import LocalCredentialProvider from '@deepseek-ai/dsh-credentials-local'
+import LlmRuntime, { createMessage, createUserMessage, userAgent } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
+import AuthorizationService from '@fde2e/len-authorization'
+import LocalCredentialProvider from '@fde2e/len-credentials-local'
 import { profileComposition } from '../../../settings/settings/tests/profile-composition.ts'
-import * as LlmPiAi from '@deepseek-ai/dsh-llm-pi-ai'
+import * as LlmPiAi from '@fde2e/len-llm-pi-ai'
 import { assemble } from './assemble.ts'
 import { closeMockServers, mockServer, textEvents } from './mock-server.ts'
 
@@ -48,14 +48,14 @@ async function loadComposition(): Promise<{ ctx: Context; settingsPath: string }
     '- id: llm',
     "  name: 'test-llm-service'",
     '- id: credentials',
-    "  name: '@deepseek-ai/dsh-credentials-local'",
+    "  name: '@fde2e/len-credentials-local'",
     '  config:',
     `    path: ${JSON.stringify(join(root, '.credentials.yaml'))}`,
     '    debounceMs: 10',
     '- id: authorization',
-    "  name: '@deepseek-ai/dsh-authorization'",
+    "  name: '@fde2e/len-authorization'",
     '- id: llm-pi-ai',
-    "  name: '@deepseek-ai/dsh-llm-pi-ai'",
+    "  name: '@fde2e/len-llm-pi-ai'",
     '',
   ].join('\n'))
 
@@ -66,9 +66,9 @@ async function loadComposition(): Promise<{ ctx: Context; settingsPath: string }
   ctx.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
     ['test-llm-service', LlmRuntime],
-    ['@deepseek-ai/dsh-credentials-local', LocalCredentialProvider],
-    ['@deepseek-ai/dsh-authorization', AuthorizationService],
-    ['@deepseek-ai/dsh-llm-pi-ai', LlmPiAi],
+    ['@fde2e/len-credentials-local', LocalCredentialProvider],
+    ['@fde2e/len-authorization', AuthorizationService],
+    ['@fde2e/len-llm-pi-ai', LlmPiAi],
   ])
   const internal: ModuleLoaderV2 = {
     version: 'v2',

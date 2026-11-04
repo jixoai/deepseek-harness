@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-fs-ssh",
+  "name": "@fde2e/len-fs-ssh",
   "description": "Filesystem provider over the shared POSIX SSH helper",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -30,10 +30,10 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-ssh": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*"
+    "@fde2e/len-ssh": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
@@ -41,9 +41,9 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-ssh": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*"
+    "@fde2e/len-ssh": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*"
   }
 }

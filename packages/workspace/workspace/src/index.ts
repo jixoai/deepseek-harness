@@ -2,15 +2,15 @@
  * Workspace entity registry (`ctx.workspaceRegistry`): durable workspace records,
  * stable registry order, and header-validated session membership over the
  * domain data form.
- * @module @deepseek-ai/dsh-workspace
+ * @module @fde2e/len-workspace
  */
 
 import { randomUUID } from 'node:crypto'
 import { mkdir, stat } from 'node:fs/promises'
 import { Context, Service } from '@deepseek-ai/cordis'
-import type { SessionHeader, SessionId } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-session-persistence'
-import type { DomainGlobal, KvTable } from '@deepseek-ai/dsh-storage-domain'
+import type { SessionHeader, SessionId } from '@fde2e/len-session'
+import type {} from '@fde2e/len-session-persistence'
+import type { DomainGlobal, KvTable } from '@fde2e/len-storage-domain'
 import { WorkspaceEntity } from './entity.ts'
 import type { WorkspaceEntityHost } from './entity.ts'
 

@@ -1,84 +1,84 @@
 # Minimal live counterpart for the persistent-pwsh-padded-completion snapshot composition.
 - id: llm-deepseek
-  name: '@deepseek-ai/dsh-llm-deepseek-api-key'
+  name: '@fde2e/len-llm-deepseek-api-key'
   config:
     models:
       - id: deepseek-v4-pro
 
 - id: sandbox-policy
-  name: '@deepseek-ai/dsh-sandbox-policy'
+  name: '@fde2e/len-sandbox-policy'
   config:
     mode: danger-full-access
     workspaceRoot: !!js process.cwd()
 
 - id: subprocess
-  name: '@deepseek-ai/dsh-subprocess-local'
+  name: '@fde2e/len-subprocess-local'
 
 - insert:
     - id: terminal
-      name: '@deepseek-ai/dsh-terminal'
+      name: '@fde2e/len-terminal'
 
 - insert:
     - id: padded-pwsh-backend
       name: './pwsh-snapshot-backend.mjs'
 
 - id: agent-default-model
-  name: '@deepseek-ai/dsh-agent-default-model'
+  name: '@fde2e/len-agent-default-model'
   config:
     provider: deepseek-official
     model: deepseek-v4-pro
 
 - id: session-persistence-jsonl
-  name: '@deepseek-ai/dsh-session-persistence-jsonl'
+  name: '@fde2e/len-session-persistence-jsonl'
   config:
     root: !!js dshHomePath('sessions')
     compression: !!js 'process.env.DSH_SNAPSHOT === undefined ? ''zstd'' : ''none'''
 
 - id: agent-instructions
-  name: '@deepseek-ai/dsh-agent-instructions'
+  name: '@fde2e/len-agent-instructions'
   disabled: true
 
 - id: system-prompt
-  name: '@deepseek-ai/dsh-system-prompt'
+  name: '@fde2e/len-system-prompt'
   config:
     personaPrefix: You are a concise snapshot agent.
 
 - id: tool-jobs
-  name: '@deepseek-ai/dsh-tool-jobs'
+  name: '@fde2e/len-tool-jobs'
   disabled: true
 
 - id: goal
-  name: '@deepseek-ai/dsh-goal'
+  name: '@fde2e/len-goal'
   disabled: true
 
 - id: goal-round-driver
-  name: '@deepseek-ai/dsh-goal-round-driver'
+  name: '@fde2e/len-goal-round-driver'
   disabled: true
 
 - id: command-goal
-  name: '@deepseek-ai/dsh-command-goal'
+  name: '@fde2e/len-command-goal'
   disabled: true
 
 - id: tool-goal
-  name: '@deepseek-ai/dsh-tool-goal'
+  name: '@fde2e/len-tool-goal'
   disabled: true
 
 - id: skill
-  name: '@deepseek-ai/dsh-skill'
+  name: '@fde2e/len-skill'
   disabled: true
 
 - id: skill-filesystem
-  name: '@deepseek-ai/dsh-skill-filesystem'
+  name: '@fde2e/len-skill-filesystem'
   disabled: true
 
 - id: tool-skill
-  name: '@deepseek-ai/dsh-tool-skill'
+  name: '@fde2e/len-tool-skill'
   disabled: true
 
 - id: tool-bash
-  name: '@deepseek-ai/dsh-tool-bash'
+  name: '@fde2e/len-tool-bash'
   disabled: true
 
 - insert:
     - id: tool-pwsh-persistent
-      name: '@deepseek-ai/dsh-tool-pwsh-persistent'
+      name: '@fde2e/len-tool-pwsh-persistent'

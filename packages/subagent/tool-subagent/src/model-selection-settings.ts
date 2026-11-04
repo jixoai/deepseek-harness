@@ -3,8 +3,8 @@ import type { Volatile } from '@deepseek-ai/cordis'
 
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { SessionSeq } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-agent'
+import { SessionSeq } from '@fde2e/len-session'
+import type {} from '@fde2e/len-agent'
 import {
   subagentModelSelectionPolicy,
   subagentModelSelectionProjectionDefinition,

@@ -4,7 +4,7 @@
  * `docs/subsystems/llm-streaming.md#appidentity--app-attribution`.
  *
  * App-attribution vocabulary for provider requests.
- * @module @deepseek-ai/dsh-llm/attribution
+ * @module @fde2e/len-llm/attribution
  */
 
 import { createRequire } from 'node:module'

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-hooks-codex",
+  "name": "@fde2e/len-hooks-codex",
   "description": "Bridge plugin: run a Codex hooks.json hook config on the DeepSeek Harness interception seams",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -32,29 +32,29 @@
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-hook-protocol": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-hook-protocol": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@fde2e/len-working-directory": "workspace:*"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-bash-local": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-hook-protocol": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
-    "@deepseek-ai/dsh-tool-testkit": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-agent-loop": "workspace:*",
+    "@fde2e/len-agent-loop-testkit": "workspace:*",
+    "@fde2e/len-shell": "workspace:*",
+    "@fde2e/len-bash-local": "workspace:*",
+    "@fde2e/len-subprocess-local": "workspace:*",
+    "@fde2e/len-hook-protocol": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-persistence-jsonl": "workspace:*",
+    "@fde2e/len-tool-testkit": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-working-directory": "workspace:*"
   }
 }

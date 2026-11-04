@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-file-actions",
+  "name": "@fde2e/len-client-ui-file-actions",
   "description": "Original-file saving and image clipboard actions for Web and Desktop",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -32,10 +32,10 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-context-menu",
-        "@deepseek-ai/dsh-api-workspace-files",
-        "@deepseek-ai/dsh-api-session-controller"
+        "@fde2e/len-client-locale",
+        "@fde2e/len-client-ui-context-menu",
+        "@fde2e/len-api-workspace-files",
+        "@fde2e/len-api-session-controller"
       ],
       "platform": "web"
     }
@@ -50,19 +50,19 @@
   },
   "devDependencies": {
     "react": "^18.2.0",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
+    "@fde2e/len-client-ui-primitives": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
-    "@deepseek-ai/dsh-api-session-controller": "workspace:*",
-    "@deepseek-ai/dsh-client-test-runtime": "workspace:*",
-    "@deepseek-ai/dsh-util-file-drag": "workspace:*",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-context-menu": "workspace:*",
-    "@deepseek-ai/dsh-api-workspace-files": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-util-workspace-path": "workspace:*",
+    "@fde2e/len-client-ui-slots": "workspace:*",
+    "@fde2e/len-api-session-controller": "workspace:*",
+    "@fde2e/len-client-test-runtime": "workspace:*",
+    "@fde2e/len-util-file-drag": "workspace:*",
+    "@fde2e/len-client-locale": "workspace:*",
+    "@fde2e/len-client-ui-context-menu": "workspace:*",
+    "@fde2e/len-api-workspace-files": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-util-workspace-path": "workspace:*",
     "mime": "^4.1.0",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*"
+    "@fde2e/len-client-ui-renderer": "workspace:*"
   },
   "files": [
     "locale/*.json",

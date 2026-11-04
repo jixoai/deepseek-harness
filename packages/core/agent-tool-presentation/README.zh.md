@@ -3,11 +3,11 @@ description: "面向用户与维护者的 agent（智能体）平面呈现选择
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-agent-tool-presentation
+# @fde2e/len-agent-tool-presentation
 
 [English](README.md) | 中文
 
-> **已弃用：** 新配置请直接挂载 `@deepseek-ai/dsh-tool-executor-native` 或 `@deepseek-ai/dsh-tool-executor-ptc`。现有配置仍受支持。迁移时，将本选择器条目替换为对应的 executor 条目，并移除 `config.mode`；不要在同一作用域同时加载两者。
+> **已弃用：** 新配置请直接挂载 `@fde2e/len-tool-executor-native` 或 `@fde2e/len-tool-executor-ptc`。现有配置仍受支持。迁移时，将本选择器条目替换为对应的 executor 条目，并移除 `config.mode`；不要在同一作用域同时加载两者。
 
 ## 概述
 
@@ -32,7 +32,7 @@ kind: "package-reference"
 ### 把这一行加入 preset
 
 ```yaml
-- name: '@deepseek-ai/dsh-agent-tool-presentation'
+- name: '@fde2e/len-agent-tool-presentation'
   config:
     mode: ptc
 ```

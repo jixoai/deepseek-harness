@@ -10,16 +10,16 @@
  */
 
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
-import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@fde2e/len-agent-loop-testkit'
 import { Context } from '@deepseek-ai/cordis'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import type { Session } from '@deepseek-ai/dsh-session'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import CommandRuntime from '@deepseek-ai/dsh-commands'
-import PermissionPresetService from '@deepseek-ai/dsh-permission-presets'
-import { AUTO_PRESET } from '@deepseek-ai/dsh-permission-presets'
-import ApprovalService from '@deepseek-ai/dsh-user-approval'
+import { SessionId } from '@fde2e/len-session'
+import type { Session } from '@fde2e/len-session'
+import type { Agent } from '@fde2e/len-agent'
+import { createScope } from '@fde2e/len-scope'
+import CommandRuntime from '@fde2e/len-commands'
+import PermissionPresetService from '@fde2e/len-permission-presets'
+import { AUTO_PRESET } from '@fde2e/len-permission-presets'
+import ApprovalService from '@fde2e/len-user-approval'
 import { omitsGeneratedPage } from '../../../settings/settings/tests/live-config.ts'
 
 async function harness(options: {

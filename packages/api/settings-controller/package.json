@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-api-settings-controller",
+  "name": "@fde2e/len-api-settings-controller",
   "description": "Remote owner for the configuration surfaces over the settings-domain seams",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -51,20 +51,20 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent-preset-registry": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
-    "@deepseek-ai/dsh-native-command": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-agent-preset-registry": "workspace:*",
+    "@fde2e/len-credentials": "workspace:*",
+    "@fde2e/len-native-command": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-settings": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent-preset-registry": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
-    "@deepseek-ai/dsh-native-command": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-agent-preset-registry": "workspace:*",
+    "@fde2e/len-credentials": "workspace:*",
+    "@fde2e/len-native-command": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-settings": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*"
   }
 }

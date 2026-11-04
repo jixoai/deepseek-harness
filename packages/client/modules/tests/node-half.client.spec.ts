@@ -9,7 +9,7 @@ import { pathToFileURL } from 'node:url'
 import { runInNewContext } from 'node:vm'
 import { Context, FiberState, type Fiber } from '@deepseek-ai/cordis'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { renderIndexInjections, type WebServer, type WebResourceRoute, type WebRoute } from '@deepseek-ai/dsh-host-webserver'
+import { renderIndexInjections, type WebServer, type WebResourceRoute, type WebRoute } from '@fde2e/len-host-webserver'
 import * as modulesClient from '../src/client/index.ts'
 import { ClientModuleRegistry, bootInjections, orderByModuleGraph } from '../src/index.ts'
 import type { ClientModuleLoaderTarget, WebBootEntry, WebBootGraph } from '../src/client/index.ts'
@@ -47,8 +47,8 @@ vi.mock('node:fs/promises', async (importOriginal) => {
   }
 })
 
-const MODULES_ID = '@deepseek-ai/dsh-client-modules'
-const UI_RENDERER_ID = '@deepseek-ai/dsh-client-ui-renderer'
+const MODULES_ID = '@fde2e/len-client-modules'
+const UI_RENDERER_ID = '@fde2e/len-client-ui-renderer'
 
 // Graph rows and batch descriptors carry app-directory-relative references;
 // a host request reaches the backend route once the document's directory

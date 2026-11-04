@@ -1,11 +1,11 @@
 import { Context } from '@deepseek-ai/cordis'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import SessionStore, { SESSION_FORMAT_VERSION, SessionSeq, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionEvent, SessionHeader } from '@deepseek-ai/dsh-session'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import { provideWorkingDirectoryFixture } from '@fde2e/len-agent-loop-testkit'
+import AgentRegistry from '@fde2e/len-agent'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import type { Agent } from '@fde2e/len-agent'
+import SessionStore, { SESSION_FORMAT_VERSION, SessionSeq, SessionId } from '@fde2e/len-session'
+import type { SessionEvent, SessionHeader } from '@fde2e/len-session'
+import SubagentRuntime from '@fde2e/len-subagent'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   createSessionTestController,

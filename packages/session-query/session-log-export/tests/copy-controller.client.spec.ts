@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@fde2e/len-session/types'
 import {
   SessionMarkdownCopyController,
   type SessionMarkdownClipboard,

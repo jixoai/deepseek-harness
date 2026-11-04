@@ -2,17 +2,17 @@
  * Named wire types for the DeepSeek Harness SDK runtime protocol: its
  * request/result pairs and server-to-client notification payloads
  * exchanged over the newline-delimited JSON-RPC stdio transport. The server
- * plugin (`@deepseek-ai/dsh-sdk-jsonrpc-server`) and SDK clients share these shapes;
+ * plugin (`@fde2e/len-sdk-jsonrpc-server`) and SDK clients share these shapes;
  * `serverInfo.name` stays the wire-stable `deepseek-harness-sdk-runtime`.
  *
- * @module @deepseek-ai/dsh-sdk-protocol/types
+ * @module @fde2e/len-sdk-protocol/types
  */
 
-import type { ContentBlock, ReasoningEffortId } from '@deepseek-ai/dsh-llm'
-import type { CommandExecution } from '@deepseek-ai/dsh-commands/types'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
-import type { SubagentStopReason } from '@deepseek-ai/dsh-subagent'
-import type { AskUserQuestionAnswer, AskUserQuestionItem } from '@deepseek-ai/dsh-user-questions/types'
+import type { ContentBlock, ReasoningEffortId } from '@fde2e/len-llm'
+import type { CommandExecution } from '@fde2e/len-commands/types'
+import type { SessionEvent, SessionId } from '@fde2e/len-session'
+import type { SubagentStopReason } from '@fde2e/len-subagent'
+import type { AskUserQuestionAnswer, AskUserQuestionItem } from '@fde2e/len-user-questions/types'
 
 /** Parameters for the process-wide SDK handshake. */
 export interface InitializeParams {

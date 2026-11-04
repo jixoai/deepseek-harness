@@ -11,12 +11,12 @@ describe.skipIf(!built)('persistent PTC published exports', () => {
   it.each(['repl', 'script'])('retains variables through published configuration and runtime exports with %s syntax', async (programFormat) => {
     const script = `
       const { Context } = await import('@deepseek-ai/cordis')
-      const { default: NodeRuntime } = await import('@deepseek-ai/dsh-ptc-runtime-node')
-      const { resolvePersistentExecution } = await import('@deepseek-ai/dsh-ptc-runtime-node/configuration')
+      const { default: NodeRuntime } = await import('@fde2e/len-ptc-runtime-node')
+      const { resolvePersistentExecution } = await import('@fde2e/len-ptc-runtime-node/configuration')
       const ctx = new Context()
       try {
         for (const name of ['session-projection', 'fs-local', 'subprocess-local', 'sandbox-local', 'sandbox-policy']) {
-          await ctx.plugin((await import('@deepseek-ai/dsh-' + name)).default)
+          await ctx.plugin((await import('@fde2e/len-' + name)).default)
         }
         await ctx.plugin(NodeRuntime, resolvePersistentExecution(${JSON.stringify(programFormat)}))
         const stateOwner = {}

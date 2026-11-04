@@ -6,7 +6,7 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import type { Transport } from '@modelcontextprotocol/client'
-import { Config } from '@deepseek-ai/dsh-mcp-client'
+import { Config } from '@fde2e/len-mcp-client'
 
 const { mockConnect, mockClose, mockListTools, mockGetServerVersion, MockClient, MockTransport } = vi.hoisted(() => {
   const mockConnect = vi.fn<() => Promise<void>>()
@@ -49,7 +49,7 @@ vi.mock('@modelcontextprotocol/client/stdio', () => ({
   StdioClientTransport: vi.fn(function () { return new MockTransport() }),
 }))
 
-import { probeServer } from '@deepseek-ai/dsh-mcp-client/src/probe.ts'
+import { probeServer } from '@fde2e/len-mcp-client/src/probe.ts'
 
 // Typed views of vitest's asymmetric matchers: their `any` return would
 // otherwise trip no-unsafe-assignment inside expectation literals.

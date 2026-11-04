@@ -11,7 +11,7 @@
 
 - insert:
     - id: mcp-template-error
-      name: '@deepseek-ai/dsh-mcp-client'
+      name: '@fde2e/len-mcp-client'
       inject: [credentials]
       config:
         transport: streamable-http

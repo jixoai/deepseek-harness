@@ -5,13 +5,13 @@ import { homedir } from 'node:os'
 import { join } from 'node:path'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { LocalSandboxProvider } from '@deepseek-ai/dsh-sandbox-local'
-import { SandboxPolicyService } from '@deepseek-ai/dsh-sandbox-policy'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import { seatbeltProfileArgs } from '@deepseek-ai/dsh-sandbox-local/src/profiles.ts'
-import { SandboxBashExecutor } from '@deepseek-ai/dsh-bash-sandbox'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
-import type { ShellExecSpec, ShellExecution, ShellRunResult } from '@deepseek-ai/dsh-shell'
+import { LocalSandboxProvider } from '@fde2e/len-sandbox-local'
+import { SandboxPolicyService } from '@fde2e/len-sandbox-policy'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import { seatbeltProfileArgs } from '@fde2e/len-sandbox-local/src/profiles.ts'
+import { SandboxBashExecutor } from '@fde2e/len-bash-sandbox'
+import LocalSubprocessRuntime from '@fde2e/len-subprocess-local'
+import type { ShellExecSpec, ShellExecution, ShellRunResult } from '@fde2e/len-shell'
 
 /** Historical foreground shorthand over the unified execute() seam. */
 async function run(x: { execute(spec: ShellExecSpec): Promise<ShellExecution> }, spec: ShellExecSpec): Promise<ShellRunResult> {
@@ -28,7 +28,7 @@ function start(x: { execute(spec: ShellExecSpec): Promise<ShellExecution> }, spe
  * Keyless macOS integration of the real provider and executor through public run/start paths.
  * Linux rungs are forced off so Seatbelt is selected. The tests check world effects and stamped
  * facts, including EPERM classification through the wrap-carried dialect; backend-only
- * confinement is covered by `@deepseek-ai/dsh-sandbox-local`. Skips off macOS or when
+ * confinement is covered by `@fde2e/len-sandbox-local`. Skips off macOS or when
  * `sandbox-exec` rejects the profile.
  */
 

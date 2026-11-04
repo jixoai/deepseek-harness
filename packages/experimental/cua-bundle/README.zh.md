@@ -3,7 +3,7 @@ description: "开启可选 macOS Computer Use 及权限页面。"
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-cua-bundle
+# @fde2e/len-cua-bundle
 
 [English](README.md) | 中文
 

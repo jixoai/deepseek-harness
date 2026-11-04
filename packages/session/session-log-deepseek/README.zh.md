@@ -3,7 +3,7 @@ description: "面向启用官方 DeepSeek 请求元数据的部署，增量上�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-log-deepseek
+# @fde2e/len-session-log-deepseek
 
 [English](README.md) | 中文
 
@@ -49,7 +49,7 @@ Web **设置 → 通用 → 在使用官方模型 API 时上传 Session Log** �
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-session-log-deepseek'
+import type {} from '@fde2e/len-session-log-deepseek'
 
 export function apply(ctx: Context): void {
   ctx.inject(['sessionLogDeepSeek'], (child) => {

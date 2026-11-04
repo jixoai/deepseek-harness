@@ -1,27 +1,27 @@
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
 import { afterEach, describe, expect, it } from 'vitest'
-import { unsupportedModel, provideWorkingDirectoryFixture, unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedModel, provideWorkingDirectoryFixture, unsupportedInbox } from '@fde2e/len-agent-loop-testkit'
 import { mkdir, rm, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { Context } from '@deepseek-ai/cordis'
-import { createUserMessage, ToolCallId, type Message } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed, MessageSource } from '@deepseek-ai/dsh-llm'
-import { createScope, type Scope } from '@deepseek-ai/dsh-scope'
+import { createUserMessage, ToolCallId, type Message } from '@fde2e/len-llm'
+import type { ContextFormed, MessageSource } from '@fde2e/len-llm'
+import { createScope, type Scope } from '@fde2e/len-scope'
 import {
   SESSION_FORMAT_VERSION, Session, SessionId, type SessionEvent, type UserMessage,
-} from '@deepseek-ai/dsh-session'
-import SystemPrompt, { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import AgentRegistry, { agentEvents, type Agent, type PreStepDecision } from '@deepseek-ai/dsh-agent'
-import SkillRegistry from '@deepseek-ai/dsh-skill'
-import * as SkillFileSystem from '@deepseek-ai/dsh-skill-filesystem'
-import * as toolSkill from '@deepseek-ai/dsh-tool-skill'
+} from '@fde2e/len-session'
+import SystemPrompt, { renderPrompt } from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
+import { defineContentToolFixture } from '@fde2e/len-tool-testkit'
+import AgentRegistry, { agentEvents, type Agent, type PreStepDecision } from '@fde2e/len-agent'
+import SkillRegistry from '@fde2e/len-skill'
+import * as SkillFileSystem from '@fde2e/len-skill-filesystem'
+import * as toolSkill from '@fde2e/len-tool-skill'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'dsh-tool-skill': { kind: 'dsh-tool-skill' } & ContextFormed
     'later-contribution': { kind: 'later-contribution' } & ContextFormed

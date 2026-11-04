@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-util-code-language",
+  "name": "@fde2e/len-util-code-language",
   "description": "Single file-extension to syntax-highlighting language table shared by Client code surfaces and the Host read card",
   "version": "0.2.2-alpha.3",
   "publishConfig": {

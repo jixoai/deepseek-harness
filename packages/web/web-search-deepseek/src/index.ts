@@ -5,22 +5,22 @@
  * every other search reuses `DEEPSEEK_API_KEY`. The provider does not reuse `DEEPSEEK_BASE_URL`;
  * auxiliary search has its own endpoint configuration. The provider reports itself not ready for a
  * model request whose search would have no credential.
- * @module @deepseek-ai/dsh-web-search-deepseek
+ * @module @fde2e/len-web-search-deepseek
  */
 import type { Volatile } from '@deepseek-ai/cordis'
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type {} from '@deepseek-ai/dsh-agent'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import type { CredentialRef } from '@deepseek-ai/dsh-credentials'
-import type {} from '@deepseek-ai/dsh-deepseek-account'
-import { launchEnvironmentOf } from '@deepseek-ai/dsh-launch-environment'
+import type {} from '@fde2e/len-agent'
+import { credentialRef } from '@fde2e/len-credentials'
+import type { CredentialRef } from '@fde2e/len-credentials'
+import type {} from '@fde2e/len-deepseek-account'
+import { launchEnvironmentOf } from '@fde2e/len-launch-environment'
 import {
   deepSeekApiKeyConfigured, rejectDeepSeekAccountToken, resolveDeepSeekAccountToken, resolveDeepSeekApiKey,
-} from '@deepseek-ai/dsh-llm-deepseek'
-import type {} from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-web'
+} from '@fde2e/len-llm-deepseek'
+import type {} from '@fde2e/len-session'
+import type {} from '@fde2e/len-web'
 import {
   DeepSeekSearchProvider,
   DEEPSEEK_DEFAULT_API_VERSION,

@@ -1,21 +1,21 @@
 // @vitest-environment jsdom
 
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { useDisclosure } from '@deepseek-ai/dsh-client-ui-chat/src/client/chat/use-disclosure.ts'
+import { useDisclosure } from '@fde2e/len-client-ui-chat/src/client/chat/use-disclosure.ts'
 import { cleanup, fireEvent, render } from '@testing-library/react'
-import { contextMenuHook, bindSnapshotSelector } from '@deepseek-ai/dsh-client-test-runtime'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { StartedToolCall, ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { SessionListState } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { contextMenuHook, bindSnapshotSelector } from '@fde2e/len-client-test-runtime'
+import { createSnapshotStore } from '@fde2e/len-client-store'
+import type { StartedToolCall, ToolResultNode } from '@fde2e/len-client-ui-chat/client'
+import type { SessionListState } from '@fde2e/len-api-session-controller/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import { makeTranslate } from '@fde2e/len-client-test-runtime'
+import { zh as commonZh } from '@fde2e/len-client-locale/src/locales/zh.ts'
 import { toolRowModel } from '../src/client/tool/models/tool-call-model.ts'
 import { CHAT_DIFF_MAX_LINES, diffCardModel } from '../src/client/tool/models/diff-card-model.ts'
 import { GenericToolCard, type GenericToolCardProps } from '../src/client/tool/toolviews/GenericToolCard.tsx'
 import { FileMutationRow, fileMutationToolview } from '../src/client/tool/toolviews/file-mutation-row.tsx'
-import { zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { zh } from '@fde2e/len-client-ui-conversation/src/client/locales.ts'
+import { PartialArguments } from '@fde2e/len-util-values'
 
 afterEach(cleanup)
 

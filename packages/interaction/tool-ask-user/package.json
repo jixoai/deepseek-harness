@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-ask-user",
+  "name": "@fde2e/len-tool-ask-user",
   "description": "Model-facing ask_user_question tool over the ctx.userQuestions seam",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,19 +29,19 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-user-questions": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
+    "@fde2e/len-user-questions": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tool-executor-native": "workspace:*",
-    "@deepseek-ai/dsh-tool-testkit": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-user-questions": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-system-prompt": "workspace:*",
+    "@fde2e/len-tool-executor-native": "workspace:*",
+    "@fde2e/len-tool-testkit": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
+    "@fde2e/len-user-questions": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {

@@ -1,18 +1,18 @@
 /** Plan projection behavior. */
 
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import SessionStore from '@deepseek-ai/dsh-session'
-import type { Session } from '@deepseek-ai/dsh-session'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import UserQuestionService from '@deepseek-ai/dsh-user-questions'
-import { CommandId } from '@deepseek-ai/dsh-commands/brand'
-import PlanModeController from '@deepseek-ai/dsh-plan-mode'
+import AgentRegistry from '@fde2e/len-agent'
+import type { Agent } from '@fde2e/len-agent'
+import SessionStore from '@fde2e/len-session'
+import type { Session } from '@fde2e/len-session'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import UserQuestionService from '@fde2e/len-user-questions'
+import { CommandId } from '@fde2e/len-commands/brand'
+import PlanModeController from '@fde2e/len-plan-mode'
 
 interface Bench {
   ctx: Context

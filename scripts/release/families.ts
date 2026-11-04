@@ -35,7 +35,7 @@ const INSTALL_SECTIONS = ['dependencies', 'optionalDependencies'] as const
 const PEER_SECTIONS = ['peerDependencies'] as const
 
 /** The workspace root manifest, which is never a release member. */
-const WORKSPACE_ROOT_PACKAGE = '@deepseek-ai/dsh-root'
+const WORKSPACE_ROOT_PACKAGE = '@fde2e/len-root'
 
 /** One peer declaration the publish order leaves unordered. */
 interface DroppedPeerEdge {
@@ -397,7 +397,7 @@ class DshFamily extends ReleaseFamily {
 
   /** Publish every advertised on-demand package before the installation that offers it. */
   protected override publicationPrerequisites(member: ReleaseMember): readonly string[] {
-    return member.name === '@deepseek-ai/dsh' ? ON_DEMAND_BUNDLES : []
+    return member.name === '@fde2e/len' ? ON_DEMAND_BUNDLES : []
   }
 
   /** Require the packed DSH runtime graph to stay on the shared exact release version. */
@@ -407,7 +407,7 @@ class DshFamily extends ReleaseFamily {
       const dependencies = manifest[section]
       if (dependencies === null || typeof dependencies !== 'object' || Array.isArray(dependencies)) continue
       for (const [name, range] of Object.entries(dependencies)) {
-        if (name !== '@deepseek-ai/dsh' && !name.startsWith('@deepseek-ai/dsh-')) continue
+        if (name !== '@fde2e/len' && !name.startsWith('@fde2e/len-')) continue
         if (range !== member.version) {
           throw new Error(`${member.name}: packed ${section}.${name} must equal ${member.version}, got ${String(range)}`)
         }
@@ -415,7 +415,7 @@ class DshFamily extends ReleaseFamily {
     }
   }
 
-  readonly installedEntry = { packageName: '@deepseek-ai/dsh', binPath: 'lib/bin.js' }
+  readonly installedEntry = { packageName: '@fde2e/len', binPath: 'lib/bin.js' }
 }
 
 /** `vendor/*`: every package keeps its own version line, so every package has its own tag. */

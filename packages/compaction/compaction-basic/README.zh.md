@@ -3,7 +3,7 @@ description: "面向部署场景的自动会话压缩（compaction）：用于�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-compaction-basic
+# @fde2e/len-compaction-basic
 
 [English](README.md) | 中文
 
@@ -36,17 +36,17 @@ kind: "package-reference"
 挂载会话存储、token 测量、可选修剪器、本后端，以及可选的按需命令：
 
 ```yaml
-- name: '@deepseek-ai/dsh-session'
-- name: '@deepseek-ai/dsh-token-meter'
-- name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
-- name: '@deepseek-ai/dsh-compaction-basic'
-- name: '@deepseek-ai/dsh-command-compact'
+- name: '@fde2e/len-session'
+- name: '@fde2e/len-token-meter'
+- name: '@fde2e/len-compaction-tool-result-pruner'
+- name: '@fde2e/len-compaction-basic'
+- name: '@fde2e/len-command-compact'
 ```
 
 你可以通过观察会话越过本来会溢出的位置继续工作、以及运行 `/compact` 立即压缩一次来确认成功。如果组合缺少 LLM、会话存储或 token 测量，插件会加载失败。同一个后端可以服务上下文大小不同的模型；用按模型覆盖为每条路由设置各自的阈值与保留：
 
 ```yaml
-- name: '@deepseek-ai/dsh-compaction-basic'
+- name: '@fde2e/len-compaction-basic'
   config:
     thresholdRatio: 0.8
     retainRatio: 0.16
@@ -148,7 +148,7 @@ kind: "package-reference"
 | [`src/config.ts`](src/config.ts) | 加载时验证与路由模型策略解析 |
 | [`src/types.ts`](src/types.ts) | `BasicCompactionConfig` 与已解析策略词汇 |
 
-包根入口的类型声明将 `compaction` 添加到 `LlmRequestPurposeMap`。直接构造压缩请求的调用方使用 `import type {} from '@deepseek-ai/dsh-compaction-basic'`，使 `GenerateOptions.purpose` 包含该键。
+包根入口的类型声明将 `compaction` 添加到 `LlmRequestPurposeMap`。直接构造压缩请求的调用方使用 `import type {} from '@fde2e/len-compaction-basic'`，使 `GenerateOptions.purpose` 包含该键。
 
 </details>
 

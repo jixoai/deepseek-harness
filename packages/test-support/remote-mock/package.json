@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-remote-mock",
+  "name": "@fde2e/len-remote-mock",
   "description": "Endpoint-named mock for Typert Remote traffic: unary answers and stream scripts per <namespace>/<method>, live stream control, a log, and the Connection carrier face whole-client specs install",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -27,13 +27,13 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-api-settings-controller": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-api-settings-controller": "workspace:*",
+    "@fde2e/len-client-connection": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "typescript": "^6.0.3"
   },
   "files": [

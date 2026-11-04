@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-typert-loader",
+  "name": "@fde2e/len-typert-loader",
   "description": "Loader integration for generated Typert package contributions",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -30,17 +30,17 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*",
+    "@fde2e/len-typert-registry": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
+    "@fde2e/len-app-boot": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-typert-registry": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-typert-registry": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "typescript": "^6.0.3",
     "zod": "4.4.3"

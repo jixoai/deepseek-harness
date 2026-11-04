@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-str-replace-editor",
+  "name": "@fde2e/len-tool-str-replace-editor",
   "description": "Model-facing view, create, literal replace, and line insert tool over the Harness filesystem service",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -28,33 +28,33 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-output-retention": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-output-retention": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-fs-observation-policy": "workspace:*",
-    "@deepseek-ai/dsh-fs-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-output-retention": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tool-executor-native": "workspace:*",
-    "@deepseek-ai/dsh-tool-testkit": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-agent-loop-testkit": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-fs-local": "workspace:*",
+    "@fde2e/len-fs-observation-policy": "workspace:*",
+    "@fde2e/len-fs-sandbox": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-output-retention": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-system-prompt": "workspace:*",
+    "@fde2e/len-tool-executor-native": "workspace:*",
+    "@fde2e/len-tool-testkit": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-session-projection": "workspace:*"
+    "@fde2e/len-session-projection": "workspace:*"
   }
 }

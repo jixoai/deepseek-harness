@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-timeout",
+  "name": "@fde2e/len-timeout",
   "description": "Zero-dependency timeout/deadline primitive: clampTimeout, deadline, timeoutOf, TimeoutReason (timing + classification only, no termination)",
   "version": "0.2.2-alpha.3",
   "publishConfig": {

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-web-fetch-http",
+  "name": "@fde2e/len-web-fetch-http",
   "description": "Anonymous HTTP(S) fetch provider for the DeepSeek Harness web capability seam (ctx.web)",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -30,8 +30,8 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*"
+    "@fde2e/len-timeout": "workspace:*",
+    "@fde2e/len-web": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
@@ -39,8 +39,8 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*",
-    "@deepseek-ai/dsh-http-proxy": "workspace:*"
+    "@fde2e/len-timeout": "workspace:*",
+    "@fde2e/len-web": "workspace:*",
+    "@fde2e/len-http-proxy": "workspace:*"
   }
 }

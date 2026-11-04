@@ -10,10 +10,10 @@ import {
   type SessionNotification,
   type StopReason,
 } from '@agentclientprotocol/sdk'
-import type { Agent, AgentHandle, AgentOptions, AgentStatus } from '@deepseek-ai/dsh-agent'
-import { installModelSelection } from '@deepseek-ai/dsh-agent'
-import { createUserMessage, errorChain, type UserMessage } from '@deepseek-ai/dsh-llm'
-import { type Session, type SessionEvent, type SessionId, type TurnEndReason } from '@deepseek-ai/dsh-session'
+import type { Agent, AgentHandle, AgentOptions, AgentStatus } from '@fde2e/len-agent'
+import { installModelSelection } from '@fde2e/len-agent'
+import { createUserMessage, errorChain, type UserMessage } from '@fde2e/len-llm'
+import { type Session, type SessionEvent, type SessionId, type TurnEndReason } from '@fde2e/len-session'
 import { AcpContentError, admitAcpPrompt } from './content.ts'
 import { turnEndToStopReason } from './codec.ts'
 import { mountAcpMcpServers } from './mcp.ts'

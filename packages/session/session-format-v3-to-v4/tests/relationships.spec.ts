@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { Session, SessionId, SessionLogOffset, type SessionEvent, type SessionHeader } from '@deepseek-ai/dsh-session'
-import { sessionFormatCatalog } from '@deepseek-ai/dsh-session-format-catalog'
-import type { SessionFormatEvent } from '@deepseek-ai/dsh-session-format'
+import { Session, SessionId, SessionLogOffset, type SessionEvent, type SessionHeader } from '@fde2e/len-session'
+import { sessionFormatCatalog } from '@fde2e/len-session-format-catalog'
+import type { SessionFormatEvent } from '@fde2e/len-session-format'
 
 type Row = { type: string; data: Record<string, unknown>; surfaceOp?: unknown; sourceEventSeqs?: number[]; ignorable?: true }
 const row = (type: string, data: Record<string, unknown>): Row => ({ type, data })

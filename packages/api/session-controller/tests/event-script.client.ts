@@ -1,18 +1,18 @@
 import {
   ToolCallId, createMessage, createToolResultMessage, createUserMessage,
-} from '@deepseek-ai/dsh-llm'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
+} from '@fde2e/len-llm'
+import { SessionSeq } from '@fde2e/len-session/types'
 // Minimal SessionEvent builders for orchestration tests (shape mirrors what the
 // host emits; only the fields the object layer reads).
-import type { ContentBlock } from '@deepseek-ai/dsh-llm/types'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+import type { ContentBlock } from '@fde2e/len-llm/types'
+import type { SessionEvent } from '@fde2e/len-session/types'
 import type {
   SessionEventEntry,
   SessionEventsPage,
   SessionWireEvent,
 } from '../src/types.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'compact-checkpoint': { kind: 'compact-checkpoint'; compactionId: string }
   }

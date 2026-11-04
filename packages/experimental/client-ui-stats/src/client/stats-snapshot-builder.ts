@@ -3,7 +3,7 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConversationViewBuilder, ConversationViewDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@fde2e/len-client-ui-conversation/client'
 import { buildTurns } from './stats-aggregate.ts'
 import type { StatsSnapshot, StatsViewNode } from './stats-contract.ts'
 import { TARGET } from './stats-definition.ts'

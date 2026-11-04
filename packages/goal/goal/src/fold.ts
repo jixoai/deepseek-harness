@@ -1,7 +1,7 @@
 /** Pure replay fold and strict decoder for durable goal changes. */
 
-import type { MessageSource } from '@deepseek-ai/dsh-llm'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import type { MessageSource } from '@fde2e/len-llm'
+import type { SessionEvent } from '@fde2e/len-session'
 import { GOAL_CHANGE_VERSION, GoalId } from './runtime.ts'
 import type { GoalBlockReason, GoalPhase, GoalRef, GoalSnapshot } from './types.ts'
 import type {

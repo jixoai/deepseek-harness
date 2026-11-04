@@ -2,12 +2,12 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { SubagentError } from '@deepseek-ai/dsh-subagent'
-import { TeamTaskId } from '@deepseek-ai/dsh-agent-team'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { InferValue, ValueSchemaSpec } from '@deepseek-ai/dsh-tools'
+import type { Agent } from '@fde2e/len-agent'
+import { SessionId } from '@fde2e/len-session'
+import { SubagentError } from '@fde2e/len-subagent'
+import { TeamTaskId } from '@fde2e/len-agent-team'
+import { defineTool } from '@fde2e/len-tools'
+import type { InferValue, ValueSchemaSpec } from '@fde2e/len-tools'
 
 /** Cordis plugin name. */
 export const name = 'tool-agent-team'

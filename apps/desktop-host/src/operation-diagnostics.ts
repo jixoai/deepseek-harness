@@ -1,6 +1,6 @@
 /** Bounded delivery of management facts to the shell which owns durable diagnostics. */
 import type { Context } from '@deepseek-ai/cordis'
-import { parsePluginOperationRecord, type PluginOperationRecord, type PluginOperationRunId } from '@deepseek-ai/dsh-plugin-manager/diagnostic'
+import { parsePluginOperationRecord, type PluginOperationRecord, type PluginOperationRunId } from '@fde2e/len-plugin-manager/diagnostic'
 
 /**
  * Observe manager operations after Host startup, with bounded concurrent IPC deliveries.

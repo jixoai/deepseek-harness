@@ -9,14 +9,14 @@
 import { beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context, FiberState, type Fiber } from '@deepseek-ai/cordis'
 import type { Transport } from '@modelcontextprotocol/client'
-import type Settings from '@deepseek-ai/dsh-settings'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import { CredentialProvider, credentialRef } from '@deepseek-ai/dsh-credentials'
+import type Settings from '@fde2e/len-settings'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
+import { CredentialProvider, credentialRef } from '@fde2e/len-credentials'
 import type {
   CredentialInfo, CredentialKey, CredentialRecord, CredentialRecordEntry, CredentialRecordInfo,
   CredentialRef, ResolvedCredential,
-} from '@deepseek-ai/dsh-credentials'
+} from '@fde2e/len-credentials'
 
 const { mockConnect, mockClose, mockListTools, MockClient, MockTransport, instances, transportConfigs } = vi.hoisted(() => {
   const mockConnect = vi.fn<() => Promise<void>>()
@@ -75,9 +75,9 @@ vi.mock('@modelcontextprotocol/client', async importOriginal => ({
   }),
 }))
 
-import { apply as applyMcpClient, Config as ClientConfig, connectionStatusOf } from '@deepseek-ai/dsh-mcp-client'
-import McpServerManager from '@deepseek-ai/dsh-mcp-manager/src/index.ts'
-import type { Config, McpManagedServerStatus } from '@deepseek-ai/dsh-mcp-manager/src/index.ts'
+import { apply as applyMcpClient, Config as ClientConfig, connectionStatusOf } from '@fde2e/len-mcp-client'
+import McpServerManager from '@fde2e/len-mcp-manager/src/index.ts'
+import type { Config, McpManagedServerStatus } from '@fde2e/len-mcp-manager/src/index.ts'
 import { managerProfile } from './profile-fixture.ts'
 
 /** Minimal real credential provider: reference half backed by a map. */

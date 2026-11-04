@@ -1,21 +1,21 @@
 /** Native-route admission and independent audited Flash translation without Agent history. */
 import { FiberState, type Context, type Fiber } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import { launchEnvironmentOf } from '@deepseek-ai/dsh-launch-environment'
-import { BlockAssembler, ReasoningEffortId, type LlmRuntime, type GenerateOptions, type RequestUserInput, type FinishReason, type TextBlock } from '@deepseek-ai/dsh-llm'
-import type { Config as AccountNativeConfig } from '@deepseek-ai/dsh-llm-deepseek-account'
-import type { Config as OfficialNativeConfig } from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import { deadline, timeoutOf } from '@deepseek-ai/dsh-timeout'
-import { deepFreeze } from '@deepseek-ai/dsh-util-values'
+import { credentialRef } from '@fde2e/len-credentials'
+import { launchEnvironmentOf } from '@fde2e/len-launch-environment'
+import { BlockAssembler, ReasoningEffortId, type LlmRuntime, type GenerateOptions, type RequestUserInput, type FinishReason, type TextBlock } from '@fde2e/len-llm'
+import type { Config as AccountNativeConfig } from '@fde2e/len-llm-deepseek-account'
+import type { Config as OfficialNativeConfig } from '@fde2e/len-llm-deepseek-api-key'
+import { deadline, timeoutOf } from '@fde2e/len-timeout'
+import { deepFreeze } from '@fde2e/len-util-values'
 import type { Config } from './index.ts'
 import type { PaidTranslationProvider, PaidTranslationSpec, TranslationIdentity, TranslationProvider } from './types.ts'
 import { TranslationError } from './error.ts'
 import type { TranslationLog } from './storage.ts'
 
 const MODEL = 'deepseek-flash'
-const OWNER_PACKAGES = { 'deepseek-account': '@deepseek-ai/dsh-llm-deepseek-account',
-  'deepseek-official': '@deepseek-ai/dsh-llm-deepseek-api-key' } as const
+const OWNER_PACKAGES = { 'deepseek-account': '@fde2e/len-llm-deepseek-account',
+  'deepseek-official': '@fde2e/len-llm-deepseek-api-key' } as const
 
 interface NativeOwnerFields { llm: LlmRuntime; fiber: Fiber }
 type NativeOwner = NativeOwnerFields & (

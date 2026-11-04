@@ -13,25 +13,25 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
 import { z } from 'zod'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import { AttachmentStore } from '@deepseek-ai/dsh-attachment'
-import { agentPresetProjectionDefinition } from '@deepseek-ai/dsh-agent-preset-registry'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { Session, SessionEvent, SessionHeader, UserMessage } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
-import type { SessionProjectionSummaryExcluded } from '@deepseek-ai/dsh-session-projection/types'
-import SessionProjectionCache, { projectionCacheDomainSpec } from '@deepseek-ai/dsh-session-projection-cache'
-import { titleProjectionDefinition } from '@deepseek-ai/dsh-session-title'
-import Storage from '@deepseek-ai/dsh-storage'
-import * as StorageDomain from '@deepseek-ai/dsh-storage-domain'
-import * as StorageJson from '@deepseek-ai/dsh-storage-json'
-import type { SessionControlFrame, SessionFollowFrame } from '@deepseek-ai/dsh-api-session-controller/types'
+import AgentRegistry from '@fde2e/len-agent'
+import { AttachmentStore } from '@fde2e/len-attachment'
+import { agentPresetProjectionDefinition } from '@fde2e/len-agent-preset-registry'
+import { createUserMessage } from '@fde2e/len-llm'
+import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@fde2e/len-session'
+import type { Session, SessionEvent, SessionHeader, UserMessage } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import type { ProjectionDefinition } from '@fde2e/len-session-projection'
+import type { SessionProjectionSummaryExcluded } from '@fde2e/len-session-projection/types'
+import SessionProjectionCache, { projectionCacheDomainSpec } from '@fde2e/len-session-projection-cache'
+import { titleProjectionDefinition } from '@fde2e/len-session-title'
+import Storage from '@fde2e/len-storage'
+import * as StorageDomain from '@fde2e/len-storage-domain'
+import * as StorageJson from '@fde2e/len-storage-json'
+import type { SessionControlFrame, SessionFollowFrame } from '@fde2e/len-api-session-controller/types'
 import {
   mountAgentLoopTestDependencies,
   mountAgentLoopTestHarness,
-} from '@deepseek-ai/dsh-agent-loop-testkit'
+} from '@fde2e/len-agent-loop-testkit'
 import { createSessionTestRemote, testSessionPersistence, type TestSessionRemote } from './test-remote.ts'
 
 const ownedContexts = new Set<Context>()
@@ -41,7 +41,7 @@ afterEach(async () => {
 })
 let nextHarnessSession = 1
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@fde2e/len-session-projection/types' {
   interface SessionProjectionMap {
     'test/last-user': { text: string } | null
     'test/summary-excluded': SessionProjectionSummaryExcluded<number>

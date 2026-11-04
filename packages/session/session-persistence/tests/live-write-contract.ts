@@ -7,16 +7,16 @@
  * ordering. Each provider owns its storage runtime; this suite pins the
  * equivalent observable behavior the seam requires.
  *
- * @module @deepseek-ai/dsh-session-persistence/tests/live-write-contract
+ * @module @fde2e/len-session-persistence/tests/live-write-contract
  */
 
 import { describe, expect, it, vi } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
-import { appendPluginRecord, pluginRecordOf, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import { appendPluginRecord, pluginRecordOf, SessionId } from '@fde2e/len-session'
+import type { SessionEvent } from '@fde2e/len-session'
 import type { SessionPersistence } from '../src/index.ts'
 
-declare module '@deepseek-ai/dsh-session/types' {
+declare module '@fde2e/len-session/types' {
   interface PluginRecordMap {
     'plugin:persistence-test/state': { count: number }
   }

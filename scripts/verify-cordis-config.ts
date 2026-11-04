@@ -41,7 +41,7 @@ const appOverlayFiles = new Set([
 const metadataFields = ['id', 'name', 'group', 'inject', 'intercept', 'isolate'] as const
 
 /** The adaptive directory-picker chooser package (mounts a backend row at boot). */
-const CHOOSER_PACKAGE = '@deepseek-ai/dsh-host-directory-picker-auto'
+const CHOOSER_PACKAGE = '@fde2e/len-host-directory-picker-auto'
 
 /**
  * The packages the chooser mounts by runtime string (mirror of its exported
@@ -51,10 +51,10 @@ const CHOOSER_PACKAGE = '@deepseek-ai/dsh-host-directory-picker-auto'
  * until a macOS boot.
  */
 const CHOOSER_BACKEND_PACKAGES = [
-  '@deepseek-ai/dsh-host-directory-picker-native',
-  '@deepseek-ai/dsh-host-directory-picker-browse',
-  '@deepseek-ai/dsh-client-ui-directory-picker-browse',
-  '@deepseek-ai/dsh-client-ui-directory-picker-native',
+  '@fde2e/len-host-directory-picker-native',
+  '@fde2e/len-host-directory-picker-browse',
+  '@fde2e/len-client-ui-directory-picker-browse',
+  '@fde2e/len-client-ui-directory-picker-native',
 ]
 const errors: string[] = []
 const pluginReferences: PluginReference[] = []
@@ -196,8 +196,8 @@ export function exclusivePlaneRowIds(rows: unknown): Set<string> {
     }
     if (!isRecord(value)) return
     if (typeof value.id === 'string' && typeof value.name === 'string'
-      && value.name !== '@deepseek-ai/dsh-tool-executor-native'
-      && value.name !== '@deepseek-ai/dsh-tool-executor-ptc') ids.add(value.id)
+      && value.name !== '@fde2e/len-tool-executor-native'
+      && value.name !== '@fde2e/len-tool-executor-ptc') ids.add(value.id)
     walk(value.insert)
     if (isCordisGroupEntry(value)) walk(value.config)
   }

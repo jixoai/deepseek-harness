@@ -2,12 +2,12 @@
 
 import type {
   ConversationLocation, ConversationNodeDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-compaction/types'
-import type {} from '@deepseek-ai/dsh-tools'
+} from '@fde2e/len-client-ui-conversation/client'
+import type {} from '@fde2e/len-compaction/types'
+import type {} from '@fde2e/len-tools'
 
-import type {} from '@deepseek-ai/dsh-user-approval/types'
-import type { SessionEventMap } from '@deepseek-ai/dsh-session/types'
+import type {} from '@fde2e/len-user-approval/types'
+import type { SessionEventMap } from '@fde2e/len-session/types'
 import type { StatsEventMetrics } from './stats-contract.ts'
 
 /** Event shape a Conversation Definition receives. */

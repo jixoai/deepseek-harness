@@ -2,8 +2,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type {} from '@deepseek-ai/dsh-experimental-forge'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+import type {} from '@fde2e/len-experimental-forge'
+import { MAX_TIMER_DELAY_MS } from '@fde2e/len-timeout'
 import { ghRunner } from './gh.ts'
 import { GitHubProvider } from './provider.ts'
 

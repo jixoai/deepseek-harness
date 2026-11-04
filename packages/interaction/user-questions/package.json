@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-user-questions",
+  "name": "@fde2e/len-user-questions",
   "description": "Abstract user-questions seam (ctx.userQuestions) for asking the human during agent runs",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -46,24 +46,24 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-scope": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-scope": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-tool-executor-ptc": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*"
+    "@fde2e/len-tool-executor-ptc": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-session-persistence-jsonl": "workspace:*"
   },
   "dependencies": {
     "zod": "4.4.3",

@@ -4,14 +4,14 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { afterEach, describe, expect, it, vi, type Mock } from 'vitest'
 import { Context, LoggerLevel } from '@deepseek-ai/cordis'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
-import DeepSeekLlmApiExtensionRegistry from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
-import type { DeepSeekLlmApiExtensionRequest } from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import * as DeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import LlmRuntime from '@fde2e/len-llm'
+import DeepSeekLlmApiExtensionRegistry from '@fde2e/len-deepseek-llm-api-extensions'
+import type { DeepSeekLlmApiExtensionRequest } from '@fde2e/len-deepseek-llm-api-extensions'
+import { SessionId } from '@fde2e/len-session'
+import * as DeepSeek from '@fde2e/len-llm-deepseek-api-key'
 import { adapter, assemble, options, sse, textEvents } from './helpers.ts'
 
-declare module '@deepseek-ai/dsh-deepseek-llm-api-extensions' {
+declare module '@fde2e/len-deepseek-llm-api-extensions' {
   interface DeepSeekLlmApiExtensionMap {
     dsh_messages_test: { value: string }
   }

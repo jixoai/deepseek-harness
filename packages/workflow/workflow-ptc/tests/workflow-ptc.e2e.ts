@@ -1,12 +1,12 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { SessionId } from '@fde2e/len-session'
 
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
-import * as Spawn from '@deepseek-ai/dsh-subagent-spawn-in-process'
+import AgentLoop from '@fde2e/len-agent-loop'
+import { mountAgentLoopTestDependencies } from '@fde2e/len-agent-loop-testkit'
+import * as LlmDeepSeek from '@fde2e/len-llm-deepseek-api-key'
+import SubagentRuntime from '@fde2e/len-subagent'
+import * as Spawn from '@fde2e/len-subagent-spawn-in-process'
 import PtcWorkflowEngine from '../src/index.ts'
 import { mountPtcRuntime } from './setup.ts'
 

@@ -1,8 +1,8 @@
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
 // Proves `allowParallelInProgress` is real configurability and not a constant:
 // the flag is set in a cordis.yml booted through the real Loader, and both faces
 // it controls — the model-facing description and the accepted input — follow it.
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -11,15 +11,15 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import { Session, SessionId } from '@deepseek-ai/dsh-session'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import * as ToolTodo from '@deepseek-ai/dsh-tool-todo'
-import { unsupportedModel, unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { ToolCallId } from '@fde2e/len-llm'
+import { Session, SessionId } from '@fde2e/len-session'
+import AgentRegistry from '@fde2e/len-agent'
+import type { Agent } from '@fde2e/len-agent'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import * as ToolTodo from '@fde2e/len-tool-todo'
+import { unsupportedModel, unsupportedInbox } from '@fde2e/len-agent-loop-testkit'
 
 let root: string | undefined
 let context: Context | undefined
@@ -60,12 +60,12 @@ async function boot(configLines: readonly string[]): Promise<Context> {
   root = await mkdtemp(join(tmpdir(), 'dsh-todo-loader-'))
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, [
-    "- name: '@deepseek-ai/dsh-agent'",
-    "- name: '@deepseek-ai/dsh-system-prompt'",
-    "- name: '@deepseek-ai/dsh-tools'",
-    "- name: '@deepseek-ai/dsh-tool-executor-native'",
-    "- name: '@deepseek-ai/dsh-session-projection'",
-    "- name: '@deepseek-ai/dsh-tool-todo'",
+    "- name: '@fde2e/len-agent'",
+    "- name: '@fde2e/len-system-prompt'",
+    "- name: '@fde2e/len-tools'",
+    "- name: '@fde2e/len-tool-executor-native'",
+    "- name: '@fde2e/len-session-projection'",
+    "- name: '@fde2e/len-tool-todo'",
     ...configLines.length > 0 ? ['  config:', ...configLines] : [],
     '',
   ].join('\n'))
@@ -76,12 +76,12 @@ async function boot(configLines: readonly string[]): Promise<Context> {
   await ctx.plugin(Loader)
   ctx.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-agent', AgentRegistry],
-    ['@deepseek-ai/dsh-system-prompt', SystemPrompt],
-    ['@deepseek-ai/dsh-tools', ToolRuntime],
-    ['@deepseek-ai/dsh-tool-executor-native', NativeToolExecutor],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-    ['@deepseek-ai/dsh-tool-todo', ToolTodo],
+    ['@fde2e/len-agent', AgentRegistry],
+    ['@fde2e/len-system-prompt', SystemPrompt],
+    ['@fde2e/len-tools', ToolRuntime],
+    ['@fde2e/len-tool-executor-native', NativeToolExecutor],
+    ['@fde2e/len-session-projection', SessionProjectionRegistry],
+    ['@fde2e/len-tool-todo', ToolTodo],
   ])
   ctx.loader.internal = {
     version: 'v2',

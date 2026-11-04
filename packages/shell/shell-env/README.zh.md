@@ -3,7 +3,7 @@ description: "受管 DSH_* shell 环境，供选择、配置或扩展每次模�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-shell-env
+# @fde2e/len-shell-env
 
 [English](README.md) | 中文
 
@@ -37,7 +37,7 @@ kind: "package-reference"
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-shell-env'
+import type {} from '@fde2e/len-shell-env'
 
 export const inject = ['shellEnv']
 

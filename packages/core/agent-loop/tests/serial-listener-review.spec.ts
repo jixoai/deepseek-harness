@@ -4,17 +4,17 @@ import { mkdtemp, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import * as JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import { mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import LocalFileReference from '@deepseek-ai/dsh-file-reference-local'
-import Selection from '@deepseek-ai/dsh-tool-subagent/model-selection-settings'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import AgentLoop from '@fde2e/len-agent-loop'
+import * as JsonlSessionPersistence from '@fde2e/len-session-persistence-jsonl'
+import { mountAgentLoopTestDependencies } from '@fde2e/len-agent-loop-testkit'
+import { SessionId } from '@fde2e/len-session'
+import LocalFileReference from '@fde2e/len-file-reference-local'
+import Selection from '@fde2e/len-tool-subagent/model-selection-settings'
+import type { Agent } from '@fde2e/len-agent'
+import { createUserMessage } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'due-work': { kind: 'due-work'; plugin: string } & ContextFormed
   }

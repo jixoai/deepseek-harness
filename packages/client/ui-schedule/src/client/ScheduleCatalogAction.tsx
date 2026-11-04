@@ -7,10 +7,10 @@ import {
   IconTrashOutlineRegular,
   useAnchoredPosition,
   useDismissOnOutsidePointer,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { ScheduleId, ScheduleCatalogEntry } from '@deepseek-ai/dsh-schedule/client'
+} from '@fde2e/len-client-ui-primitives'
+import type { InjectFace, PropsLocale, PropsRuntime } from '@fde2e/len-client-ui-slots'
+import type {} from '@fde2e/len-client-ui-conversation/client'
+import type { ScheduleId, ScheduleCatalogEntry } from '@fde2e/len-schedule/client'
 import type { CatalogInjected } from './catalog-source.ts'
 import { NS } from './locales.ts'
 import { taskNextRunAt } from './task-record.ts'

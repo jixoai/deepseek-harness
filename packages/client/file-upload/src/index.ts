@@ -2,12 +2,12 @@
 
 import { randomUUID } from 'node:crypto'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
-import type {} from '@deepseek-ai/dsh-client-connection'
-import type { CommandFileReceiptResolver } from '@deepseek-ai/dsh-commands'
-import type { Session, SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
-import { Remote, RemoteError, remoteErrorOf, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import type { Agent } from '@fde2e/len-agent'
+import type { ImageAttachmentRef } from '@fde2e/len-attachment'
+import type {} from '@fde2e/len-client-connection'
+import type { CommandFileReceiptResolver } from '@fde2e/len-commands'
+import type { Session, SessionEvent, SessionId } from '@fde2e/len-session'
+import { Remote, RemoteError, remoteErrorOf, TypertRemoteService } from '@fde2e/len-typert-protocol'
 import { handleFileUploadHttp } from './http-route.ts'
 import { FILE_UPLOAD_PATH } from './protocol.ts'
 import type {

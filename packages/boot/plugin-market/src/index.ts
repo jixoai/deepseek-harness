@@ -4,15 +4,15 @@ import { isAbsolute, join, resolve } from 'node:path'
 import type { Context, Volatile } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import semver from 'semver'
-import { evaluatePluginCompatibility, getDshRuntimeVersion } from '@deepseek-ai/dsh-app-boot'
-import { marketInstallTarget, type MarketIndex, type MarketPlugin, type MarketVersion } from '@deepseek-ai/dsh-plugin-market-index'
-import type { BundleInfo } from '@deepseek-ai/dsh-plugin-manager/types'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
-import { Remote, RemoteError, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { evaluatePluginCompatibility, getDshRuntimeVersion } from '@fde2e/len-app-boot'
+import { marketInstallTarget, type MarketIndex, type MarketPlugin, type MarketVersion } from '@fde2e/len-plugin-market-index'
+import type { BundleInfo } from '@fde2e/len-plugin-manager/types'
+import { MAX_TIMER_DELAY_MS } from '@fde2e/len-timeout'
+import { Remote, RemoteError, TypertRemoteService } from '@fde2e/len-typert-protocol'
 import {
   DetailFailure, detailImageResponse, languageChain, NPM_FILE_SOURCES, npmFileSourceOrder, npmFiles,
-} from '@deepseek-ai/dsh-plugin-detail'
-import type { NpmFileSource } from '@deepseek-ai/dsh-plugin-detail/types'
+} from '@fde2e/len-plugin-detail'
+import type { NpmFileSource } from '@fde2e/len-plugin-detail/types'
 import { DetailReader, repositoryOf, type DetailLocation, type RepositoryLocation } from './detail.ts'
 import { repositoryFiles, type RepositoryFileOptions } from './detail-files.ts'
 import { normalizeIndexUrl } from './index-url.ts'
@@ -21,10 +21,10 @@ import { parseIndexInWorker } from './parse-thread.ts'
 import { MarketSearch } from './search.ts'
 // Type-only: the `pluginManager` service, `settings.update`, the Loader's `loader/volatile-update` event, and the
 // `connection` Fetch routes.
-import type {} from '@deepseek-ai/dsh-plugin-manager'
-import type {} from '@deepseek-ai/dsh-settings'
+import type {} from '@fde2e/len-plugin-manager'
+import type {} from '@fde2e/len-settings'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
-import type {} from '@deepseek-ai/dsh-client-connection'
+import type {} from '@fde2e/len-client-connection'
 import type {
   MarketCompatibility, MarketIndexSummary, MarketInstallation, MarketListingEntry, MarketListingVersion, MarketQuery, MarketSearchResult,
   PluginDetail,

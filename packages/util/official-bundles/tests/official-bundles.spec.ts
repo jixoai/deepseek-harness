@@ -5,7 +5,7 @@ import { OFFICIAL_ON_DEMAND_CATALOG, ON_DEMAND_BUNDLES, PROFILE_TEMPLATES } from
 
 describe('Official on-demand catalog', () => {
   it('offers exactly the two native subagent integrations with offline localized metadata', () => {
-    expect(ON_DEMAND_BUNDLES).toEqual(['@deepseek-ai/dsh-subagent-claude-code', '@deepseek-ai/dsh-subagent-codex'])
+    expect(ON_DEMAND_BUNDLES).toEqual(['@fde2e/len-subagent-claude-code', '@fde2e/len-subagent-codex'])
     expect(OFFICIAL_ON_DEMAND_CATALOG.map(entry => entry.packageName)).toEqual(ON_DEMAND_BUNDLES)
     for (const entry of OFFICIAL_ON_DEMAND_CATALOG) {
       expect(entry.meta.icon).toMatch(/^data:image\/svg\+xml;base64,/)
@@ -22,11 +22,11 @@ describe('Official on-demand catalog', () => {
 describe('Shipped profile templates', () => {
   it('stack each mode bundle on base except the standalone minimal SDK', () => {
     expect(PROFILE_TEMPLATES).toEqual({
-      acp: { bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-acp-app'] },
-      web: { bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app'] },
-      headless: { bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-headless'] },
-      sdk: { bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-sdk-app'] },
-      'sdk-minimal': { bundles: ['@deepseek-ai/dsh-sdk-minimal'] },
+      acp: { bundles: ['@fde2e/len-base', '@fde2e/len-acp-app'] },
+      web: { bundles: ['@fde2e/len-base', '@fde2e/len-web-app'] },
+      headless: { bundles: ['@fde2e/len-base', '@fde2e/len-headless'] },
+      sdk: { bundles: ['@fde2e/len-base', '@fde2e/len-sdk-app'] },
+      'sdk-minimal': { bundles: ['@fde2e/len-sdk-minimal'] },
     })
   })
 })

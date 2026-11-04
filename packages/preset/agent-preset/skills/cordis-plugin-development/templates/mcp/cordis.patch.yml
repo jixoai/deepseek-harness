@@ -1,6 +1,6 @@
 - insert:
     - id: demo-mcp
-      name: '@deepseek-ai/dsh-mcp-client'
+      name: '@fde2e/len-mcp-client'
       config:
         serverName: demo
         transport: streamable-http

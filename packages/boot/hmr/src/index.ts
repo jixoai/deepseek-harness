@@ -10,8 +10,8 @@ import { basename, dirname, join, relative, resolve, sep } from 'node:path'
 import { existsSync, lstatSync, readdirSync, readFileSync, realpathSync } from 'node:fs'
 import {
   readProfileManifest, readProfilePatches, recomposeProfile, PROFILE_PATCH_FILENAME, type RuntimeResolution,
-} from '@deepseek-ai/dsh-app-boot'
-import type {} from '@deepseek-ai/dsh-cmdline'
+} from '@fde2e/len-app-boot'
+import type {} from '@fde2e/len-cmdline'
 import { handleError } from './error.ts'
 import { PackageManifests } from './package-manifest.ts'
 import { ModuleFiles } from './module-files.ts'

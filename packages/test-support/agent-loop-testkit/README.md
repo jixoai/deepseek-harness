@@ -3,7 +3,7 @@ description: "Prerequisite mounting, production AgentLoop drivers, and explicit 
 kind: "package-library"
 ---
 
-# @deepseek-ai/dsh-agent-loop-testkit
+# @fde2e/len-agent-loop-testkit
 
 English | [中文](README.zh.md)
 
@@ -35,11 +35,11 @@ Use `mountAgentLoopTestHarness()` when the test covers durable Inbox events, pro
 
 ```ts
 import { Context } from '@deepseek-ai/cordis'
-import { SessionId, type UserMessage } from '@deepseek-ai/dsh-session'
+import { SessionId, type UserMessage } from '@fde2e/len-session'
 import {
   mountAgentLoopTestDependencies,
   mountAgentLoopTestHarness,
-} from '@deepseek-ai/dsh-agent-loop-testkit'
+} from '@fde2e/len-agent-loop-testkit'
 
 const ctx = new Context()
 
@@ -60,7 +60,7 @@ The dependency helper forwards system-prompt and tool-registry configuration thr
 Use `createInboxStub()` when the test subject needs mutable pending lists but does not exercise durability, projection validation, live Inbox notifications, or the driver's claim policy. The stub implements the public queue operations with two process-local arrays and never writes to a Session. Use `unsupportedInbox()` when the test subject must not touch pending input; every mutation throws at the first unexpected dependency. Use `unsupportedModel()` when the test does not read or change model selection; all its operations throw.
 
 ```ts
-import { createInboxStub, unsupportedModel } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { createInboxStub, unsupportedModel } from '@fde2e/len-agent-loop-testkit'
 
 const agent = {
   // ...

@@ -1,19 +1,19 @@
 // @vitest-environment jsdom
 /** Detail adapters accept the exact recorded result text and retain safe fallback paths. */
 import { describe, expect, it } from 'vitest'
-import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
-import { en, zh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
-import { statusLine } from '@deepseek-ai/dsh-tool-jobs/src/render.ts'
-import { presentation } from '@deepseek-ai/dsh-tool-session-query/src/presentation.ts'
-import { renderList, renderRead, renderSpawn } from '@deepseek-ai/dsh-tool-terminal/src/render.ts'
-import { formatSpillNotice } from '@deepseek-ai/dsh-spill-policy/notice'
+import type { ToolResultNode } from '@fde2e/len-client-ui-chat/client'
+import { makeTranslate } from '@fde2e/len-client-test-runtime'
+import { en, zh } from '@fde2e/len-client-ui-conversation/src/client/locales.ts'
+import { en as commonEn } from '@fde2e/len-client-locale/src/locales/en.ts'
+import { zh as commonZh } from '@fde2e/len-client-locale/src/locales/zh.ts'
+import { statusLine } from '@fde2e/len-tool-jobs/src/render.ts'
+import { presentation } from '@fde2e/len-tool-session-query/src/presentation.ts'
+import { renderList, renderRead, renderSpawn } from '@fde2e/len-tool-terminal/src/render.ts'
+import { formatSpillNotice } from '@fde2e/len-spill-policy/notice'
 import { detailBadge, detailJson, detailList, detailRecord, inspectionItems, nonempty } from '../src/client/tool/models/detail-model-shared.ts'
 import { detailsCardModel } from '../src/client/tool/models/details-card-model.ts'
-import { SpillLocator } from '@deepseek-ai/dsh-spill'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import { SpillLocator } from '@fde2e/len-spill'
+import { PartialArguments } from '@fde2e/len-util-values'
 
 const t = makeTranslate(en, commonEn)
 

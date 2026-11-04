@@ -1,8 +1,8 @@
 /** Shared credential resolution and metadata-only readiness across DeepSeek consumers. */
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import { createLaunchEnvironmentSnapshot, DSH_LAUNCH_ENVIRONMENT_KEY } from '@deepseek-ai/dsh-launch-environment'
+import { credentialRef } from '@fde2e/len-credentials'
+import { createLaunchEnvironmentSnapshot, DSH_LAUNCH_ENVIRONMENT_KEY } from '@fde2e/len-launch-environment'
 import { deepSeekApiKeyConfigured, rejectDeepSeekAccountToken, resolveDeepSeekAccountToken, resolveDeepSeekApiKey } from '../src/credential.ts'
 
 const ref = credentialRef('TEST_DEEPSEEK_KEY')

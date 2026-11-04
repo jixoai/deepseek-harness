@@ -1,10 +1,10 @@
 /** Settled question batches rendered with the shared user-message surface. */
 import { memo } from 'react'
-import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+import type {} from '@fde2e/len-client-ui-chat/client'
+import type { PropsLocale, PropsRuntime } from '@fde2e/len-client-ui-slots'
 import {
   IconCheckOutlineRegular, IconCopyOutlineRegular, Tooltip, UserMessageBubble, useClipboardCopy,
-} from '@deepseek-ai/dsh-client-ui-primitives'
+} from '@fde2e/len-client-ui-primitives'
 import type { QuestionReplyData } from './question-reply.ts'
 import { replyAnswerValues, replyClipboardText } from './question-reply.ts'
 import css from './QuestionReplyView.module.css'

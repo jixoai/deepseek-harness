@@ -1,11 +1,11 @@
 /** Session-owned Agent Teams selection in the model and reasoning menu. */
 
 import { useState } from 'react'
-import { Button, IconInfoOutlineRegular, Switch, Tooltip } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-model-selection/client'
-import type {} from '@deepseek-ai/dsh-agent-team/client'
-import type {} from '@deepseek-ai/dsh-agent'
+import { Button, IconInfoOutlineRegular, Switch, Tooltip } from '@fde2e/len-client-ui-primitives'
+import type { PropsLocale, PropsRuntime } from '@fde2e/len-client-ui-slots'
+import type {} from '@fde2e/len-client-ui-model-selection/client'
+import type {} from '@fde2e/len-agent-team/client'
+import type {} from '@fde2e/len-agent'
 import type { NS } from './locales.ts'
 import css from './TeamModeToggle.module.css'
 

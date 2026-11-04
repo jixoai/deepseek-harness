@@ -1,17 +1,17 @@
 /**
  * Default model selection for an Agent without a session-specific selection.
  *
- * @module @deepseek-ai/dsh-agent-default-model
+ * @module @fde2e/len-agent-default-model
  */
-import type {} from '@deepseek-ai/dsh-settings'
+import type {} from '@fde2e/len-settings'
 
 import type { Volatile } from '@deepseek-ai/cordis'
 
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { ModelSelection } from '@deepseek-ai/dsh-agent'
-import { ReasoningEffortId } from '@deepseek-ai/dsh-llm'
-import type {} from '@deepseek-ai/dsh-config-editor'
+import type { ModelSelection } from '@fde2e/len-agent'
+import { ReasoningEffortId } from '@fde2e/len-llm'
+import type {} from '@fde2e/len-config-editor'
 
 declare module '@deepseek-ai/cordis' {
   interface Context {

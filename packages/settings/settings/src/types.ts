@@ -1,7 +1,7 @@
 /** Client-safe configuration form views and change notifications. */
 
-import type { Branded } from '@deepseek-ai/dsh-brand'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import type { Branded } from '@fde2e/len-brand'
+import type { JsonValue } from '@fde2e/len-util-values'
 
 /** Nominal id of one profile plugin entry. */
 export type SettingsNamespace = Branded<'SettingsNamespace'>

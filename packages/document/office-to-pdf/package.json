@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-office-to-pdf",
+  "name": "@fde2e/len-office-to-pdf",
   "description": "Shared Office-to-PDF conversion with bounded queues and caching",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -52,15 +52,15 @@
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
-    "@deepseek-ai/dsh-api-workspace-files": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*"
+    "@fde2e/len-api-workspace-files": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-session": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/libreoffice-kit": "^0.1.5",
     "@deepseek-ai/schemastery": "workspace:~",
-    "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "zod": "4.4.3"
   }
 }

@@ -1,13 +1,13 @@
 import { mountWorkingDirectoryFixture } from './working-directory-fixture.ts'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent, AgentCancelCause, AgentStatus, CancelOptions } from '@deepseek-ai/dsh-agent'
-import { unsupportedModel, unsupportedInbox } from '@deepseek-ai/dsh-agent-loop-testkit'
-import SessionStore, { SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { Session } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { SessionActivity } from '@deepseek-ai/dsh-workspace'
+import AgentRegistry from '@fde2e/len-agent'
+import type { Agent, AgentCancelCause, AgentStatus, CancelOptions } from '@fde2e/len-agent'
+import { unsupportedModel, unsupportedInbox } from '@fde2e/len-agent-loop-testkit'
+import SessionStore, { SessionId, SessionLogOffset, SessionSeq } from '@fde2e/len-session'
+import type { Session } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import type { SessionActivity } from '@fde2e/len-workspace'
 import SubagentRuntime, { SUBAGENT_DESCRIPTOR_VERSION } from '../src/index.ts'
 import { TestSessionQuery } from './test-session-query.ts'
 
@@ -281,7 +281,7 @@ describe('Subagent archive admission: lifetime', () => {
 })
 
 // The runtime knows only its own family; this suite merges a trailing one to observe ordering.
-declare module '@deepseek-ai/dsh-workspace/types' {
+declare module '@fde2e/len-workspace/types' {
   interface SessionActivityKindMap {
     probe: true
   }

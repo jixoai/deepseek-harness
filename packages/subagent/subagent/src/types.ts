@@ -4,14 +4,14 @@
  * payloads that plugins and hosts observe. Internal control interfaces, such
  * as the manager host, belong with their implementation.
  *
- * @module @deepseek-ai/dsh-subagent/types
+ * @module @fde2e/len-subagent/types
  */
 
-import type { Agent, AgentOptions } from '@deepseek-ai/dsh-agent'
-import type { Branded } from '@deepseek-ai/dsh-brand'
-import type { ContentBlock, MessageId } from '@deepseek-ai/dsh-llm'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session'
-import type { ObjectJsonSchema } from '@deepseek-ai/dsh-tools'
+import type { Agent, AgentOptions } from '@fde2e/len-agent'
+import type { Branded } from '@fde2e/len-brand'
+import type { ContentBlock, MessageId } from '@fde2e/len-llm'
+import type { SessionEvent, SessionId } from '@fde2e/len-session'
+import type { ObjectJsonSchema } from '@fde2e/len-tools'
 
 /** Identifies one subagent residency epoch across its lifecycle event pair. */
 export type SubagentRunId = Branded<'SubagentRunId'>

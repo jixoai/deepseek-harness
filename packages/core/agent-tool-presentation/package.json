@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-agent-tool-presentation",
+  "name": "@fde2e/len-agent-tool-presentation",
   "description": "Deprecated tool presentation selector; use dsh-tool-executor-native or dsh-tool-executor-ptc directly",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,21 +29,21 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-tool-executor-native": "workspace:*",
-    "@deepseek-ai/dsh-tool-executor-ptc": "workspace:*",
+    "@fde2e/len-tool-executor-native": "workspace:*",
+    "@fde2e/len-tool-executor-ptc": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "peerDependencies": {
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-scope": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-system-prompt": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-ptc-runtime": "workspace:*",
+    "@fde2e/len-scope": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-system-prompt": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

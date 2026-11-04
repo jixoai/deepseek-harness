@@ -3,7 +3,7 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type { SessionId } from '@fde2e/len-session/types'
 import { openSharedSession } from '../src/client/viewer-session.ts'
 
 const SHARED = 'fx-shared' as SessionId

@@ -24,7 +24,7 @@
  * module; distinct active Loader sources for that package are a composition
  * error. Bundle rebuilds outside
  * an entry restart reach the graph through {@link ClientModuleRegistry.rebuilt}.
- * @module @deepseek-ai/dsh-client-modules
+ * @module @fde2e/len-client-modules
  */
 
 import { createHash } from 'node:crypto'
@@ -38,7 +38,7 @@ import { isDeepStrictEqual } from 'node:util'
 import { Service } from '@deepseek-ai/cordis'
 import type { Context } from '@deepseek-ai/cordis'
 import type { Entry } from '@deepseek-ai/cordis-plugin-loader'
-import type { IndexInjection } from '@deepseek-ai/dsh-host-webserver'
+import type { IndexInjection } from '@fde2e/len-host-webserver'
 import { PACKAGE_ASSET_SEGMENT, packageAssetMediaType } from './assets.ts'
 import { exactPackageSpecifier, parseDshClient, stripClientSuffix } from './client/manifest.ts'
 import type { WebBootBatch, WebBootBatchPhase, WebBootEntry, WebBootGraph, WebBootRelease } from './client/manifest.ts'
@@ -583,7 +583,7 @@ export function orderByModuleGraph(entries: readonly WebBootEntry[]): WebBootEnt
 }
 
 /** Bootstrap package whose ordinary client bundle supplies the module-system implementation. */
-const CLIENT_MODULES_ID = '@deepseek-ai/dsh-client-modules'
+const CLIENT_MODULES_ID = '@fde2e/len-client-modules'
 
 /** Dynamic bundles grouped into the parser bootstrap batch before the Vite shell. */
 const PARSER_PRELOAD_IDS = [CLIENT_MODULES_ID] as const

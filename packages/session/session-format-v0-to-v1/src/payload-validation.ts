@@ -1,10 +1,10 @@
-import { SessionFormatError, sessionFormatCount, sessionFormatSafeInteger } from '@deepseek-ai/dsh-session-format'
-import { fourDigitYearEpoch } from '@deepseek-ai/dsh-util-time'
-import { deepEqualJson } from '@deepseek-ai/dsh-util-values'
+import { SessionFormatError, sessionFormatCount, sessionFormatSafeInteger } from '@fde2e/len-session-format'
+import { fourDigitYearEpoch } from '@fde2e/len-util-time'
+import { deepEqualJson } from '@fde2e/len-util-values'
 import type {
   SessionFormatEvent,
   SessionFormatJsonValue,
-} from '@deepseek-ai/dsh-session-format'
+} from '@fde2e/len-session-format'
 import { assertReleasedV0Keys, releasedV0Record } from './validation-helpers.ts'
 
 type JsonRecord = Record<string, SessionFormatJsonValue>

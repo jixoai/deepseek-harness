@@ -9,13 +9,13 @@ import type {
   SessionSnapshot,
   SessionSummary,
   UseProjection,
-} from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type { AccessEffect, RemoteEndpoint } from '@deepseek-ai/dsh-api-remote-access/client'
-import { notifySubscribers } from '@deepseek-ai/dsh-client-store'
-import { WeakMapWithValues } from '@deepseek-ai/dsh-util-values'
-import { standardHookPropName } from '@deepseek-ai/dsh-client-ui-slots'
+} from '@fde2e/len-api-session-controller/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type {} from '@fde2e/len-api-remotes/client'
+import type { AccessEffect, RemoteEndpoint } from '@fde2e/len-api-remote-access/client'
+import { notifySubscribers } from '@fde2e/len-client-store'
+import { WeakMapWithValues } from '@fde2e/len-util-values'
+import { standardHookPropName } from '@fde2e/len-client-ui-slots'
 import type {
   HostObservable,
   KeyedStandardSource,
@@ -25,9 +25,9 @@ import type {
   SlotScopeAdapter,
   SnapshotSelectorHook,
   StandardSourceBinding,
-} from '@deepseek-ai/dsh-client-ui-slots'
+} from '@fde2e/len-client-ui-slots'
 // Type-only service merge for ctx.slots.
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
+import type {} from '@fde2e/len-client-ui-renderer/client'
 import { renderSessionArea } from './session-provider.tsx'
 
 /** Selector hook over the Session Controller list and current selection. */
@@ -149,7 +149,7 @@ class PendingInteractionDomain<T extends SessionPendingInteractionBase> {
   }
 }
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@fde2e/len-client-ui-slots' {
   interface SlotScopeTargetMap {
     session: SessionReference
   }
@@ -186,7 +186,7 @@ declare module '@deepseek-ai/dsh-client-ui-slots' {
   }
 }
 
-declare module '@deepseek-ai/dsh-api-session-controller/client' {
+declare module '@fde2e/len-api-session-controller/client' {
   interface SessionReferenceSourceMap {
     mainView: unknown
   }

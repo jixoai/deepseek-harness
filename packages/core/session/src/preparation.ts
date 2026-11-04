@@ -1,6 +1,6 @@
 /**
  * Ownership of one unpublished Session before registry publication.
- * @module @deepseek-ai/dsh-session/preparation
+ * @module @fde2e/len-session/preparation
  */
 
 import type { Session } from './index.ts'

@@ -4,7 +4,7 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import type { SubprocessTerminalActivity } from '@deepseek-ai/dsh-subprocess'
+import type { SubprocessTerminalActivity } from '@fde2e/len-subprocess'
 import { afterEach, describe, expect, it } from 'vitest'
 import LocalSubprocessRuntime from '../src/index.ts'
 

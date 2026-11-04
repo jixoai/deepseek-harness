@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-llm",
+  "name": "@fde2e/len-llm",
   "description": "Provider-neutral LLM service interface for the DeepSeek Harness",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -61,17 +61,17 @@
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-util-crypto": "workspace:*",
+    "@fde2e/len-util-crypto": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "4.4.3",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
-    "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-util-values": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-timeout": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
+    "@fde2e/len-util-values": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-attachment": "workspace:*",
-    "@deepseek-ai/dsh-package-manifest": "workspace:*",
+    "@fde2e/len-attachment": "workspace:*",
+    "@fde2e/len-package-manifest": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

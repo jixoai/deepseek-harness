@@ -3,7 +3,7 @@ description: "The authorization flow registry for users and maintainers who obta
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-authorization
+# @fde2e/len-authorization
 
 English | [中文](README.zh.md)
 
@@ -37,8 +37,8 @@ Your plugin declares one flow per credential it holds, keyed by the `<scope>/<id
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type { AuthorizationSession } from '@deepseek-ai/dsh-authorization'
-import { credentialKey } from '@deepseek-ai/dsh-credentials'
+import type { AuthorizationSession } from '@fde2e/len-authorization'
+import { credentialKey } from '@fde2e/len-credentials'
 
 declare const ctx: Context
 declare const exchangeCode: (code: string, signal: AbortSignal) => Promise<{ token: string }>

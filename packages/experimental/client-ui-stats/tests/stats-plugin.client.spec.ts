@@ -1,24 +1,24 @@
 import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
-import { AttachmentId, type ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
-import { LlmAttemptId } from '@deepseek-ai/dsh-llm/brand'
-import type { StreamChunk } from '@deepseek-ai/dsh-llm'
+import { AttachmentId, type ImageAttachmentRef } from '@fde2e/len-attachment'
+import { LlmAttemptId } from '@fde2e/len-llm/brand'
+import type { StreamChunk } from '@fde2e/len-llm'
 import type {
   AssistantLiveChunkEvent, SessionEventLike, SessionEventLikeEntry,
   SessionLiveEventEntry, SessionTransientEventEntry,
-} from '@deepseek-ai/dsh-api-session-controller/client'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
-import type { SessionEvent, SessionId } from '@deepseek-ai/dsh-session/types'
-import { ConversationNodeAssembler } from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@fde2e/len-api-session-controller/client'
+import { SessionSeq } from '@fde2e/len-session/types'
+import type { SessionEvent, SessionId } from '@fde2e/len-session/types'
+import { ConversationNodeAssembler } from '@fde2e/len-client-ui-conversation/client'
 import type {
   ConversationContextReader, ConversationLocation, ConversationMatch,
   ConversationNodeContext, ConversationNodeDefinition, ConversationStartMatch,
   ConversationViewDefinition,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import { makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
-import { resolveSlotLabel } from '@deepseek-ai/dsh-client-ui-slots'
-import type { StoredEntry } from '@deepseek-ai/dsh-client-ui-slots'
+} from '@fde2e/len-client-ui-conversation/client'
+import { SlotRegistry } from '@fde2e/len-client-ui-renderer/client'
+import { makeTranslate } from '@fde2e/len-client-test-runtime'
+import { resolveSlotLabel } from '@fde2e/len-client-ui-slots'
+import type { StoredEntry } from '@fde2e/len-client-ui-slots'
 import { de, en, es, fr, ja, NS, pt, ru, zh } from '../src/client/locales.ts'
 import type {
   StatsCall, StatsContribution, StatsSnapshot, StatsStepMetrics, StatsStepState, StatsViewNode,

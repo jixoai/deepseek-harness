@@ -3,7 +3,7 @@ description: "Enable optional macOS Computer Use and its permission page."
 kind: "package-bundle"
 ---
 
-# @deepseek-ai/dsh-cua-bundle
+# @fde2e/len-cua-bundle
 
 English | [中文](README.zh.md)
 

@@ -14,10 +14,10 @@ import { describe, expect, it, vi } from 'vitest'
 import type {
   ApprovalRequestId, CordisDynamicPackageId, CordisDynamicPluginId, CordisDynamicPluginRunId,
   DynamicCordisInvokeResult, SessionId,
-} from '@deepseek-ai/dsh-api-remotes/client'
+} from '@fde2e/len-api-remotes/client'
 // Type-only: resolves the `ctx.remote.$on` surface.
-import type {} from '@deepseek-ai/dsh-api-gateway/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
+import type {} from '@fde2e/len-api-gateway/client'
+import { SlotRegistry } from '@fde2e/len-client-ui-renderer/client'
 import * as NodeHalf from '../src/index.ts'
 import * as ClientHalf from '../src/client/index.ts'
 

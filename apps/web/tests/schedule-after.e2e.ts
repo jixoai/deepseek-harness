@@ -1,5 +1,5 @@
 /** Keyless assembled-Web evidence for conversational Schedule delivery. */
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
 
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
@@ -10,21 +10,21 @@ import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { dump } from 'js-yaml'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed } from 'vitest'
-import type { Agent, AgentHandle } from '@deepseek-ai/dsh-agent'
+import type { Agent, AgentHandle } from '@fde2e/len-agent'
 import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
-import { bundlePatchPaths, composeEntries, loadOverlayPatches } from '@deepseek-ai/dsh-app-boot'
-import { MessageId, ToolCallId, createUserMessage, LlmAdapter } from '@deepseek-ai/dsh-llm'
+import { bundlePatchPaths, composeEntries, loadOverlayPatches } from '@fde2e/len-app-boot'
+import { MessageId, ToolCallId, createUserMessage, LlmAdapter } from '@fde2e/len-llm'
 import { appendDelivery } from '../../../packages/schedule/schedule/src/delivery-history.ts'
-import type { ScheduleTask } from '@deepseek-ai/dsh-schedule'
-import type { ContextFormed, GenerateOptions, StreamChunk } from '@deepseek-ai/dsh-llm'
-import { SessionId, type SessionEvent } from '@deepseek-ai/dsh-session'
+import type { ScheduleTask } from '@fde2e/len-schedule'
+import type { ContextFormed, GenerateOptions, StreamChunk } from '@fde2e/len-llm'
+import { SessionId, type SessionEvent } from '@fde2e/len-session'
 import {
   ScheduleId,
   createAfterScheduleRecord,
   createEveryScheduleRecord,
   type EveryScheduleRecord,
   type ScheduleRecord,
-} from '@deepseek-ai/dsh-schedule'
+} from '@fde2e/len-schedule'
 import {
   assertFixtureInventory,
   captureStableAria,
@@ -42,7 +42,7 @@ import {
   saveFailureShot,
 } from './support.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'schedule-web-e2e': { kind: 'schedule-web-e2e' } & ContextFormed
   }
@@ -930,8 +930,8 @@ describe.skipIf(MODE === 'record')('web e2e: active Schedule catalog', () => {
     // The delivered composition carries the Schedule service and its task page;
     // the clock stays preset-level, so no Host row declares it.
     for (const row of [
-      { id: 'schedule', name: '@deepseek-ai/dsh-schedule' },
-      { id: 'ui-schedule', name: '@deepseek-ai/dsh-client-ui-schedule' },
+      { id: 'schedule', name: '@fde2e/len-schedule' },
+      { id: 'ui-schedule', name: '@fde2e/len-client-ui-schedule' },
     ]) {
       expect(shipped.filter(entry => entry.id === row.id && entry.name === row.name && entry.disabled !== true))
         .toHaveLength(1)
@@ -947,17 +947,17 @@ describe.skipIf(MODE === 'record')('web e2e: active Schedule catalog', () => {
     for (const id of ['preset-standard', 'preset-ptc', 'preset-cordis']) {
       const plugins = presetPlugins(id)
       expect(plugins.filter(row => row.id === 'time-context'
-        && row.name === '@deepseek-ai/dsh-time-context')).toHaveLength(1)
+        && row.name === '@fde2e/len-time-context')).toHaveLength(1)
       expect(plugins.filter(row => row.id === 'tool-schedule'
-        && row.name === '@deepseek-ai/dsh-tool-schedule')).toHaveLength(1)
-      for (const name of ['@deepseek-ai/dsh-time-context', '@deepseek-ai/dsh-tool-schedule']) {
+        && row.name === '@fde2e/len-tool-schedule')).toHaveLength(1)
+      for (const name of ['@fde2e/len-time-context', '@fde2e/len-tool-schedule']) {
         const matches = plugins.filter(row => row.name === name)
         expect(matches).toHaveLength(1)
         expect(matches[0]?.disabled).not.toBe(true)
       }
     }
-    expect(presetPlugins('preset-minimal').some(row => row.name === '@deepseek-ai/dsh-time-context'
-      || row.name === '@deepseek-ai/dsh-tool-schedule')).toBe(false)
+    expect(presetPlugins('preset-minimal').some(row => row.name === '@fde2e/len-time-context'
+      || row.name === '@fde2e/len-tool-schedule')).toBe(false)
 
     await page.getByRole('button', { name: 'Automation tasks', exact: true }).click()
     const manager = page.getByTestId('task-manager-page')

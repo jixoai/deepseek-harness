@@ -37,13 +37,13 @@ describe.skipIf(!built)('built lib real load path (plain node)', () => {
     const program = 'const doubled: number = await tools.double({ n: 21 }); console.log("halfway", doubled); let failure; try { await tools.fail({}) } catch (error) { failure = { typed: error instanceof ToolCallError, name: error.name, toolName: error.toolName, message: error.message } }; const env = Object.keys((await import("node:process")).env); ' + (executionMode === 'per-call' ? 'return { doubled, failure, env };' : '({ doubled, failure, env })')
     const script = `
       const { Context } = await import('@deepseek-ai/cordis')
-      const { NodePtcRuntime } = await import('@deepseek-ai/dsh-ptc-runtime-node')
+      const { NodePtcRuntime } = await import('@fde2e/len-ptc-runtime-node')
       const ctx = new Context()
       for (const name of ['session-projection', 'fs-local', 'subprocess-local', 'sandbox-local']) {
-        const plugin = await import('@deepseek-ai/dsh-' + name)
+        const plugin = await import('@fde2e/len-' + name)
         await ctx.plugin(plugin.default, {})
       }
-      const { default: SandboxPolicy } = await import('@deepseek-ai/dsh-sandbox-policy')
+      const { default: SandboxPolicy } = await import('@fde2e/len-sandbox-policy')
       await ctx.plugin(SandboxPolicy, { mode: 'read-only' })
       await ctx.plugin(NodePtcRuntime, ${JSON.stringify({ executionMode })})
       const result = await ctx.ptcRuntime.run(ctx.ptcRuntime.resolve({

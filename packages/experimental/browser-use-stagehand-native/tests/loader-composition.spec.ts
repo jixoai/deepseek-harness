@@ -1,6 +1,6 @@
 /** A real Loader and AgentLoop exercise independently configured browser inference and durable screenshots. */
 
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -9,16 +9,16 @@ import { afterEach, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import BrowserUseRegistry from '@deepseek-ai/dsh-browser-use'
-import LocalAttachmentStore from '@deepseek-ai/dsh-attachment-local'
-import LlmRuntime, { LlmAdapter, ToolCallId, createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@deepseek-ai/dsh-llm'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import AgentRegistry from '@fde2e/len-agent'
+import AgentLoop from '@fde2e/len-agent-loop'
+import BrowserUseRegistry from '@fde2e/len-browser-use'
+import LocalAttachmentStore from '@fde2e/len-attachment-local'
+import LlmRuntime, { LlmAdapter, ToolCallId, createUserMessage } from '@fde2e/len-llm'
+import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@fde2e/len-llm'
+import SessionStore, { SessionId } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
 import * as Provider from '../src/index.ts'
 import { resetFixture, screenshotBase64 } from './fixtures/stagehand.ts'
 
@@ -76,24 +76,24 @@ it('loads browser tools from cordis.yml, logs browser results, and admits the sc
   resetFixture()
   root = await mkdtemp(join(tmpdir(), 'dsh-stagehand-composition-'))
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-llm', LlmRuntime],
-    ['@deepseek-ai/dsh-session', SessionStore],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
+    ['@fde2e/len-llm', LlmRuntime],
+    ['@fde2e/len-session', SessionStore],
+    ['@fde2e/len-session-projection', SessionProjectionRegistry],
 
-    ['@deepseek-ai/dsh-system-prompt', SystemPrompt],
-    ['@deepseek-ai/dsh-tools', ToolRuntime],
-    ['@deepseek-ai/dsh-tool-executor-native', NativeToolExecutor],
-    ['@deepseek-ai/dsh-agent', AgentRegistry],
-    ['@deepseek-ai/dsh-agent-loop', AgentLoop],
-    ['@deepseek-ai/dsh-attachment-local', LocalAttachmentStore],
-    ['@deepseek-ai/dsh-browser-use', BrowserUseRegistry],
-    ['@deepseek-ai/dsh-experimental-browser-use-stagehand-native', Provider],
+    ['@fde2e/len-system-prompt', SystemPrompt],
+    ['@fde2e/len-tools', ToolRuntime],
+    ['@fde2e/len-tool-executor-native', NativeToolExecutor],
+    ['@fde2e/len-agent', AgentRegistry],
+    ['@fde2e/len-agent-loop', AgentLoop],
+    ['@fde2e/len-attachment-local', LocalAttachmentStore],
+    ['@fde2e/len-browser-use', BrowserUseRegistry],
+    ['@fde2e/len-experimental-browser-use-stagehand-native', Provider],
   ])
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, [...modules.keys()].flatMap(name => [
     `- name: '${name}'`,
-    ...name === '@deepseek-ai/dsh-attachment-local' ? ['  config:', `    dshHome: ${JSON.stringify(root)}`] : [],
-    ...name === '@deepseek-ai/dsh-experimental-browser-use-stagehand-native' ? ['  config:', '    mode: launch', '    model:', '      modelName: openai/gpt-5.4-mini', '      apiKey: fixture-model-key'] : [],
+    ...name === '@fde2e/len-attachment-local' ? ['  config:', `    dshHome: ${JSON.stringify(root)}`] : [],
+    ...name === '@fde2e/len-experimental-browser-use-stagehand-native' ? ['  config:', '    mode: launch', '    model:', '      modelName: openai/gpt-5.4-mini', '      apiKey: fixture-model-key'] : [],
   ]).join('\n') + '\n')
   const context = ctx = new Context()
   context.baseUrl = pathToFileURL(root).href + '/'

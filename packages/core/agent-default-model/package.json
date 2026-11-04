@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-agent-default-model",
+  "name": "@fde2e/len-agent-default-model",
   "description": "Default model selection shared by Agent entry points",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -30,17 +30,17 @@
   "license": "MIT",
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~",
-    "@deepseek-ai/dsh-config-editor": "workspace:*"
+    "@fde2e/len-config-editor": "workspace:*"
   },
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-settings": "workspace:*"
+    "@fde2e/len-settings": "workspace:*"
   }
 }

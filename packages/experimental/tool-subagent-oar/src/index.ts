@@ -2,8 +2,8 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type {} from '@deepseek-ai/dsh-subagent'
+import { defineTool } from '@fde2e/len-tools'
+import type {} from '@fde2e/len-subagent'
 
 export const name = 'experimental-tool-subagent-oar'
 export const inject = ['tools', 'subagents']

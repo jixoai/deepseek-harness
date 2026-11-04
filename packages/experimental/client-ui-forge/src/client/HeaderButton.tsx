@@ -1,9 +1,9 @@
 /** Session header entry that shows or hides the forge tab and marks change requests that need attention. */
 
 import type { ReactNode } from 'react'
-import { Button, StateDot, Tooltip } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { HostObservable, InjectFace, PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
+import { Button, StateDot, Tooltip } from '@fde2e/len-client-ui-primitives'
+import type { HostObservable, InjectFace, PropsLocale } from '@fde2e/len-client-ui-slots'
+import type {} from '@fde2e/len-client-ui-conversation/client'
 import { ChangeRequestGlyph } from './glyphs.tsx'
 import type { NS } from './locales.ts'
 import type { PanelSnapshot } from './source.ts'

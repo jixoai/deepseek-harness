@@ -1,10 +1,10 @@
 /**
  * Carrier-independent Typert Gateway request, service, and error contracts.
- * @module @deepseek-ai/dsh-api-gateway/types
+ * @module @fde2e/len-api-gateway/types
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { PeerScope, RemoteUplinkWindow, TypertResourceReader } from '@deepseek-ai/dsh-typert-protocol'
+import type { PeerScope, RemoteUplinkWindow, TypertResourceReader } from '@fde2e/len-typert-protocol'
 import type { RemoteEventAgentId, RemoteEventHostInfo } from './stream-protocol.ts'
 
 /** One Remote method request after a carrier has decoded its envelope. */

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-skill-badge",
+  "name": "@fde2e/len-skill-badge",
   "description": "Bundled dsh badge skill provider for DeepSeek Harness",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -31,11 +31,11 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@fde2e/len-skill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-skill": "workspace:*",
+    "@fde2e/len-skill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

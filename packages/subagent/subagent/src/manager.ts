@@ -3,22 +3,22 @@
  * One child lock orders input acceptance and closure; one activation map owns
  * capacity, runtime ownership, and resource release across all providers.
  *
- * @module @deepseek-ai/dsh-subagent/manager
+ * @module @fde2e/len-subagent/manager
  */
 
 import { randomUUID } from 'node:crypto'
 import { isAbsolute, resolve } from 'node:path'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@fde2e/len-working-directory'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent, AgentOptions, CreateAgentOptions } from '@deepseek-ai/dsh-agent'
-import { brandString } from '@deepseek-ai/dsh-brand'
-import { ReasoningEffortId, contentHasImage, createUserMessage, errorChain } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock, MessageId, MessageSource } from '@deepseek-ai/dsh-llm'
-import { SessionLogOffset } from '@deepseek-ai/dsh-session'
-import type { Session, SessionId, SessionEvent, UserMessage } from '@deepseek-ai/dsh-session'
-import type { SessionPersistence } from '@deepseek-ai/dsh-session-persistence'
-import type { SessionObservation, SessionQueryEngine } from '@deepseek-ai/dsh-session-query'
-import type { ObjectJsonSchema } from '@deepseek-ai/dsh-tools'
+import type { Agent, AgentOptions, CreateAgentOptions } from '@fde2e/len-agent'
+import { brandString } from '@fde2e/len-brand'
+import { ReasoningEffortId, contentHasImage, createUserMessage, errorChain } from '@fde2e/len-llm'
+import type { ContentBlock, MessageId, MessageSource } from '@fde2e/len-llm'
+import { SessionLogOffset } from '@fde2e/len-session'
+import type { Session, SessionId, SessionEvent, UserMessage } from '@fde2e/len-session'
+import type { SessionPersistence } from '@fde2e/len-session-persistence'
+import type { SessionObservation, SessionQueryEngine } from '@fde2e/len-session-query'
+import type { ObjectJsonSchema } from '@fde2e/len-tools'
 import {
   appendDelegatedPolicyOverrides, applyChildComposition, captureDelegatedPolicyOverrides,
   childSessionMeta, resolveChildAgentOptions, resolveChildDepth,
@@ -1249,7 +1249,7 @@ export class SubagentManager {
     const query = this.ctx.get('sessionQuery')
     if (query === undefined) {
       throw new SubagentError(
-        'continuable subagents require session query (load @deepseek-ai/dsh-session-query)',
+        'continuable subagents require session query (load @fde2e/len-session-query)',
         'CONTINUATION_UNAVAILABLE',
       )
     }

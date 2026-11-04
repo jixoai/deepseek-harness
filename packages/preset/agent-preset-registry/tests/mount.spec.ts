@@ -5,8 +5,8 @@ import { pathToFileURL } from 'node:url'
 import { Context } from '@deepseek-ai/cordis'
 import Group from '@deepseek-ai/cordis-plugin-group'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import { getDshRuntimeVersion, type ProfileContext } from '@deepseek-ai/dsh-app-boot'
-import { createScope } from '@deepseek-ai/dsh-scope'
+import { getDshRuntimeVersion, type ProfileContext } from '@fde2e/len-app-boot'
+import { createScope } from '@fde2e/len-scope'
 import { expect, it, onTestFinished } from 'vitest'
 import { harness, declare } from './harness.ts'
 import { auditRows, mountPreset, type PresetMount } from '../src/mount.ts'
@@ -111,7 +111,7 @@ it('mounts a profile-denied row disabled and the same row active once exempted',
   const loaded = join(pluginDir, 'loaded.txt')
   writeFileSync(join(pluginDir, 'package.json'), JSON.stringify({
     name: 'incompatible-preset-plugin', version: '1.0.0', type: 'module', main: 'index.mjs',
-    peerDependencies: { '@deepseek-ai/dsh': '<0.0.0' },
+    peerDependencies: { '@fde2e/len': '<0.0.0' },
   }))
   writeFileSync(join(pluginDir, 'index.mjs'), [
     "import { writeFileSync } from 'node:fs'",

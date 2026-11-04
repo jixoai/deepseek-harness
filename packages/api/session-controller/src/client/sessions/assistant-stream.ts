@@ -4,9 +4,9 @@ import type {
   SessionAssistantStreamBaseline,
   SessionAssistantStreamFrame,
 } from '../../types.ts'
-import { expandAssistantStream } from '@deepseek-ai/dsh-llm/assistant-stream'
-import type { AssistantStreamRecord } from '@deepseek-ai/dsh-llm/assistant-stream'
-import type { LlmAttemptId } from '@deepseek-ai/dsh-llm/brand'
+import { expandAssistantStream } from '@fde2e/len-llm/assistant-stream'
+import type { AssistantStreamRecord } from '@fde2e/len-llm/assistant-stream'
+import type { LlmAttemptId } from '@fde2e/len-llm/brand'
 import type {
   SessionAssistantSettlementEntry,
   SessionEventLikeEntry,

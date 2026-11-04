@@ -1,11 +1,11 @@
 /**
  * Read or change the calling Session's working directory.
- * @module @deepseek-ai/dsh-tool-working-directory
+ * @module @fde2e/len-tool-working-directory
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type {} from '@deepseek-ai/dsh-working-directory'
+import { defineTool } from '@fde2e/len-tools'
+import type {} from '@fde2e/len-working-directory'
 
 /** Cordis plugin name. */
 export const name = 'tool-working-directory'

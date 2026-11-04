@@ -1,19 +1,19 @@
 // @vitest-environment jsdom
-import { contextMenuHook } from '@deepseek-ai/dsh-client-test-runtime'
-import type { GlobalStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
+import { contextMenuHook } from '@fde2e/len-client-test-runtime'
+import type { GlobalStandardProps } from '@fde2e/len-client-ui-slots'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
-import { allowAllAccess } from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { ToolCallId } from '@deepseek-ai/dsh-llm/brand'
+import { allowAllAccess } from '@fde2e/len-client-test-runtime'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { ToolCallId } from '@fde2e/len-llm/brand'
 import {
   createWaterfallRequest, PendingQuestion, planReviewOf, type QuestionComposerProps, type QuestionWait,
 } from '../src/client/contract/slots.ts'
 import { createQuestionDraftStore } from '../src/client/draft-store.ts'
 import { QuestionComposer } from '../src/client/QuestionComposer.tsx'
 import { en, zh } from '../src/client/locales.ts'
-import { en as commonEn } from '@deepseek-ai/dsh-client-locale/src/locales/en.ts'
-import { zh as commonZh } from '@deepseek-ai/dsh-client-locale/src/locales/zh.ts'
+import { en as commonEn } from '@fde2e/len-client-locale/src/locales/en.ts'
+import { zh as commonZh } from '@fde2e/len-client-locale/src/locales/zh.ts'
 
 // Every session-scope fixture carries the resource hook the resources plugin merges into GlobalStandardProps.
 const useResource = (() => ({ status: 'none' as const, value: undefined, failure: undefined, reload: () => {} })) as GlobalStandardProps['useResource']

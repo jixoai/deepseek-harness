@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { LIVESHARE_CAPABILITIES, LIVESHARE_PROTOCOL_VERSION } from '@deepseek-ai/dsh-experimental-liveshare-protocol'
+import { LIVESHARE_CAPABILITIES, LIVESHARE_PROTOCOL_VERSION } from '@fde2e/len-experimental-liveshare-protocol'
 import { registrationUrl } from '../src/owner-gateway/registration-url.ts'
-import type { TunnelShareSpec } from '@deepseek-ai/dsh-experimental-liveshare-protocol'
+import type { TunnelShareSpec } from '@fde2e/len-experimental-liveshare-protocol'
 
 /** The share every case starts from: the required fields, and nothing optional. */
 const minimal: TunnelShareSpec = {

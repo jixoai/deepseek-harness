@@ -2,10 +2,10 @@
 import type { Context } from '@deepseek-ai/cordis'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import z from '@deepseek-ai/schemastery'
-import type {} from '@deepseek-ai/dsh-attachment'
-import type {} from '@deepseek-ai/dsh-credentials'
+import type {} from '@fde2e/len-attachment'
+import type {} from '@fde2e/len-credentials'
 // Activates the webServer Context merge used below.
-import type { WebRoute } from '@deepseek-ai/dsh-host-webserver'
+import type { WebRoute } from '@fde2e/len-host-webserver'
 import { API_PATH } from './api-path.ts'
 import { CONNECT_PATH } from './connect-protocol.ts'
 import { bridge, DEFAULT_MAX_REQUEST_BODY_BYTES } from './http-bridge.ts'
@@ -38,7 +38,7 @@ export type {
   RpcMessage,
   ServerResponse,
 } from './rpc.ts'
-export type { PeerId, PeerScope, Principal, RemoteInvocation } from '@deepseek-ai/dsh-typert-protocol'
+export type { PeerId, PeerScope, Principal, RemoteInvocation } from '@fde2e/len-typert-protocol'
 export { RpcId, transportError } from './rpc.ts'
 export { Peer } from './peer.ts'
 export type { PeerOptions } from './peer.ts'

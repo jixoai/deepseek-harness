@@ -1,5 +1,5 @@
 - insert:
     - id: workspace
-      name: '@deepseek-ai/dsh-workspace'
+      name: '@fde2e/len-workspace'
     - id: subagent-archive-lineage-fixture
       name: './fixture.mjs'

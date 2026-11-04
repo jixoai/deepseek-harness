@@ -1,9 +1,9 @@
 /** Direct Messages transport with one cancellable lifecycle per model request. */
 
-import { attributionHeaders, LlmAdapter, LlmError } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, ImageAttachmentAccessResolver, PreparedAdapterCall, StreamChunk } from '@deepseek-ai/dsh-llm'
-import type { DeepSeekLlmApiExtensionRequest, DeepSeekLlmApiJson } from '@deepseek-ai/dsh-deepseek-llm-api-extensions'
-import { idleWatchdog, timeoutOf } from '@deepseek-ai/dsh-timeout'
+import { attributionHeaders, LlmAdapter, LlmError } from '@fde2e/len-llm'
+import type { GenerateOptions, ImageAttachmentAccessResolver, PreparedAdapterCall, StreamChunk } from '@fde2e/len-llm'
+import type { DeepSeekLlmApiExtensionRequest, DeepSeekLlmApiJson } from '@fde2e/len-deepseek-llm-api-extensions'
+import { idleWatchdog, timeoutOf } from '@fde2e/len-timeout'
 import { modelInfo } from './model-info.ts'
 import type { DeepSeekAdapterOptions, DeepSeekConnectionOptions as Connection } from './types.ts'
 import { DeepSeekFileStore } from './file-store.ts'
@@ -15,7 +15,7 @@ import { serialize } from './serialize.ts'
 import { parseSse } from './sse.ts'
 import { translate } from './translate.ts'
 import { providerError, providerErrorDetail } from './transport.ts'
-import type { ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
+import type { ImageAttachmentRef } from '@fde2e/len-attachment'
 import { resolveRequestImageTarget } from './request-pricing.ts'
 
 /** DeepSeek provider using Messages content and native thinking replay. */

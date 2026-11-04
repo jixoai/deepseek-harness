@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { WebError } from '@deepseek-ai/dsh-web'
+import { WebError } from '@fde2e/len-web'
 import { customGuidance } from './guidance.ts'
 import { dispatchDeepSeekWeb, type DeepSeekWebAuth } from '../src/transport.ts'
 const options = { apiKey: 'ds-key', baseURL: 'https://api.deepseek.test/v1/tools' }

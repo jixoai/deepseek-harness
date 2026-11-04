@@ -4,7 +4,7 @@ import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { expect, it, onTestFinished } from 'vitest'
 import { applyEntryPatches } from '@deepseek-ai/cordis-plugin-include'
-import { initProfile, loadOptionalPatches, type ProfileContext } from '@deepseek-ai/dsh-app-boot'
+import { initProfile, loadOptionalPatches, type ProfileContext } from '@fde2e/len-app-boot'
 import { writePluginEnabled } from '../src/patch.ts'
 
 const TOOL = { id: 'tool', name: 'package' }

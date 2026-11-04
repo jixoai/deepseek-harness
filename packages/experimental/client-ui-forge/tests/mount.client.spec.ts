@@ -5,13 +5,13 @@
  */
 import assert from 'node:assert/strict'
 import { Context, Service } from '@deepseek-ai/cordis'
-import type { RemoteHostFacts } from '@deepseek-ai/dsh-api-remotes/client'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { SidebarRightTabDefinition, TabId } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import type { ChangeRequestSnapshot, ForgeReviewRequest, ForgeReviewResult } from '@deepseek-ai/dsh-experimental-forge/types'
-import { SessionId } from '@deepseek-ai/dsh-session/types'
-import { RemoteError, type RemoteResult, type TypertRemoteContribution } from '@deepseek-ai/dsh-typert-protocol'
+import type { RemoteHostFacts } from '@fde2e/len-api-remotes/client'
+import { LocaleRuntime } from '@fde2e/len-client-locale/client'
+import { SlotRegistry } from '@fde2e/len-client-ui-renderer/client'
+import type { SidebarRightTabDefinition, TabId } from '@fde2e/len-client-ui-sidebar-right/client'
+import type { ChangeRequestSnapshot, ForgeReviewRequest, ForgeReviewResult } from '@fde2e/len-experimental-forge/types'
+import { SessionId } from '@fde2e/len-session/types'
+import { RemoteError, type RemoteResult, type TypertRemoteContribution } from '@fde2e/len-typert-protocol'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { ActionToast } from '../src/client/ActionToast.tsx'
 import { CHANGES_ID, CHANGES_KIND } from '../src/client/changes-address.ts'
@@ -34,7 +34,7 @@ import type {
 } from '../src/types.ts'
 import { entry, listState, ready, snapshot, unserved } from './client-fixtures.client.ts'
 
-const REMOTE: TypertRemoteContribution = { package: '@deepseek-ai/dsh-experimental-client-ui-forge', descriptors: [] }
+const REMOTE: TypertRemoteContribution = { package: '@fde2e/len-experimental-client-ui-forge', descriptors: [] }
 const S1 = SessionId('s1')
 const S2 = SessionId('s2')
 const BRANCHES: ForgeBranches = { current: 'main', branches: ['main', 'release'] }

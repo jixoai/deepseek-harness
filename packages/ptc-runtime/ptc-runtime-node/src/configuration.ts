@@ -1,7 +1,7 @@
 /** Pure configuration changes for Node PTC profile editors. */
-import type { PtcProgramFormat } from '@deepseek-ai/dsh-ptc-runtime'
+import type { PtcProgramFormat } from '@fde2e/len-ptc-runtime'
 import type { Config } from './config.ts'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { assertNever } from '@fde2e/len-util-values'
 
 /**
  * Select retained Node execution while preserving Script syntax.

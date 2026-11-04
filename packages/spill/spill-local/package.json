@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-spill-local",
+  "name": "@fde2e/len-spill-local",
   "description": "Local-filesystem implementation of the DeepSeek Harness spill storage seam (private session-scoped files)",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,7 +29,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-spill": "workspace:*",
+    "@fde2e/len-spill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
@@ -38,10 +38,10 @@
   "devDependencies": {
     "@deepseek-ai/cordis-plugin-include": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-spill": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-spill": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

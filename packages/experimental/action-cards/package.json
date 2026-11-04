@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-action-cards",
+  "name": "@fde2e/len-action-cards",
   "description": "Optional action cards below answers: one shared proposal tool, card state, user actions and status notices",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -37,27 +37,27 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
+    "@fde2e/len-session": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-api-remote-access": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-skill": "workspace:*",
-    "@deepseek-ai/dsh-tool-skill": "workspace:*",
-    "@deepseek-ai/dsh-tool-testkit": "workspace:*",
-    "@deepseek-ai/dsh-util-values": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-agent-loop": "workspace:*",
+    "@fde2e/len-agent-loop-testkit": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-api-remote-access": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-skill": "workspace:*",
+    "@fde2e/len-tool-skill": "workspace:*",
+    "@fde2e/len-tool-testkit": "workspace:*",
+    "@fde2e/len-util-values": "workspace:*"
   },
   "dependencies": {
     "zod": "4.4.3"

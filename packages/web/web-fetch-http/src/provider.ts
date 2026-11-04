@@ -1,14 +1,14 @@
 /**
  * Bounded HTTP(S) retrieval for `ctx.web`: validates URLs, follows only same-origin redirects,
  * enforces time and size limits, classifies and decodes text, and leaves presentation to
- * `@deepseek-ai/dsh-tool-web`. Requests carry no browser cookies
+ * `@fde2e/len-tool-web`. Requests carry no browser cookies
  * or ambient credentials.
- * @module @deepseek-ai/dsh-web-fetch-http/provider
+ * @module @fde2e/len-web-fetch-http/provider
  */
 
-import { WebError } from '@deepseek-ai/dsh-web'
-import type { WebFetchBody, WebFetchProvider, WebFetchRequest, WebFetchResult } from '@deepseek-ai/dsh-web'
-import { deadline, timeoutOf } from '@deepseek-ai/dsh-timeout'
+import { WebError } from '@fde2e/len-web'
+import type { WebFetchBody, WebFetchProvider, WebFetchRequest, WebFetchResult } from '@fde2e/len-web'
+import { deadline, timeoutOf } from '@fde2e/len-timeout'
 import type { Response } from 'undici'
 import { classifyContentType, decoderForCharset, isSameOrigin, parseCharset, validateFetchUrl } from './policy.ts'
 

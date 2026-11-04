@@ -2,13 +2,13 @@
 /* oxlint-disable typescript/no-deprecated -- exercise the public compatibility API. */
 import { setImmediate } from 'node:timers/promises'
 import { Context, FiberState } from '@deepseek-ai/cordis'
-import SessionStore from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import SessionStore from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import type { ProjectionDefinition } from '@fde2e/len-session-projection'
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { z } from 'zod'
 
-declare module '@deepseek-ai/dsh-session-projection/types' {
+declare module '@fde2e/len-session-projection/types' {
   interface SessionProjectionMap {
     'test/legacy': number
     'test/legacy-unread-wire': number

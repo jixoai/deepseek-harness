@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /** Test driver: one delegation turn through a headless Loader composition. */
 
-import { resolveConfigPath } from '@deepseek-ai/dsh-app-boot'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { runFixtureTurn } from '@deepseek-ai/dsh-loader-smoke'
+import { resolveConfigPath } from '@fde2e/len-app-boot'
+import { SessionId } from '@fde2e/len-session'
+import { runFixtureTurn } from '@fde2e/len-loader-smoke'
 import { bootProductionProfile } from '../../../../../test-support/loader-smoke/tests/fixtures/production-profile.ts'
 
 const configPath = process.argv[2]

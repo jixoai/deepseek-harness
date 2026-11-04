@@ -5,20 +5,20 @@ import { join } from 'node:path'
 import { expect, it, onTestFinished, vi } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
 import Timer from '@deepseek-ai/cordis-plugin-timer'
-import { boot, initProfile, loadProfileDirectory, readProfilePatches, readProfileManifest, type ProfileContext } from '@deepseek-ai/dsh-app-boot'
-import Hmr from '@deepseek-ai/dsh-hmr'
-import PluginManager from '@deepseek-ai/dsh-plugin-manager'
-import Sessions, { SessionId } from '@deepseek-ai/dsh-session'
-import Projections from '@deepseek-ai/dsh-session-projection'
-import Agents from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import Llm, { LlmAdapter, createUserMessage, type GenerateOptions, type StreamChunk } from '@deepseek-ai/dsh-llm'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import Tools from '@deepseek-ai/dsh-tools'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
-import Skills from '@deepseek-ai/dsh-skill'
-import Access from '@deepseek-ai/dsh-api-remote-access'
-import * as ActionCards from '@deepseek-ai/dsh-action-cards'
+import { boot, initProfile, loadProfileDirectory, readProfilePatches, readProfileManifest, type ProfileContext } from '@fde2e/len-app-boot'
+import Hmr from '@fde2e/len-hmr'
+import PluginManager from '@fde2e/len-plugin-manager'
+import Sessions, { SessionId } from '@fde2e/len-session'
+import Projections from '@fde2e/len-session-projection'
+import Agents from '@fde2e/len-agent'
+import AgentLoop from '@fde2e/len-agent-loop'
+import Llm, { LlmAdapter, createUserMessage, type GenerateOptions, type StreamChunk } from '@fde2e/len-llm'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import Tools from '@fde2e/len-tools'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
+import Skills from '@fde2e/len-skill'
+import Access from '@fde2e/len-api-remote-access'
+import * as ActionCards from '@fde2e/len-action-cards'
 import * as Recommendations from '../src/index.ts'
 import { ACTION, logProposal } from './fixture.ts'
 
@@ -39,7 +39,7 @@ it.each(['normal', 'consumer-unload'] as const)('enables through the real Loader
   onTestFinished(async () => { await owner?.fiber.dispose(); await rm(home, { recursive: true, force: true }) })
   const dir = join(home, 'profiles', 'test')
   const anchor = join(home, 'package.json')
-  const name = '@deepseek-ai/dsh-experimental-session-search'
+  const name = '@fde2e/len-experimental-session-search'
   await writeFile(anchor, JSON.stringify({ name: 'installation', dependencies: { [name]: '1.0.0' } }))
   initProfile(dir, ['fixture-base'])
   async function bundle(root: string, name: string, patch: string) {

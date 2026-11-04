@@ -2,14 +2,14 @@
  * The stored share's editable permission, fork switch, and plugin-endpoint selection, with the one
  * save that submits all three through the host.
  *
- * @module @deepseek-ai/dsh-experimental-liveshare/src/client/ShareEditPanel
+ * @module @fde2e/len-experimental-liveshare/src/client/ShareEditPanel
  */
 
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 
-import { Button } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import { Button } from '@fde2e/len-client-ui-primitives'
+import type { PropsLocale } from '@fde2e/len-client-ui-slots'
+import type { SessionId } from '@fde2e/len-session/types'
 import type { CreatedShare } from '../share-api-types.ts'
 import type { NS } from './locales.ts'
 import type { OwnerShares } from './owner-shares.ts'

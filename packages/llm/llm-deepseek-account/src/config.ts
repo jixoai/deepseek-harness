@@ -2,14 +2,14 @@
 import type { Volatile } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { isVolatile } from '@deepseek-ai/cosmokit'
-import type { LaunchEnvironmentSnapshot } from '@deepseek-ai/dsh-launch-environment'
+import type { LaunchEnvironmentSnapshot } from '@fde2e/len-launch-environment'
 import {
   catalogModelFields, deepSeekConfigFields, modelListingConfigFields, modelListingURL, resolveAdapterOptions, resolveListingTiming,
-} from '@deepseek-ai/dsh-llm-deepseek'
+} from '@fde2e/len-llm-deepseek'
 import type {
   Config as ProtocolConfig, ListingSettings, ModelListingConfig, ModelListingOptions, ModelOverride, Options as ProtocolOptions,
   ResolvedDeepSeekOptions,
-} from '@deepseek-ai/dsh-llm-deepseek'
+} from '@fde2e/len-llm-deepseek'
 
 /** Account route configuration; authentication comes exclusively from the account service. */
 export interface Config extends Omit<ProtocolConfig, 'models'>, ModelListingConfig {

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /** Inspect the public Claude Code provider composition without invoking the product. */
 
-import { resolveConfigPath } from '@deepseek-ai/dsh-app-boot'
-import type {} from '@deepseek-ai/dsh-subagent'
-import type {} from '@deepseek-ai/dsh-tools'
+import { resolveConfigPath } from '@fde2e/len-app-boot'
+import type {} from '@fde2e/len-subagent'
+import type {} from '@fde2e/len-tools'
 import { bootProductionProfile } from '../../../../../test-support/loader-smoke/tests/fixtures/production-profile.ts'
 
 const configPath = process.argv[2]

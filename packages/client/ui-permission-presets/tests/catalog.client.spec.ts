@@ -2,9 +2,9 @@ import { Context } from '@deepseek-ai/cordis'
 import { describe, expect, it, vi } from 'vitest'
 import type {
   ConnectionGeneration, ConnectionHandle,
-} from '@deepseek-ai/dsh-client-connection/client'
-import { TestRemote } from '@deepseek-ai/dsh-client-test-runtime'
-import type { PermissionCatalog } from '@deepseek-ai/dsh-permission-presets/client'
+} from '@fde2e/len-client-connection/client'
+import { TestRemote } from '@fde2e/len-client-test-runtime'
+import type { PermissionCatalog } from '@fde2e/len-permission-presets/client'
 import { PermissionCatalogDirectory } from '../src/client/catalog.ts'
 
 const FIRST: PermissionCatalog = {

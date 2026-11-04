@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-ui-attachment",
+  "name": "@fde2e/len-client-ui-attachment",
   "description": "Dynamic attachment presentation plugin for conversation input, message-image, and trajectory image slots",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,14 +29,14 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-locale",
-        "@deepseek-ai/dsh-client-ui-chat",
-        "@deepseek-ai/dsh-client-ui-conversation",
-        "@deepseek-ai/dsh-client-ui-renderer",
-        "@deepseek-ai/dsh-client-ui-trajectory",
-        "@deepseek-ai/dsh-client-ui-tool",
-        "@deepseek-ai/dsh-client-ui-file-drag",
-        "@deepseek-ai/dsh-client-ui-context-menu"
+        "@fde2e/len-client-locale",
+        "@fde2e/len-client-ui-chat",
+        "@fde2e/len-client-ui-conversation",
+        "@fde2e/len-client-ui-renderer",
+        "@fde2e/len-client-ui-trajectory",
+        "@fde2e/len-client-ui-tool",
+        "@fde2e/len-client-ui-file-drag",
+        "@fde2e/len-client-ui-context-menu"
       ],
       "platform": "web"
     }
@@ -48,21 +48,21 @@
   "license": "MIT",
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-client-locale": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-chat": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-conversation": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-trajectory": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-renderer": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-primitives": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
+    "@fde2e/len-client-locale": "workspace:*",
+    "@fde2e/len-client-ui-chat": "workspace:*",
+    "@fde2e/len-client-ui-conversation": "workspace:*",
+    "@fde2e/len-client-ui-trajectory": "workspace:*",
+    "@fde2e/len-client-ui-renderer": "workspace:*",
+    "@fde2e/len-client-ui-primitives": "workspace:*",
+    "@fde2e/len-client-ui-slots": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@deepseek-ai/dsh-attachment": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-tool": "workspace:*",
+    "@fde2e/len-attachment": "workspace:*",
+    "@fde2e/len-client-ui-tool": "workspace:*",
     "clsx": "^2.0.0",
-    "@deepseek-ai/dsh-client-ui-file-drag": "workspace:*",
-    "@deepseek-ai/dsh-util-file-drag": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-context-menu": "workspace:*"
+    "@fde2e/len-client-ui-file-drag": "workspace:*",
+    "@fde2e/len-util-file-drag": "workspace:*",
+    "@fde2e/len-client-ui-context-menu": "workspace:*"
   },
   "files": [
     "locale/*.json",

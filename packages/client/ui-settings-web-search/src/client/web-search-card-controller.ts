@@ -27,13 +27,13 @@
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 // Type-only: pulls the ctx.remote merge into this program.
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type { WebProviderInfo, WebProviderList as ProviderList } from '@deepseek-ai/dsh-web/types'
-import { createSnapshotStore, type SnapshotStore } from '@deepseek-ai/dsh-client-store'
+import type {} from '@fde2e/len-api-remotes/client'
+import type { WebProviderInfo, WebProviderList as ProviderList } from '@fde2e/len-web/types'
+import { createSnapshotStore, type SnapshotStore } from '@fde2e/len-client-store'
 import {
   SettingsFormModel, settingsNumberField, settingsTextField,
   type SettingsFieldState, type SettingsFormActions, type SettingsFormShell, type SettingsFormScope,
-} from '@deepseek-ai/dsh-client-ui-primitives'
+} from '@fde2e/len-client-ui-primitives'
 
 /**
  * Namespaces this page edits. Spelled here rather than imported: a client

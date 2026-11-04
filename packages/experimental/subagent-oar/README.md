@@ -3,7 +3,7 @@ description: "Add experimental one-shot coding-agent delegation through OAR with
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-subagent-oar
+# @fde2e/len-experimental-subagent-oar
 
 English | [中文](README.zh.md)
 
@@ -29,12 +29,12 @@ Compose this experimental provider with the `subagent_oar` tool to delegate stan
 
 Install and authenticate the native Codex and Claude Code CLIs before delegating to them. Their executables must be available to the DSH Host. The provider starts no native session until a delegation is accepted.
 
-Declare this provider and `@deepseek-ai/dsh-experimental-tool-subagent-oar` as dependencies of your composition, then add these rows through a profile patch:
+Declare this provider and `@fde2e/len-experimental-tool-subagent-oar` as dependencies of your composition, then add these rows through a profile patch:
 
 ```yaml
 - insert:
     - id: experimental-subagent-oar-codex
-      name: '@deepseek-ai/dsh-experimental-subagent-oar'
+      name: '@fde2e/len-experimental-subagent-oar'
       config:
         runtime: codex
         providerName: oar-codex
@@ -42,7 +42,7 @@ Declare this provider and `@deepseek-ai/dsh-experimental-tool-subagent-oar` as d
           - -c
           - sandbox_mode="workspace-write"
     - id: experimental-subagent-oar-claude
-      name: '@deepseek-ai/dsh-experimental-subagent-oar'
+      name: '@fde2e/len-experimental-subagent-oar'
       config:
         runtime: claude
         providerName: oar-claude
@@ -52,7 +52,7 @@ Declare this provider and `@deepseek-ai/dsh-experimental-tool-subagent-oar` as d
           - --permission-prompts
           - none
     - id: tool-subagent-oar
-      name: '@deepseek-ai/dsh-experimental-tool-subagent-oar'
+      name: '@fde2e/len-experimental-tool-subagent-oar'
       config:
         providers:
           codex: oar-codex

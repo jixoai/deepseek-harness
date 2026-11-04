@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-util-workspace-path",
+  "name": "@fde2e/len-util-workspace-path",
   "description": "Browser-safe Workspace path and display helpers",
   "version": "0.2.2-alpha.3",
   "publishConfig": {

@@ -2,9 +2,9 @@
 /** Confirmed type filters compose with folding, live rows, raw details, and picked-row navigation. */
 
 import { act, cleanup, fireEvent, render } from '@testing-library/react'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { bindSnapshotSelector, makeTranslate, sessionSnapshot } from '@deepseek-ai/dsh-client-test-runtime'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import { createSnapshotStore } from '@fde2e/len-client-store'
+import { bindSnapshotSelector, makeTranslate, sessionSnapshot } from '@fde2e/len-client-test-runtime'
+import type { SessionId } from '@fde2e/len-session/types'
 import { afterEach, beforeEach, expect, it, onTestFinished, vi } from 'vitest'
 import { InspectorTable, type InspectorTableProps } from '../src/client/views/InspectorTable.tsx'
 import type { InspectorRecord, InspectorRow } from '../src/client/views/table-model.ts'

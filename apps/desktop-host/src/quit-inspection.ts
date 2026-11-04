@@ -1,8 +1,8 @@
 /** Quit-time inspection of interruptible work and armed scheduled reminders for the Electron shell. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-workspace'
-import type {} from '@deepseek-ai/dsh-schedule'
+import type {} from '@fde2e/len-workspace'
+import type {} from '@fde2e/len-schedule'
 import { hasDesktopActiveTasks } from './update-tasks.ts'
 
 /** What quitting the Host now would affect. */

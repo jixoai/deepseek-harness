@@ -1,8 +1,8 @@
 - insert:
     - id: subagent-claude-code
-      name: '@deepseek-ai/dsh-subagent-claude-code'
+      name: '@fde2e/len-subagent-claude-code'
     - id: tool-subagent-claude-code
-      name: '@deepseek-ai/dsh-tool-subagent'
+      name: '@fde2e/len-tool-subagent'
       config:
         provider: claude-code
         toolName: subagent_claude_code

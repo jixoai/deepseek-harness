@@ -1,10 +1,10 @@
 /** Fixed-size recovery facts; positional attachment prices remain a rebuildable cache. */
 import { z } from 'zod'
-import { assembleAssistantStream } from '@deepseek-ai/dsh-llm'
-import type { TokenUsage } from '@deepseek-ai/dsh-llm'
-import { canonicalHeader, deriveEventMessage, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import { assembleAssistantStream } from '@fde2e/len-llm'
+import type { TokenUsage } from '@fde2e/len-llm'
+import { canonicalHeader, deriveEventMessage, SessionSeq } from '@fde2e/len-session'
+import type { SessionEvent } from '@fde2e/len-session'
+import type { ProjectionDefinition } from '@fde2e/len-session-projection'
 import { estimateContent, estimateMessage, ROLE_OVERHEAD } from './estimate.ts'
 
 const seqSchema = z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER).transform(SessionSeq)

@@ -1,9 +1,9 @@
 /** Input waiting owned by the subagent control plugin. */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { HarnessError } from '@deepseek-ai/dsh-llm'
-import { defineTool } from '@deepseek-ai/dsh-tools'
+import type { Agent } from '@fde2e/len-agent'
+import { HarnessError } from '@fde2e/len-llm'
+import { defineTool } from '@fde2e/len-tools'
 
 /** Wait failures retain a stable machine-readable reason through tool execution. */
 class AgentWaitError extends HarnessError {

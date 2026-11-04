@@ -11,20 +11,20 @@
  * the generic question flow. Both use the same carrier and composer seat.
  */
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { InboxWireState } from '@deepseek-ai/dsh-agent/types'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type {} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { ComposerChainProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { PendingInteractionPublisher } from '@deepseek-ai/dsh-client-ui-session/client'
-import type { TypertClientEventListener } from '@deepseek-ai/dsh-typert-protocol'
-import type { AskUserQuestionItem, PendingUserQuestion, UserQuestionProjectionView } from '@deepseek-ai/dsh-user-questions/types'
+import type { InboxWireState } from '@fde2e/len-agent/types'
+import type {} from '@fde2e/len-api-remotes/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type {} from '@fde2e/len-client-ui-chat/client'
+import type { ComposerChainProps } from '@fde2e/len-client-ui-conversation/client'
+import type {} from '@fde2e/len-client-ui-renderer/client'
+import type { PendingInteractionPublisher } from '@fde2e/len-client-ui-session/client'
+import type { TypertClientEventListener } from '@fde2e/len-typert-protocol'
+import type { AskUserQuestionItem, PendingUserQuestion, UserQuestionProjectionView } from '@fde2e/len-user-questions/types'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type { UserQuestionPanels, UserQuestionRecord } from '@deepseek-ai/dsh-client-ui-tool/client'
-import type { ToolCallId } from '@deepseek-ai/dsh-llm'
-import { brandString } from '@deepseek-ai/dsh-brand'
+import type {} from '@fde2e/len-client-locale/client'
+import type { UserQuestionPanels, UserQuestionRecord } from '@fde2e/len-client-ui-tool/client'
+import type { ToolCallId } from '@fde2e/len-llm'
+import { brandString } from '@fde2e/len-brand'
 import { createWaterfallRequest, PendingQuestion, type QuestionRpcChannel } from './contract/slots.ts'
 import { createQuestionDraftStore } from './draft-store.ts'
 import { QuestionComposer } from './QuestionComposer.tsx'
@@ -37,7 +37,7 @@ export type {
 } from './contract/slots.ts'
 export type { QuestionKey } from './locales.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@fde2e/len-client-ui-slots' {
   interface LocaleNamespaceMap {
     /** The question composer's copy. */
     question: QuestionKey

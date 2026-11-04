@@ -1,5 +1,5 @@
 import { Context } from '@deepseek-ai/cordis'
-import ForgeService from '@deepseek-ai/dsh-experimental-forge'
+import ForgeService from '@fde2e/len-experimental-forge'
 import { afterEach, describe, expect, it } from 'vitest'
 import * as ForgeGitHub from '../src/index.ts'
 

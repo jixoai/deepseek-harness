@@ -1,7 +1,7 @@
 /** What the panel's checkout row says about the checkout the Session works in. */
 
-import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
-import { abbreviateHomePath } from '@deepseek-ai/dsh-util-workspace-path'
+import type { PropsLocale } from '@fde2e/len-client-ui-slots'
+import { abbreviateHomePath } from '@fde2e/len-util-workspace-path'
 import type { ForgePanelState } from '../types.ts'
 import type { NS } from './locales.ts'
 

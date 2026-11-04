@@ -1,19 +1,19 @@
 import { afterEach, beforeEach, describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
-import { createUserMessage, ToolCallId, LlmAdapter } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, StreamChunk } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-import { Session, SessionId, SessionLogOffset, type SessionEvent } from '@deepseek-ai/dsh-session'
-import AgentRegistry, { agentEvents, type Agent } from '@deepseek-ai/dsh-agent'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import { unsupportedModel, unsupportedInbox, mountAgentLoopTestDependencies } from '@deepseek-ai/dsh-agent-loop-testkit'
-import * as timeContext from '@deepseek-ai/dsh-time-context'
-import type { Config } from '@deepseek-ai/dsh-time-context'
+import { createUserMessage, ToolCallId, LlmAdapter } from '@fde2e/len-llm'
+import type { GenerateOptions, StreamChunk } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
+import { Session, SessionId, SessionLogOffset, type SessionEvent } from '@fde2e/len-session'
+import AgentRegistry, { agentEvents, type Agent } from '@fde2e/len-agent'
+import { defineContentToolFixture } from '@fde2e/len-tool-testkit'
+import AgentLoop from '@fde2e/len-agent-loop'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import { unsupportedModel, unsupportedInbox, mountAgentLoopTestDependencies } from '@fde2e/len-agent-loop-testkit'
+import * as timeContext from '@fde2e/len-time-context'
+import type { Config } from '@fde2e/len-time-context'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'compaction-basic': { kind: 'compaction-basic' } & ContextFormed
     'time-context-test': { kind: 'time-context-test' } & ContextFormed

@@ -5,12 +5,12 @@
  */
 
 import { Service } from '@deepseek-ai/cordis'
-import { RemoteError, isRemoteUplinkItem, remoteErrorOf } from '@deepseek-ai/dsh-typert-protocol'
+import { RemoteError, isRemoteUplinkItem, remoteErrorOf } from '@fde2e/len-typert-protocol'
 export type { TypertGatewayFaultDetails } from '../remote-error-codes.ts'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConnectionHandle,
-} from '@deepseek-ai/dsh-client-connection/client'
+} from '@fde2e/len-client-connection/client'
 import type {
   InvocationDescriptor,
   TypertClientEventListener,
@@ -22,7 +22,7 @@ import type {
   TypertDisposer,
   TypertRemoteContribution,
   TypertRemoteEvent,
-} from '@deepseek-ai/dsh-typert-protocol'
+} from '@fde2e/len-typert-protocol'
 import {
   ClientUplinkQueue,
   RemoteStreamCarrierError,

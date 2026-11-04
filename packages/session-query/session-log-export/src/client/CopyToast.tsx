@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import { IconWarningOutlineRegular, Toast } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
+import type { ObservableSnapshot } from '@fde2e/len-client-store'
+import { IconWarningOutlineRegular, Toast } from '@fde2e/len-client-ui-primitives'
+import type { InjectFace, PropsLocale, PropsRuntime } from '@fde2e/len-client-ui-slots'
+import type {} from '@fde2e/len-client-ui-layout/client'
 import type { SessionMarkdownCopyState } from './copy-controller.ts'
 import { NS } from './locales.ts'
 

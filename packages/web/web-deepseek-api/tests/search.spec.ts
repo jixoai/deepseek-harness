@@ -1,18 +1,18 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { Session } from '@deepseek-ai/dsh-session'
-import WebRuntime from '@deepseek-ai/dsh-web'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
+import AgentRegistry from '@fde2e/len-agent'
+import type { Agent } from '@fde2e/len-agent'
+import type { Session } from '@fde2e/len-session'
+import WebRuntime from '@fde2e/len-web'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
 import {
   DeepSeekSearchApiProvider,
   DEEPSEEK_WEB_API_BASE_URL,
   mapSearchResponse,
   type DeepSeekSearchApiOptions,
-} from '@deepseek-ai/dsh-web-deepseek-api'
-import * as webApiPlugin from '@deepseek-ai/dsh-web-deepseek-api'
-import { DSH_LAUNCH_ENVIRONMENT_KEY, createLaunchEnvironmentSnapshot } from '@deepseek-ai/dsh-launch-environment'
+} from '@fde2e/len-web-deepseek-api'
+import * as webApiPlugin from '@fde2e/len-web-deepseek-api'
+import { DSH_LAUNCH_ENVIRONMENT_KEY, createLaunchEnvironmentSnapshot } from '@fde2e/len-launch-environment'
 import { customGuidance } from './guidance.ts'
 
 /** Construct the provider over a fixed options value; production passes a live thunk. */

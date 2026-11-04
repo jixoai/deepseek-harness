@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-terminal-bash",
+  "name": "@fde2e/len-terminal-bash",
   "description": "Persistent shell PTY backend over the DeepSeek Harness subprocess terminal primitive",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,32 +29,32 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-terminal": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-terminal": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-subprocess": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@fde2e/len-working-directory": "workspace:*"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-lazy-require": "workspace:*",
-    "@deepseek-ai/dsh-pwsh-local": "workspace:*",
+    "@fde2e/len-lazy-require": "workspace:*",
+    "@fde2e/len-pwsh-local": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "@xterm/headless": "^6.0.0"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-terminal": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-agent-loop-testkit": "workspace:*",
+    "@fde2e/len-terminal": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-subprocess": "workspace:*",
+    "@fde2e/len-subprocess-local": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-working-directory": "workspace:*"
+    "@fde2e/len-working-directory": "workspace:*"
   }
 }

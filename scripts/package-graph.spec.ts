@@ -18,9 +18,9 @@ function fixture(packages: Readonly<Record<string, readonly string[]>>): string 
     const directory = join(root, 'packages', 'client', name)
     mkdirSync(directory, { recursive: true })
     writeFileSync(join(directory, 'package.json'), `${JSON.stringify({
-      name: `@deepseek-ai/dsh-${name}`,
+      name: `@fde2e/len-${name}`,
       peerDependencies: Object.fromEntries(dependencies.map(dependency => [
-        `@deepseek-ai/dsh-${dependency}`,
+        `@fde2e/len-${dependency}`,
         'workspace:^',
       ])),
     }, null, 2)}\n`)
@@ -47,15 +47,15 @@ describe('collectPackageGraph', () => {
     const root = fixture({ consumer: ['missing'] })
 
     expect(() => collectPackageGraph(root, ['client'], 'fixture'))
-      .toThrow('fixture: @deepseek-ai/dsh-consumer references missing in-repo peer @deepseek-ai/dsh-missing')
+      .toThrow('fixture: @fde2e/len-consumer references missing in-repo peer @fde2e/len-missing')
   })
 })
 
 describe('renderModuleGraph', () => {
   it('renders the same peer edge in both generated languages', () => {
     const packages = [
-      { short: 'provider', name: '@deepseek-ai/dsh-provider', group: 'core', rel: 'packages/core/provider', deps: [] },
-      { short: 'consumer', name: '@deepseek-ai/dsh-consumer', group: 'core', rel: 'packages/core/consumer', deps: ['provider'] },
+      { short: 'provider', name: '@fde2e/len-provider', group: 'core', rel: 'packages/core/provider', deps: [] },
+      { short: 'consumer', name: '@fde2e/len-consumer', group: 'core', rel: 'packages/core/consumer', deps: ['provider'] },
     ]
 
     const english = renderModuleGraph(packages, 'en')

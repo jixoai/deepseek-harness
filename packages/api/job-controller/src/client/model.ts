@@ -3,13 +3,13 @@
  * by `job.list` frames, and per-job accumulated output views fed by
  * `job.follow` frames. Pure data plus subscriptions — transport wiring stays
  * in the client service, UI stays in slot components.
- * @module @deepseek-ai/dsh-api-job-controller/client/model
+ * @module @fde2e/len-api-job-controller/client/model
  */
 
-import { notifySubscribers } from '@deepseek-ai/dsh-client-store'
-import type { JobId } from '@deepseek-ai/dsh-jobs/brand'
-import type { JobView } from '@deepseek-ai/dsh-jobs/view'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import { notifySubscribers } from '@fde2e/len-client-store'
+import type { JobId } from '@fde2e/len-jobs/brand'
+import type { JobView } from '@fde2e/len-jobs/view'
+import type { SessionId } from '@fde2e/len-session/types'
 import type { JobFollowFrame } from '../types.ts'
 
 /** Bounded per-job render tail, in UTF-16 code units. */

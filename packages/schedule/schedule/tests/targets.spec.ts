@@ -4,12 +4,12 @@
  * of each Session that a delivery creates.
  */
 import { afterEach, beforeEach, expect, it, vi } from 'vitest'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { createUserMessage, MessageId, type UserMessage } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { SessionAlreadyOwnedError, SessionPersistenceNotFoundError } from '@deepseek-ai/dsh-session-persistence'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import type { Agent } from '@fde2e/len-agent'
+import { createUserMessage, MessageId, type UserMessage } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
+import { SessionAlreadyOwnedError, SessionPersistenceNotFoundError } from '@fde2e/len-session-persistence'
+import SessionTitleService from '@fde2e/len-session-title'
+import { RemoteError } from '@fde2e/len-typert-protocol'
 import { ScheduleId } from '../src/domain.ts'
 import { createRRuleScheduleRecord } from '../src/domain.ts'
 import { ScheduleRuntime, type ScheduleRuntimeLimits } from '../src/runtime.ts'

@@ -1,18 +1,18 @@
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import * as PtcToolExecutor from '@deepseek-ai/dsh-tool-executor-ptc'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
+import * as PtcToolExecutor from '@fde2e/len-tool-executor-ptc'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import { renderPrompt } from '@deepseek-ai/dsh-system-prompt'
-import type { ToolExecutionToken } from '@deepseek-ai/dsh-tools'
+import type { Agent } from '@fde2e/len-agent'
+import { ToolCallId } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
+import { createScope } from '@fde2e/len-scope'
+import { renderPrompt } from '@fde2e/len-system-prompt'
+import type { ToolExecutionToken } from '@fde2e/len-tools'
 import ScheduleService, {
   DEFAULT_LIST_LIMIT, MAX_LIST_LIMIT, MAX_TITLE_LENGTH, REQUIRED_TITLE_MESSAGE, ScheduleId, ScheduleInputError,
   createAfterScheduleRecord, formatScheduleLocalTime,
-} from '@deepseek-ai/dsh-schedule'
-import type { ScheduleCatalogEntry, ScheduleRecord } from '@deepseek-ai/dsh-schedule'
+} from '@fde2e/len-schedule'
+import type { ScheduleCatalogEntry, ScheduleRecord } from '@fde2e/len-schedule'
 import * as ToolSchedule from '../src/index.ts'
 import { agentFor, boundTask, harness, mountToolSchedule, PromptRuntime, seedTasks } from './harness.ts'
 

@@ -14,22 +14,22 @@
  * mount under the manager's fiber, so disposing the manager unwinds every
  * instance and its registered tools.
  *
- * @module @deepseek-ai/dsh-mcp-manager
+ * @module @fde2e/len-mcp-manager
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import { Remote, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
+import { Remote, TypertRemoteService } from '@fde2e/len-typert-protocol'
 import type { Fiber, Volatile, VolatileSnapshot } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import * as McpClient from '@deepseek-ai/dsh-mcp-client'
-import { ReconnectSchema, SERVER_NAME_PATTERN, connectionStatusOf, probeServer, resolveReconnectPolicy } from '@deepseek-ai/dsh-mcp-client'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
-import type { McpCloseResult, McpProbeOptions, McpProbeResult, ReconnectConfig } from '@deepseek-ai/dsh-mcp-client'
-import { deepEqualJson } from '@deepseek-ai/dsh-util-values'
-import { assertTemplateSyntax } from '@deepseek-ai/dsh-mcp-client'
+import * as McpClient from '@fde2e/len-mcp-client'
+import { ReconnectSchema, SERVER_NAME_PATTERN, connectionStatusOf, probeServer, resolveReconnectPolicy } from '@fde2e/len-mcp-client'
+import { MAX_TIMER_DELAY_MS } from '@fde2e/len-timeout'
+import type { McpCloseResult, McpProbeOptions, McpProbeResult, ReconnectConfig } from '@fde2e/len-mcp-client'
+import { deepEqualJson } from '@fde2e/len-util-values'
+import { assertTemplateSyntax } from '@fde2e/len-mcp-client'
 import type { McpManagedServerStatus, McpManagedServerView } from './types.ts'
 // Side-effect type imports: declare the tool service and Loader's volatile events.
-import type {} from '@deepseek-ai/dsh-tools'
+import type {} from '@fde2e/len-tools'
 import type {} from '@deepseek-ai/cordis-plugin-loader'
 
 export type { McpManagedServerStatus, McpManagedServerView } from './types.ts'

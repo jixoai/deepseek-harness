@@ -10,14 +10,14 @@
  */
 
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import liveshareSharesRemote from '@deepseek-ai/dsh-experimental-liveshare/remote'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type {} from '@deepseek-ai/dsh-client-ui-workspace/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import liveshareSharesRemote from '@fde2e/len-experimental-liveshare/remote'
+import type {} from '@fde2e/len-api-remotes/client'
+import type {} from '@fde2e/len-client-locale/client'
+import type {} from '@fde2e/len-client-ui-conversation/client'
+import type {} from '@fde2e/len-client-ui-renderer/client'
+import type {} from '@fde2e/len-client-ui-session/client'
+import type {} from '@fde2e/len-client-ui-workspace/client'
 import { LIVESHARE_VIEWER_GLOBAL } from '../viewer-channel.ts'
 import { LiveshareShareAction } from './ShareAction.tsx'
 import type { OwnerShares } from './owner-shares.ts'
@@ -32,7 +32,7 @@ import * as viewerSession from './viewer-session-plugin.ts'
 import * as viewerSessionRow from './viewer-session-row.tsx'
 import * as viewerSharePath from './viewer-share-path.tsx'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@fde2e/len-client-ui-slots' {
   interface LocaleNamespaceMap {
     liveshare: LiveshareKey
   }

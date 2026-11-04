@@ -3,7 +3,7 @@ description: "通过宿主上的 GitHub CLI 为实验性 forge 注册表服务 G
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-forge-github
+# @fde2e/len-experimental-forge-github
 
 [English](README.md) | 中文
 
@@ -28,8 +28,8 @@ kind: "package-reference"
 在 forge 注册表之后挂载提供方，并显式列出每个 GitHub Enterprise 主机。
 
 ```yaml
-- name: '@deepseek-ai/dsh-experimental-forge'
-- name: '@deepseek-ai/dsh-experimental-forge-github'
+- name: '@fde2e/len-experimental-forge'
+- name: '@fde2e/len-experimental-forge-github'
   config:
     hosts: [github.com, ghe.example.com]
 ```

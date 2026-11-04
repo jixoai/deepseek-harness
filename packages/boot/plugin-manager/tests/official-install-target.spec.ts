@@ -5,7 +5,7 @@ import { dirname, join } from 'node:path'
 import { expect, it, onTestFinished } from 'vitest'
 import { officialBundleInstallTarget } from '../src/official-install-target.ts'
 
-const name = '@deepseek-ai/dsh-subagent-codex'
+const name = '@fde2e/len-subagent-codex'
 const version = '0.2.1-alpha.1'
 
 function fixture() {
@@ -14,8 +14,8 @@ function fixture() {
   const root = realpathSync(temporary)
   const anchor = join(root, 'apps', 'cli', 'package.json')
   mkdirSync(dirname(anchor), { recursive: true })
-  writeFileSync(join(root, 'package.json'), JSON.stringify({ name: '@deepseek-ai/dsh-root' }))
-  writeFileSync(anchor, JSON.stringify({ name: '@deepseek-ai/dsh', version, dependencies: { '@deepseek-ai/dsh-app-boot': 'workspace:*' } }))
+  writeFileSync(join(root, 'package.json'), JSON.stringify({ name: '@fde2e/len-root' }))
+  writeFileSync(anchor, JSON.stringify({ name: '@fde2e/len', version, dependencies: { '@fde2e/len-app-boot': 'workspace:*' } }))
   const directory = join(root, 'packages', 'relocated', 'native-provider')
   mkdirSync(join(directory, 'lib'), { recursive: true })
   writeFileSync(join(directory, 'package.json'), JSON.stringify({ name, version, main: 'lib/index.js', dsh: { bundle: { patch: './cordis.patch.yml' } } }))
@@ -26,13 +26,13 @@ function fixture() {
 
 it('offers an exact prerelease registry target for a packed installation inside a checkout', () => {
   const { anchor } = fixture()
-  writeFileSync(anchor, JSON.stringify({ name: '@deepseek-ai/dsh', version, dependencies: { '@deepseek-ai/dsh-app-boot': version } }))
+  writeFileSync(anchor, JSON.stringify({ name: '@fde2e/len', version, dependencies: { '@fde2e/len-app-boot': version } }))
   expect(officialBundleInstallTarget(name, anchor, version)).toEqual({ spec: `${name}@${version}`, version })
 })
 
 it('keeps an installation without workspace dependencies on the registry path', () => {
   const { anchor } = fixture()
-  writeFileSync(anchor, JSON.stringify({ name: '@deepseek-ai/dsh', version }))
+  writeFileSync(anchor, JSON.stringify({ name: '@fde2e/len', version }))
   expect(officialBundleInstallTarget(name, anchor, version)).toEqual({ spec: `${name}@${version}`, version })
 })
 

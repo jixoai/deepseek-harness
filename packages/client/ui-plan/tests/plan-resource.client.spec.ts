@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
-import type { SessionEventEntry, SessionEventsPage } from '@deepseek-ai/dsh-api-session-controller/types'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import type { SessionEventEntry, SessionEventsPage } from '@fde2e/len-api-session-controller/types'
+import { RemoteError } from '@fde2e/len-typert-protocol'
 import { planResourceProvider } from '../src/client/plan-resource.ts'
 
 const address = 'dsh-resource://plan/session/call'

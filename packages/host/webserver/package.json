@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-host-webserver",
+  "name": "@fde2e/len-host-webserver",
   "description": "Web route-registration plugin: HTTP and upgrade routes, per-Peer index transform taps, and static dist fallback",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "@types/compression": "^1.8.1",
     "@types/negotiator": "^0.6.5",
     "selfsigned": "^4.0.1"

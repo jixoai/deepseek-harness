@@ -6,9 +6,9 @@ import { Context, FiberState, Service } from '@deepseek-ai/cordis'
 import { entryListSchema, type PatchOptions } from '@deepseek-ai/cordis-plugin-include'
 import yaml from 'js-yaml'
 import type { Entry, EntryOptions } from '@deepseek-ai/cordis-plugin-loader'
-import type {} from '@deepseek-ai/dsh-hmr'
-import { composeEntries, loadProfileDirectory, readProfilePatches, reconcileProfilePatches } from '@deepseek-ai/dsh-app-boot'
-import { withFileLock, writeFileAtomic } from '@deepseek-ai/dsh-atomic-write'
+import type {} from '@fde2e/len-hmr'
+import { composeEntries, loadProfileDirectory, readProfilePatches, reconcileProfilePatches } from '@fde2e/len-app-boot'
+import { withFileLock, writeFileAtomic } from '@fde2e/len-atomic-write'
 import { isMap, isSeq, parseDocument, Scalar, visit } from 'yaml'
 
 declare module '@deepseek-ai/cordis' {

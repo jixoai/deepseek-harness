@@ -11,10 +11,10 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import Include from '@deepseek-ai/cordis-plugin-include'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
-import LocalFileSystem from '@deepseek-ai/dsh-fs-local'
-import * as WorkspaceChangesPlugin from '@deepseek-ai/dsh-workspace-changes'
+import SessionStore, { SessionId } from '@fde2e/len-session'
+import LocalSubprocessRuntime from '@fde2e/len-subprocess-local'
+import LocalFileSystem from '@fde2e/len-fs-local'
+import * as WorkspaceChangesPlugin from '@fde2e/len-workspace-changes'
 import { changes, endTurn, git, startTurn, toolCall } from './support.ts'
 
 let root: string | undefined
@@ -32,10 +32,10 @@ describe('real Loader composition', () => {
     root = await mkdtemp(join(tmpdir(), 'dsh-workspace-changes-loader-'))
     const cwd = join(root, 'ws')
     await writeFile(join(root, 'cordis.yml'), [
-      "- name: '@deepseek-ai/dsh-session'",
-      "- name: '@deepseek-ai/dsh-subprocess-local'",
-      "- name: '@deepseek-ai/dsh-fs-local'",
-      "- name: '@deepseek-ai/dsh-workspace-changes'",
+      "- name: '@fde2e/len-session'",
+      "- name: '@fde2e/len-subprocess-local'",
+      "- name: '@fde2e/len-fs-local'",
+      "- name: '@fde2e/len-workspace-changes'",
       '',
     ].join('\n'))
     context = new Context()
@@ -43,10 +43,10 @@ describe('real Loader composition', () => {
     await context.plugin(Loader)
     context.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
-      ['@deepseek-ai/dsh-session', SessionStore],
-      ['@deepseek-ai/dsh-subprocess-local', LocalSubprocessRuntime],
-      ['@deepseek-ai/dsh-fs-local', LocalFileSystem],
-      ['@deepseek-ai/dsh-workspace-changes', WorkspaceChangesPlugin],
+      ['@fde2e/len-session', SessionStore],
+      ['@fde2e/len-subprocess-local', LocalSubprocessRuntime],
+      ['@fde2e/len-fs-local', LocalFileSystem],
+      ['@fde2e/len-workspace-changes', WorkspaceChangesPlugin],
     ])
     context.loader.internal = {
       version: 'v2',

@@ -4,11 +4,11 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import LocalCredentialProvider from '@deepseek-ai/dsh-credentials-local'
-import { DSH_LAUNCH_ENVIRONMENT_KEY, createLaunchEnvironmentSnapshot } from '@deepseek-ai/dsh-launch-environment'
-import WebRuntime from '@deepseek-ai/dsh-web'
-import * as webApiPlugin from '@deepseek-ai/dsh-web-deepseek-api'
+import { credentialRef } from '@fde2e/len-credentials'
+import LocalCredentialProvider from '@fde2e/len-credentials-local'
+import { DSH_LAUNCH_ENVIRONMENT_KEY, createLaunchEnvironmentSnapshot } from '@fde2e/len-launch-environment'
+import WebRuntime from '@fde2e/len-web'
+import * as webApiPlugin from '@fde2e/len-web-deepseek-api'
 
 /** Stub the Search API and read back the bearer credential of every dispatched request. */
 function captureAuthorization(): () => (string | null)[] {

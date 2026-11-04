@@ -1,20 +1,20 @@
 /** Host timer over standalone tasks; target Session activation is a delivery operation. */
 import { randomUUID } from 'node:crypto'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-declare module '@deepseek-ai/dsh-llm' {
+import { createUserMessage } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'schedule': { kind: 'schedule' } & ContextFormed
   }
 }
-import { SessionId, type SessionId as SessionIdType } from '@deepseek-ai/dsh-session'
+import { SessionId, type SessionId as SessionIdType } from '@fde2e/len-session'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { SessionPersistenceNotFoundError } from '@deepseek-ai/dsh-session-persistence'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
-import type {} from '@deepseek-ai/dsh-api-session-controller'
-import type {} from '@deepseek-ai/dsh-session-title'
-import type {} from '@deepseek-ai/dsh-workspace'
+import type { Agent } from '@fde2e/len-agent'
+import { SessionPersistenceNotFoundError } from '@fde2e/len-session-persistence'
+import { RemoteError } from '@fde2e/len-typert-protocol'
+import type {} from '@fde2e/len-api-session-controller'
+import type {} from '@fde2e/len-session-title'
+import type {} from '@fde2e/len-workspace'
 import {
   isRecurringScheduleRecord, MIN_EVERY_INTERVAL_SECONDS, renderRecurringReminderBatchFraming, renderReminderFraming,
   resolveRecurringOccurrence, type RecurringOccurrence,

@@ -2,7 +2,7 @@
 /** The viewer's brand row: what the sidebar's brand seats say about a share, and where they lead. */
 
 import { Context } from '@deepseek-ai/cordis'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@fde2e/len-client-locale/client'
 import { act, cleanup, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
 import { ViewerBrandMark, ViewerBrandName } from '../src/client/viewer-brand.tsx'

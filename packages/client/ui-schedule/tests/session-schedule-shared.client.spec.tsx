@@ -1,10 +1,10 @@
 // @vitest-environment jsdom
 import { act, cleanup, render } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { HostObservable } from '@deepseek-ai/dsh-client-ui-slots'
-import type { ScheduleId, ScheduleCatalogEntry as ScheduleCatalogEntry } from '@deepseek-ai/dsh-schedule/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-ui-renderer/src/client/bind.ts'
+import type { HostObservable } from '@fde2e/len-client-ui-slots'
+import type { ScheduleId, ScheduleCatalogEntry as ScheduleCatalogEntry } from '@fde2e/len-schedule/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import { bindSnapshotSelector } from '@fde2e/len-client-ui-renderer/src/client/bind.ts'
 import type { CatalogSnapshot } from '../src/client/catalog-source.ts'
 import { useSessionScheduleFacts } from '../src/client/session-schedule-state.ts'
 

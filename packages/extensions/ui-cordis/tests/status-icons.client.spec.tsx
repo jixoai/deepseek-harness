@@ -2,9 +2,9 @@
 
 import { cleanup, render } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { ToolResultNode } from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { CordisDynamicPackageId, CordisDynamicPluginId, CordisDynamicPluginRunId, SessionId } from '@deepseek-ai/dsh-api-remotes/client'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+import type { ToolResultNode } from '@fde2e/len-client-ui-chat/client'
+import type { CordisDynamicPackageId, CordisDynamicPluginId, CordisDynamicPluginRunId, SessionId } from '@fde2e/len-api-remotes/client'
+import { PartialArguments } from '@fde2e/len-util-values'
 import { CordisActionRow } from '../src/client/CordisActionRow.tsx'
 import { CordisDefineRow } from '../src/client/CordisDefineRow.tsx'
 import { CordisRunRow } from '../src/client/CordisRunRow.tsx'

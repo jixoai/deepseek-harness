@@ -2,9 +2,9 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {
   ConversationMatch, ConversationNodeContext, ConversationNodeDefinition, StartedToolCall,
   ToolResultNode,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type {} from '@deepseek-ai/dsh-tool-executor-ptc/client'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+} from '@fde2e/len-client-ui-conversation/client'
+import type {} from '@fde2e/len-tool-executor-ptc/client'
+import { PartialArguments } from '@fde2e/len-util-values'
 import { trajectoryNode } from './trajectory-definition-common.ts'
 
 /* jscpd:ignore-start -- Target-owned Definitions intentionally keep their event

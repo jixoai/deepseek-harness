@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-call-timeout-policy",
+  "name": "@fde2e/len-tool-call-timeout-policy",
   "description": "Tool-call timeout policy: a tools/execute wrapper that arms a per-tool deadline on exec.signal and returns TOOL_TIMEOUT when it wins",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,17 +29,17 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-timeout": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
-    "@deepseek-ai/dsh-tool-executor-native": "workspace:*",
-    "@deepseek-ai/dsh-tool-testkit": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-timeout": "workspace:*",
+    "@fde2e/len-tool-executor-native": "workspace:*",
+    "@fde2e/len-tool-testkit": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

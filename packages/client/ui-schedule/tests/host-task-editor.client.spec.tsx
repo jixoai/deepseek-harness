@@ -1,12 +1,12 @@
 // @vitest-environment jsdom
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { allowAllAccess, bindSnapshotSelector, contextMenuHook, makeTranslate } from '@deepseek-ai/dsh-client-test-runtime'
-import type { ScheduleId, ScheduleCatalogEntry, ScheduleRecord } from '@deepseek-ai/dsh-schedule/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { SessionListState } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { WorkspaceId, WorkspaceSnapshot } from '@deepseek-ai/dsh-api-workspace-controller/client'
-import { RRule } from '@deepseek-ai/dsh-util-time'
+import { allowAllAccess, bindSnapshotSelector, contextMenuHook, makeTranslate } from '@fde2e/len-client-test-runtime'
+import type { ScheduleId, ScheduleCatalogEntry, ScheduleRecord } from '@fde2e/len-schedule/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { SessionListState } from '@fde2e/len-api-session-controller/client'
+import type { WorkspaceId, WorkspaceSnapshot } from '@fde2e/len-api-workspace-controller/client'
+import { RRule } from '@fde2e/len-util-time'
 import { TaskManagerPage, type TaskManagerPageProps } from '../src/client/TaskManagerPage.tsx'
 import type { HostTaskActions } from '../src/client/TaskDetail.tsx'
 import type { TaskCreateOutcome } from '../src/client/TaskDetail.tsx'
@@ -1586,7 +1586,7 @@ describe('time zone menu', () => {
 })
 
 /** Read the authoritative RRULE selected by a form submission. */
-function rruleOf(timing: import('@deepseek-ai/dsh-schedule/client').ScheduleTiming | undefined): string {
+function rruleOf(timing: import('@fde2e/len-schedule/client').ScheduleTiming | undefined): string {
   if (timing?.kind !== 'rrule') throw new Error('expected RRULE timing')
   return timing.rrule
 }

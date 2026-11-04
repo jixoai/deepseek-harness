@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-client-file-upload",
+  "name": "@fde2e/len-client-file-upload",
   "description": "Agent-scoped browser file upload, streaming intake, and staged receipt service",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -41,7 +41,7 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-remotes"
+        "@fde2e/len-api-remotes"
       ],
       "platform": "web",
       "immediately": true
@@ -65,20 +65,20 @@
   ],
   "dependencies": {
     "zod": "4.4.3",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
-    "@deepseek-ai/dsh-brand": "workspace:*"
+    "@fde2e/len-typert-protocol": "workspace:*",
+    "@fde2e/len-brand": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-commands": "workspace:*",
-    "@deepseek-ai/dsh-util-crypto": "workspace:*",
-    "@deepseek-ai/dsh-api-remotes": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-attachment": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-client-connection": "workspace:*",
+    "@fde2e/len-commands": "workspace:*",
+    "@fde2e/len-util-crypto": "workspace:*",
+    "@fde2e/len-api-remotes": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-attachment": "workspace:*"
   }
 }

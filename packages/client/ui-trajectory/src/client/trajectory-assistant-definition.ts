@@ -3,10 +3,10 @@ import type {
   AssistantBlock, AssistantMessageNode, ConversationLocation,
   ConversationMatch, ConversationNodeContext, ConversationNodeDefinition,
   RequestView,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { StreamChunk } from '@deepseek-ai/dsh-llm'
-import { assistantStreamFirstTokenTime } from '@deepseek-ai/dsh-llm/assistant-stream'
-import type { SessionEvent } from '@deepseek-ai/dsh-session/types'
+} from '@fde2e/len-client-ui-conversation/client'
+import type { StreamChunk } from '@fde2e/len-llm'
+import { assistantStreamFirstTokenTime } from '@fde2e/len-llm/assistant-stream'
+import type { SessionEvent } from '@fde2e/len-session/types'
 import { trajectoryNode } from './trajectory-definition-common.ts'
 import type { TrajectoryPartialAssistant } from './trajectory-contract.ts'
 import {

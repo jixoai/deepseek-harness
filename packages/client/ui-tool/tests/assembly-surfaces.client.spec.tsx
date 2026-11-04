@@ -1,22 +1,22 @@
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import { apply as applyMenus, inject as injectMenus } from '@deepseek-ai/dsh-client-ui-context-menu/client'
+import { createSnapshotStore } from '@fde2e/len-client-store'
+import { apply as applyMenus, inject as injectMenus } from '@fde2e/len-client-ui-context-menu/client'
 import { toolSessionEvents } from './tool-fixtures.client.ts'
 // @vitest-environment jsdom
 /** Tool assembly acceptance through the real ui-conversation host. */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, fireEvent, waitFor } from '@testing-library/react'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
-import type { ISession } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { WorkspaceId } from '@deepseek-ai/dsh-workspace/types'
-import type { TodoItem } from '@deepseek-ai/dsh-client-ui-conversation/client'
+import { LocaleRuntime } from '@fde2e/len-client-locale/client'
+import type { ISession } from '@fde2e/len-api-session-controller/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { WorkspaceId } from '@fde2e/len-workspace/types'
+import type { TodoItem } from '@fde2e/len-client-ui-conversation/client'
 import {
   apply as applyChat, inject as injectChat, type ToolResultNode,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
-import { SlotTestRuntime, usePinnedBrowserLanguages, stubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
-import { apply as applyConversation, inject as injectConversation } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+} from '@fde2e/len-client-ui-chat/client'
+import type { PropsRenderSlots } from '@fde2e/len-client-ui-slots'
+import { SlotTestRuntime, usePinnedBrowserLanguages, stubConfigForm } from '@fde2e/len-client-test-runtime'
+import { apply as applyConversation, inject as injectConversation } from '@fde2e/len-client-ui-conversation/client'
+import { PartialArguments } from '@fde2e/len-util-values'
 import { apply as applyTool, inject as injectTool } from '../src/client/apply.ts'
 
 // The service reads its initial locale from the browser; these specs assert

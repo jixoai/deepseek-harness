@@ -2,9 +2,9 @@
 import { createHash } from 'node:crypto'
 import { isDeepStrictEqual } from 'node:util'
 import { z } from 'zod'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { MessageId } from '@deepseek-ai/dsh-llm/brand'
-import { defineDomain, domainTable } from '@deepseek-ai/dsh-storage-domain'
+import { SessionId } from '@fde2e/len-session'
+import { MessageId } from '@fde2e/len-llm/brand'
+import { defineDomain, domainTable } from '@fde2e/len-storage-domain'
 import { decodeScheduleRecord } from './domain.ts'
 import type { ScheduleDeliveryRecord, ScheduleId, ScheduleRecord, ScheduleTarget } from './types.ts'
 

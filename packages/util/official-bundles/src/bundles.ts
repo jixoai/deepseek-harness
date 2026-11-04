@@ -9,19 +9,19 @@ export interface ProfileTemplate {
 /** The shipped profile templates auto-initialized on first use, by name. */
 export const PROFILE_TEMPLATES: Record<string, ProfileTemplate> = {
   acp: {
-    bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-acp-app'],
+    bundles: ['@fde2e/len-base', '@fde2e/len-acp-app'],
   },
   web: {
-    bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app'],
+    bundles: ['@fde2e/len-base', '@fde2e/len-web-app'],
   },
   headless: {
-    bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-headless'],
+    bundles: ['@fde2e/len-base', '@fde2e/len-headless'],
   },
   sdk: {
-    bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-sdk-app'],
+    bundles: ['@fde2e/len-base', '@fde2e/len-sdk-app'],
   },
   'sdk-minimal': {
-    bundles: ['@deepseek-ai/dsh-sdk-minimal'],
+    bundles: ['@fde2e/len-sdk-minimal'],
   },
 }
 
@@ -30,19 +30,19 @@ export const PROFILE_TEMPLATES: Record<string, ProfileTemplate> = {
  * match with the {@link PROFILE_TEMPLATES} entry of the same name and leaves every other list untouched.
  */
 export const INSTALLATION_OWNED_PROFILE_TUPLES: Readonly<Record<string, readonly string[]>> = {
-  headless: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app', '@deepseek-ai/dsh-headless'],
+  headless: ['@fde2e/len-base', '@fde2e/len-web-app', '@fde2e/len-headless'],
 }
 
 /** Bundles an earlier release shipped and the installation no longer carries; app-boot removes them from profiles. */
 export const RETIRED_BUNDLES: ReadonlySet<string> = new Set([
   // The Web composition mounts Schedule itself
   // ([upgrade guide](../../../../docs/upgrade-guide/v0.2.0-rc.2/schedule-bundle-retired/guide.md)).
-  '@deepseek-ai/dsh-experimental-schedule-bundle',
-  '@deepseek-ai/dsh-experimental-agent-team-profile',
+  '@fde2e/len-experimental-schedule-bundle',
+  '@fde2e/len-experimental-agent-team-profile',
 ])
 
 /** The bundle list a `dsh plugin` init uses for a name with no shipped template. */
-export const DEFAULT_PROFILE_BUNDLES: readonly string[] = ['@deepseek-ai/dsh-base']
+export const DEFAULT_PROFILE_BUNDLES: readonly string[] = ['@fde2e/len-base']
 
 /**
  * The bundles the dsh installation ships for a person to switch on: each a
@@ -54,25 +54,25 @@ export const DEFAULT_PROFILE_BUNDLES: readonly string[] = ['@deepseek-ai/dsh-bas
  * [admission](../../../../.agents/notes/implemented/architecture/2026-09-21-experimental-capabilities-as-optional-bundles.md)).
  */
 export const OPTIONAL_BUNDLES: readonly string[] = [
-  '@deepseek-ai/dsh-personalized-recommendations',
-  '@deepseek-ai/dsh-cua-bundle',
-  '@deepseek-ai/dsh-experimental-session-search',
-  '@deepseek-ai/dsh-experimental-ralph-bundle',
-  '@deepseek-ai/dsh-experimental-terminal-bundle',
-  '@deepseek-ai/dsh-experimental-badge-skill-bundle',
-  '@deepseek-ai/dsh-experimental-session-titles-bundle',
-  '@deepseek-ai/dsh-experimental-voice-input-bundle',
-  '@deepseek-ai/dsh-experimental-cot-translation-bundle',
-  '@deepseek-ai/dsh-experimental-auto-review',
-  '@deepseek-ai/dsh-experimental-inspector-profile',
-  '@deepseek-ai/dsh-experimental-liveshare',
-  '@deepseek-ai/dsh-experimental-plugin-market-bundle',
-  '@deepseek-ai/dsh-experimental-tool-worktree',
-  '@deepseek-ai/dsh-experimental-forge-bundle',
+  '@fde2e/len-personalized-recommendations',
+  '@fde2e/len-cua-bundle',
+  '@fde2e/len-experimental-session-search',
+  '@fde2e/len-experimental-ralph-bundle',
+  '@fde2e/len-experimental-terminal-bundle',
+  '@fde2e/len-experimental-badge-skill-bundle',
+  '@fde2e/len-experimental-session-titles-bundle',
+  '@fde2e/len-experimental-voice-input-bundle',
+  '@fde2e/len-experimental-cot-translation-bundle',
+  '@fde2e/len-experimental-auto-review',
+  '@fde2e/len-experimental-inspector-profile',
+  '@fde2e/len-experimental-liveshare',
+  '@fde2e/len-experimental-plugin-market-bundle',
+  '@fde2e/len-experimental-tool-worktree',
+  '@fde2e/len-experimental-forge-bundle',
 ]
 
 /** Public DSH release members available through the ordinary on-demand bundle installer. */
 export const ON_DEMAND_BUNDLES: readonly string[] = [
-  '@deepseek-ai/dsh-subagent-claude-code',
-  '@deepseek-ai/dsh-subagent-codex',
+  '@fde2e/len-subagent-claude-code',
+  '@fde2e/len-subagent-codex',
 ]

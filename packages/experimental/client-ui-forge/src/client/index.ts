@@ -4,7 +4,7 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import remote from '@deepseek-ai/dsh-experimental-client-ui-forge/remote'
+import remote from '@fde2e/len-experimental-client-ui-forge/remote'
 import { mountForgePanel } from './mount.ts'
 
 export { inject } from './mount.ts'

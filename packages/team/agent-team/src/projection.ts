@@ -1,9 +1,9 @@
 /** Team state projected incrementally from committed Session events, with a durable-only client view. */
 
 import { z } from 'zod'
-import { brandString } from '@deepseek-ai/dsh-brand'
-import type { SessionEvent, SessionEventMap, SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
+import { brandString } from '@fde2e/len-brand'
+import type { SessionEvent, SessionEventMap, SessionId, SessionLogOffset } from '@fde2e/len-session'
+import type { ProjectionDefinition } from '@fde2e/len-session-projection'
 import type {
   TeamId,
   TeamProjection,

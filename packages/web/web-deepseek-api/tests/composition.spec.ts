@@ -9,14 +9,14 @@ import { join } from 'node:path'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
 import type { ModuleLoaderV2 } from '@deepseek-ai/cordis-plugin-loader'
-import { boot } from '@deepseek-ai/dsh-app-boot'
-import type { DeepSeekAccount } from '@deepseek-ai/dsh-deepseek-account'
-import { createLaunchEnvironmentSnapshot } from '@deepseek-ai/dsh-launch-environment'
-import LlmRuntime from '@deepseek-ai/dsh-llm'
-import * as Account from '@deepseek-ai/dsh-llm-deepseek-account'
-import * as Official from '@deepseek-ai/dsh-llm-deepseek-api-key'
-import WebRuntime from '@deepseek-ai/dsh-web'
-import * as webApiPlugin from '@deepseek-ai/dsh-web-deepseek-api'
+import { boot } from '@fde2e/len-app-boot'
+import type { DeepSeekAccount } from '@fde2e/len-deepseek-account'
+import { createLaunchEnvironmentSnapshot } from '@fde2e/len-launch-environment'
+import LlmRuntime from '@fde2e/len-llm'
+import * as Account from '@fde2e/len-llm-deepseek-account'
+import * as Official from '@fde2e/len-llm-deepseek-api-key'
+import WebRuntime from '@fde2e/len-web'
+import * as webApiPlugin from '@fde2e/len-web-deepseek-api'
 
 const cleanups: Array<() => Promise<void>> = []
 
@@ -26,11 +26,11 @@ afterEach(async () => {
 })
 
 const MODULES = new Map<string, unknown>([
-  ['@deepseek-ai/dsh-llm', LlmRuntime],
-  ['@deepseek-ai/dsh-llm-deepseek-api-key', Official],
-  ['@deepseek-ai/dsh-llm-deepseek-account', Account],
-  ['@deepseek-ai/dsh-web', WebRuntime],
-  ['@deepseek-ai/dsh-web-deepseek-api', webApiPlugin],
+  ['@fde2e/len-llm', LlmRuntime],
+  ['@fde2e/len-llm-deepseek-api-key', Official],
+  ['@fde2e/len-llm-deepseek-account', Account],
+  ['@fde2e/len-web', WebRuntime],
+  ['@fde2e/len-web-deepseek-api', webApiPlugin],
 ])
 
 /** One dispatched Search or Fetch API request. */
@@ -63,11 +63,11 @@ async function bootComposition(web: Record<string, unknown>, environment: Record
   })
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, JSON.stringify([
-    { id: 'llm', name: '@deepseek-ai/dsh-llm' },
-    { id: 'llm-deepseek', name: '@deepseek-ai/dsh-llm-deepseek-api-key' },
-    { id: 'llm-deepseek-account', name: '@deepseek-ai/dsh-llm-deepseek-account' },
-    { id: 'web', name: '@deepseek-ai/dsh-web', config: { searchProvider: 'deepseek-search-api', fetchProvider: 'deepseek-fetch-api' } },
-    { id: 'web-deepseek-api', name: '@deepseek-ai/dsh-web-deepseek-api', config: web },
+    { id: 'llm', name: '@fde2e/len-llm' },
+    { id: 'llm-deepseek', name: '@fde2e/len-llm-deepseek-api-key' },
+    { id: 'llm-deepseek-account', name: '@fde2e/len-llm-deepseek-account' },
+    { id: 'web', name: '@fde2e/len-web', config: { searchProvider: 'deepseek-search-api', fetchProvider: 'deepseek-fetch-api' } },
+    { id: 'web-deepseek-api', name: '@fde2e/len-web-deepseek-api', config: web },
   ]))
   const ctx: Context = await boot('web-deepseek-api-composition', configPath, [], (host) => {
     const modules: ModuleLoaderV2 = {

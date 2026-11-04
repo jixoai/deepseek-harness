@@ -8,22 +8,22 @@
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import { AttachmentId } from '@deepseek-ai/dsh-attachment'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@deepseek-ai/dsh-agent-loop-testkit'
-import TypertGatewayService from '@deepseek-ai/dsh-api-gateway'
-import type { RemoteAccessBinding, RemoteAccessRole } from '@deepseek-ai/dsh-api-remote-access'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { remoteMethods, type PeerId, type PeerScope, type Principal, type RemoteInvocation } from '@deepseek-ai/dsh-typert-protocol'
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
+import { AttachmentId } from '@fde2e/len-attachment'
+import type { Agent } from '@fde2e/len-agent'
+import { mountAgentLoopTestDependencies, mountAgentLoopTestHarness } from '@fde2e/len-agent-loop-testkit'
+import TypertGatewayService from '@fde2e/len-api-gateway'
+import type { RemoteAccessBinding, RemoteAccessRole } from '@fde2e/len-api-remote-access'
+import { createUserMessage } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
+import { remoteMethods, type PeerId, type PeerScope, type Principal, type RemoteInvocation } from '@fde2e/len-typert-protocol'
+import TypertRegistry from '@fde2e/len-typert-registry'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import type SessionController from '../src/index.ts'
 import { ApiSessionList } from '../src/list.ts'
 import type { SessionControlFrame, SessionRequestId, SessionSearchValue } from '../src/types.ts'
 import { createSessionTestController } from './test-remote.ts'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@fde2e/len-typert-protocol' {
   interface PrincipalMap {
     /** Test-only non-owner caller shared by the access specs. */
     'test-guest': { readonly kind: 'test-guest'; readonly guest: string }

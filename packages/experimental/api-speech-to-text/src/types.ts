@@ -1,8 +1,8 @@
 /** JSON-safe inputs and results of the experimental speech Remote namespace. */
-import type { SpeechProviderId, SpeechSnapshot } from '@deepseek-ai/dsh-experimental-speech-to-text/types'
-import type {} from '@deepseek-ai/dsh-typert-protocol'
+import type { SpeechProviderId, SpeechSnapshot } from '@fde2e/len-experimental-speech-to-text/types'
+import type {} from '@fde2e/len-typert-protocol'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@fde2e/len-typert-protocol' {
   interface RemoteErrorDetailsMap {
     /** Audio encoding or intake limits prevented transcription. */
     'speech/invalid-audio': { readonly reason: string }

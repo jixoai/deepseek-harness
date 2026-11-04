@@ -3,7 +3,7 @@ description: "The anonymous HTTP(S) fetch backend for ctx.web: how deployments m
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-web-fetch-http
+# @fde2e/len-web-fetch-http
 
 English | [中文](README.zh.md)
 
@@ -36,8 +36,8 @@ Choose this backend when a deployment must fetch pages with bounded output: no c
 Load the web service and the provider; configurable limits have safe defaults and validate at plugin construction, so an invalid value fails loudly instead of building a provider with nonsensical caps. The URL security limit is fixed at 2,048 characters.
 
 ```yaml
-- name: '@deepseek-ai/dsh-web'
-- name: '@deepseek-ai/dsh-web-fetch-http'
+- name: '@fde2e/len-web'
+- name: '@fde2e/len-web-fetch-http'
 ```
 
 | Field | Default | Meaning |

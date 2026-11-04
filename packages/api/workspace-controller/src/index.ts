@@ -2,9 +2,9 @@
 
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { Remote, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
-import type {} from '@deepseek-ai/dsh-api-remote-access'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import { Remote, TypertRemoteService } from '@fde2e/len-typert-protocol'
+import type {} from '@fde2e/len-api-remote-access'
+import type { SessionId } from '@fde2e/len-session/types'
 import { WorkspaceCommands } from './commands.ts'
 import { DirectoryPickerController } from './directory-picker.ts'
 import { WorkspaceFeed, workspaceView } from './feed.ts'

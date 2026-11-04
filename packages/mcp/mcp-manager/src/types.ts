@@ -2,10 +2,10 @@
  * Per-server runtime status, list views, and the MCP manager's Cordis event.
  * Types only — no runtime code.
  *
- * @module @deepseek-ai/dsh-mcp-manager/types
+ * @module @fde2e/len-mcp-manager/types
  */
 
-import type { McpCloseResult, McpConnectionStatus } from '@deepseek-ai/dsh-mcp-client/types'
+import type { McpCloseResult, McpConnectionStatus } from '@fde2e/len-mcp-client/types'
 
 /**
  * Status of one managed server. Extends the mcp-client connection status with

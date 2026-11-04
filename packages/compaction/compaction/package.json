@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-compaction",
+  "name": "@fde2e/len-compaction",
   "description": "Abstract compaction service seam (ctx.compaction) for the DeepSeek Harness",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -36,17 +36,17 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-commands": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
+    "@fde2e/len-commands": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-commands": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
+    "@fde2e/len-commands": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

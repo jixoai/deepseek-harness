@@ -1,12 +1,12 @@
 /** Explicit opt-in compatibility check against an installed Cua Driver executable. */
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { isAbsolute } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import ComputerUse from '@deepseek-ai/dsh-computer-use'
-import { ToolCallId } from '@deepseek-ai/dsh-llm'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
+import ComputerUse from '@fde2e/len-computer-use'
+import { ToolCallId } from '@fde2e/len-llm'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ToolRuntime from '@fde2e/len-tools'
 import { expect, it } from 'vitest'
 import * as Provider from '../src/index.ts'
 

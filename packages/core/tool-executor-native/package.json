@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-tool-executor-native",
+  "name": "@fde2e/len-tool-executor-native",
   "description": "Native tool execution plugin",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -30,10 +30,10 @@
   ],
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@fde2e/len-tools": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@fde2e/len-tools": "workspace:*"
   }
 }

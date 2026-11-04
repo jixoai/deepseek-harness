@@ -3,7 +3,7 @@ description: "创建和管理定时指令，将其投递到已有或新建对话
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-schedule
+# @fde2e/len-schedule
 
 [English](README.md) | 中文
 
@@ -198,7 +198,7 @@ v2 写入后，v1 程序会拒绝该存储。无效或有歧义的回执会被�
 
 #### 模型看到什么
 
-[生成的工具目录](../../../docs/tool-catalog.zh.md#deepseek-aidsh-tool-schedule) 包含 `schedule_create`、`schedule_list`、`schedule_view` 和 `schedule_edit` 的描述与 schema；这些工具由 [`@deepseek-ai/dsh-tool-schedule`](../tool-schedule/README.zh.md) 贡献给挂载它的 preset。
+[生成的工具目录](../../../docs/tool-catalog.zh.md#deepseek-aidsh-tool-schedule) 包含 `schedule_create`、`schedule_list`、`schedule_view` 和 `schedule_edit` 的描述与 schema；这些工具由 [`@fde2e/len-tool-schedule`](../tool-schedule/README.zh.md) 贡献给挂载它的 preset。
 
 #### Token 影响
 

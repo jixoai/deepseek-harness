@@ -1,5 +1,5 @@
 /** Welcome acknowledgement stored in the plugin configuration. */
-import type {} from '@deepseek-ai/dsh-settings'
+import type {} from '@fde2e/len-settings'
 
 import type { Volatile, Context } from '@deepseek-ai/cordis'
 

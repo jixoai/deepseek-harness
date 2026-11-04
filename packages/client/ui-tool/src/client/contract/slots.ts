@@ -1,18 +1,18 @@
 /** Tool UI slot declarations and their composed component props. */
 import type {
   HostObservable, InjectFace, PropsLocale, PropsRenderSlots, PropsRuntime, SessionIdOf,
-} from '@deepseek-ai/dsh-client-ui-slots'
-import type { RemoteHostFacts } from '@deepseek-ai/dsh-api-remotes/client'
+} from '@fde2e/len-client-ui-slots'
+import type { RemoteHostFacts } from '@fde2e/len-api-remotes/client'
 import type {
   OpenFileOptions, PreparingToolCall, StartedToolCall,
   ToolResultNode, UseDisclosure,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
-import type { MessageImageLoader, MessageImageSource } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { AskUserQuestionAnswerItem, AskUserQuestionItem } from '@deepseek-ai/dsh-user-questions/types'
-import type {} from '@deepseek-ai/dsh-client-locale/client'
+} from '@fde2e/len-client-ui-chat/client'
+import type { MessageImageLoader, MessageImageSource } from '@fde2e/len-client-ui-conversation/client'
+import type { AskUserQuestionAnswerItem, AskUserQuestionItem } from '@fde2e/len-user-questions/types'
+import type {} from '@fde2e/len-client-locale/client'
 import type { ToolFileInjected } from '../tool/file-menu.ts'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@fde2e/len-client-ui-slots' {
   interface SlotMap {
     /**
      * Keyed Tool view dispatched by wire name, including custom tools.

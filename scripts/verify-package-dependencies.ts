@@ -42,7 +42,7 @@ const CORDIS = '@deepseek-ai/cordis'
  * location that TypeScript scans when it computes module specifiers for every JSX file.
  */
 function workspaceRange(name: string): 'workspace:*' | 'workspace:~' {
-  return name === '@deepseek-ai/dsh' || name.startsWith('@deepseek-ai/dsh-') ? 'workspace:*' : 'workspace:~'
+  return name === '@fde2e/len' || name.startsWith('@fde2e/len-') ? 'workspace:*' : 'workspace:~'
 }
 const RELEASE_MANIFEST_GLOB = 'packages/!(experimental)/*/package.json'
 /** Every package group, experimental included, follows the same published dependency policy. */
@@ -231,7 +231,7 @@ export function collectRuntimeSourceExportUses(path: string, source: string): Ru
   for (const statement of sourceFile.statements) {
     if (!ts.isImportDeclaration(statement)
       || !ts.isStringLiteralLike(statement.moduleSpecifier)
-      || statement.moduleSpecifier.text !== '@deepseek-ai/dsh-lazy-require') continue
+      || statement.moduleSpecifier.text !== '@fde2e/len-lazy-require') continue
     const bindings = statement.importClause?.namedBindings
     if (bindings !== undefined && ts.isNamespaceImport(bindings)) {
       lazyRequireNamespaces.add(bindings.name.text)

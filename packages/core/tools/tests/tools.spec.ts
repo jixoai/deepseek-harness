@@ -1,21 +1,21 @@
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import { ToolExecutionPipeline } from '@deepseek-ai/dsh-tools/pipeline'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
+import { ToolExecutionPipeline } from '@fde2e/len-tools/pipeline'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { describe, expect, expectTypeOf, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import LlmRuntime, { createUserMessage, ToolCallId, HarnessError, type ContentBlock  } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-import SessionStore, { Session, SessionId } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import AgentRegistry, { type Agent } from '@deepseek-ai/dsh-agent'
-import AgentLoop from '@deepseek-ai/dsh-agent-loop'
-import ApprovalService, { type ApprovalOutcome, type ApprovalRequest } from '@deepseek-ai/dsh-user-approval'
-import ToolRuntime, { defineTool, JsonSchemaError, parameterSchemaSpecToJsonSchema, validateArgs, ToolArgsError, ToolNotFoundError, TOOL_ABORTED, TOOL_ABORTED_BEFORE_DISPATCH, type InferArgs, type ParameterSchemaSpec, type PreToolDecision, type PostToolDecision, type JsonSchemaNode, type ToolDefinition, type ToolDispatchExecution, type ToolExecutionResult, type ToolExecutionToken } from '@deepseek-ai/dsh-tools'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import LlmRuntime, { createUserMessage, ToolCallId, HarnessError, type ContentBlock  } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
+import SessionStore, { Session, SessionId } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import AgentRegistry, { type Agent } from '@fde2e/len-agent'
+import AgentLoop from '@fde2e/len-agent-loop'
+import ApprovalService, { type ApprovalOutcome, type ApprovalRequest } from '@fde2e/len-user-approval'
+import ToolRuntime, { defineTool, JsonSchemaError, parameterSchemaSpecToJsonSchema, validateArgs, ToolArgsError, ToolNotFoundError, TOOL_ABORTED, TOOL_ABORTED_BEFORE_DISPATCH, type InferArgs, type ParameterSchemaSpec, type PreToolDecision, type PostToolDecision, type JsonSchemaNode, type ToolDefinition, type ToolDispatchExecution, type ToolExecutionResult, type ToolExecutionToken } from '@fde2e/len-tools'
+import { defineContentToolFixture } from '@fde2e/len-tool-testkit'
+import type { JsonValue } from '@fde2e/len-util-values'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'blocker': { kind: 'blocker' } & ContextFormed
     'child': { kind: 'child' } & ContextFormed
@@ -777,7 +777,7 @@ describe('ToolRuntime', () => {
   })
 
   it('ToolNotFoundError carries a stable message and code', async () => {
-    const { HarnessError } = await import('@deepseek-ai/dsh-llm')
+    const { HarnessError } = await import('@fde2e/len-llm')
     const err = new ToolNotFoundError('ghost')
     expect(err).toBeInstanceOf(HarnessError)
     expect(err.name).toBe('ToolNotFoundError')
@@ -2803,7 +2803,7 @@ describe('defineTool validation (the runtime-validation Agent Note, part 1)', ()
   })
 
   it('a tool throwing a HarnessError surfaces its name and code', async () => {
-    const { HarnessError } = await import('@deepseek-ai/dsh-llm')
+    const { HarnessError } = await import('@fde2e/len-llm')
     const ctx = await setup()
     ctx.tools.register({
       ...echoTool,

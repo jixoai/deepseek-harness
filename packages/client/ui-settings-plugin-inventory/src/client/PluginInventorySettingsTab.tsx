@@ -1,17 +1,17 @@
 import { useEffect, useId, useMemo, useState, type ReactNode } from 'react'
-import type { ClientEntryState } from '@deepseek-ai/dsh-client-modules/client'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
-import type { PluginInventorySnapshot } from '@deepseek-ai/dsh-api-remotes/client'
-import type { LocalizedText } from '@deepseek-ai/dsh-package-manifest'
+import type { ClientEntryState } from '@fde2e/len-client-modules/client'
+import type { ObservableSnapshot } from '@fde2e/len-client-store'
+import type { PluginInventorySnapshot } from '@fde2e/len-api-remotes/client'
+import type { LocalizedText } from '@fde2e/len-package-manifest'
 import {
   IconChevronDownOutlineRegular,
   IconSearchOutlineRegular,
   Menu,
   StateDot,
   Tag,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { StateDotState, TagTone } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
+} from '@fde2e/len-client-ui-primitives'
+import type { StateDotState, TagTone } from '@fde2e/len-client-ui-primitives'
+import type { InjectFace, PropsLocale, PropsRuntime } from '@fde2e/len-client-ui-slots'
 import type { PluginInventoryLocaleKey } from './locales.ts'
 import css from './PluginInventorySettingsTab.module.css'
 

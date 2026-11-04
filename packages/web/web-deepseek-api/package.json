@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-web-deepseek-api",
+  "name": "@fde2e/len-web-deepseek-api",
   "description": "DeepSeek Search and Fetch API providers for the DeepSeek Harness web capability seam (ctx.web)",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,42 +29,42 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
-    "@deepseek-ai/dsh-deepseek-account": "workspace:*",
-    "@deepseek-ai/dsh-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-credentials": "workspace:*",
+    "@fde2e/len-deepseek-account": "workspace:*",
+    "@fde2e/len-launch-environment": "workspace:*",
+    "@fde2e/len-llm-deepseek": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-web": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek-api-key": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek-account": "workspace:*"
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-llm-deepseek-api-key": "workspace:*",
+    "@fde2e/len-llm-deepseek-account": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-credentials": "workspace:*",
-    "@deepseek-ai/dsh-credentials-local": "workspace:*",
-    "@deepseek-ai/dsh-deepseek-account": "workspace:*",
-    "@deepseek-ai/dsh-launch-environment": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-web": "workspace:*",
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-credentials": "workspace:*",
+    "@fde2e/len-credentials-local": "workspace:*",
+    "@fde2e/len-deepseek-account": "workspace:*",
+    "@fde2e/len-launch-environment": "workspace:*",
+    "@fde2e/len-llm-deepseek": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-web": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-http-proxy": "workspace:*",
+    "@fde2e/len-http-proxy": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek-api-key": "workspace:*",
-    "@deepseek-ai/dsh-llm-deepseek-account": "workspace:*",
-    "@deepseek-ai/dsh-app-boot": "workspace:*"
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-llm-deepseek-api-key": "workspace:*",
+    "@fde2e/len-llm-deepseek-account": "workspace:*",
+    "@fde2e/len-app-boot": "workspace:*"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-deepseek-account": {
+    "@fde2e/len-deepseek-account": {
       "optional": true
     }
   }

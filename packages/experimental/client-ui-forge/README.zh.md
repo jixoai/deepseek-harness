@@ -3,7 +3,7 @@ description: "展示 Session 创建的变更请求、并让新 Session 以 workt
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-client-ui-forge
+# @fde2e/len-experimental-client-ui-forge
 
 [English](README.md) | 中文
 

@@ -1,21 +1,21 @@
 import { Context } from '@deepseek-ai/cordis'
 import { afterEach, describe, expect, it, onTestFinished, vi } from 'vitest'
-import { SessionSeq } from '@deepseek-ai/dsh-session/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { createAssistantMessage, LlmAttemptId } from '@deepseek-ai/dsh-llm'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
+import { SessionSeq } from '@fde2e/len-session/types'
+import type { SessionId } from '@fde2e/len-session/types'
+import { createAssistantMessage, LlmAttemptId } from '@fde2e/len-llm'
+import { createSnapshotStore } from '@fde2e/len-client-store'
 import {
   createScope, MutableSessionEventSource,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@fde2e/len-api-session-controller/client'
 import type {
   ISessions, SessionBinding, SessionEventLike, SessionFace, SessionListState, SessionSnapshot,
-} from '@deepseek-ai/dsh-api-session-controller/client'
+} from '@fde2e/len-api-session-controller/client'
 import {
   ConversationEventRegistry, ConversationNodeAssembler, ConversationViewRegistry, UiConversation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@fde2e/len-client-ui-conversation/client'
 import type {
   ConversationNodeDefinition, ConversationViewDefinition, ConversationViewNode,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@fde2e/len-client-ui-conversation/client'
 
 const SESSION_ID = 'resident' as SessionId
 

@@ -8,18 +8,18 @@
  */
 
 import { Context } from '@deepseek-ai/cordis'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { createUserMessage } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
 import {
   mountAgentLoopTestDependencies,
   mountAgentLoopTestHarness,
-} from '@deepseek-ai/dsh-agent-loop-testkit'
-import { TypertGatewayService } from '@deepseek-ai/dsh-api-gateway'
-import RemoteAccessService from '@deepseek-ai/dsh-api-remote-access'
-import { TypertRegistry } from '@deepseek-ai/dsh-typert-registry'
-import type { PeerScope } from '@deepseek-ai/dsh-typert-protocol'
-import type { ShareRpcActor } from '@deepseek-ai/dsh-experimental-liveshare-protocol'
-import { identityKeyOf } from '@deepseek-ai/dsh-experimental-liveshare-protocol'
+} from '@fde2e/len-agent-loop-testkit'
+import { TypertGatewayService } from '@fde2e/len-api-gateway'
+import RemoteAccessService from '@fde2e/len-api-remote-access'
+import { TypertRegistry } from '@fde2e/len-typert-registry'
+import type { PeerScope } from '@fde2e/len-typert-protocol'
+import type { ShareRpcActor } from '@fde2e/len-experimental-liveshare-protocol'
+import { identityKeyOf } from '@fde2e/len-experimental-liveshare-protocol'
 import { mkdtempSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -36,7 +36,7 @@ import { createViewerAccessPolicy, readerWriteRefusal, type ViewerAccessFacts } 
 import { createViewerReadService } from '../src/host/viewer-read.ts'
 import type { ViewerCallRequest } from '../src/viewer-channel.ts'
 
-declare module '@deepseek-ai/dsh-typert-protocol' {
+declare module '@fde2e/len-typert-protocol' {
   interface TypertLookupMap {
     /** Test-only lookup holding a cancel request in the Gateway's preparation, after access was checked. */
     viewerCancelAdmissionRequest: TypertLookup<SessionCancelRequest, SessionCancelRequest>

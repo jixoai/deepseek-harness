@@ -6,29 +6,29 @@
  * experimental status keeps their names.
  */
 export const EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS: Readonly<Record<string, string>> = {
-  'packages/experimental/cua': '@deepseek-ai/dsh-cua',
-  'packages/experimental/cua-bundle': '@deepseek-ai/dsh-cua-bundle',
-  'packages/experimental/tool-session-query': '@deepseek-ai/dsh-tool-session-query',
-  'packages/experimental/session-title-all-prompts-llm': '@deepseek-ai/dsh-session-title-all-prompts-llm',
-  'packages/experimental/tool-terminal': '@deepseek-ai/dsh-tool-terminal',
-  'packages/experimental/tool-ralph': '@deepseek-ai/dsh-tool-ralph',
-  'packages/experimental/skill-badge': '@deepseek-ai/dsh-skill-badge',
-  'packages/experimental/hook-protocol': '@deepseek-ai/dsh-hook-protocol',
-  'packages/experimental/hooks-claude-code': '@deepseek-ai/dsh-hooks-claude-code',
-  'packages/experimental/hooks-codex': '@deepseek-ai/dsh-hooks-codex',
-  'packages/experimental/webhook': '@deepseek-ai/dsh-webhook',
-  'packages/experimental/webhook-github': '@deepseek-ai/dsh-webhook-github',
-  'packages/experimental/action-cards': '@deepseek-ai/dsh-action-cards',
-  'packages/experimental/client-ui-action-cards': '@deepseek-ai/dsh-client-ui-action-cards',
-  'packages/experimental/creation-recommendations': '@deepseek-ai/dsh-creation-recommendations',
-  'packages/experimental/client-ui-creation-recommendations': '@deepseek-ai/dsh-client-ui-creation-recommendations',
-  'packages/experimental/plugin-recommendations': '@deepseek-ai/dsh-plugin-recommendations',
-  'packages/experimental/client-ui-plugin-recommendations': '@deepseek-ai/dsh-client-ui-plugin-recommendations',
-  'packages/experimental/personalized-recommendations': '@deepseek-ai/dsh-personalized-recommendations',
-} satisfies Record<`packages/experimental/${string}`, `@deepseek-ai/dsh-${string}`>
+  'packages/experimental/cua': '@fde2e/len-cua',
+  'packages/experimental/cua-bundle': '@fde2e/len-cua-bundle',
+  'packages/experimental/tool-session-query': '@fde2e/len-tool-session-query',
+  'packages/experimental/session-title-all-prompts-llm': '@fde2e/len-session-title-all-prompts-llm',
+  'packages/experimental/tool-terminal': '@fde2e/len-tool-terminal',
+  'packages/experimental/tool-ralph': '@fde2e/len-tool-ralph',
+  'packages/experimental/skill-badge': '@fde2e/len-skill-badge',
+  'packages/experimental/hook-protocol': '@fde2e/len-hook-protocol',
+  'packages/experimental/hooks-claude-code': '@fde2e/len-hooks-claude-code',
+  'packages/experimental/hooks-codex': '@fde2e/len-hooks-codex',
+  'packages/experimental/webhook': '@fde2e/len-webhook',
+  'packages/experimental/webhook-github': '@fde2e/len-webhook-github',
+  'packages/experimental/action-cards': '@fde2e/len-action-cards',
+  'packages/experimental/client-ui-action-cards': '@fde2e/len-client-ui-action-cards',
+  'packages/experimental/creation-recommendations': '@fde2e/len-creation-recommendations',
+  'packages/experimental/client-ui-creation-recommendations': '@fde2e/len-client-ui-creation-recommendations',
+  'packages/experimental/plugin-recommendations': '@fde2e/len-plugin-recommendations',
+  'packages/experimental/client-ui-plugin-recommendations': '@fde2e/len-client-ui-plugin-recommendations',
+  'packages/experimental/personalized-recommendations': '@fde2e/len-personalized-recommendations',
+} satisfies Record<`packages/experimental/${string}`, `@fde2e/len-${string}`>
 
 /** npm namespace for experimental packages without retained-name exceptions. */
-export const EXPERIMENTAL_PACKAGE_NAME_PREFIX = '@deepseek-ai/dsh-experimental-'
+export const EXPERIMENTAL_PACKAGE_NAME_PREFIX = '@fde2e/len-experimental-'
 const retainedNames = new Set(Object.values(EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS))
 
 /**
@@ -58,7 +58,7 @@ export function hasExperimentalPackageReference(reference: string): boolean {
  */
 export function experimentalPackageRecordNamespace(name: string): string | undefined {
   if (!isExperimentalPackageName(name)) return undefined
-  return name.slice(name.startsWith(EXPERIMENTAL_PACKAGE_NAME_PREFIX) ? EXPERIMENTAL_PACKAGE_NAME_PREFIX.length : '@deepseek-ai/dsh-'.length)
+  return name.slice(name.startsWith(EXPERIMENTAL_PACKAGE_NAME_PREFIX) ? EXPERIMENTAL_PACKAGE_NAME_PREFIX.length : '@fde2e/len-'.length)
 }
 
 /** Experimental packages excluded from public releases and npm baselines. */

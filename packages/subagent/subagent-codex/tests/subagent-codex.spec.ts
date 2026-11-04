@@ -9,17 +9,17 @@ import { Context } from '@deepseek-ai/cordis'
 import Loader from '@deepseek-ai/cordis-plugin-loader'
 import * as yaml from 'js-yaml'
 import { describe, expect, it, vi } from 'vitest'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import { MAX_TIMER_DELAY_MS } from '@deepseek-ai/dsh-timeout'
+import type { Agent } from '@fde2e/len-agent'
+import type { ContentBlock } from '@fde2e/len-llm'
+import SubagentRuntime from '@fde2e/len-subagent'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import { MAX_TIMER_DELAY_MS } from '@fde2e/len-timeout'
 import type {
   SubprocessHandle,
   SubprocessOutcome,
   SubprocessSpawnSpec,
-} from '@deepseek-ai/dsh-subprocess'
-import LocalSubprocessRuntime from '@deepseek-ai/dsh-subprocess-local'
+} from '@fde2e/len-subprocess'
+import LocalSubprocessRuntime from '@fde2e/len-subprocess-local'
 import * as codex from '../src/index.ts'
 import {
   CODEX_PERMISSION_MODES,
@@ -369,11 +369,11 @@ describe('task admission and package contracts', () => {
     expect(manifest.dsh?.bundle?.patch).toBe('./cordis.patch.yml')
     expect(manifest.files).toContain('cordis.patch.yml')
     expect(manifest.dependencies).toHaveProperty(
-      '@deepseek-ai/dsh-sdk-protocol',
+      '@fde2e/len-sdk-protocol',
       'workspace:*',
     )
     expect(manifest.dependencies).toHaveProperty('@openai/codex', CODEX_VERSION)
-    expect(manifest.dependencies).not.toHaveProperty('@deepseek-ai/dsh-subagent-claude-code')
+    expect(manifest.dependencies).not.toHaveProperty('@fde2e/len-subagent-claude-code')
 
     const codexPackageJson = fileURLToPath(import.meta.resolve('@openai/codex/package.json'))
     const codexManifest = JSON.parse(readFileSync(codexPackageJson, 'utf8')) as {
@@ -407,12 +407,12 @@ describe('task admission and package contracts', () => {
 
     const parsed = yaml.load(readFileSync(resolve(root, manifest.dsh!.bundle!.patch!), 'utf8'))
     expect(parsed).toEqual([{ insert: [
-      { id: 'subagent-codex', name: '@deepseek-ai/dsh-subagent-codex' },
-      { id: 'tool-subagent-codex', name: '@deepseek-ai/dsh-tool-subagent', config: {
+      { id: 'subagent-codex', name: '@fde2e/len-subagent-codex' },
+      { id: 'tool-subagent-codex', name: '@fde2e/len-tool-subagent', config: {
         provider: 'codex', toolName: 'subagent_codex', maxDepth: 'provider-managed',
       } },
     ] }])
-    expect(manifest.dependencies).toHaveProperty('@deepseek-ai/dsh-tool-subagent', 'workspace:*')
+    expect(manifest.dependencies).toHaveProperty('@fde2e/len-tool-subagent', 'workspace:*')
   })
 
   it('accepts one or more text blocks and rejects empty or non-text tasks', () => {

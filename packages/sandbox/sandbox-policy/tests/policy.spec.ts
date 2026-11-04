@@ -9,11 +9,11 @@ import { tmpdir } from 'node:os'
 import { join, resolve, sep } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { SESSION_FORMAT_VERSION, Session, SessionId } from '@deepseek-ai/dsh-session'
-import SandboxPolicyService, { SANDBOX_MODES, setSandboxMode } from '@deepseek-ai/dsh-sandbox-policy'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SystemPrompt, { renderContextSnapshot, renderPrompt } from '@deepseek-ai/dsh-system-prompt'
+import type { Agent } from '@fde2e/len-agent'
+import { SESSION_FORMAT_VERSION, Session, SessionId } from '@fde2e/len-session'
+import SandboxPolicyService, { SANDBOX_MODES, setSandboxMode } from '@fde2e/len-sandbox-policy'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SystemPrompt, { renderContextSnapshot, renderPrompt } from '@fde2e/len-system-prompt'
 
 async function mounted(config: { mode?: 'read-only' | 'workspace-write' | 'danger-full-access'; workspaceRoot?: string; additionalWritableRoots?: string[] } = {}) {
   const ctx = new Context()

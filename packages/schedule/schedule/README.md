@@ -3,7 +3,7 @@ description: "Create and manage scheduled instructions, with delivery to existin
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-schedule
+# @fde2e/len-schedule
 
 English | [中文](README.zh.md)
 
@@ -198,7 +198,7 @@ History stays with the task and is pruned only on append. Missing old history ke
 
 #### What the model sees
 
-The [generated tool catalog](../../../docs/tool-catalog.md#deepseek-aidsh-tool-schedule) contains the descriptions and schemas for `schedule_create`, `schedule_list`, `schedule_view`, and `schedule_edit`, which [`@deepseek-ai/dsh-tool-schedule`](../tool-schedule/README.md) contributes to the presets that mount it.
+The [generated tool catalog](../../../docs/tool-catalog.md#deepseek-aidsh-tool-schedule) contains the descriptions and schemas for `schedule_create`, `schedule_list`, `schedule_view`, and `schedule_edit`, which [`@fde2e/len-tool-schedule`](../tool-schedule/README.md) contributes to the presets that mount it.
 
 #### Token effect
 

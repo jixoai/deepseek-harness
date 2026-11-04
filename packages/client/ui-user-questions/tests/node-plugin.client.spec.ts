@@ -1,9 +1,9 @@
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
 import { Context } from '@deepseek-ai/cordis'
 import { afterEach, describe, expect, it } from 'vitest'
-import ToolRuntime from '@deepseek-ai/dsh-tools'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import UserQuestionService from '@deepseek-ai/dsh-user-questions'
+import ToolRuntime from '@fde2e/len-tools'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import UserQuestionService from '@fde2e/len-user-questions'
 import { apply } from '../src/index.ts'
 
 let ctx: Context | undefined

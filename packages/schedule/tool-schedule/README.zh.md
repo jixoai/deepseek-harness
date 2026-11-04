@@ -3,13 +3,13 @@ description: "预设作用域的定时任务工具（schedule_create、schedule_
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-tool-schedule
+# @fde2e/len-tool-schedule
 
 [English](README.md) | 中文
 
 ## 概述
 
-使用 `dsh-tool-schedule`，可通过 `schedule_create`、`schedule_list`、`schedule_view` 与 `schedule_edit` 让 agent（智能体）创建、列出、查看、更新和删除宿主定时任务。定时任务在其重复规则的每个发生时点把指令投递到一个目标 Session。本包把四个工具注册进挂载它的 preset 或 Agent 作用域；`minimal` 不获得。任务属于宿主：这些工具按 id 读取和改变任意任务，只有投递目标指定 Session。存储、调度与投递由宿主 `@deepseek-ai/dsh-schedule` 服务负责。失败时返回一个结构化错误码。
+使用 `dsh-tool-schedule`，可通过 `schedule_create`、`schedule_list`、`schedule_view` 与 `schedule_edit` 让 agent（智能体）创建、列出、查看、更新和删除宿主定时任务。定时任务在其重复规则的每个发生时点把指令投递到一个目标 Session。本包把四个工具注册进挂载它的 preset 或 Agent 作用域；`minimal` 不获得。任务属于宿主：这些工具按 id 读取和改变任意任务，只有投递目标指定 Session。存储、调度与投递由宿主 `@fde2e/len-schedule` 服务负责。失败时返回一个结构化错误码。
 
 ## 目录
 
@@ -29,7 +29,7 @@ kind: "package-reference"
 
 ### 何时选用
 
-当 preset 的 agent 需要安排未来工作时选用它，并在同一进程内加载 `@deepseek-ai/dsh-schedule`：本包只是该服务面向模型的消费方。需要保持能力精简的 preset——随产品发布的例子是 `minimal`——会省略该行，其 agent 完全看不到 Schedule 工具。
+当 preset 的 agent 需要安排未来工作时选用它，并在同一进程内加载 `@fde2e/len-schedule`：本包只是该服务面向模型的消费方。需要保持能力精简的 preset——随产品发布的例子是 `minimal`——会省略该行，其 agent 完全看不到 Schedule 工具。
 
 ### 用户授权
 
@@ -47,7 +47,7 @@ kind: "package-reference"
 ### 最小配置
 
 ```yaml
-- name: '@deepseek-ai/dsh-tool-schedule'
+- name: '@fde2e/len-tool-schedule'
 ```
 
 本包不声明任何 `Config` 字段。它注入 `ctx.tools` 和 `ctx.systemPrompt`，并在作用域解析到宿主 `ctx.schedule` 服务后注册这四个工具及其共享指导，因此保持该服务关闭的组合不会挂载任何 Schedule 工具。每次调用都代表派发该调用的 Agent 执行。
@@ -143,7 +143,7 @@ Native 和 PTC 模式下，每次组装 prompt 只加入一句固定文本。同
 - **每个工具都能触及宿主的全部任务** —— `schedule_list` 返回其他 Session 创建的任务，`schedule_view` 与 `schedule_edit` 按 id 读取、改变和删除任意任务。授权说明约束模型行为；宿主不校验用户意图，也不增加按 Session 的归属检查。不应管理宿主任务的 agent 所用 preset 应省略这一行。
 - **删除不会撤回已排队的消息** —— 宿主已经投递的消息在 `schedule_edit` 删除之后仍留在目标 Session 收件箱中。
 - **任务时间由宿主负责** —— 这些工具不提供时钟来源、投递重试或执行结果；这些限制属于该服务。
-- **每个工具都拒绝被委派的调用方** —— 四个工具都会在调用服务之前读取调用方 Agent 的委派深度，当该深度大于零时返回 `{ code: 'subagent_session', message: 'A delegated subagent cannot use scheduled tasks.' }`。该守卫位于本包内，读取来自 `@deepseek-ai/dsh-subagent` 的 `delegationDepthOf`，即委派封顶本身执行的同一份记账，因此在任何挂载这些工具的 preset 下都成立。
+- **每个工具都拒绝被委派的调用方** —— 四个工具都会在调用服务之前读取调用方 Agent 的委派深度，当该深度大于零时返回 `{ code: 'subagent_session', message: 'A delegated subagent cannot use scheduled tasks.' }`。该守卫位于本包内，读取来自 `@fde2e/len-subagent` 的 `delegationDepthOf`，即委派封顶本身执行的同一份记账，因此在任何挂载这些工具的 preset 下都成立。
 - **被委派的子 agent 仍能看到这四个工具** —— 子 agent 加入父方的 preset，因此其请求携带这四个 schema 及其 token 成本；阻止它管理任务的是上述拒绝，而不是省略 schema。
 
 <a id="dev-note"></a>

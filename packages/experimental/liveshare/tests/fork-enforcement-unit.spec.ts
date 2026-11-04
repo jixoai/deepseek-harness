@@ -2,8 +2,8 @@
 
 import { describe, expect, it, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import type { ToolDefinition } from '@deepseek-ai/dsh-tools'
+import { createScope } from '@fde2e/len-scope'
+import type { ToolDefinition } from '@fde2e/len-tools'
 import { READ_ONLY_FORK_CEILING, type ForkCeiling } from '../src/host/fork-policy.ts'
 import { SHARED_TOOL_PROFILES, sharedToolNames } from '../src/host/shared-tools.ts'
 import {

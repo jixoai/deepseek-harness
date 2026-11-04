@@ -5,10 +5,10 @@ import { join } from 'node:path'
 import type { Browser, Page } from 'playwright'
 import { chromium } from 'playwright'
 import { afterAll, beforeAll, describe, expect, it, onTestFailed, onTestFinished, vi } from 'vitest'
-import type {} from '@deepseek-ai/dsh-agent-team'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import { CommandId } from '@deepseek-ai/dsh-commands/brand'
-import { createMessage, createUserMessage } from '@deepseek-ai/dsh-llm'
+import type {} from '@fde2e/len-agent-team'
+import { SessionId } from '@fde2e/len-session'
+import { CommandId } from '@fde2e/len-commands/brand'
+import { createMessage, createUserMessage } from '@fde2e/len-llm'
 import {
   acknowledgeReloadConnectionLoss, assertFixtureInventory, captureStableAria, compareOrRefreshGolden,
   launchWebScaffold, watchConsole, webSnapshotMode, type WebScaffold,

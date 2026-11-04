@@ -5,28 +5,28 @@
  * or command substitution, and no pre-tool approval or rewrite path; only
  * blocking decisions are honored. Shared execution and parsing live in
  * `dsh-hook-protocol`.
- * @module @deepseek-ai/dsh-hooks-codex
+ * @module @fde2e/len-hooks-codex
  */
 
 // Each dialect bridge keeps its complete dependency list visible at the entry
 // point; a cross-package facade for imports alone would add indirection.
 /* jscpd:ignore-start */
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@fde2e/len-working-directory'
 import { readFileSync } from 'node:fs'
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
-declare module '@deepseek-ai/dsh-llm' {
+import type { Agent, PreStepDecision } from '@fde2e/len-agent'
+import { createUserMessage } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'hooks-codex': { kind: 'hooks-codex' } & ContextFormed
   }
 }
 
-import type { ContentBlock, MessageSource } from '@deepseek-ai/dsh-llm'
-import type { UserMessage } from '@deepseek-ai/dsh-session'
-import type { PostToolDecision, PreToolDecision, ToolExecution, ToolExecutionResult } from '@deepseek-ai/dsh-tools'
+import type { ContentBlock, MessageSource } from '@fde2e/len-llm'
+import type { UserMessage } from '@fde2e/len-session'
+import type { PostToolDecision, PreToolDecision, ToolExecution, ToolExecutionResult } from '@fde2e/len-tools'
 import {
   appendHookInvoked,
   appendHookResult,
@@ -38,7 +38,7 @@ import {
   selectHookGroups,
   type HookOutput,
   type MergedHookOutcome,
-} from '@deepseek-ai/dsh-hook-protocol'
+} from '@fde2e/len-hook-protocol'
 import { parseCodexConfig, type CodexHookConfig } from './config.ts'
 /* jscpd:ignore-end */
 

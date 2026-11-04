@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-api-workspace-files",
+  "name": "@fde2e/len-api-workspace-files",
   "description": "Workspace file service and Client resource provider: bounded reads, directory listing, and live metadata over the workspaceFiles Remote namespace",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -41,8 +41,8 @@
   "dsh": {
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-api-gateway",
-        "@deepseek-ai/dsh-client-resources"
+        "@fde2e/len-api-gateway",
+        "@fde2e/len-client-resources"
       ],
       "platform": "web"
     }
@@ -53,8 +53,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-deque": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-deque": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "4.4.3"
   },
@@ -63,17 +63,17 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-api-gateway": "workspace:*",
-    "@deepseek-ai/dsh-api-remote-access": "workspace:*",
-    "@deepseek-ai/dsh-client-connection": "workspace:*",
-    "@deepseek-ai/dsh-client-resources": "workspace:*",
-    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-remote-mock": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
-    "@deepseek-ai/dsh-util-workspace-path": "workspace:*"
+    "@fde2e/len-api-gateway": "workspace:*",
+    "@fde2e/len-api-remote-access": "workspace:*",
+    "@fde2e/len-client-connection": "workspace:*",
+    "@fde2e/len-client-resources": "workspace:*",
+    "@fde2e/len-client-ui-slots": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-remote-mock": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-persistence": "workspace:*",
+    "@fde2e/len-util-workspace-path": "workspace:*"
   },
   "files": [
     "locale/*.json",

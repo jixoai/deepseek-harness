@@ -2,7 +2,7 @@
  * Fresh-process ACP subagent client. Drives one child session and owns cancellation and
  * quiescent disposal.
  *
- * @module @deepseek-ai/dsh-subagent-acp/run
+ * @module @fde2e/len-subagent-acp/run
  */
 
 import { randomUUID } from 'node:crypto'
@@ -16,12 +16,12 @@ import {
   type StopReason,
   type ToolKind,
 } from '@agentclientprotocol/sdk'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
-import { brandString } from '@deepseek-ai/dsh-brand'
-import type { SessionId } from '@deepseek-ai/dsh-session'
-import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@deepseek-ai/dsh-subagent'
-import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@deepseek-ai/dsh-subagent'
-import type { SubprocessHandle, SubprocessOutcome, SubprocessSpawnSpec } from '@deepseek-ai/dsh-subprocess'
+import type { ContentBlock } from '@fde2e/len-llm'
+import { brandString } from '@fde2e/len-brand'
+import type { SessionId } from '@fde2e/len-session'
+import { AssistantOutputFold, settleRunResult, subprocessRunHandle } from '@fde2e/len-subagent'
+import type { SubagentResult, SubagentRun, SubagentStartRequest, SubagentStopReason } from '@fde2e/len-subagent'
+import type { SubprocessHandle, SubprocessOutcome, SubprocessSpawnSpec } from '@fde2e/len-subprocess'
 
 /** Fixed response to child permission requests: reject by default, or select the first allow option. */
 export type PermissionPolicy = 'allow' | 'reject'

@@ -1,12 +1,12 @@
 /** Tool definitions and scoped dispatch to plugin-owned executors. @module */
 import { Context, Service } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import { AnonymousEntries, NamedEntries, ScopedLayers, scopeOf, scopeChainOf } from '@deepseek-ai/dsh-scope'
-import type { ScopeKey, ScopeLayer } from '@deepseek-ai/dsh-scope'
+import { AnonymousEntries, NamedEntries, ScopedLayers, scopeOf, scopeChainOf } from '@fde2e/len-scope'
+import type { ScopeKey, ScopeLayer } from '@fde2e/len-scope'
 import { ToolExecutorUnavailableError } from './executor.ts'
 import type { ToolExecutor, ToolBatchInput, ToolBatchResult } from './executor.ts'
 import './events.ts'
-import type { ToolSchema } from '@deepseek-ai/dsh-llm'
+import type { ToolSchema } from '@fde2e/len-llm'
 import { projectToolSchema } from './schema.ts'
 import { assertSupportedJsonSchema } from './json-schema.ts'
 import { RUN_CODE_NAME, ToolActivationError } from './contracts.ts'
@@ -15,14 +15,14 @@ import type {
   ResolvedToolSet, ToolActivationContext, ToolRegistrationOptions,
 } from './contracts.ts'
 
-declare module '@deepseek-ai/dsh-system-prompt' {
+declare module '@fde2e/len-system-prompt' {
   interface AssembleContext {
     /** Step-owned tool selection; absent when inspecting registered definitions. */
     toolSet?: ResolvedToolSet
   }
 }
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     /** Tool availability changes supplied by the tool registry. */
     'tool-registry': { kind: 'tool-registry' }

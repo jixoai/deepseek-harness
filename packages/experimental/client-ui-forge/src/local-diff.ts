@@ -7,9 +7,9 @@
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import { FsError } from '@deepseek-ai/dsh-fs'
-import type { Session } from '@deepseek-ai/dsh-session'
-import { assertNever } from '@deepseek-ai/dsh-util-values'
+import { FsError } from '@fde2e/len-fs'
+import type { Session } from '@fde2e/len-session'
+import { assertNever } from '@fde2e/len-util-values'
 import { decodeText, parseDiff, parseNumstat, untrackedFile } from './diff.ts'
 import { gitIn, GitOutputTooLarge } from './git.ts'
 import type { Git, GitConfig, GitOutput, Inspection } from './git.ts'

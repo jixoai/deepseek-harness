@@ -4,7 +4,7 @@ export const inject = ['tools', 'loader']
 /** @param {import('@deepseek-ai/cordis').Context} ctx - Scenario-owned runtime. */
 export async function apply(ctx) {
   // Resolve through the running profile so packaged runs share the bundled error classes.
-  const { NativeToolExecutor } = await ctx.loader.import('@deepseek-ai/dsh-tool-executor-native')
+  const { NativeToolExecutor } = await ctx.loader.import('@fde2e/len-tool-executor-native')
   ctx.on('agent/created', ({ agent }) => {
     const executor = new NativeToolExecutor(agent.ctx)
     const scheduler = executor.pipeline

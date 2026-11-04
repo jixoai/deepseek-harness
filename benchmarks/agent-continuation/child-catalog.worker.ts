@@ -2,13 +2,13 @@
 
 import { performance } from 'node:perf_hooks'
 import { Context } from '@deepseek-ai/cordis'
-import { provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
-import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import * as JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SessionQueryEngine from '@deepseek-ai/dsh-session-query'
-import SubagentRuntime, { SUBAGENT_DESCRIPTOR_VERSION } from '@deepseek-ai/dsh-subagent'
+import { provideWorkingDirectoryFixture } from '@fde2e/len-agent-loop-testkit'
+import SessionStore, { SESSION_FORMAT_VERSION, SessionId, SessionLogOffset, SessionSeq } from '@fde2e/len-session'
+import type { SessionEvent } from '@fde2e/len-session'
+import * as JsonlSessionPersistence from '@fde2e/len-session-persistence-jsonl'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SessionQueryEngine from '@fde2e/len-session-query'
+import SubagentRuntime, { SUBAGENT_DESCRIPTOR_VERSION } from '@fde2e/len-subagent'
 import { assertBuiltBenchmarkRuntime } from '../support/built-worker.ts'
 import { PARENT_ID, syntheticHistory, TIME_ZERO, WORKLOAD } from './workload.ts'
 
@@ -106,8 +106,8 @@ async function run(root: string, mode: string): Promise<CatalogReport | { seeded
 }
 
 assertBuiltBenchmarkRuntime(import.meta.url, Object.fromEntries([
-  '@deepseek-ai/dsh-subagent', '@deepseek-ai/dsh-session-query',
-  '@deepseek-ai/dsh-session-persistence-jsonl',
+  '@fde2e/len-subagent', '@fde2e/len-session-query',
+  '@fde2e/len-session-persistence-jsonl',
 ].map(name => [name, import.meta.resolve(name)])))
 const [root, mode] = process.argv.slice(2)
 if (root === undefined || (mode !== 'seed' && mode !== 'catalog')) {

@@ -1,4 +1,4 @@
-import { LlmAdapter } from '@deepseek-ai/dsh-llm'
+import { LlmAdapter } from '@fde2e/len-llm'
 
 /** A completed turn with no tool or auxiliary model work. */
 class AutoShutdownAdapter extends LlmAdapter {

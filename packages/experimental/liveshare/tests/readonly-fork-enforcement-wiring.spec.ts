@@ -12,10 +12,10 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { createScope } from '@deepseek-ai/dsh-scope'
-import { FsTargetKey, FsVersion, type FsEditOutcome, type FsTarget, type FsWriteOutcome } from '@deepseek-ai/dsh-fs'
-import type { PreToolDecision, ToolDefinition } from '@deepseek-ai/dsh-tools'
-import { SessionId } from '@deepseek-ai/dsh-session'
+import { createScope } from '@fde2e/len-scope'
+import { FsTargetKey, FsVersion, type FsEditOutcome, type FsTarget, type FsWriteOutcome } from '@fde2e/len-fs'
+import type { PreToolDecision, ToolDefinition } from '@fde2e/len-tools'
+import { SessionId } from '@fde2e/len-session'
 import {
   installForkEnforcement,
   installForkEnforcementForAgent,

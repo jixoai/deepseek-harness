@@ -1,19 +1,19 @@
-import type {} from '@deepseek-ai/dsh-client-ui-context-menu/client'
+import type {} from '@fde2e/len-client-ui-context-menu/client'
 /**
  * Browser half: register `files` as a right-Sidebar tab type, and the
  * workspace navigator beside every file preview. The navigator, the page body,
  * and the toggle share one store and one face per store instance. The package
  * README lists the registrations.
  */
-import type { ShortcutCommandId } from '@deepseek-ai/dsh-client-shortcuts/client'
+import type { ShortcutCommandId } from '@fde2e/len-client-shortcuts/client'
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-api-remotes/client'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type {} from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import type { BoundActions } from '@deepseek-ai/dsh-client-store'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
+import type {} from '@fde2e/len-api-remotes/client'
+import type {} from '@fde2e/len-client-ui-renderer/client'
+import type {} from '@fde2e/len-client-ui-session/client'
+import type {} from '@fde2e/len-client-ui-sidebar-right/client'
+import type { BoundActions } from '@fde2e/len-client-store'
+import type { TabId } from '@fde2e/len-client-ui-dockkit'
+import type { SessionId } from '@fde2e/len-session/types'
 import { FILES_ID, FILES_KIND, filesDefinition } from './definition.tsx'
 import { canOpenOf, createList, createWatch, filesFace, type FilesInjected } from './face.ts'
 import { FileTree } from './FileTree.tsx'
@@ -33,7 +33,7 @@ export type { TreeEntry, TreeEntryMeta, TreeEntryKind, TreeDirectoryState, FileT
 export type { FileNavigatorInput } from './FileNavigator.tsx'
 export type { NavigatorToggleInput } from './NavigatorToggle.tsx'
 
-declare module '@deepseek-ai/dsh-client-ui-slots' {
+declare module '@fde2e/len-client-ui-slots' {
   interface SlotMap {
     /** Workspace directory actions after the `files` page's reload control. */
     'sidebar.right.tab.files.actions': {

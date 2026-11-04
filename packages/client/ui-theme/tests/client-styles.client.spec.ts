@@ -4,7 +4,7 @@ import { Context } from '@deepseek-ai/cordis'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { installThemeStyles } from '../src/client/styles.ts'
 
-const PLUGIN_ID = '@deepseek-ai/dsh-client-ui-theme'
+const PLUGIN_ID = '@fde2e/len-client-ui-theme'
 const HAIRLINE_WIDTH = '--dsh-hairline-width'
 const contexts = new Set<Context>()
 let previousWidth: string

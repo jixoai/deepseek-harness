@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-speech-to-text",
+  "name": "@fde2e/len-experimental-speech-to-text",
   "description": "Experimental speech recognition with independently selectable providers",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -38,19 +38,19 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-brand": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@fde2e/len-settings": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-config-editor": "workspace:*",
-    "@deepseek-ai/dsh-settings": "workspace:*",
+    "@fde2e/len-app-boot": "workspace:*",
+    "@fde2e/len-config-editor": "workspace:*",
+    "@fde2e/len-settings": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
   "peerDependenciesMeta": {

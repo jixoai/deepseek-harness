@@ -1,6 +1,6 @@
 /**
  * Host-native command execution and path-opening utilities.
- * @module @deepseek-ai/dsh-native-command
+ * @module @fde2e/len-native-command
  */
 
 export { runNativeCommand } from './runner.ts'

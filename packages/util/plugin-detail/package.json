@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-plugin-detail",
+  "name": "@fde2e/len-plugin-detail",
   "description": "Plugin detail documents: meta.detail or README selection, image paths, and local and npm CDN file sources",
   "version": "0.2.2-alpha.3",
   "publishConfig": {

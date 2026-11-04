@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-shell-env",
+  "name": "@fde2e/len-shell-env",
   "description": "Tool-independent managed DSH_* shell environment registry",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -30,21 +30,21 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-home-paths": "workspace:*",
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@fde2e/len-app-boot": "workspace:*",
+    "@fde2e/len-home-paths": "workspace:*",
+    "@fde2e/len-shell": "workspace:*",
+    "@fde2e/len-tools": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-home-paths": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-app-boot": "workspace:*",
+    "@fde2e/len-home-paths": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-shell": "workspace:*",
+    "@fde2e/len-tools": "workspace:*"
   }
 }

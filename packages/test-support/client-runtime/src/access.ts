@@ -8,15 +8,15 @@
  * hand-built component props spread {@link allowAllAccess}; a spec of a
  * refused path overrides one Hook or provides a {@link StaticRemoteAccess}
  * that refuses the action.
- * @module @deepseek-ai/dsh-client-test-runtime/src/access
+ * @module @fde2e/len-client-test-runtime/src/access
  */
 
 import { Service, type Context } from '@deepseek-ai/cordis'
-import type { AccessEffect, ClientRemoteAccess, RemoteEndpoint, TypertResourceKind } from '@deepseek-ai/dsh-api-remote-access/client'
-import type { GlobalStandardProps, HostObservable, SessionStandardProps } from '@deepseek-ai/dsh-client-ui-slots'
-import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type {} from '@deepseek-ai/dsh-client-ui-session/client'
-import type {} from '@deepseek-ai/dsh-client-ui-workspace/client'
+import type { AccessEffect, ClientRemoteAccess, RemoteEndpoint, TypertResourceKind } from '@fde2e/len-api-remote-access/client'
+import type { GlobalStandardProps, HostObservable, SessionStandardProps } from '@fde2e/len-client-ui-slots'
+import type {} from '@fde2e/len-client-ui-renderer/client'
+import type {} from '@fde2e/len-client-ui-session/client'
+import type {} from '@fde2e/len-client-ui-workspace/client'
 
 /** The access Hooks every Slot component receives. */
 export type AccessStandardProps =

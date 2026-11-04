@@ -21,12 +21,12 @@
  * composition, entry mounting, the activation audit, and its diagnostics are the
  * same code the Node deployment runs. The Worker supplies module loading, the
  * platform overlay, and the command line.
- * @module @deepseek-ai/dsh-experimental-webworker-runtime/src/worker-host
+ * @module @fde2e/len-experimental-webworker-runtime/src/worker-host
  */
 import { setActiveModuleLoader, WorkerModuleLoader, type StaticModuleFactory } from './module-system/module-loader.ts'
-import type { ProfileContext } from '@deepseek-ai/dsh-app-boot'
-import type { TypertGateway } from '@deepseek-ai/dsh-api-gateway'
-import type { HostConnectionHandle, PeerScope } from '@deepseek-ai/dsh-client-connection'
+import type { ProfileContext } from '@fde2e/len-app-boot'
+import type { TypertGateway } from '@fde2e/len-api-gateway'
+import type { HostConnectionHandle, PeerScope } from '@fde2e/len-client-connection'
 import type { AlsCausality } from './polyfill/async-context/als-runtime.ts'
 import { join } from './module-system/posix-path.ts'
 import { installProcessGlobal } from './node/globals/process.ts'
@@ -222,11 +222,11 @@ export function createWorkerHost(options: WorkerHostOptions): WorkerHost {
       modules = loader
 
       const require = loader.requireFrom(root)
-      const appBoot = require('@deepseek-ai/dsh-app-boot') as AppBootFace
-      const { DSH_LAUNCH_ENVIRONMENT_KEY } = require('@deepseek-ai/dsh-launch-environment') as {
+      const appBoot = require('@fde2e/len-app-boot') as AppBootFace
+      const { DSH_LAUNCH_ENVIRONMENT_KEY } = require('@fde2e/len-launch-environment') as {
         DSH_LAUNCH_ENVIRONMENT_KEY: string
       }
-      const cmdline = require('@deepseek-ai/dsh-cmdline') as {
+      const cmdline = require('@fde2e/len-cmdline') as {
         provideCmdline(ctx: unknown, host: {
           args: readonly string[]
           exit: (code: number) => void

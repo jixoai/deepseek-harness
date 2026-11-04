@@ -2,7 +2,7 @@
 /** The copy a viewer page states for the reason code its share's abilities carry. */
 
 import { Context } from '@deepseek-ai/cordis'
-import { LocaleRuntime } from '@deepseek-ai/dsh-client-locale/client'
+import { LocaleRuntime } from '@fde2e/len-client-locale/client'
 import { describe, expect, it } from 'vitest'
 import {
   en, NS, viewerReasonText, viewerRefusalText, zh, type LiveshareKey,

@@ -5,8 +5,8 @@ import { mkdtemp, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
-import * as JsonlSessionPersistence from '@deepseek-ai/dsh-session-persistence-jsonl'
-import { type ContinuableCreateSpec, type SubagentStartRequest } from '@deepseek-ai/dsh-subagent'
+import * as JsonlSessionPersistence from '@fde2e/len-session-persistence-jsonl'
+import { type ContinuableCreateSpec, type SubagentStartRequest } from '@fde2e/len-subagent'
 import { onTestFinished } from 'vitest'
 
 /**

@@ -8,21 +8,21 @@ import * as yaml from 'js-yaml'
 import type { Context } from '@deepseek-ai/cordis'
 import { entryListSchema } from '@deepseek-ai/cordis-plugin-include'
 import Timer from '@deepseek-ai/cordis-plugin-timer'
-import { boot, initProfile, loadProfileDirectory, readProfilePatches, type ProfileContext } from '@deepseek-ai/dsh-app-boot'
-import Hmr from '@deepseek-ai/dsh-hmr'
-import PluginManager from '@deepseek-ai/dsh-plugin-manager'
-import Sessions from '@deepseek-ai/dsh-session'
-import Projections from '@deepseek-ai/dsh-session-projection'
-import Agents from '@deepseek-ai/dsh-agent'
-import Llm from '@deepseek-ai/dsh-llm'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import Tools from '@deepseek-ai/dsh-tools'
-import * as NativeToolExecutor from '@deepseek-ai/dsh-tool-executor-native'
-import Skills from '@deepseek-ai/dsh-skill'
-import Access from '@deepseek-ai/dsh-api-remote-access'
-import * as ActionCards from '@deepseek-ai/dsh-action-cards'
-import * as Pages from '@deepseek-ai/dsh-creation-recommendations'
-import * as Plugins from '@deepseek-ai/dsh-plugin-recommendations'
+import { boot, initProfile, loadProfileDirectory, readProfilePatches, type ProfileContext } from '@fde2e/len-app-boot'
+import Hmr from '@fde2e/len-hmr'
+import PluginManager from '@fde2e/len-plugin-manager'
+import Sessions from '@fde2e/len-session'
+import Projections from '@fde2e/len-session-projection'
+import Agents from '@fde2e/len-agent'
+import Llm from '@fde2e/len-llm'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import Tools from '@fde2e/len-tools'
+import * as NativeToolExecutor from '@fde2e/len-tool-executor-native'
+import Skills from '@fde2e/len-skill'
+import Access from '@fde2e/len-api-remote-access'
+import * as ActionCards from '@fde2e/len-action-cards'
+import * as Pages from '@fde2e/len-creation-recommendations'
+import * as Plugins from '@fde2e/len-plugin-recommendations'
 
 interface Row { readonly id: string; readonly name: string }
 
@@ -44,24 +44,24 @@ function browserRow(): object {
 
 /** Source modules standing in for the row packages, which the Loader would otherwise import from their built lib. */
 const MODULES: Readonly<Record<string, object>> = {
-  '@deepseek-ai/dsh-action-cards': ActionCards,
-  '@deepseek-ai/dsh-client-ui-action-cards': browserRow(),
-  '@deepseek-ai/dsh-creation-recommendations': Pages,
-  '@deepseek-ai/dsh-client-ui-creation-recommendations': browserRow(),
-  '@deepseek-ai/dsh-plugin-recommendations': Plugins,
-  '@deepseek-ai/dsh-client-ui-plugin-recommendations': browserRow(),
+  '@fde2e/len-action-cards': ActionCards,
+  '@fde2e/len-client-ui-action-cards': browserRow(),
+  '@fde2e/len-creation-recommendations': Pages,
+  '@fde2e/len-client-ui-creation-recommendations': browserRow(),
+  '@fde2e/len-plugin-recommendations': Plugins,
+  '@fde2e/len-client-ui-plugin-recommendations': browserRow(),
 }
 
 it('publishes one layer inserting the card service, the card display and both features with their card bodies', () => {
   expect(manifest.publishConfig.access).toBe('public')
   expect(manifest.dsh.bundle.patch).toBe('./cordis.patch.yml')
   expect(patch).toEqual([{ insert: [
-    { id: 'action-cards', name: '@deepseek-ai/dsh-action-cards' },
-    { id: 'client-ui-action-cards', name: '@deepseek-ai/dsh-client-ui-action-cards' },
-    { id: 'creation-recommendations', name: '@deepseek-ai/dsh-creation-recommendations' },
-    { id: 'client-ui-creation-recommendations', name: '@deepseek-ai/dsh-client-ui-creation-recommendations' },
-    { id: 'plugin-recommendations', name: '@deepseek-ai/dsh-plugin-recommendations' },
-    { id: 'client-ui-plugin-recommendations', name: '@deepseek-ai/dsh-client-ui-plugin-recommendations' },
+    { id: 'action-cards', name: '@fde2e/len-action-cards' },
+    { id: 'client-ui-action-cards', name: '@fde2e/len-client-ui-action-cards' },
+    { id: 'creation-recommendations', name: '@fde2e/len-creation-recommendations' },
+    { id: 'client-ui-creation-recommendations', name: '@fde2e/len-client-ui-creation-recommendations' },
+    { id: 'plugin-recommendations', name: '@fde2e/len-plugin-recommendations' },
+    { id: 'client-ui-plugin-recommendations', name: '@fde2e/len-client-ui-plugin-recommendations' },
   ] }])
   expect(Object.keys(manifest.dependencies).sort()).toEqual(rows.map(row => row.name).sort())
 })

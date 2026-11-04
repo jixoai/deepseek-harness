@@ -3,17 +3,17 @@
  * {@link SessionEvent}s as the event-sourced log and carry non-replayable
  * {@link SessionHeader} metadata separately; callers address one stored
  * session through a {@link SessionHandle} obtained from `create`/`open`.
- * @module @deepseek-ai/dsh-session-persistence
+ * @module @fde2e/len-session-persistence
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'
-import type { SessionEvent, SessionHeader, SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
+import type { SessionEvent, SessionHeader, SessionId, SessionLogOffset } from '@fde2e/len-session'
 import type { SessionHandle, SessionAccess } from './handle.ts'
 import type { SessionLocation } from './errors.ts'
 import type { SessionPersistenceRevision } from './revision.ts'
 
 // Re-export the metadata vocabulary so Consumers import it from the Service Definition.
-export type { SessionHeader } from '@deepseek-ai/dsh-session'
+export type { SessionHeader } from '@fde2e/len-session'
 export { SessionPersistenceRevision } from './revision.ts'
 export type {
   SessionAccess,

@@ -3,7 +3,7 @@ description: "在普通 Cordis YAML 中定义 Agent 的子插件列表。可同�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-agent-preset
+# @fde2e/len-agent-preset
 
 [English](README.md) | 中文
 
@@ -27,11 +27,11 @@ kind: "package-reference"
 
 ```yaml
 - id: agent-preset-registry
-  name: '@deepseek-ai/dsh-agent-preset-registry'
+  name: '@fde2e/len-agent-preset-registry'
   config:
     default: standard
 - id: preset-standard
-  name: '@deepseek-ai/dsh-agent-preset'
+  name: '@fde2e/len-agent-preset'
   config:
     id: standard
     plugins: []

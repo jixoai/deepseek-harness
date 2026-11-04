@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-session-titles-bundle",
+  "name": "@fde2e/len-experimental-session-titles-bundle",
   "description": "Refresh session titles as new human prompts arrive.",
   "version": "0.2.2-alpha.3",
   "icon": "./icon.svg",
@@ -39,7 +39,7 @@
     }
   },
   "dependencies": {
-    "@deepseek-ai/dsh-session-title-all-prompts-llm": "workspace:*"
+    "@fde2e/len-session-title-all-prompts-llm": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

@@ -1,6 +1,6 @@
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
-import { agentPresetProjectionDefinition } from '@deepseek-ai/dsh-agent-preset-registry'
-import { subagentModelSelectionProjectionDefinition } from '@deepseek-ai/dsh-tool-subagent/src/model-selection-state.ts'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
+import { agentPresetProjectionDefinition } from '@fde2e/len-agent-preset-registry'
+import { subagentModelSelectionProjectionDefinition } from '@fde2e/len-tool-subagent/src/model-selection-state.ts'
 import { createRequire } from 'node:module'
 import { randomUUID } from 'node:crypto'
 import { mkdir, mkdtemp, readFile, realpath, rm, symlink, writeFile } from 'node:fs/promises'
@@ -16,29 +16,29 @@ import {
   loadProfile,
   PluginPackages,
   type Profile,
-} from '@deepseek-ai/dsh-app-boot'
-import { provideCmdline } from '@deepseek-ai/dsh-cmdline'
-import { SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+} from '@fde2e/len-app-boot'
+import { provideCmdline } from '@fde2e/len-cmdline'
+import { SessionId, SessionLogOffset } from '@fde2e/len-session'
+import type { Agent } from '@fde2e/len-agent'
 import type { PatchOptions } from '@deepseek-ai/cordis-plugin-include'
 import { afterAll, beforeAll, describe, expect, it, onTestFinished, vi } from 'vitest'
-import { bundlePatchPaths, composeEntries } from '@deepseek-ai/dsh-app-boot'
+import { bundlePatchPaths, composeEntries } from '@fde2e/len-app-boot'
 import { createPluginProfile } from '../../desktop/src/project-manager.ts'
 /** Profile entry ids whose volatile fields these scenarios edit through Settings. */
 const SETTINGS_NAMESPACE = 'agent-preset-registry'
 const SUBAGENT_MODEL_SELECTION_SETTINGS_NAMESPACE = 'subagent-model-selection-settings'
-import { applyChildComposition, childSessionMeta } from '@deepseek-ai/dsh-subagent'
-import { ToolCallId, LlmAdapter, createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@deepseek-ai/dsh-llm'
-import type {} from '@deepseek-ai/dsh-compaction-basic'
-import type {} from '@deepseek-ai/dsh-skill'
-import type {} from '@deepseek-ai/dsh-tools'
+import { applyChildComposition, childSessionMeta } from '@fde2e/len-subagent'
+import { ToolCallId, LlmAdapter, createUserMessage } from '@fde2e/len-llm'
+import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@fde2e/len-llm'
+import type {} from '@fde2e/len-compaction-basic'
+import type {} from '@fde2e/len-skill'
+import type {} from '@fde2e/len-tools'
 // Type-only: resolves `ctx.get('sessionProjections')` and `ctx.get('tokenMeter')`.
-import type {} from '@deepseek-ai/dsh-session-projection'
-import type {} from '@deepseek-ai/dsh-token-meter'
+import type {} from '@fde2e/len-session-projection'
+import type {} from '@fde2e/len-token-meter'
 
 const REPO_ROOT = fileURLToPath(new URL('../../..', import.meta.url))
-const { boot } = createRequire(import.meta.url)(join(REPO_ROOT, 'packages/boot/app-boot/lib/index.js')) as typeof import('@deepseek-ai/dsh-app-boot')
+const { boot } = createRequire(import.meta.url)(join(REPO_ROOT, 'packages/boot/app-boot/lib/index.js')) as typeof import('@fde2e/len-app-boot')
 /** The shipped Web surface: the dsh-base and dsh-web-app bundle patches over an empty profile. */
 const BASE_PATCH = join(REPO_ROOT, 'packages/bundle/base/cordis.patch.yml')
 const WEB_BUNDLE = join(REPO_ROOT, 'packages/bundle/web-app')
@@ -142,7 +142,7 @@ async function bootWeb(
     // A deployment-level skill on the host registry's GLOBAL layer — the same
     // registration shape a repository plugin's skill root uses. The layered
     // skills test below proves it reaches preset-composed agents.
-    { insert: [{ id: 'skill-badge', name: import.meta.resolve('@deepseek-ai/dsh-skill-badge') }] },
+    { insert: [{ id: 'skill-badge', name: import.meta.resolve('@fde2e/len-skill-badge') }] },
     { id: 'modules', disabled: true },
     // The physical Connection row owns the disabled HTTP server. bootWeb
     // supplies only its in-process registries so Host services still prove
@@ -162,8 +162,8 @@ async function bootWeb(
     // supplies `directoryPicker` without one.
     { id: 'directory-picker', disabled: true },
     { insert: [
-      { id: 'directory-picker-browse', name: '@deepseek-ai/dsh-host-directory-picker-browse' },
-      { id: 'ui-directory-picker-browse', name: '@deepseek-ai/dsh-client-ui-directory-picker-browse' },
+      { id: 'directory-picker-browse', name: '@fde2e/len-host-directory-picker-browse' },
+      { id: 'ui-directory-picker-browse', name: '@fde2e/len-client-ui-directory-picker-browse' },
     ] },
     { id: 'agent-preset-registry', config: { default: 'standard' } },
     ...extra,
@@ -172,7 +172,7 @@ async function bootWeb(
   const profileDir = join(home, 'profiles', surface)
   await mkdir(profileDir, { recursive: true })
   if (surface === 'desktop') createPluginProfile(profileDir)
-  else if (profileBundles === undefined) initProfile(profileDir, ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app'])
+  else if (profileBundles === undefined) initProfile(profileDir, ['@fde2e/len-base', '@fde2e/len-web-app'])
   // Product Bundles are installed into the Profile, not the dsh app. Model
   // pnpm's package link for only the selected products; their own production
   // dependencies resolve from the linked workspace packages, while shared
@@ -218,7 +218,7 @@ async function bootWeb(
   return await boot('dsh-test', rootConfig, [...bundlePatches, ...overrides], async (bootCtx) => {
     bootCtx.provide('profileContext', { name: surface, dir: profileDir, patchPath: profile.patchPath,
       installAnchor: INSTALL_ANCHOR, home, cwd: home,
-      startedBundles: profileBundles ?? ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app'],
+      startedBundles: profileBundles ?? ['@fde2e/len-base', '@fde2e/len-web-app'],
       overlays: [], telemetryDisabledEnv: '1' })
     await bootCtx.plugin(PluginPackages, { resolution })
     bootCtx.provide('connection', {
@@ -771,7 +771,7 @@ describe.each(['web', 'desktop'] as const)('%s native subagent bundles', (surfac
     const root = await mkdtemp(join(tmpdir(), `dsh-${surface}-native-bundles-`))
     onTestFinished(async () => { await rm(root, { recursive: true, force: true }) })
     return await bootWeb(root, extra, installed.map(packageDir), [
-      '@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app', ...installed.map(product => `@deepseek-ai/dsh-subagent-${product}`),
+      '@fde2e/len-base', '@fde2e/len-web-app', ...installed.map(product => `@fde2e/len-subagent-${product}`),
     ], surface)
   }
 
@@ -841,13 +841,13 @@ describe('a user preset declared from the shipped cordis rows', () => {
 
   it('mounts beside the shipped `cordis` preset and reads the shared Host inspect providers', async () => {
     // The Host inspect providers are one process-global set registered by the
-    // host composition (`@deepseek-ai/dsh-tool-cordis/host`); each preset's
+    // host composition (`@fde2e/len-tool-cordis/host`); each preset's
     // `tool-cordis` row only registers the tools. Before that split the copy
     // failed to mount: its row re-registered provider "Service".
     const root = await mkdtemp(join(tmpdir(), 'dsh-copied-preset-'))
-    const cordis = composeEntries([webPatches('test')]).find(row => row.id === 'preset-cordis')!.config as import('@deepseek-ai/dsh-agent-preset-registry').PresetDefinition
+    const cordis = composeEntries([webPatches('test')]).find(row => row.id === 'preset-cordis')!.config as import('@fde2e/len-agent-preset-registry').PresetDefinition
     const copyCtx = await bootWeb(root, [{ insert: [{
-      id: 'preset-cordis-copy', name: '@deepseek-ai/dsh-agent-preset',
+      id: 'preset-cordis-copy', name: '@fde2e/len-agent-preset',
       config: { ...cordis, id: 'cordis-copy', name: 'Cordis copy' },
     }] }])
     try {
@@ -912,7 +912,7 @@ describe('a user preset declared from the shipped cordis rows', () => {
           expect(page.isError, resultText(page)).toBe(false)
           return (JSON.parse(resultText(page)) as ConfigPage).data
         }
-        const toolsRows = await listConfigs({ name: '@deepseek-ai/dsh-agent-loop' }, 'copied-preset-inspect-configs')
+        const toolsRows = await listConfigs({ name: '@fde2e/len-agent-loop' }, 'copied-preset-inspect-configs')
         const toolsRow = toolsRows.entries[0]
         expect(toolsRow).toMatchObject({ patchId: 'agent-loop', status: 'schema' })
         expect(toolsRows).toMatchObject({ total: 1, nextOffset: null })

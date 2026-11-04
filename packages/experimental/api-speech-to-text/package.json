@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-api-speech-to-text",
+  "name": "@fde2e/len-experimental-api-speech-to-text",
   "description": "Authenticated experimental speech transcription for browser clients",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -51,12 +51,12 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-experimental-speech-to-text": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-experimental-speech-to-text": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-experimental-speech-to-text": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-experimental-speech-to-text": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*"
   }
 }

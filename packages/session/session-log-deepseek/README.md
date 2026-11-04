@@ -3,7 +3,7 @@ description: "Incremental canonical session-log upload for deployments enabling 
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-session-log-deepseek
+# @fde2e/len-session-log-deepseek
 
 English | [中文](README.zh.md)
 
@@ -49,7 +49,7 @@ Plugins can register synchronous, side-effect-free predicates with `ctx.sessionL
 
 ```ts
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-session-log-deepseek'
+import type {} from '@fde2e/len-session-log-deepseek'
 
 export function apply(ctx: Context): void {
   ctx.inject(['sessionLogDeepSeek'], (child) => {

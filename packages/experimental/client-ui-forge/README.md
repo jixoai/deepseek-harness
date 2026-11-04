@@ -3,7 +3,7 @@ description: "GUI panel for the change requests a Session creates, and a worktre
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-client-ui-forge
+# @fde2e/len-experimental-client-ui-forge
 
 English | [中文](README.zh.md)
 

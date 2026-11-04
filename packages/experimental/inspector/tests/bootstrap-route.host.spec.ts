@@ -2,9 +2,9 @@
 
 import { Context, FiberState } from '@deepseek-ai/cordis'
 import type { Message } from '@deepseek-ai/cordis'
-import type { IndexInjection, WebServer } from '@deepseek-ai/dsh-host-webserver'
-import { HostConnectionService } from '@deepseek-ai/dsh-client-connection'
-import type { BrowserAuth } from '@deepseek-ai/dsh-client-connection/src/browser-auth.ts'
+import type { IndexInjection, WebServer } from '@fde2e/len-host-webserver'
+import { HostConnectionService } from '@fde2e/len-client-connection'
+import type { BrowserAuth } from '@fde2e/len-client-connection/src/browser-auth.ts'
 import { setFlagsFromString } from 'node:v8'
 import { runInNewContext } from 'node:vm'
 import open from 'open'

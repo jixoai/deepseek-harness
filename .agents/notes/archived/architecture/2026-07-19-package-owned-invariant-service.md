@@ -17,7 +17,7 @@ Published ownership must be mechanically complete. Without a repository rule, a 
 
 ### One registry service, package-owned contributions
 
-`@deepseek-ai/dsh-invariants` is a product-independent Cordis service plugin that registers `ctx.invariants`. It owns configuration, registration uniqueness, child-fiber lifecycle, and package-attributed failures. It imports no session, agent, scope, or agent-loop package and contains none of their checks.
+`@fde2e/len-invariants` is a product-independent Cordis service plugin that registers `ctx.invariants`. It owns configuration, registration uniqueness, child-fiber lifecycle, and package-attributed failures. It imports no session, agent, scope, or agent-loop package and contains none of their checks.
 
 A workspace package publishes a `./invariant` companion plugin only when it owns an independently observable event or mutable-data relationship. The companion registers its exact full npm name. Packages without such a relationship omit the companion and publication wiring and record the reason in their README; generated placeholders, empty installers, and synthetic API-shape assertions are forbidden by the [runtime-contract Agent Note](2026-07-19-package-invariant-runtime-contracts.md) and [omission decision](../simplification/2026-08-28-omit-unneeded-invariant-companions.md). Package root entrypoints do not import or register diagnostics implicitly, so loading a root package does not change runtime checking or require the invariant service.
 
@@ -60,10 +60,10 @@ The former functional-plugin entry point and one-argument `InvariantError` const
 
 | Companion entry | Registration name | Owned checks |
 |---|---|---|
-| `@deepseek-ai/dsh-session/invariant` | `@deepseek-ai/dsh-session` | session sequence, turn/step enclosure, and same-step call/result trace |
-| `@deepseek-ai/dsh-agent/invariant` | `@deepseek-ai/dsh-agent` | agent-status transitions |
-| `@deepseek-ai/dsh-scope/invariant` | `@deepseek-ai/dsh-scope` | scoped-event carrier presence and subject consistency |
-| `@deepseek-ai/dsh-agent-loop/invariant` | `@deepseek-ai/dsh-agent-loop` | model-request reconstruction |
+| `@fde2e/len-session/invariant` | `@fde2e/len-session` | session sequence, turn/step enclosure, and same-step call/result trace |
+| `@fde2e/len-agent/invariant` | `@fde2e/len-agent` | agent-status transitions |
+| `@fde2e/len-scope/invariant` | `@fde2e/len-scope` | scoped-event carrier presence and subject consistency |
+| `@fde2e/len-agent-loop/invariant` | `@fde2e/len-agent-loop` | model-request reconstruction |
 
 These four owners supplied the initial stateful checks. Later owners add companions for real event or mutable-data relationships, while packages without one omit the companion and document why. Every published companion is a separately bundled `./invariant` export with its own declarations and Loader-safe namespace plugin shape.
 

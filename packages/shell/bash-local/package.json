@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-bash-local",
+  "name": "@fde2e/len-bash-local",
   "description": "Local-subprocess implementation of the DeepSeek Harness bash executor seam",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -29,19 +29,19 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@fde2e/len-shell": "workspace:*",
+    "@fde2e/len-subprocess": "workspace:*",
+    "@fde2e/len-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-shell": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
+    "@fde2e/len-shell": "workspace:*",
+    "@fde2e/len-subprocess": "workspace:*",
+    "@fde2e/len-subprocess-local": "workspace:*",
+    "@fde2e/len-timeout": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

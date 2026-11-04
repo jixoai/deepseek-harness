@@ -1,14 +1,14 @@
 import { describe, expect, it, onTestFinished, vi } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { ToolCallId, createUserMessage } from '@deepseek-ai/dsh-llm'
-import { carrierKeyOf, createScope } from '@deepseek-ai/dsh-scope'
-import type { Scope } from '@deepseek-ai/dsh-scope'
-import SessionStore, { Session, SessionId } from '@deepseek-ai/dsh-session'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SystemPrompt from '@deepseek-ai/dsh-system-prompt'
-import ApprovalService, { ApprovalOutcome, ApprovalRequest, setApprovalPolicy } from '@deepseek-ai/dsh-user-approval'
+import type { Agent } from '@fde2e/len-agent'
+import { ToolCallId, createUserMessage } from '@fde2e/len-llm'
+import { carrierKeyOf, createScope } from '@fde2e/len-scope'
+import type { Scope } from '@fde2e/len-scope'
+import SessionStore, { Session, SessionId } from '@fde2e/len-session'
+import type { SessionEvent } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SystemPrompt from '@fde2e/len-system-prompt'
+import ApprovalService, { ApprovalOutcome, ApprovalRequest, setApprovalPolicy } from '@fde2e/len-user-approval'
 
 // Keep the Agent structural while exercising committed events on a real managed Session.
 function fakeAgent(ctx: Context, seed: Array<{ type: 'turn/start' | 'turn/end' | 'user/message' }> = [{ type: 'turn/start' }, { type: 'user/message' }]): { agent: Agent; appended: Array<{ type: string; data: Record<string, unknown> }> } {

@@ -1,9 +1,9 @@
 import { useState, type KeyboardEvent, type ReactNode } from 'react'
 import {
   IconChevronDownOutlineRegular, IconInspectOutlineRegular, IconSkillOutlineRegular, TextShimmer,
-} from '@deepseek-ai/dsh-client-ui-primitives'
-import type { StartedToolCallViewProps, ToolCallViewProps } from '@deepseek-ai/dsh-client-ui-tool/client'
-import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
+} from '@fde2e/len-client-ui-primitives'
+import type { StartedToolCallViewProps, ToolCallViewProps } from '@fde2e/len-client-ui-tool/client'
+import type { PropsLocale } from '@fde2e/len-client-ui-slots'
 import css from './SkillRow.module.css'
 
 /** Skill row lifecycle derived solely from the durable call slice. */

@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-native-command",
+  "name": "@fde2e/len-native-command",
   "description": "Host-native command and path-opening utilities with shell-free execution, cancellation, desktop detection, and WSL handoff",
   "version": "0.2.2-alpha.3",
   "publishConfig": {

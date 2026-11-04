@@ -1,9 +1,9 @@
 /** One Sidebar view's Session reference, retained bodies and committed mount lifetime. */
-import type { ISessions, SessionReference } from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { TabId } from '@deepseek-ai/dsh-client-ui-dockkit'
+import type { ISessions, SessionReference } from '@fde2e/len-api-session-controller/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { TabId } from '@fde2e/len-client-ui-dockkit'
 
-declare module '@deepseek-ai/dsh-api-session-controller/client' {
+declare module '@fde2e/len-api-session-controller/client' {
   interface SessionReferenceSourceMap {
     sidebarView: unknown
   }

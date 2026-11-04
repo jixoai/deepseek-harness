@@ -6,15 +6,15 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import LlmRuntime, { createUserMessage, LlmAdapter, ReasoningEffortId } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, LlmCallConfig, StreamChunk } from '@deepseek-ai/dsh-llm'
-import * as LlmPiAi from '@deepseek-ai/dsh-llm-pi-ai'
-import SessionStore, { SessionId } from '@deepseek-ai/dsh-session'
-import type { Session, SessionSeq } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import SessionTitleService from '@deepseek-ai/dsh-session-title'
-import * as providerPlugin from '@deepseek-ai/dsh-session-title-first-prompt-llm'
+import LlmRuntime, { createUserMessage, LlmAdapter, ReasoningEffortId } from '@fde2e/len-llm'
+import type { GenerateOptions, LlmCallConfig, StreamChunk } from '@fde2e/len-llm'
+import * as LlmPiAi from '@fde2e/len-llm-pi-ai'
+import SessionStore, { SessionId } from '@fde2e/len-session'
+import type { Session, SessionSeq } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import AgentRegistry from '@fde2e/len-agent'
+import SessionTitleService from '@fde2e/len-session-title'
+import * as providerPlugin from '@fde2e/len-session-title-first-prompt-llm'
 import { anthropicTextEvents, closeMockServers, mockServer } from '../../../llm/llm-pi-ai/tests/mock-server.ts'
 
 let root: string | undefined
@@ -54,16 +54,16 @@ async function loadComposition(
   root = await mkdtemp(join(tmpdir(), 'dsh-title-loader-'))
   const configPath = join(root, 'cordis.yml')
   await writeFile(configPath, [
-    "- name: '@deepseek-ai/dsh-llm'",
-    "- name: '@deepseek-ai/dsh-session'",
-    "- name: '@deepseek-ai/dsh-session-projection'",
-    "- name: '@deepseek-ai/dsh-agent'",
-    "- name: '@deepseek-ai/dsh-session-title'",
+    "- name: '@fde2e/len-llm'",
+    "- name: '@fde2e/len-session'",
+    "- name: '@fde2e/len-session-projection'",
+    "- name: '@fde2e/len-agent'",
+    "- name: '@fde2e/len-session-title'",
     '  config:',
     '    fallbackMaxWords: 5',
     '    fallbackMaxBytes: 40',
     '    maxTitleBytes: 80',
-    "- name: '@deepseek-ai/dsh-session-title-first-prompt-llm'",
+    "- name: '@fde2e/len-session-title-first-prompt-llm'",
     '  config:',
     '    targetWords: 5',
     '    targetCjkCharacters: 10',
@@ -77,12 +77,12 @@ async function loadComposition(
   await context.plugin(Loader)
   context.loader.builtins.include = Include
   const modules = new Map<string, unknown>([
-    ['@deepseek-ai/dsh-llm', LlmRuntime],
-    ['@deepseek-ai/dsh-session', SessionStore],
-    ['@deepseek-ai/dsh-session-projection', SessionProjectionRegistry],
-    ['@deepseek-ai/dsh-agent', AgentRegistry],
-    ['@deepseek-ai/dsh-session-title', SessionTitleService],
-    ['@deepseek-ai/dsh-session-title-first-prompt-llm', providerPlugin],
+    ['@fde2e/len-llm', LlmRuntime],
+    ['@fde2e/len-session', SessionStore],
+    ['@fde2e/len-session-projection', SessionProjectionRegistry],
+    ['@fde2e/len-agent', AgentRegistry],
+    ['@fde2e/len-session-title', SessionTitleService],
+    ['@fde2e/len-session-title-first-prompt-llm', providerPlugin],
     ...entryModules,
   ])
   context.loader.internal = {
@@ -170,7 +170,7 @@ describe('session-title Loader composition', () => {
       'maxOutputTokens: 64',
       'timeoutMs: 60000',
     ], [
-      "- name: '@deepseek-ai/dsh-llm-pi-ai'",
+      "- name: '@fde2e/len-llm-pi-ai'",
       '  config:',
       '    providers:',
       '      gateway:',
@@ -183,7 +183,7 @@ describe('session-title Loader composition', () => {
       '            reasoningEfforts: { low: low, high: high, max: max }',
       '            compat:',
       '              forceAdaptiveThinking: true',
-    ], new Map([['@deepseek-ai/dsh-llm-pi-ai', LlmPiAi]]))
+    ], new Map([['@fde2e/len-llm-pi-ai', LlmPiAi]]))
 
     const { session, messageSeq } = await promptThenRequest(ctx, 'pi-ai-title', {
       provider: 'gateway',

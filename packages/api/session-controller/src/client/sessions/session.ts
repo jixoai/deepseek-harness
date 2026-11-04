@@ -1,13 +1,13 @@
 // Sessions remain resident after creation so their open Remote sources keep running off-screen.
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { InboxState, InboxTarget } from '@deepseek-ai/dsh-agent/types'
-import { randomUUID } from '@deepseek-ai/dsh-util-crypto'
-import type { FileAttachmentRef, ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
-import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
-import type { MessageId } from '@deepseek-ai/dsh-llm/brand'
-import type { UserMessage } from '@deepseek-ai/dsh-llm/types'
-import { SessionLogOffset, SessionSeq, type SessionId } from '@deepseek-ai/dsh-session/types'
+import type { InboxState, InboxTarget } from '@fde2e/len-agent/types'
+import { randomUUID } from '@fde2e/len-util-crypto'
+import type { FileAttachmentRef, ImageAttachmentRef } from '@fde2e/len-attachment'
+import type { SubagentAddress } from '@fde2e/len-subagent/client'
+import type { MessageId } from '@fde2e/len-llm/brand'
+import type { UserMessage } from '@fde2e/len-llm/types'
+import { SessionLogOffset, SessionSeq, type SessionId } from '@fde2e/len-session/types'
 import { SessionEventStream } from '../transport.ts'
 import type { SessionJournalChange } from '../transport.ts'
 import type {
@@ -29,9 +29,9 @@ import type {
   SessionEventLike, SessionEventLikeEntry, SessionLiveEventEntry,
 } from '../contract/events.ts'
 import { Notifier } from './notifier.ts'
-import { isRemoteFailure } from '@deepseek-ai/dsh-api-gateway/client'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
-import type { RemoteFailure, RemoteResult } from '@deepseek-ai/dsh-typert-protocol'
+import { isRemoteFailure } from '@fde2e/len-api-gateway/client'
+import { RemoteError } from '@fde2e/len-typert-protocol'
+import type { RemoteFailure, RemoteResult } from '@fde2e/len-typert-protocol'
 import type { SessionRemotes } from './remotes.ts'
 import { ProjectionValueStore } from './projection-store.ts'
 import type { ProjectionsBaseline } from './projection-store.ts'

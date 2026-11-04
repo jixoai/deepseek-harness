@@ -7,7 +7,7 @@
  * values a real Loader composition would, without booting a config tree.
  */
 import type { Context, Fiber, Inject } from '@deepseek-ai/cordis'
-import type { TypertContribution } from '@deepseek-ai/dsh-typert-registry'
+import type { TypertContribution } from '@fde2e/len-typert-registry'
 import { z } from 'zod'
 
 /**

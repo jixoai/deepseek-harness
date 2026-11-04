@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-cua-bundle",
+  "name": "@fde2e/len-cua-bundle",
   "description": "Optional macOS Computer Use and permission setup",
   "version": "0.2.2-alpha.3",
   "icon": "./icon.svg",
@@ -42,8 +42,8 @@
     }
   },
   "dependencies": {
-    "@deepseek-ai/dsh-computer-use": "workspace:*",
-    "@deepseek-ai/dsh-cua": "workspace:*"
+    "@fde2e/len-computer-use": "workspace:*",
+    "@fde2e/len-cua": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"
@@ -55,6 +55,6 @@
     "@deepseek-ai/cordis-plugin-loader": "workspace:~"
   },
   "optionalDependencies": {
-    "@deepseek-ai/dsh-experimental-cua-macos": "workspace:*"
+    "@fde2e/len-experimental-cua-macos": "workspace:*"
   }
 }

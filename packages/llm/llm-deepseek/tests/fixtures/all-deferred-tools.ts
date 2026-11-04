@@ -1,9 +1,9 @@
 /** Verify serialized deferred-only declarations; keyless replay does not validate provider acceptance. */
 import assert from 'node:assert/strict'
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-agent'
-import { projectToolUpdates } from '@deepseek-ai/dsh-llm'
-import { defineContentToolFixture } from '@deepseek-ai/dsh-tool-testkit'
+import type {} from '@fde2e/len-agent'
+import { projectToolUpdates } from '@fde2e/len-llm'
+import { defineContentToolFixture } from '@fde2e/len-tool-testkit'
 import { resolveAdapterOptions } from '../../src/config.ts'
 import { serialize } from '../../src/serialize.ts'
 

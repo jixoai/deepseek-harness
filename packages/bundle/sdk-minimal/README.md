@@ -3,7 +3,7 @@ description: "Standalone SDK profile with a persistent shell, image reading, aut
 kind: "package-bundle"
 ---
 
-# `@deepseek-ai/dsh-sdk-minimal`
+# `@fde2e/len-sdk-minimal`
 
 English | [中文](README.zh.md)
 

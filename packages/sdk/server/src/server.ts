@@ -2,7 +2,7 @@
  * JSON-RPC methods and notifications for out-of-process harness SDKs.
  * The surrounding context owns plugins, persistence, and configured adapters.
  *
- * @module @deepseek-ai/dsh-sdk-jsonrpc-server/server
+ * @module @fde2e/len-sdk-jsonrpc-server/server
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -12,17 +12,17 @@ import { QueryActivity } from './query-activity.ts'
 import { SdkUserQuestionBridge } from './user-questions.ts'
 import { queryCommand } from './query-input.ts'
 import { queryCommandImages, queryContent } from './query-content.ts'
-import { brandString } from '@deepseek-ai/dsh-brand'
-import type { Agent, AgentHandle } from '@deepseek-ai/dsh-agent'
-import { admitEncodedImages, type EncodedImageAttachment, type ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
-import { createUserMessage, ReasoningEffortId, type ContentBlock, type LlmRuntime } from '@deepseek-ai/dsh-llm'
-import type { SessionId, SessionLogOffset } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-working-directory'
-import type {} from '@deepseek-ai/dsh-user-approval'
+import { brandString } from '@fde2e/len-brand'
+import type { Agent, AgentHandle } from '@fde2e/len-agent'
+import { admitEncodedImages, type EncodedImageAttachment, type ImageAttachmentRef } from '@fde2e/len-attachment'
+import { createUserMessage, ReasoningEffortId, type ContentBlock, type LlmRuntime } from '@fde2e/len-llm'
+import type { SessionId, SessionLogOffset } from '@fde2e/len-session'
+import type {} from '@fde2e/len-working-directory'
+import type {} from '@fde2e/len-user-approval'
 
-import type {} from '@deepseek-ai/dsh-schedule'
-import type { SubagentRunEndInfo } from '@deepseek-ai/dsh-subagent'
-import * as LlmDeepSeek from '@deepseek-ai/dsh-llm-deepseek-api-key'
+import type {} from '@fde2e/len-schedule'
+import type { SubagentRunEndInfo } from '@fde2e/len-subagent'
+import * as LlmDeepSeek from '@fde2e/len-llm-deepseek-api-key'
 import type {
   ApprovalRequestParams,
   CommandExecution,
@@ -42,7 +42,7 @@ import type {
   SdkEncodedImageBlock,
   SubagentFinishedNotification,
   SubagentStartedNotification,
-} from '@deepseek-ai/dsh-sdk-protocol'
+} from '@fde2e/len-sdk-protocol'
 
 interface SessionRecord {
   handle: AgentHandle
@@ -568,7 +568,7 @@ export class HarnessSdkJsonRpcServer {
     // No preset composition: this server's compositions keep the model-facing
     // rows in the host plane, so this agent reads them from the global layer. A
     // deployment that configures a roster has to join one here first
-    // (@deepseek-ai/dsh-agent-preset-registry README, "Composing a child agent").
+    // (@fde2e/len-agent-preset-registry README, "Composing a child agent").
     const agentOptions = {
       provider: this.provider,
       model: this.model,

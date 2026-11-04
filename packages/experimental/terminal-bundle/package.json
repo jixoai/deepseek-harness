@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-terminal-bundle",
+  "name": "@fde2e/len-experimental-terminal-bundle",
   "description": "Keep shell processes alive across tool calls.",
   "version": "0.2.2-alpha.3",
   "icon": "./icon.svg",
@@ -39,9 +39,9 @@
     }
   },
   "dependencies": {
-    "@deepseek-ai/dsh-tool-terminal": "workspace:*",
-    "@deepseek-ai/dsh-terminal": "workspace:*",
-    "@deepseek-ai/dsh-terminal-bash": "workspace:*"
+    "@fde2e/len-tool-terminal": "workspace:*",
+    "@fde2e/len-terminal": "workspace:*",
+    "@fde2e/len-terminal-bash": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~"

@@ -106,14 +106,14 @@ teardown 独立报告顶层进程退出与存活进程清理。PTY 会话不会�
 
 ```yaml
 plugins:
-  '@deepseek-ai/dsh-sandbox-local':
-  '@deepseek-ai/dsh-sandbox-policy':
+  '@fde2e/len-sandbox-local':
+  '@fde2e/len-sandbox-policy':
     config:
       mode: workspace-write
       workspaceRoot: .
-  '@deepseek-ai/dsh-terminal':
-  '@deepseek-ai/dsh-subprocess-local':
-  '@deepseek-ai/dsh-terminal-bash':
+  '@fde2e/len-terminal':
+  '@fde2e/len-subprocess-local':
+  '@fde2e/len-terminal-bash':
     config:
       scrollbackLines: 10000
       scrollbackMaxBytes: 4194304
@@ -124,7 +124,7 @@ plugins:
       handoffGraceMs: 500
       timeoutMs: 30000
       disposeGraceMs: 3000
-  '@deepseek-ai/dsh-tool-terminal':
+  '@fde2e/len-tool-terminal':
     config:
       enableRunInBackground: true
       maxResultBytes: 262144

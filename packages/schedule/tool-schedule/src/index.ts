@@ -4,27 +4,27 @@
  * plugin registers them in the mounting scope, so a preset decides which
  * agents receive them. Tasks belong to the Host, not to a Session: the tools
  * read and change any task by id, and only the delivery target names a Session.
- * @module @deepseek-ai/dsh-tool-schedule
+ * @module @fde2e/len-tool-schedule
  */
 
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
+import type { Agent } from '@fde2e/len-agent'
 // Type-only: make `ctx.get('agentPresets')` resolve to the preset roster when
 // composed. A rosterless deployment records no preset for a created Session.
-import type {} from '@deepseek-ai/dsh-agent-preset-registry'
-import type { ContentBlock } from '@deepseek-ai/dsh-llm'
-import { delegationDepthOf } from '@deepseek-ai/dsh-subagent'
-import type {} from '@deepseek-ai/dsh-system-prompt'
-import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { GenericCallView, ToolRunContext } from '@deepseek-ai/dsh-tools'
+import type {} from '@fde2e/len-agent-preset-registry'
+import type { ContentBlock } from '@fde2e/len-llm'
+import { delegationDepthOf } from '@fde2e/len-subagent'
+import type {} from '@fde2e/len-system-prompt'
+import { defineTool } from '@fde2e/len-tools'
+import type { GenericCallView, ToolRunContext } from '@fde2e/len-tools'
 import {
   DEFAULT_LIST_LIMIT, MAX_LIST_LIMIT, MAX_TITLE_LENGTH, MIN_EVERY_INTERVAL_SECONDS, ScheduleId, ScheduleInputError,
   formatScheduleLocalTime,
-} from '@deepseek-ai/dsh-schedule'
+} from '@fde2e/len-schedule'
 import type {
   InternalScheduleError, ScheduleEditRequest, ScheduleTargetRequest, ScheduleToolError,
   ScheduleCatalogEntry, ScheduleDeliveryReceipt, ScheduleRecord, SubagentSessionError,
-} from '@deepseek-ai/dsh-schedule'
+} from '@fde2e/len-schedule'
 
 /** Plugin name registered with the Loader. */
 export const name = 'tool-schedule'

@@ -4,9 +4,9 @@
  * shared handler records which Peer each call spoke for.
  */
 import { Context } from '@deepseek-ai/cordis'
-import { Peer } from '@deepseek-ai/dsh-client-connection'
-import type { PeerScope } from '@deepseek-ai/dsh-typert-protocol'
-import type { ShareRpcActor } from '@deepseek-ai/dsh-experimental-liveshare-protocol'
+import { Peer } from '@fde2e/len-client-connection'
+import type { PeerScope } from '@fde2e/len-typert-protocol'
+import type { ShareRpcActor } from '@fde2e/len-experimental-liveshare-protocol'
 import type { ViewerReadConnection } from '../src/host/viewer-read.ts'
 import type { ShareViewerPrincipal } from '../src/host/viewer-principal.ts'
 

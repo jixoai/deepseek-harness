@@ -31,7 +31,7 @@ import {
   type Profile,
   type RuntimeResolution,
 } from '../src/index.ts'
-import { PROFILE_TEMPLATES } from '@deepseek-ai/dsh-official-bundles'
+import { PROFILE_TEMPLATES } from '@fde2e/len-official-bundles'
 import { installRuntimeInterception } from '../src/profile-resolution/resolver.ts'
 
 const tempRoots: string[] = []
@@ -229,15 +229,15 @@ describe('initProfile', () => {
   it('creates manifest, user patch layer, and pnpm workspace once, never overwriting', () => {
     const home = tmp()
     const dir = resolveProfileDir('tui', home)
-    initProfile(dir, ['@deepseek-ai/dsh-base'])
+    initProfile(dir, ['@fde2e/len-base'])
     const manifest = readProfileManifest('t', dir)
-    expect(manifest.dsh?.profile?.bundles).toEqual(['@deepseek-ai/dsh-base'])
+    expect(manifest.dsh?.profile?.bundles).toEqual(['@fde2e/len-base'])
     expect(readFileSync(join(dir, PROFILE_PATCH_FILENAME), 'utf8')).toContain('[]')
     expect(readFileSync(join(dir, 'pnpm-workspace.yaml'), 'utf8')).toContain('nodeLinker: hoisted')
     // Re-init keeps user edits.
     writeFileSync(join(dir, PROFILE_PATCH_FILENAME), '- id: x\n  config: {}\n')
     initProfile(dir, ['other'])
-    expect(readProfileManifest('t', dir).dsh?.profile?.bundles).toEqual(['@deepseek-ai/dsh-base'])
+    expect(readProfileManifest('t', dir).dsh?.profile?.bundles).toEqual(['@fde2e/len-base'])
     expect(readFileSync(join(dir, PROFILE_PATCH_FILENAME), 'utf8')).toContain('- id: x')
   })
 })
@@ -366,48 +366,48 @@ describe('loadProfile', () => {
 
   it('normalizes only the exact installation-owned headless bundle tuple', () => {
     const anchor = stageInstallation({
-      '@deepseek-ai/dsh-base': { patch: '[]\n' },
-      '@deepseek-ai/dsh-web-app': { patch: '[]\n' },
-      '@deepseek-ai/dsh-headless': { patch: '[]\n' },
+      '@fde2e/len-base': { patch: '[]\n' },
+      '@fde2e/len-web-app': { patch: '[]\n' },
+      '@fde2e/len-headless': { patch: '[]\n' },
       'custom-bundle': { patch: '[]\n' },
     })
     const home = tmp()
     const stock = resolveProfileDir('headless', home)
     initProfile(stock, [
-      '@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app', '@deepseek-ai/dsh-headless',
+      '@fde2e/len-base', '@fde2e/len-web-app', '@fde2e/len-headless',
     ])
     const retiredManifest = readProfileManifest('t', stock)
     writeProfileManifest(stock, retiredManifest)
     loadProfile('t', 'headless', anchor, home)
     expect(readProfileManifest('t', stock).dsh?.profile).toEqual({
-      bundles: ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-headless'],
+      bundles: ['@fde2e/len-base', '@fde2e/len-headless'],
     })
 
     const customHome = tmp()
     const custom = resolveProfileDir('headless', customHome)
     initProfile(custom, [
-      '@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app', '@deepseek-ai/dsh-headless', 'custom-bundle',
+      '@fde2e/len-base', '@fde2e/len-web-app', '@fde2e/len-headless', 'custom-bundle',
     ])
     loadProfile('t', 'headless', anchor, customHome)
     expect(readProfileManifest('t', custom).dsh?.profile?.bundles).toEqual([
-      '@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app', '@deepseek-ai/dsh-headless', 'custom-bundle',
+      '@fde2e/len-base', '@fde2e/len-web-app', '@fde2e/len-headless', 'custom-bundle',
     ])
   })
 
-  it.each(['@deepseek-ai/dsh-experimental-schedule-bundle', '@deepseek-ai/dsh-experimental-agent-team-profile'])('removes retired %s and keeps the rest of an application-owned manifest', (retired) => {
+  it.each(['@fde2e/len-experimental-schedule-bundle', '@fde2e/len-experimental-agent-team-profile'])('removes retired %s and keeps the rest of an application-owned manifest', (retired) => {
     const anchor = stageInstallation({
-      '@deepseek-ai/dsh-base': { patch: '[]\n' },
+      '@fde2e/len-base': { patch: '[]\n' },
       'custom-bundle': { patch: '[]\n' },
     })
     const dir = join(tmp(), 'app-profile')
-    initProfile(dir, ['@deepseek-ai/dsh-base', retired, 'custom-bundle'])
+    initProfile(dir, ['@fde2e/len-base', retired, 'custom-bundle'])
     writeProfileManifest(dir, { ...readProfileManifest('t', dir), dependencies: { 'custom-bundle': '^1.0.0' } })
     const profile = loadProfileDirectory('t', dir, anchor)
     expect(profile.skippedBundles).toEqual([])
-    expect(profile.layers.map(layer => layer.packageName)).toEqual(['@deepseek-ai/dsh-base', 'custom-bundle'])
+    expect(profile.layers.map(layer => layer.packageName)).toEqual(['@fde2e/len-base', 'custom-bundle'])
     expect(readProfileManifest('t', dir)).toMatchObject({
       dependencies: { 'custom-bundle': '^1.0.0' },
-      dsh: { profile: { bundles: ['@deepseek-ai/dsh-base', 'custom-bundle'] } },
+      dsh: { profile: { bundles: ['@fde2e/len-base', 'custom-bundle'] } },
     })
   })
 
@@ -463,7 +463,7 @@ describe('loadProfile', () => {
     })
     const manifestPath = join(anchor, '..', 'node_modules', 'guarded', 'package.json')
     writeFileSync(manifestPath, JSON.stringify({
-      ...JSON.parse(readFileSync(manifestPath, 'utf8')) as object, peerDependencies: { '@deepseek-ai/dsh': '999.0.0' },
+      ...JSON.parse(readFileSync(manifestPath, 'utf8')) as object, peerDependencies: { '@fde2e/len': '999.0.0' },
     }))
     const dir = resolveProfileDir('demo', tmp())
     initProfile(dir, ['guarded', 'kept'])

@@ -5,11 +5,11 @@
  * / epoch-guard behavior of the original global cache; the session-key axis
  * is the only extra dimension.
  */
-import type { CommandDescriptor } from '@deepseek-ai/dsh-commands/types'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import { resolveCommand } from '@deepseek-ai/dsh-commands/builtin'
+import type { CommandDescriptor } from '@fde2e/len-commands/types'
+import type { SessionId } from '@fde2e/len-session/types'
+import { resolveCommand } from '@fde2e/len-commands/builtin'
 
-export type { CommandDescriptor } from '@deepseek-ai/dsh-commands/types'
+export type { CommandDescriptor } from '@fde2e/len-commands/types'
 
 /**
  * cold = never pulled; pending = pull in flight with nothing servable;

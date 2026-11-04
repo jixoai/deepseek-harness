@@ -5,13 +5,13 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ISessions, SessionListState, SessionReference, SessionSnapshot,
-} from '@deepseek-ai/dsh-api-session-controller/client'
-import type { ResourceProvider } from '@deepseek-ai/dsh-client-resources/client'
-import { sessionSnapshot } from '@deepseek-ai/dsh-client-test-runtime'
-import type { ConversationViewsProps } from '@deepseek-ai/dsh-client-ui-conversation/client'
-import type { SidebarRightTabDefinition } from '@deepseek-ai/dsh-client-ui-sidebar-right/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { SubagentAddress } from '@deepseek-ai/dsh-subagent/client'
+} from '@fde2e/len-api-session-controller/client'
+import type { ResourceProvider } from '@fde2e/len-client-resources/client'
+import { sessionSnapshot } from '@fde2e/len-client-test-runtime'
+import type { ConversationViewsProps } from '@fde2e/len-client-ui-conversation/client'
+import type { SidebarRightTabDefinition } from '@fde2e/len-client-ui-sidebar-right/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { SubagentAddress } from '@fde2e/len-subagent/client'
 import {
   ConversationSlotPanel, FixedChatConversationView, parseSubagentChatAddress,
   registerSidebarChat, subagentChatAddress, SUBAGENT_CHAT_ID, type SidebarChatTabProps,

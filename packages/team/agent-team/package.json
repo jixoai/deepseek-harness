@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-agent-team",
+  "name": "@fde2e/len-agent-team",
   "description": "Shared task DAG and change waits for subagent trees",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -50,35 +50,35 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@deepseek-ai/dsh-brand": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "zod": "4.4.3"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-persistence": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-subagent": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-agent": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop": "workspace:*",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence": "workspace:*",
-    "@deepseek-ai/dsh-session-persistence-jsonl": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-session-query": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
-    "@deepseek-ai/dsh-subagent-fork-in-process": "workspace:*",
-    "@deepseek-ai/dsh-subagent-spawn-in-process": "workspace:*",
-    "@deepseek-ai/dsh-commands": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*"
+    "@fde2e/len-agent": "workspace:*",
+    "@fde2e/len-agent-loop": "workspace:*",
+    "@fde2e/len-agent-loop-testkit": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-session-persistence": "workspace:*",
+    "@fde2e/len-session-persistence-jsonl": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-session-query": "workspace:*",
+    "@fde2e/len-subagent": "workspace:*",
+    "@fde2e/len-subagent-fork-in-process": "workspace:*",
+    "@fde2e/len-subagent-spawn-in-process": "workspace:*",
+    "@fde2e/len-commands": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*"
   }
 }

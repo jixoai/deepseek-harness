@@ -1,26 +1,26 @@
-import TypertRegistry from '@deepseek-ai/dsh-typert-registry'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import { RemoteError } from '@deepseek-ai/dsh-typert-protocol'
+import TypertRegistry from '@fde2e/len-typert-registry'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import { RemoteError } from '@fde2e/len-typert-protocol'
 import { Context } from '@deepseek-ai/cordis'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
-import type { Agent, Inbox } from '@deepseek-ai/dsh-agent'
-import { AttachmentError, AttachmentId } from '@deepseek-ai/dsh-attachment'
-import type { ImageAttachmentRef } from '@deepseek-ai/dsh-attachment'
-import { createUserMessage, MessageId } from '@deepseek-ai/dsh-llm'
-import type { ContextFormed } from '@deepseek-ai/dsh-llm'
+import AgentRegistry from '@fde2e/len-agent'
+import type { Agent, Inbox } from '@fde2e/len-agent'
+import { AttachmentError, AttachmentId } from '@fde2e/len-attachment'
+import type { ImageAttachmentRef } from '@fde2e/len-attachment'
+import { createUserMessage, MessageId } from '@fde2e/len-llm'
+import type { ContextFormed } from '@fde2e/len-llm'
 import SessionStore, {
   Session, SessionId, SessionLogOffset,
-} from '@deepseek-ai/dsh-session'
-import type { UserMessage } from '@deepseek-ai/dsh-session'
-import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@deepseek-ai/dsh-subagent'
-import { subagentIdentityProjectionDefinition } from '@deepseek-ai/dsh-subagent/src/projection.ts'
+} from '@fde2e/len-session'
+import type { UserMessage } from '@fde2e/len-session'
+import { snapshotSubagentDescriptor, SUBAGENT_DESCRIPTOR_VERSION } from '@fde2e/len-subagent'
+import { subagentIdentityProjectionDefinition } from '@fde2e/len-subagent/src/projection.ts'
 import { describe, expect, it, vi } from 'vitest'
 import { ApiSessionAgentController } from '../src/agent.ts'
 import { SessionCommandController } from '../src/commands.ts'
-import { unsupportedModel, createInboxStub } from '@deepseek-ai/dsh-agent-loop-testkit'
+import { unsupportedModel, createInboxStub } from '@fde2e/len-agent-loop-testkit'
 import { installSessionReadTestServices } from './test-remote.ts'
 
-declare module '@deepseek-ai/dsh-llm' {
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'test': { kind: 'test' } & ContextFormed
   }

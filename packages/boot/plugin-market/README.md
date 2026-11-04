@@ -3,7 +3,7 @@ description: "Host reader of the plugin indexes a user configures, with installa
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-plugin-market
+# @fde2e/len-plugin-market
 
 English | [中文](README.zh.md)
 

@@ -1,8 +1,8 @@
 // @vitest-environment jsdom
-import { contextMenuHook } from '@deepseek-ai/dsh-client-test-runtime'
+import { contextMenuHook } from '@fde2e/len-client-test-runtime'
 import { cleanup, fireEvent, render } from '@testing-library/react'
 import { afterEach, expect, it, vi } from 'vitest'
-import { MarkdownDelegateProvider, MarkdownText } from '@deepseek-ai/dsh-client-ui-primitives'
+import { MarkdownDelegateProvider, MarkdownText } from '@fde2e/len-client-ui-primitives'
 
 afterEach(cleanup)
 

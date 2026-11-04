@@ -1,9 +1,9 @@
 /** Process-local assistant state retained for reconnecting Web followers. */
 
-import type { AssistantStreamFrame } from '@deepseek-ai/dsh-agent'
-import { AssistantStreamAccumulator } from '@deepseek-ai/dsh-llm'
-import type { SessionSeqCursor } from '@deepseek-ai/dsh-session'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import type { AssistantStreamFrame } from '@fde2e/len-agent'
+import { AssistantStreamAccumulator } from '@fde2e/len-llm'
+import type { SessionSeqCursor } from '@fde2e/len-session'
+import type { JsonValue } from '@fde2e/len-util-values'
 import type {
   SessionAssistantStreamAttempt,
   SessionAssistantStreamBaseline,

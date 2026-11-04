@@ -3,27 +3,27 @@
 import { Readable } from 'node:stream'
 import { afterEach, describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
-import { brandString } from '@deepseek-ai/dsh-brand'
-import AgentRegistry from '@deepseek-ai/dsh-agent'
+import { brandString } from '@fde2e/len-brand'
+import AgentRegistry from '@fde2e/len-agent'
 import type {
   Agent,
   AgentHandle,
   AssistantStreamFrame,
   CreateAgentOptions,
   ResumeAgentOptions,
-} from '@deepseek-ai/dsh-agent'
-import AgentDefaultModelConfig from '@deepseek-ai/dsh-agent-default-model'
-import { LlmAttemptId, ReasoningEffortId, ToolCallId, createAssistantMessage, createToolResultMessage, createUserMessage, type MessageId, type StreamChunk } from '@deepseek-ai/dsh-llm'
-import SessionStore, { SessionLogOffset } from '@deepseek-ai/dsh-session'
-import SessionProjectionRegistry from '@deepseek-ai/dsh-session-projection'
-import SandboxPolicyService from '@deepseek-ai/dsh-sandbox-policy'
-import ApprovalService, { setApprovalPolicy, type ApprovalPolicy } from '@deepseek-ai/dsh-user-approval'
-import type { Session, SessionId, UserMessage } from '@deepseek-ai/dsh-session'
-import { SessionQueryError } from '@deepseek-ai/dsh-session-query'
-import { AgentModel, modelSelectionProjectionDefinition } from '@deepseek-ai/dsh-agent'
-import { createInboxStub, provideWorkingDirectoryFixture } from '@deepseek-ai/dsh-agent-loop-testkit'
+} from '@fde2e/len-agent'
+import AgentDefaultModelConfig from '@fde2e/len-agent-default-model'
+import { LlmAttemptId, ReasoningEffortId, ToolCallId, createAssistantMessage, createToolResultMessage, createUserMessage, type MessageId, type StreamChunk } from '@fde2e/len-llm'
+import SessionStore, { SessionLogOffset } from '@fde2e/len-session'
+import SessionProjectionRegistry from '@fde2e/len-session-projection'
+import SandboxPolicyService from '@fde2e/len-sandbox-policy'
+import ApprovalService, { setApprovalPolicy, type ApprovalPolicy } from '@fde2e/len-user-approval'
+import type { Session, SessionId, UserMessage } from '@fde2e/len-session'
+import { SessionQueryError } from '@fde2e/len-session-query'
+import { AgentModel, modelSelectionProjectionDefinition } from '@fde2e/len-agent'
+import { createInboxStub, provideWorkingDirectoryFixture } from '@fde2e/len-agent-loop-testkit'
 import { apply, Config } from '../src/index.ts'
-import SubagentRuntime from '@deepseek-ai/dsh-subagent'
+import SubagentRuntime from '@fde2e/len-subagent'
 import { internals } from '../src/runner-internals.ts'
 
 const originalInternals = { ...internals }

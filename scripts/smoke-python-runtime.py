@@ -281,9 +281,9 @@ def write_advanced_profile_patch(
             },
         },
         {"insert": [
-            {"id": "ptc-runtime", "name": "@deepseek-ai/dsh-ptc-runtime-node"},
-            {"id": "cordis-host-runner", "name": "@deepseek-ai/dsh-cordis-host-runner"},
-            {"id": "cordis-tool", "name": "@deepseek-ai/dsh-tool-cordis"},
+            {"id": "ptc-runtime", "name": "@fde2e/len-ptc-runtime-node"},
+            {"id": "cordis-host-runner", "name": "@fde2e/len-cordis-host-runner"},
+            {"id": "cordis-tool", "name": "@fde2e/len-tool-cordis"},
         ]},
     ])
 
@@ -293,7 +293,7 @@ def write_mcp_patch(root: Path, sessions: Path, server_script: Path) -> Path:
     return write_profile_patch(root, "mcp.patch.yml", sessions, [{
         "insert": [{
             "id": "mcp-fixture",
-            "name": "@deepseek-ai/dsh-mcp-client",
+            "name": "@fde2e/len-mcp-client",
             "config": {
                 "serverName": "fixture",
                 "transport": "stdio",
@@ -492,7 +492,7 @@ def completion_chunks(body: dict[str, object]) -> list[dict[str, object]]:
     if prompt == "check missing plugin package manager":
         assert_advertised_tool(body, "plugin_manager")
         return tool_call_chunks("python-plugin-install", "plugin_manager", {
-            "action": "install_bundle", "target": "@deepseek-ai/dsh-subagent-codex",
+            "action": "install_bundle", "target": "@fde2e/len-subagent-codex",
         })
     if prompt == SNAPSHOT_DIRECT_CHILD_PROMPT:
         return text_chunks("DIRECT_CHILD_OK")
@@ -1777,7 +1777,7 @@ def smoke_sdk_snapshot_mode(
                 "parentSessionId": SNAPSHOT_SESSION_ID, "prompt": SNAPSHOT_WORKFLOW_CHILD_PROMPT,
                 "direct": {"prompt": SNAPSHOT_DIRECT_CHILD_PROMPT, "callId": "advanced-direct-child"},
             }},
-            {"id": "snapshot-message-feedback", "name": "@deepseek-ai/dsh-message-feedback",
+            {"id": "snapshot-message-feedback", "name": "@fde2e/len-message-feedback",
              "config": {"maxNoteBytes": 1024}},
             {"id": "snapshot-feedback-producer", "name": (
                 Path(__file__).resolve().parent.parent / "snapshots/sdk/text-turn/feedback-producer.mjs"

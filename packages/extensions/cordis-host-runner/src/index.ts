@@ -1,22 +1,22 @@
 /**
  * Dynamic Cordis Plugin service: immutable package definitions, one active run
  * per Plugin, human-approved Client activation, and Host/Client invocation.
- * @module @deepseek-ai/dsh-cordis-host-runner
+ * @module @fde2e/len-cordis-host-runner
  */
 
 import { Context } from '@deepseek-ai/cordis'
 import type { Fiber } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import { createUserMessage } from '@deepseek-ai/dsh-llm'
-declare module '@deepseek-ai/dsh-llm' {
+import type { Agent } from '@fde2e/len-agent'
+import { createUserMessage } from '@fde2e/len-llm'
+declare module '@fde2e/len-llm' {
   interface MessageSourceMap {
     'cordis-host-runner': { kind: 'cordis-host-runner' }
   }
 }
 
-import { TypertRemoteService, Remote } from '@deepseek-ai/dsh-typert-protocol'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+import { TypertRemoteService, Remote } from '@fde2e/len-typert-protocol'
+import type { JsonValue } from '@fde2e/len-util-values'
 import { isPlugin, normalizeHandler } from './guard.ts'
 import { CordisInspectRegistryService } from './inspect-registry.ts'
 import { missingServices, startHostHalf } from './lifecycle.ts'

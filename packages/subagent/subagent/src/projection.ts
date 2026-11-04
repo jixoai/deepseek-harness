@@ -2,13 +2,13 @@
  * Pure session projections for subagent identity (mode/label) and active-turn
  * duration.
  *
- * @module @deepseek-ai/dsh-subagent/projection
+ * @module @fde2e/len-subagent/projection
  */
 
 import { z } from 'zod'
-import { SessionSeq } from '@deepseek-ai/dsh-session'
-import type { ProjectionDefinition } from '@deepseek-ai/dsh-session-projection'
-import type { SessionEvent } from '@deepseek-ai/dsh-session'
+import { SessionSeq } from '@fde2e/len-session'
+import type { ProjectionDefinition } from '@fde2e/len-session-projection'
+import type { SessionEvent } from '@fde2e/len-session'
 import { foldSubagentDescriptor } from './descriptor.ts'
 import type { SubagentDescriptorData } from './descriptor.ts'
 import type { SubagentIdentityProjection, SubagentTimingProjection } from './projection-types.ts'

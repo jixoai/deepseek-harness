@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-host-plugin-inventory",
+  "name": "@fde2e/len-host-plugin-inventory",
   "description": "Read-only Remote projection of current Cordis Loader plugin state",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -50,23 +50,23 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent-preset-registry": "workspace:*",
-    "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-agent-preset-registry": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/dsh-agent-preset-registry": {
+    "@fde2e/len-agent-preset-registry": {
       "optional": true
     }
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-app-boot": "workspace:*",
-    "@deepseek-ai/dsh-package-manifest": "workspace:*",
+    "@fde2e/len-app-boot": "workspace:*",
+    "@fde2e/len-package-manifest": "workspace:*",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent-preset-registry": "workspace:*",
-    "@deepseek-ai/dsh-brand": "workspace:*",
-    "@deepseek-ai/dsh-typert-protocol": "workspace:*",
+    "@fde2e/len-agent-preset-registry": "workspace:*",
+    "@fde2e/len-brand": "workspace:*",
+    "@fde2e/len-typert-protocol": "workspace:*",
     "@deepseek-ai/cordis": "workspace:~"
   }
 }

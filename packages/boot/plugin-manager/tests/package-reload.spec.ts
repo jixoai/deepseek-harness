@@ -10,8 +10,8 @@ import {
   boot, createRuntimeResolution, initProfile, loadProfileDirectory, PluginPackages, ProfileRuntimeResolution,
   readProfileManifest, readProfilePatches, type ProfileContext,
   ResolutionRestartRequired,
-} from '@deepseek-ai/dsh-app-boot'
-import Hmr from '@deepseek-ai/dsh-hmr'
+} from '@fde2e/len-app-boot'
+import Hmr from '@fde2e/len-hmr'
 import type { ChokidarOptions } from 'chokidar'
 import { expect, it, onTestFinished, vi } from 'vitest'
 import PluginManager, { type PluginInstallRequestId } from '../src/index.ts'

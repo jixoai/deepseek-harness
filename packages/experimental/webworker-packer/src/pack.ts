@@ -13,7 +13,7 @@
  * This module holds no repository knowledge: paths, globs, and the roster come in as
  * parameters, so the same library packs a different tree by being called
  * differently. Locating those inputs is the CLI's job.
- * @module @deepseek-ai/dsh-experimental-webworker-packer/src/pack
+ * @module @fde2e/len-experimental-webworker-packer/src/pack
  */
 import { createHash } from 'node:crypto'
 import { existsSync, readFileSync, readdirSync, realpathSync } from 'node:fs'
@@ -26,15 +26,15 @@ import {
   IMAGE_OVERLAY_DIRECTORIES,
   MODULE_PROXIES, MODULE_PROXY_PREFIXES, REPLACED_EXTERNAL_PACKAGES,
   type ImageLazyArchive, type ImageManifest,
-} from '@deepseek-ai/dsh-experimental-webworker-runtime'
+} from '@fde2e/len-experimental-webworker-runtime'
 import picomatch from 'picomatch'
 import yaml from 'js-yaml'
 import { entryListSchema, type PatchOptions } from '@deepseek-ai/cordis-plugin-include'
-import { PROFILE_PATCH_FILENAME } from '@deepseek-ai/dsh-app-boot'
+import { PROFILE_PATCH_FILENAME } from '@fde2e/len-app-boot'
 import { WRAPPER_CONTRACT, type ImageFiles, type TransformOutcome } from './transform-image.ts'
 import { EXCLUDE, EXCLUDE_WORKSPACE, IMAGE_ENTRY_SEEDS, PAGE_ASSETS } from './rules.ts'
 
-export { DEFAULT_ROOT } from '@deepseek-ai/dsh-experimental-webworker-runtime'
+export { DEFAULT_ROOT } from '@fde2e/len-experimental-webworker-runtime'
 
 /** Image path of the manifest; the layout contract's name, re-exported for callers. */
 export const MANIFEST_PATH: string = IMAGE_MANIFEST_PATH

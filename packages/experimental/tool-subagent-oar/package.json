@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-experimental-tool-subagent-oar",
+  "name": "@fde2e/len-experimental-tool-subagent-oar",
   "description": "Delegate standalone tasks to configured external subagent providers",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -30,8 +30,8 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*"
+    "@fde2e/len-subagent": "workspace:*",
+    "@fde2e/len-tools": "workspace:*"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "workspace:~"
@@ -39,11 +39,11 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
     "@deepseek-ai/cordis-plugin-loader": "workspace:~",
-    "@deepseek-ai/dsh-agent-loop-testkit": "workspace:*",
-    "@deepseek-ai/dsh-llm": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-subagent": "workspace:*",
-    "@deepseek-ai/dsh-tools": "workspace:*",
-    "@deepseek-ai/dsh-tool-testkit": "workspace:*"
+    "@fde2e/len-agent-loop-testkit": "workspace:*",
+    "@fde2e/len-llm": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-subagent": "workspace:*",
+    "@fde2e/len-tools": "workspace:*",
+    "@fde2e/len-tool-testkit": "workspace:*"
   }
 }

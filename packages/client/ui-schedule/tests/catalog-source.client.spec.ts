@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
-import type { RemoteResult } from '@deepseek-ai/dsh-api-remotes/client'
-import { RemoteError } from '@deepseek-ai/dsh-client-test-runtime'
-import type { ScheduleDeleteResult, ScheduleId, ScheduleRecord } from '@deepseek-ai/dsh-schedule/client'
+import type { RemoteResult } from '@fde2e/len-api-remotes/client'
+import { RemoteError } from '@fde2e/len-client-test-runtime'
+import type { ScheduleDeleteResult, ScheduleId, ScheduleRecord } from '@fde2e/len-schedule/client'
 import { createCatalogSource } from '../src/client/catalog-source.ts'
 
 const id = 'reminder' as ScheduleId

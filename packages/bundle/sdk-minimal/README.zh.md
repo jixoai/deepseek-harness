@@ -3,7 +3,7 @@ description: "独立 SDK profile，提供持久 shell、图片读取、自动上
 kind: "package-bundle"
 ---
 
-# `@deepseek-ai/dsh-sdk-minimal`
+# `@fde2e/len-sdk-minimal`
 
 [English](README.md) | 中文
 

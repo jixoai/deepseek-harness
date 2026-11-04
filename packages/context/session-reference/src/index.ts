@@ -2,24 +2,24 @@
  * Cross-session snapshot preparation. Hosts adapt mentions into structured
  * references; this service owns exact reads, projection, budgets, and durable context.
  *
- * @module @deepseek-ai/dsh-session-reference
+ * @module @fde2e/len-session-reference
  */
 
 import { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
-import type { Agent, PreStepDecision } from '@deepseek-ai/dsh-agent'
-import { Remote, TypertRemoteService } from '@deepseek-ai/dsh-typert-protocol'
-import { createUserMessage, freezeMessage, LlmError } from '@deepseek-ai/dsh-llm'
-import type { ContentBlock, LlmCallConfig, LlmResolvedModelInfo, UserMessage } from '@deepseek-ai/dsh-llm'
-import type { SessionId } from '@deepseek-ai/dsh-session'
+import type { Agent, PreStepDecision } from '@fde2e/len-agent'
+import { Remote, TypertRemoteService } from '@fde2e/len-typert-protocol'
+import { createUserMessage, freezeMessage, LlmError } from '@fde2e/len-llm'
+import type { ContentBlock, LlmCallConfig, LlmResolvedModelInfo, UserMessage } from '@fde2e/len-llm'
+import type { SessionId } from '@fde2e/len-session'
 // Type-only: the `title` projection key plus the live registry and durable
 // cache Context merges — the two projection faces discovery labels from.
-import type { ProjectionSnapshot } from '@deepseek-ai/dsh-session-projection'
-import type {} from '@deepseek-ai/dsh-session-projection-cache'
-import type {} from '@deepseek-ai/dsh-session-title'
-import type {} from '@deepseek-ai/dsh-subagent'
-import type {} from '@deepseek-ai/dsh-system-prompt'
-import type { SessionRecord, SessionSurfaceSnapshot } from '@deepseek-ai/dsh-session-query'
+import type { ProjectionSnapshot } from '@fde2e/len-session-projection'
+import type {} from '@fde2e/len-session-projection-cache'
+import type {} from '@fde2e/len-session-title'
+import type {} from '@fde2e/len-subagent'
+import type {} from '@fde2e/len-system-prompt'
+import type { SessionRecord, SessionSurfaceSnapshot } from '@fde2e/len-session-query'
 import { prepareReferenceOmission, REFERENCE_WARNING } from './spill.ts'
 import {
   DEFAULT_CANDIDATE_LIMIT,

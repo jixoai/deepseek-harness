@@ -15,10 +15,10 @@ import { TimerService } from '@deepseek-ai/cordis-plugin-timer'
 import type {
   ApprovalRequestId, CordisDynamicPluginId, DynamicCordisInvokeResult,
   DynamicCordisInventoryRow,
-} from '@deepseek-ai/dsh-api-remotes/client'
-import type { ClientModuleSystem } from '@deepseek-ai/dsh-client-modules/client'
-import type { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import type { JsonValue } from '@deepseek-ai/dsh-util-values'
+} from '@fde2e/len-api-remotes/client'
+import type { ClientModuleSystem } from '@fde2e/len-client-modules/client'
+import type { SlotRegistry } from '@fde2e/len-client-ui-renderer/client'
+import type { JsonValue } from '@fde2e/len-util-values'
 // The Client Remote assembly is the one place the two planes meet: it mounts the
 // `dynamicCordisRunner` namespace and re-exports its payload vocabulary, so this
 // package names what it sends without importing a Host package.
@@ -54,7 +54,7 @@ export type { DynamicCordisGuardEnv, DynamicCordisSlotLedgerRow } from './guard.
 export type {
   ApprovalRequestId, CordisDynamicPackageId, CordisDynamicPluginId, CordisDynamicPluginRunId,
   DynamicCordisPackage,
-} from '@deepseek-ai/dsh-api-remotes/client'
+} from '@fde2e/len-api-remotes/client'
 
 
 /**

@@ -1,5 +1,5 @@
 /** Optional bundles through the shipped Web Loader, live package manager, and real Agent loop. */
-import { executeToolFixture } from '@deepseek-ai/dsh-tool-testkit'
+import { executeToolFixture } from '@fde2e/len-tool-testkit'
 import { randomUUID } from 'node:crypto'
 import { existsSync } from 'node:fs'
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
@@ -8,29 +8,29 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { Context } from '@deepseek-ai/cordis'
-import type { Agent, AgentHandle } from '@deepseek-ai/dsh-agent'
-import type { ProfileContext } from '@deepseek-ai/dsh-app-boot'
-import { LlmAdapter, ToolCallId, createUserMessage } from '@deepseek-ai/dsh-llm'
-import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@deepseek-ai/dsh-llm'
-import { SessionId } from '@deepseek-ai/dsh-session'
-import type {} from '@deepseek-ai/dsh-agent-preset-registry'
-import type {} from '@deepseek-ai/dsh-hmr'
-import type {} from '@deepseek-ai/dsh-plugin-manager'
-import type {} from '@deepseek-ai/dsh-permission-presets'
-import type {} from '@deepseek-ai/dsh-session-title-llm'
-import type {} from '@deepseek-ai/dsh-skill'
-import type {} from '@deepseek-ai/dsh-tools'
+import type { Agent, AgentHandle } from '@fde2e/len-agent'
+import type { ProfileContext } from '@fde2e/len-app-boot'
+import { LlmAdapter, ToolCallId, createUserMessage } from '@fde2e/len-llm'
+import type { GenerateOptions, LlmResolvedModelInfo, StreamChunk } from '@fde2e/len-llm'
+import { SessionId } from '@fde2e/len-session'
+import type {} from '@fde2e/len-agent-preset-registry'
+import type {} from '@fde2e/len-hmr'
+import type {} from '@fde2e/len-plugin-manager'
+import type {} from '@fde2e/len-permission-presets'
+import type {} from '@fde2e/len-session-title-llm'
+import type {} from '@fde2e/len-skill'
+import type {} from '@fde2e/len-tools'
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest'
 import { textResponse, toolCallResponse } from '../../../packages/core/agent-loop/tests/mock-adapter.ts'
 
 const root = fileURLToPath(new URL('../../..', import.meta.url))
 const installAnchor = join(root, 'apps/cli/package.json')
 const bundles = {
-  search: '@deepseek-ai/dsh-experimental-session-search',
-  ralph: '@deepseek-ai/dsh-experimental-ralph-bundle',
-  terminal: '@deepseek-ai/dsh-experimental-terminal-bundle',
-  badge: '@deepseek-ai/dsh-experimental-badge-skill-bundle',
-  titles: '@deepseek-ai/dsh-experimental-session-titles-bundle',
+  search: '@fde2e/len-experimental-session-search',
+  ralph: '@fde2e/len-experimental-ralph-bundle',
+  terminal: '@fde2e/len-experimental-terminal-bundle',
+  badge: '@fde2e/len-experimental-badge-skill-bundle',
+  titles: '@fde2e/len-experimental-session-titles-bundle',
 } as const
 type Response = StreamChunk[] | ((request: GenerateOptions) => StreamChunk[])
 
@@ -83,10 +83,10 @@ describe.skipIf(!existsSync(join(root, 'apps/cli/lib/bin.js')))('Official option
     originalEnvironment = Object.fromEntries(Object.keys(values).map(key => [key, process.env[key]]))
     Object.assign(process.env, values)
     const require = createRequire(import.meta.url)
-    const app = require(join(root, 'packages/boot/app-boot/lib/index.js')) as typeof import('@deepseek-ai/dsh-app-boot')
-    const cmdline = require(join(root, 'packages/boot/cmdline/lib/index.js')) as typeof import('@deepseek-ai/dsh-cmdline')
+    const app = require(join(root, 'packages/boot/app-boot/lib/index.js')) as typeof import('@fde2e/len-app-boot')
+    const cmdline = require(join(root, 'packages/boot/cmdline/lib/index.js')) as typeof import('@fde2e/len-cmdline')
     const directory = join(home, 'profiles', 'web')
-    app.initProfile(directory, ['@deepseek-ai/dsh-base', '@deepseek-ai/dsh-web-app'])
+    app.initProfile(directory, ['@fde2e/len-base', '@fde2e/len-web-app'])
     await writeFile(join(directory, 'cordis.yml'), '[]\n')
     await writeFile(join(directory, 'cordis.patch.yml'), JSON.stringify([
       { id: 'agent-default-model', config: { provider: 'bundle-test', model: 'scripted' } },

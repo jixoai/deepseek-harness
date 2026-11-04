@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { contextMenuHook } from '@deepseek-ai/dsh-client-test-runtime'
+import { contextMenuHook } from '@fde2e/len-client-test-runtime'
 /**
  * View registration acceptance on the real framework stack: the plugin fiber
  * registers Trajectory into a real SlotRegistry view ring, tabs
@@ -8,41 +8,41 @@ import { contextMenuHook } from '@deepseek-ai/dsh-client-test-runtime'
  * event ledger with its timing overview, and fiber disposal removes the tab.
  * Timeline projection and inclusive focus edge cases ride along.
  */
-import type { GlobalStandardProps, PropsRenderSlots } from '@deepseek-ai/dsh-client-ui-slots'
+import type { GlobalStandardProps, PropsRenderSlots } from '@fde2e/len-client-ui-slots'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { createElement, type ComponentProps, type FC, type ReactNode } from 'react'
-import { allowAllAccess, bindSnapshotSelector, SlotTestRuntime, stubConfigForm } from '@deepseek-ai/dsh-client-test-runtime'
-import { resolveSlotLabel } from '@deepseek-ai/dsh-client-ui-slots'
+import { allowAllAccess, bindSnapshotSelector, SlotTestRuntime, stubConfigForm } from '@fde2e/len-client-test-runtime'
+import { resolveSlotLabel } from '@fde2e/len-client-ui-slots'
 import {
   EMPTY_CONVERSATION_SNAPSHOT, UiConversation,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
+} from '@fde2e/len-client-ui-conversation/client'
 import type {
   ConversationBinding, ConversationSnapshot, ConversationViewSnapshotMap, ConvViewProps,
   InputActions, InputState, RequestView, ViewTab,
-} from '@deepseek-ai/dsh-client-ui-conversation/client'
-import { EMPTY_CHAT_SNAPSHOT } from '@deepseek-ai/dsh-client-ui-chat/client'
+} from '@fde2e/len-client-ui-conversation/client'
+import { EMPTY_CHAT_SNAPSHOT } from '@fde2e/len-client-ui-chat/client'
 import type {
   ChatSnapshot, LegacyConversationSlice,
-} from '@deepseek-ai/dsh-client-ui-chat/client'
-import { SlotRegistry } from '@deepseek-ai/dsh-client-ui-renderer/client'
-import { createSnapshotStore } from '@deepseek-ai/dsh-client-store'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+} from '@fde2e/len-client-ui-chat/client'
+import { SlotRegistry } from '@fde2e/len-client-ui-renderer/client'
+import { createSnapshotStore } from '@fde2e/len-client-store'
+import type { ObservableSnapshot } from '@fde2e/len-client-store'
 import type {
   SessionBinding, SessionListState, SessionProjectionMap, SessionSnapshot, UseProjection,
-} from '@deepseek-ai/dsh-api-session-controller/client'
-import type { WorkspaceSnapshot } from '@deepseek-ai/dsh-api-workspace-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { SessionStatusSnapshot } from '@deepseek-ai/dsh-client-ui-session/client'
+} from '@fde2e/len-api-session-controller/client'
+import type { WorkspaceSnapshot } from '@fde2e/len-api-workspace-controller/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { SessionStatusSnapshot } from '@fde2e/len-client-ui-session/client'
 import {
   ConversationSession, ConversationSessionHeader,
   type ConversationSessionHeaderProps, type ConversationSessionProps,
-} from '@deepseek-ai/dsh-client-ui-conversation/src/client/skeleton/ConversationSession.tsx'
-import { createConversationStore } from '@deepseek-ai/dsh-client-ui-conversation/src/client/stores.ts'
-import { zh as conversationZh } from '@deepseek-ai/dsh-client-ui-conversation/src/client/locales.ts'
-import * as localePlugin from '@deepseek-ai/dsh-client-locale/client'
-import { apply, inject } from '@deepseek-ai/dsh-client-ui-trajectory/client'
-import { PartialArguments } from '@deepseek-ai/dsh-util-values'
+} from '@fde2e/len-client-ui-conversation/src/client/skeleton/ConversationSession.tsx'
+import { createConversationStore } from '@fde2e/len-client-ui-conversation/src/client/stores.ts'
+import { zh as conversationZh } from '@fde2e/len-client-ui-conversation/src/client/locales.ts'
+import * as localePlugin from '@fde2e/len-client-locale/client'
+import { apply, inject } from '@fde2e/len-client-ui-trajectory/client'
+import { PartialArguments } from '@fde2e/len-util-values'
 import type { TrajectoryTurnModel } from '../src/client/layout.ts'
 import { TrajectoryTimeline as LocalizedTrajectoryTimeline } from '../src/client/TrajectoryTimeline.tsx'
 import {

@@ -3,7 +3,7 @@ description: "web 访问服务（ctx.web）：部署方与插件作者如何通�
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-web
+# @fde2e/len-web
 
 [English](README.md) | 中文
 
@@ -36,11 +36,11 @@ kind: "package-reference"
 加载服务并让唯一挂载的后端自动选择，或用 `searchProvider`／`fetchProvider` 固定提供方 id。环境变量 `$DSH_WEB_SEARCH_PROVIDER` 与 `$DSH_WEB_FETCH_PROVIDER` 提供相同字段，不是另一条优先级链。下面两个后端都注册了抓取提供方，因此示例固定 `fetchProvider: http`。
 
 ```yaml
-- name: '@deepseek-ai/dsh-web'
+- name: '@fde2e/len-web'
   config:
     fetchProvider: http
-- name: '@deepseek-ai/dsh-web-deepseek-api'
-- name: '@deepseek-ai/dsh-web-fetch-http'
+- name: '@fde2e/len-web-deepseek-api'
+- name: '@fde2e/len-web-fetch-http'
 ```
 
 | 字段 | 默认值 | 含义 |

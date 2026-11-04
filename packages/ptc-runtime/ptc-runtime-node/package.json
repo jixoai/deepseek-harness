@@ -1,5 +1,5 @@
 {
-  "name": "@deepseek-ai/dsh-ptc-runtime-node",
+  "name": "@fde2e/len-ptc-runtime-node",
   "description": "Node PTC execution with async function, REPL and VM Script evaluators and optional retained state",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
@@ -40,16 +40,16 @@
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*"
+    "@fde2e/len-ptc-runtime": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-timeout": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-subprocess": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-util-values": "workspace:*",
+    "@fde2e/len-util-values": "workspace:*",
     "@deepseek-ai/schemastery": "workspace:~",
     "acorn": "^8.18.0",
     "acorn-walk": "^8.3.5",
@@ -57,16 +57,16 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
-    "@deepseek-ai/dsh-ptc-runtime": "workspace:*",
-    "@deepseek-ai/dsh-session": "workspace:*",
-    "@deepseek-ai/dsh-timeout": "workspace:*",
-    "@deepseek-ai/dsh-fs": "workspace:*",
-    "@deepseek-ai/dsh-subprocess": "workspace:*",
-    "@deepseek-ai/dsh-sandbox": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-policy": "workspace:*",
-    "@deepseek-ai/dsh-fs-local": "workspace:*",
-    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
-    "@deepseek-ai/dsh-session-projection": "workspace:*",
-    "@deepseek-ai/dsh-sandbox-local": "workspace:*"
+    "@fde2e/len-ptc-runtime": "workspace:*",
+    "@fde2e/len-session": "workspace:*",
+    "@fde2e/len-timeout": "workspace:*",
+    "@fde2e/len-fs": "workspace:*",
+    "@fde2e/len-subprocess": "workspace:*",
+    "@fde2e/len-sandbox": "workspace:*",
+    "@fde2e/len-sandbox-policy": "workspace:*",
+    "@fde2e/len-fs-local": "workspace:*",
+    "@fde2e/len-subprocess-local": "workspace:*",
+    "@fde2e/len-session-projection": "workspace:*",
+    "@fde2e/len-sandbox-local": "workspace:*"
   }
 }

@@ -3,7 +3,7 @@ description: "Serve the experimental forge registry for GitHub hosts through the
 kind: "package-reference"
 ---
 
-# @deepseek-ai/dsh-experimental-forge-github
+# @fde2e/len-experimental-forge-github
 
 English | [中文](README.zh.md)
 
@@ -28,8 +28,8 @@ Read GitHub and GitHub Enterprise pull requests for `ctx.forge` with the GitHub 
 Mount the provider after the forge registry and list every GitHub Enterprise host explicitly.
 
 ```yaml
-- name: '@deepseek-ai/dsh-experimental-forge'
-- name: '@deepseek-ai/dsh-experimental-forge-github'
+- name: '@fde2e/len-experimental-forge'
+- name: '@fde2e/len-experimental-forge-github'
   config:
     hosts: [github.com, ghe.example.com]
 ```

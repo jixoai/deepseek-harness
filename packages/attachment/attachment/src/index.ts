@@ -1,4 +1,4 @@
-/** Durable attachment storage seam (`ctx.attachments`). @module @deepseek-ai/dsh-attachment */
+/** Durable attachment storage seam (`ctx.attachments`). @module @fde2e/len-attachment */
 
 import { Buffer } from 'node:buffer'
 import { Context, Service } from '@deepseek-ai/cordis'

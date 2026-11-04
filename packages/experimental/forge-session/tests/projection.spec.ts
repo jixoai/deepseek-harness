@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { createAssistantMessage, createToolResultMessage, ToolCallId } from '@deepseek-ai/dsh-llm'
-import { appendPluginRecord, Session, SessionId, SessionSeq } from '@deepseek-ai/dsh-session'
+import { createAssistantMessage, createToolResultMessage, ToolCallId } from '@fde2e/len-llm'
+import { appendPluginRecord, Session, SessionId, SessionSeq } from '@fde2e/len-session'
 import { forgeChangeRequestsProjection } from '../src/projection.ts'
 import type { ForgeChangeRequestsState } from '../src/index.ts'
 import { pullUrl, pushOutput, shellTurn } from './fixtures.ts'

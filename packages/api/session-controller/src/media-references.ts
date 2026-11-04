@@ -4,14 +4,14 @@
  * the connection service authenticates requests before this handler. A request
  * without the current `v` version is redirected, uncached, to the versioned URL,
  * whose response is cacheable indefinitely.
- * @module @deepseek-ai/dsh-api-session-controller/media-references
+ * @module @fde2e/len-api-session-controller/media-references
  */
 
 import { isAbsolute } from 'node:path'
 import type { Context } from '@deepseek-ai/cordis'
-import type {} from '@deepseek-ai/dsh-client-connection'
-import type {} from '@deepseek-ai/dsh-attachment'
-import { FsError, type FileSystem } from '@deepseek-ai/dsh-fs'
+import type {} from '@fde2e/len-client-connection'
+import type {} from '@fde2e/len-attachment'
+import { FsError, type FileSystem } from '@fde2e/len-fs'
 import mime from 'mime-types'
 
 const BASE_HEADERS = {

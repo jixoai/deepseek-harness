@@ -1,5 +1,5 @@
 /** Host registration for browser conversation preferences. */
-import type {} from '@deepseek-ai/dsh-settings'
+import type {} from '@fde2e/len-settings'
 
 import type { Volatile, Context } from '@deepseek-ai/cordis'
 import type { BusyEnterBehavior } from './submission-settings.ts'

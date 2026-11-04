@@ -1,19 +1,19 @@
 /**
  * Persistent shell PTY backend over the subprocess terminal primitive, shared
  * sandbox policy, bounded output, and provider-owned session cleanup.
- * @module @deepseek-ai/dsh-terminal-bash
+ * @module @fde2e/len-terminal-bash
  */
 
-import type {} from '@deepseek-ai/dsh-working-directory'
+import type {} from '@fde2e/len-working-directory'
 import { Context } from '@deepseek-ai/cordis'
-import type { Agent } from '@deepseek-ai/dsh-agent'
-import type { Session, SessionEvent } from '@deepseek-ai/dsh-session'
-import { TerminalBackendCleanupError } from '@deepseek-ai/dsh-terminal'
-import type { TerminalBackend, TerminalBackendSpawnSpec, TerminalSendOperation } from '@deepseek-ai/dsh-terminal'
-import type { SubprocessTerminalHandle, SubprocessTerminalSpawnSpec } from '@deepseek-ai/dsh-subprocess'
-import type { SandboxExecutionPolicy } from '@deepseek-ai/dsh-sandbox'
-import type {} from '@deepseek-ai/dsh-sandbox-policy'
-import { ENCODING_PREAMBLE } from '@deepseek-ai/dsh-pwsh-local'
+import type { Agent } from '@fde2e/len-agent'
+import type { Session, SessionEvent } from '@fde2e/len-session'
+import { TerminalBackendCleanupError } from '@fde2e/len-terminal'
+import type { TerminalBackend, TerminalBackendSpawnSpec, TerminalSendOperation } from '@fde2e/len-terminal'
+import type { SubprocessTerminalHandle, SubprocessTerminalSpawnSpec } from '@fde2e/len-subprocess'
+import type { SandboxExecutionPolicy } from '@fde2e/len-sandbox'
+import type {} from '@fde2e/len-sandbox-policy'
+import { ENCODING_PREAMBLE } from '@fde2e/len-pwsh-local'
 import { type Config, type ResolvedConfig, resolveConfig, type ShellDialect, validateConfig } from './config.ts'
 import { LocalPtySession } from './session.ts'
 import { CONTROLLED_PROMPT } from './sanitize.ts'

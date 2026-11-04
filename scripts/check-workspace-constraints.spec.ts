@@ -25,14 +25,14 @@ import {
 const experimental = {
   dir: 'packages/experimental/prototype',
   manifest: {
-    name: '@deepseek-ai/dsh-experimental-prototype',
+    name: '@fde2e/len-experimental-prototype',
     publishConfig: { access: 'public' },
   },
 } satisfies WorkspaceManifest
 
 describe('workspace dependency ranges', () => {
-  const dependency = { dir: 'packages/core/runtime', manifest: { name: '@deepseek-ai/dsh-runtime' } }
-  const cli = { dir: 'apps/cli', manifest: { name: '@deepseek-ai/dsh' } }
+  const dependency = { dir: 'packages/core/runtime', manifest: { name: '@fde2e/len-runtime' } }
+  const cli = { dir: 'apps/cli', manifest: { name: '@fde2e/len' } }
   const vendor = { dir: 'vendor/cordis', manifest: { name: '@deepseek-ai/cordis' } }
   const native = { dir: 'native/system', manifest: { name: '@deepseek-ai/node-addon-system' } }
   const platform = { dir: 'native/system/packages/darwin-arm64', manifest: { name: '@deepseek-ai/node-addon-system-darwin-arm64' } }
@@ -51,7 +51,7 @@ describe('workspace dependency ranges', () => {
         })
         const check = (name: string, range: string): string[] =>
           checkWorkspaceProtocol([dependency, cli, vendor, native, platform, unrelated, consumer(name, range)])
-        for (const name of ['@deepseek-ai/dsh', '@deepseek-ai/dsh-runtime']) {
+        for (const name of ['@fde2e/len', '@fde2e/len-runtime']) {
           expect(check(name, 'workspace:*')).toEqual([])
           for (const range of ['workspace:^', 'workspace:~', 'workspace:^0.1.7', '^0.1.7', '*']) {
             expect(check(name, range)).toEqual([
@@ -91,13 +91,13 @@ describe('workspace manifest discovery', () => {
     for (const dir of [...consumers, 'tools/excluded', 'unlisted/probe', 'packages/core/runtime']) {
       mkdirSync(join(root, dir), { recursive: true })
       writeFileSync(join(root, dir, 'package.json'), JSON.stringify(dir === 'packages/core/runtime'
-        ? { name: '@deepseek-ai/dsh-runtime' }
-        : { dependencies: { '@deepseek-ai/dsh-runtime': 'workspace:^' } }))
+        ? { name: '@fde2e/len-runtime' }
+        : { dependencies: { '@fde2e/len-runtime': 'workspace:^' } }))
     }
     const manifests = readWorkspaceManifests(root)
     expect(manifests.map(entry => entry.dir).sort()).toEqual([...consumers, 'packages/core/runtime'].sort())
     expect(checkWorkspaceProtocol(manifests).sort()).toEqual(consumers.map(dir =>
-      `${dir}: dependencies.@deepseek-ai/dsh-runtime must use workspace:*, got workspace:^`).sort())
+      `${dir}: dependencies.@fde2e/len-runtime must use workspace:*, got workspace:^`).sort())
   })
 
   it.each(['', 'null', '{}', 'packages: []', 'packages: [false]', 'packages: [""]', 'packages: wrong'])(
@@ -121,9 +121,9 @@ describe('experimental workspace constraints', () => {
   it('requires the experimental package-name prefix', () => {
     expect(checkExperimentalManifest({
       ...experimental,
-      manifest: { ...experimental.manifest, name: '@deepseek-ai/dsh-prototype' },
+      manifest: { ...experimental.manifest, name: '@fde2e/len-prototype' },
     })).toEqual([
-      '@deepseek-ai/dsh-prototype: experimental package name must start with "@deepseek-ai/dsh-experimental-" or match its declared directory exception',
+      '@fde2e/len-prototype: experimental package name must start with "@fde2e/len-experimental-" or match its declared directory exception',
     ])
   })
 
@@ -144,7 +144,7 @@ describe('experimental workspace constraints', () => {
     const [first, ...rest] = manifests
     for (const invalid of [
       rest,
-      [{ ...first!, manifest: { name: '@deepseek-ai/dsh-experimental-replacement' } }, ...rest],
+      [{ ...first!, manifest: { name: '@fde2e/len-experimental-replacement' } }, ...rest],
       [{ ...first!, dir: 'packages/core/replacement' }, ...rest],
       [...manifests, { ...first!, dir: 'packages/experimental/duplicate' }],
     ]) expect(checkExperimentalNameExceptions(invalid)).toEqual([expect.stringContaining(first!.manifest.name)])
@@ -153,7 +153,7 @@ describe('experimental workspace constraints', () => {
   it.each(Object.values(EXPERIMENTAL_PACKAGE_NAME_EXCEPTIONS))('rejects retained runtime names and aliases: %s', (name) => {
     for (const dependencies of [{ [name]: 'workspace:*' }, { alias: `npm:${name}@1.0.0` }, { alias: `workspace:${name}@*` }]) {
       expect(checkExperimentalDependencyIsolation([{
-        dir: 'apps/cli', manifest: { name: '@deepseek-ai/dsh', dependencies },
+        dir: 'apps/cli', manifest: { name: '@fde2e/len', dependencies },
       }], [])).toEqual([expect.stringContaining('must not reference an experimental package')])
     }
   })
@@ -164,8 +164,8 @@ describe('experimental workspace constraints', () => {
       ...experimental,
       manifest: { name: experimental.manifest.name, private: true },
     })).toEqual([
-      '@deepseek-ai/dsh-experimental-prototype: public experimental package must not set "private": true',
-      '@deepseek-ai/dsh-experimental-prototype: public experimental package must set publishConfig.access to "public"',
+      '@fde2e/len-experimental-prototype: public experimental package must not set "private": true',
+      '@fde2e/len-experimental-prototype: public experimental package must set publishConfig.access to "public"',
     ])
   })
 
@@ -204,28 +204,28 @@ describe('experimental workspace constraints', () => {
       expect(checkExperimentalDependencyIsolation([experimental, {
         dir: 'packages/core/consumer',
         manifest: {
-          name: '@deepseek-ai/dsh-consumer',
-          [section]: { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' },
+          name: '@fde2e/len-consumer',
+          [section]: { '@fde2e/len-experimental-prototype': 'workspace:^' },
         },
       }])).toEqual([
-        `@deepseek-ai/dsh-consumer: ${section}.@deepseek-ai/dsh-experimental-prototype must not reference an experimental package`,
+        `@fde2e/len-consumer: ${section}.@fde2e/len-experimental-prototype must not reference an experimental package`,
       ])
     },
   )
 
   it('allows the dsh installation to ship the optional bundles the launcher names, and nothing else experimental', () => {
-    const listed = { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' }
-    const installation = { dir: 'apps/cli', manifest: { name: '@deepseek-ai/dsh', dependencies: listed } } satisfies WorkspaceManifest
-    expect(checkExperimentalDependencyIsolation([experimental, installation], ['@deepseek-ai/dsh-experimental-prototype'])).toEqual([])
+    const listed = { '@fde2e/len-experimental-prototype': 'workspace:^' }
+    const installation = { dir: 'apps/cli', manifest: { name: '@fde2e/len', dependencies: listed } } satisfies WorkspaceManifest
+    expect(checkExperimentalDependencyIsolation([experimental, installation], ['@fde2e/len-experimental-prototype'])).toEqual([])
     expect(checkExperimentalDependencyIsolation([experimental, installation], [])).toEqual([
-      '@deepseek-ai/dsh: dependencies.@deepseek-ai/dsh-experimental-prototype must not reference an experimental package',
+      '@fde2e/len: dependencies.@fde2e/len-experimental-prototype must not reference an experimental package',
     ])
     // Only a plain dependency edge is offered; a peer would make the bundle a requirement of every consumer.
     expect(checkExperimentalDependencyIsolation([experimental, {
       dir: 'apps/cli',
-      manifest: { name: '@deepseek-ai/dsh', peerDependencies: listed },
-    }], ['@deepseek-ai/dsh-experimental-prototype'])).toEqual([
-      '@deepseek-ai/dsh: peerDependencies.@deepseek-ai/dsh-experimental-prototype must not reference an experimental package',
+      manifest: { name: '@fde2e/len', peerDependencies: listed },
+    }], ['@fde2e/len-experimental-prototype'])).toEqual([
+      '@fde2e/len: peerDependencies.@fde2e/len-experimental-prototype must not reference an experimental package',
     ])
   })
 
@@ -233,25 +233,25 @@ describe('experimental workspace constraints', () => {
     const manifests: WorkspaceManifest[] = [experimental, {
       dir: 'packages/core/test-only',
       manifest: {
-        name: '@deepseek-ai/dsh-test-only',
-        devDependencies: { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' },
+        name: '@fde2e/len-test-only',
+        devDependencies: { '@fde2e/len-experimental-prototype': 'workspace:^' },
       },
     }, {
       dir: 'packages/experimental/consumer',
       manifest: {
-        name: '@deepseek-ai/dsh-experimental-consumer',
-        dependencies: { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' },
+        name: '@fde2e/len-experimental-consumer',
+        dependencies: { '@fde2e/len-experimental-prototype': 'workspace:^' },
       },
     }, {
       dir: 'python/sdk-runtime',
       manifest: {
-        name: '@deepseek-ai/dsh-python-runtime',
-        dependencies: { '@deepseek-ai/dsh-experimental-prototype': 'workspace:^' },
+        name: '@fde2e/len-python-runtime',
+        dependencies: { '@fde2e/len-experimental-prototype': 'workspace:^' },
       },
     }]
 
     expect(checkExperimentalDependencyIsolation(manifests)).toEqual([
-      '@deepseek-ai/dsh-python-runtime: dependencies.@deepseek-ai/dsh-experimental-prototype must not reference an experimental package',
+      '@fde2e/len-python-runtime: dependencies.@fde2e/len-experimental-prototype must not reference an experimental package',
     ])
   })
 })
@@ -259,21 +259,21 @@ describe('experimental workspace constraints', () => {
 describe('dsh family version coherence', () => {
   it('rejects a package carrying a stale shared version', () => {
     expect(checkDshFamilyVersion(
-      { name: '@deepseek-ai/dsh-http-proxy', version: '0.1.2-alpha.5' },
+      { name: '@fde2e/len-http-proxy', version: '0.1.2-alpha.5' },
       '0.1.2-rc.1',
-    )).toBe('@deepseek-ai/dsh-http-proxy: package.json version must match root version 0.1.2-rc.1')
+    )).toBe('@fde2e/len-http-proxy: package.json version must match root version 0.1.2-rc.1')
   })
 
   it('rejects the root-named CLI app on a stale shared version', () => {
     expect(checkDshFamilyVersion(
-      { name: '@deepseek-ai/dsh', version: '0.1.2-alpha.5' },
+      { name: '@fde2e/len', version: '0.1.2-alpha.5' },
       '0.1.2-rc.1',
-    )).toBe('@deepseek-ai/dsh: package.json version must match root version 0.1.2-rc.1')
+    )).toBe('@fde2e/len: package.json version must match root version 0.1.2-rc.1')
   })
 
   it('accepts a manifest carrying the shared version', () => {
     expect(checkDshFamilyVersion(
-      { name: '@deepseek-ai/dsh-http-proxy', version: '0.1.2-rc.1' },
+      { name: '@fde2e/len-http-proxy', version: '0.1.2-rc.1' },
       '0.1.2-rc.1',
     )).toBeUndefined()
   })
@@ -323,7 +323,7 @@ describe('package payload constraints', () => {
     { exports: { './locale/*.json': './locale/*.json', './search/locale/*.json': './locale/*.json' }, resources: ['locale/*.json'] },
     { exports: { './search/locale/*.json': './z/*.json', './locale/*.json': './a/*.json' }, resources: ['a/*.json', 'z/*.json'] },
   ])('includes declared locale resources in the canonical payload: $exports', ({ exports, resources }) => {
-    expect(expectedDshPackageFiles({ name: '@deepseek-ai/dsh-localized', exports })).toEqual([
+    expect(expectedDshPackageFiles({ name: '@fde2e/len-localized', exports })).toEqual([
       ...resources, 'lib/index.js', 'lib/types/**/*.d.ts',
     ])
   })
@@ -435,7 +435,7 @@ describe('package payload constraints', () => {
 
   it('includes a declared profile patch without a package-name allowlist', () => {
     expect(expectedDshPackageFiles({
-      name: '@deepseek-ai/dsh-private-profile',
+      name: '@fde2e/len-private-profile',
       dsh: { bundle: { patch: './cordis.patch.yml' } },
     })).toEqual([
       'lib/index.js',
@@ -443,7 +443,7 @@ describe('package payload constraints', () => {
       'lib/types/**/*.d.ts',
     ])
     expect(expectedDshPackageFiles({
-      name: '@deepseek-ai/dsh-private-profile',
+      name: '@fde2e/len-private-profile',
       dsh: { bundle: { patch: ['./cordis.patch.yml', './layers/web.patch.yml'] } },
     })).toEqual([
       'lib/index.js',
@@ -489,7 +489,7 @@ describe('package payload constraints', () => {
   it('rejects a package-asset export whose payload omits the built assets', () => {
     const dir = 'packages/client/probe'
     const manifest = {
-      name: '@deepseek-ai/dsh-client-probe',
+      name: '@fde2e/len-client-probe',
       type: 'module',
       main: 'lib/index.js',
       types: 'lib/types/index.d.ts',
@@ -506,7 +506,7 @@ describe('package payload constraints', () => {
       checkWorkspaceManifest({ dir, manifest: candidate }).filter(error => error.includes('package.json files must be'))
     expect(payloadErrors(manifest)).toEqual([])
     expect(payloadErrors({ ...manifest, files: manifest.files.filter(file => file !== 'lib/assets') })).toEqual([
-      expect.stringContaining('@deepseek-ai/dsh-client-probe: package.json files must be '
+      expect.stringContaining('@fde2e/len-client-probe: package.json files must be '
         + '["lib/index.js","lib/client.js","lib/assets","lib/types/**/*.d.ts"]'),
     ])
   })
@@ -527,7 +527,7 @@ it('publishes CLI runtime declarations and rejects a payload that omits them', (
   const manifest = JSON.parse(readFileSync(new URL('../apps/cli/package.json', import.meta.url), 'utf8')) as WorkspaceManifest['manifest']
   expect(checkWorkspaceManifest({ dir: 'apps/cli', manifest })).toEqual([])
   expect(checkWorkspaceManifest({ dir: 'apps/cli', manifest: { ...manifest, files: ['lib/*.js'] } }))
-    .toEqual([expect.stringContaining('@deepseek-ai/dsh: package.json files must be ["lib/*.js","lib/types/*.d.ts"]')])
+    .toEqual([expect.stringContaining('@fde2e/len: package.json files must be ["lib/*.js","lib/types/*.d.ts"]')])
 })
 
 it('requires the shared Web injection entry in the published payload', () => {

@@ -4,18 +4,18 @@
  * catalog subscription. Saved drafts enter the model before the first lookup
  * returns; Session-scope disposal releases the shell and its resources.
  */
-import type {} from '@deepseek-ai/dsh-client-product-analytics/client'
-import type { PlanProjection } from '@deepseek-ai/dsh-plan-mode/types'
-import type { GoalProjection } from '@deepseek-ai/dsh-goal/types'
+import type {} from '@fde2e/len-client-product-analytics/client'
+import type { PlanProjection } from '@fde2e/len-plan-mode/types'
+import type { GoalProjection } from '@fde2e/len-goal/types'
 import type { Context } from '@deepseek-ai/cordis'
 import type {
   ISessions, SessionBinding, SessionFace,
-} from '@deepseek-ai/dsh-api-session-controller/client'
-import type { SessionId } from '@deepseek-ai/dsh-session/types'
-import type { TranslateNS } from '@deepseek-ai/dsh-client-locale/client'
-import type { InboxState } from '@deepseek-ai/dsh-agent/types'
-import type { ModelSelectionProjection } from '@deepseek-ai/dsh-agent/types'
-import type { ObservableSnapshot } from '@deepseek-ai/dsh-client-store'
+} from '@fde2e/len-api-session-controller/client'
+import type { SessionId } from '@fde2e/len-session/types'
+import type { TranslateNS } from '@fde2e/len-client-locale/client'
+import type { InboxState } from '@fde2e/len-agent/types'
+import type { ModelSelectionProjection } from '@fde2e/len-agent/types'
+import type { ObservableSnapshot } from '@fde2e/len-client-store'
 import type {
   DraftAttachmentId, DraftAttachmentSerializationResult, DraftInitializationOptions, DraftInitializationResult, InputTriggerController,
   SessionInputResolver, SessionInput, SubmitOutcome,

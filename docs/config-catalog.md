@@ -9,10 +9,10 @@ Both language versions of this file are GENERATED from source (`scripts/gen-conf
 
 Each package entry labels its data with three identifiers: `inject` lists the service keys the plugin injects, so its `cordis.yml` tree must also load providers for those services; `refs` lists the referenced types that are not pasted here; `source` links the file that declares the config. Scope is the harness tier (`packages/`); the vendored cordis plugins a config tree may also load (the console logger, …) are pinned upstream source ([vendoring policy](../vendor/README.md)) and not catalogued here.
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-acp -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-acp -->
 <a id="deepseek-aidsh-acp"></a>
 
-## `@deepseek-ai/dsh-acp`
+## `@fde2e/len-acp`
 
 - `inject`: `agents` · `llm` · `sessionPersistence` · `sessions`
 - `refs`: `Stream` (`@agentclientprotocol/sdk`)
@@ -31,12 +31,12 @@ export interface AcpConfig {
   stream?: Stream
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-acp -->
+<!-- END GENERATED config-catalog:@fde2e/len-acp -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-action-cards -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-action-cards -->
 <a id="deepseek-aidsh-action-cards"></a>
 
-## `@deepseek-ai/dsh-action-cards`
+## `@fde2e/len-action-cards`
 
 - `inject`: `tools` · `agents` · `sessionProjections` · `remoteAccess`
 - `refs`: `z` (`zod`)
@@ -46,12 +46,12 @@ export interface AcpConfig {
 /** Validated card limits after schema defaults. */
 export type Config = z.infer<typeof Config>
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-action-cards -->
+<!-- END GENERATED config-catalog:@fde2e/len-action-cards -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-default-model -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-agent-default-model -->
 <a id="deepseek-aidsh-agent-default-model"></a>
 
-## `@deepseek-ai/dsh-agent-default-model`
+## `@fde2e/len-agent-default-model`
 
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
 - `source`: [`packages/core/agent-default-model/src/index.ts:24`](../packages/core/agent-default-model/src/index.ts)
@@ -67,12 +67,12 @@ export interface Config {
   reasoningEffort: Volatile<string | undefined>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-default-model -->
+<!-- END GENERATED config-catalog:@fde2e/len-agent-default-model -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-instructions -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-agent-instructions -->
 <a id="deepseek-aidsh-agent-instructions"></a>
 
-## `@deepseek-ai/dsh-agent-instructions`
+## `@fde2e/len-agent-instructions`
 
 - `inject`: `agents` · `workingDirectory`
 - `source`: [`packages/context/agent-instructions/src/config.ts:18`](../packages/context/agent-instructions/src/config.ts)
@@ -102,12 +102,12 @@ export interface Config {
   localInstructionFileCandidates?: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-instructions -->
+<!-- END GENERATED config-catalog:@fde2e/len-agent-instructions -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-loop -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-agent-loop -->
 <a id="deepseek-aidsh-agent-loop"></a>
 
-## `@deepseek-ai/dsh-agent-loop`
+## `@fde2e/len-agent-loop`
 
 - `inject`: `agents` · `sessions` · `llm` · `tools` · `systemPrompt` · `sessionProjections`
 - `refs`: [`AgentOptions`](subsystems/core.md) · [`SessionId`](subsystems/core.md) · `Volatile` (`@deepseek-ai/cosmokit`)
@@ -134,12 +134,12 @@ export interface Config {
   })[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-loop -->
+<!-- END GENERATED config-catalog:@fde2e/len-agent-loop -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-preset -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-agent-preset -->
 <a id="deepseek-aidsh-agent-preset"></a>
 
-## `@deepseek-ai/dsh-agent-preset`
+## `@fde2e/len-agent-preset`
 
 - `inject`: `agentPresets`
 - `refs`: [`PresetDefinition`](../packages/preset/agent-preset-registry/src/index.ts)
@@ -149,12 +149,12 @@ export interface Config {
 /** Definition submitted to the preset registry. */
 export type Config = PresetDefinition
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-preset -->
+<!-- END GENERATED config-catalog:@fde2e/len-agent-preset -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-preset-registry -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-agent-preset-registry -->
 <a id="deepseek-aidsh-agent-preset-registry"></a>
 
-## `@deepseek-ai/dsh-agent-preset-registry`
+## `@fde2e/len-agent-preset-registry`
 
 - `inject`: `loader` · `sessionProjections` · `agents`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -169,12 +169,12 @@ export interface Config {
   selectedDefault: Volatile<string | undefined>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-preset-registry -->
+<!-- END GENERATED config-catalog:@fde2e/len-agent-preset-registry -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-team -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-agent-team -->
 <a id="deepseek-aidsh-agent-team"></a>
 
-## `@deepseek-ai/dsh-agent-team`
+## `@fde2e/len-agent-team`
 
 - `inject`: `agents` · `sessions` · `sessionPersistence` · `sessionProjections` · `subagents`
 - `source`: [`packages/team/agent-team/src/types.ts:132`](../packages/team/agent-team/src/types.ts)
@@ -188,12 +188,12 @@ export interface Config {
   readonly maxTasks?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-team -->
+<!-- END GENERATED config-catalog:@fde2e/len-agent-team -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-agent-tool-presentation -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-agent-tool-presentation -->
 <a id="deepseek-aidsh-agent-tool-presentation"></a>
 
-## `@deepseek-ai/dsh-agent-tool-presentation`
+## `@fde2e/len-agent-tool-presentation`
 
 - `inject`: `tools`
 - `source`: [`packages/core/agent-tool-presentation/src/index.ts:25`](../packages/core/agent-tool-presentation/src/index.ts)
@@ -214,12 +214,12 @@ export interface Config {
   mode: 'native' | 'ptc'
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-agent-tool-presentation -->
+<!-- END GENERATED config-catalog:@fde2e/len-agent-tool-presentation -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-api-gateway -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-api-gateway -->
 <a id="deepseek-aidsh-api-gateway"></a>
 
-## `@deepseek-ai/dsh-api-gateway`
+## `@fde2e/len-api-gateway`
 
 - `inject`: `typert` · `remoteAccess`
 - `source`: [`packages/api/gateway/src/index.ts:158`](../packages/api/gateway/src/index.ts)
@@ -235,12 +235,12 @@ export interface Config {
   readonly websocketCompression?: 'none' | 'deflate'
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-gateway -->
+<!-- END GENERATED config-catalog:@fde2e/len-api-gateway -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-api-job-controller -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-api-job-controller -->
 <a id="deepseek-aidsh-api-job-controller"></a>
 
-## `@deepseek-ai/dsh-api-job-controller`
+## `@fde2e/len-api-job-controller`
 
 - `inject`: `jobs` · `typert`
 - `source`: [`packages/api/job-controller/src/index.ts:35`](../packages/api/job-controller/src/index.ts)
@@ -254,12 +254,12 @@ export interface Config {
   readonly observeMaxFrameBytes?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-job-controller -->
+<!-- END GENERATED config-catalog:@fde2e/len-api-job-controller -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-api-session-controller -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-api-session-controller -->
 <a id="deepseek-aidsh-api-session-controller"></a>
 
-## `@deepseek-ai/dsh-api-session-controller`
+## `@fde2e/len-api-session-controller`
 
 - `inject`: `agentDefaultModel` · `agents` · `attachments` · `fileUploads` · `fs` · `llm` · `remoteAccess` · `sessions` · `sessionProjections` · `sessionQuery` · `typert` · `typertGateway` · `workspaceRegistry`
 - `source`: [`packages/api/session-controller/src/index.ts:110`](../packages/api/session-controller/src/index.ts)
@@ -273,12 +273,12 @@ export interface Config {
   readonly listWorkSliceMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-session-controller -->
+<!-- END GENERATED config-catalog:@fde2e/len-api-session-controller -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-api-settings-controller -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-api-settings-controller -->
 <a id="deepseek-aidsh-api-settings-controller"></a>
 
-## `@deepseek-ai/dsh-api-settings-controller`
+## `@fde2e/len-api-settings-controller`
 
 - `source`: [`packages/api/settings-controller/src/index.ts:35`](../packages/api/settings-controller/src/index.ts)
 
@@ -289,12 +289,12 @@ export interface SettingsControllerInternals {
   readonly openTextFile?: (path: string, signal: AbortSignal) => Promise<void>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-settings-controller -->
+<!-- END GENERATED config-catalog:@fde2e/len-api-settings-controller -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-api-terminal-controller -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-api-terminal-controller -->
 <a id="deepseek-aidsh-api-terminal-controller"></a>
 
-## `@deepseek-ai/dsh-api-terminal-controller`
+## `@fde2e/len-api-terminal-controller`
 
 - `inject`: `subprocess` · `sandboxPolicy` · `workingDirectory` · `typert`
 - `source`: [`packages/api/terminal-controller/src/index.ts:27`](../packages/api/terminal-controller/src/index.ts)
@@ -335,12 +335,12 @@ export interface Config {
   readonly cleanupRetryMs: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-terminal-controller -->
+<!-- END GENERATED config-catalog:@fde2e/len-api-terminal-controller -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-api-workspace-controller -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-api-workspace-controller -->
 <a id="deepseek-aidsh-api-workspace-controller"></a>
 
-## `@deepseek-ai/dsh-api-workspace-controller`
+## `@fde2e/len-api-workspace-controller`
 
 - `inject`: `remoteAccess` · `typert` · `workspaceRegistry`
 - `source`: [`packages/api/workspace-controller/src/index.ts:37`](../packages/api/workspace-controller/src/index.ts)
@@ -354,12 +354,12 @@ export interface Config {
   documentsLookupTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-workspace-controller -->
+<!-- END GENERATED config-catalog:@fde2e/len-api-workspace-controller -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-api-workspace-files -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-api-workspace-files -->
 <a id="deepseek-aidsh-api-workspace-files"></a>
 
-## `@deepseek-ai/dsh-api-workspace-files`
+## `@fde2e/len-api-workspace-files`
 
 - `inject`: `fs` · `sandboxPolicy` · `sessions` · `typert`
 - `source`: [`packages/api/workspace-files/src/index.ts:70`](../packages/api/workspace-files/src/index.ts)
@@ -383,12 +383,12 @@ export interface Config {
   readonly maxEntries: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-api-workspace-files -->
+<!-- END GENERATED config-catalog:@fde2e/len-api-workspace-files -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-attachment-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-attachment-local -->
 <a id="deepseek-aidsh-attachment-local"></a>
 
-## `@deepseek-ai/dsh-attachment-local`
+## `@fde2e/len-attachment-local`
 
 - `source`: [`packages/attachment/attachment-local/src/index.ts:65`](../packages/attachment/attachment-local/src/index.ts)
 
@@ -420,12 +420,12 @@ export interface Config {
   imageCompressionConcurrency?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-attachment-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-attachment-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-bash-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-bash-local -->
 <a id="deepseek-aidsh-bash-local"></a>
 
-## `@deepseek-ai/dsh-bash-local`
+## `@fde2e/len-bash-local`
 
 - `inject`: `subprocess`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -448,12 +448,12 @@ export interface Config {
   graceMs: Volatile<number>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-bash-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-bash-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-bash-sandbox -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-bash-sandbox -->
 <a id="deepseek-aidsh-bash-sandbox"></a>
 
-## `@deepseek-ai/dsh-bash-sandbox`
+## `@fde2e/len-bash-sandbox`
 
 - `inject`: `subprocess` · `sandbox` · `sandboxPolicy`
 - `refs`: [`LocalConfig`](#deepseek-aidsh-bash-local)
@@ -463,18 +463,18 @@ export interface Config {
 /**
  * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
  * the default mode and fallback `workspace-write` root — is NOT here: it lives
- * on `ctx.sandboxPolicy` (`@deepseek-ai/dsh-sandbox-policy`), which resolves
+ * on `ctx.sandboxPolicy` (`@fde2e/len-sandbox-policy`), which resolves
  * each calling session's mode and cwd for every enforcing capability. The runner
  * choice is likewise the `ctx.sandbox` provider's config, not this executor's.
  */
 export type Config = LocalConfig
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-bash-sandbox -->
+<!-- END GENERATED config-catalog:@fde2e/len-bash-sandbox -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-connection -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-connection -->
 <a id="deepseek-aidsh-client-connection"></a>
 
-## `@deepseek-ai/dsh-client-connection`
+## `@fde2e/len-client-connection`
 
 - `inject`: `credentials`
 - `source`: [`packages/client/connection/src/index.ts:96`](../packages/client/connection/src/index.ts)
@@ -514,12 +514,12 @@ export interface ConnectionRecoveryConfig {
   generationReadyTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-connection -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-connection -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-hmr -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-hmr -->
 <a id="deepseek-aidsh-client-hmr"></a>
 
-## `@deepseek-ai/dsh-client-hmr`
+## `@fde2e/len-client-hmr`
 
 - `inject`: `clientModules` · `webServer`
 - `source`: [`packages/client/hmr/src/index.ts:30`](../packages/client/hmr/src/index.ts)
@@ -531,12 +531,12 @@ export interface Config {
   pollIntervalMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-hmr -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-hmr -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-product-analytics -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-product-analytics -->
 <a id="deepseek-aidsh-client-product-analytics"></a>
 
-## `@deepseek-ai/dsh-client-product-analytics`
+## `@fde2e/len-client-product-analytics`
 
 - `inject`: `deepseekAccount` · `productTelemetry`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -555,12 +555,12 @@ export interface Config {
   environmentQueryMaxOutputBytes: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-product-analytics -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-product-analytics -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-shortcuts -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-shortcuts -->
 <a id="deepseek-aidsh-client-shortcuts"></a>
 
-## `@deepseek-ai/dsh-client-shortcuts`
+## `@fde2e/len-client-shortcuts`
 
 - `source`: [`packages/client/shortcuts/src/config.ts:5`](../packages/client/shortcuts/src/config.ts)
 
@@ -571,12 +571,12 @@ export interface Config {
   stopSequenceMs: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-shortcuts -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-shortcuts -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-ui-plugin-manager -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-ui-plugin-manager -->
 <a id="deepseek-aidsh-client-ui-plugin-manager"></a>
 
-## `@deepseek-ai/dsh-client-ui-plugin-manager`
+## `@fde2e/len-client-ui-plugin-manager`
 
 - `source`: [`packages/client/ui-plugin-manager/src/index.ts:15`](../packages/client/ui-plugin-manager/src/index.ts)
 
@@ -591,12 +591,12 @@ export interface Config {
   registryProbeCacheTtlMs: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-ui-plugin-manager -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-ui-plugin-manager -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-ui-settings-account -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-ui-settings-account -->
 <a id="deepseek-aidsh-client-ui-settings-account"></a>
 
-## `@deepseek-ai/dsh-client-ui-settings-account`
+## `@fde2e/len-client-ui-settings-account`
 
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
 - `source`: [`packages/client/ui-settings-account/src/index.ts:9`](../packages/client/ui-settings-account/src/index.ts)
@@ -641,12 +641,12 @@ export type OnboardingPurpose = 'office' | 'development' | 'both'
 /** Work-detail mode applied to Chat when onboarding completes. */
 export type OnboardingProcess = 'compact' | 'standard' | 'detailed'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-ui-settings-account -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-ui-settings-account -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-ui-settings-models -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-ui-settings-models -->
 <a id="deepseek-aidsh-client-ui-settings-models"></a>
 
-## `@deepseek-ai/dsh-client-ui-settings-models`
+## `@fde2e/len-client-ui-settings-models`
 
 - `source`: [`packages/client/ui-settings-models/src/onboarding-config.ts:6`](../packages/client/ui-settings-models/src/onboarding-config.ts)
 
@@ -657,12 +657,12 @@ export interface Config {
   credentialOnboarding: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-ui-settings-models -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-ui-settings-models -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-ui-sidebar-documentpreview -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-ui-sidebar-documentpreview -->
 <a id="deepseek-aidsh-client-ui-sidebar-documentpreview"></a>
 
-## `@deepseek-ai/dsh-client-ui-sidebar-documentpreview`
+## `@fde2e/len-client-ui-sidebar-documentpreview`
 
 - `source`: [`packages/client/ui-sidebar-documentpreview/src/config.ts:5`](../packages/client/ui-sidebar-documentpreview/src/config.ts)
 
@@ -691,12 +691,12 @@ export interface Config {
   }
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-ui-sidebar-documentpreview -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-ui-sidebar-documentpreview -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-ui-theme -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-ui-theme -->
 <a id="deepseek-aidsh-client-ui-theme"></a>
 
-## `@deepseek-ai/dsh-client-ui-theme`
+## `@fde2e/len-client-ui-theme`
 
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
 - `source`: [`packages/client/ui-theme/src/index.ts:20`](../packages/client/ui-theme/src/index.ts)
@@ -723,12 +723,12 @@ export interface Config {
 /** Theme preference persisted by the product Appearance row. */
 export type ThemePreference = typeof THEME_PREFERENCES[number]
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-ui-theme -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-ui-theme -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-client-ui-trajectory -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-client-ui-trajectory -->
 <a id="deepseek-aidsh-client-ui-trajectory"></a>
 
-## `@deepseek-ai/dsh-client-ui-trajectory`
+## `@fde2e/len-client-ui-trajectory`
 
 - `inject`: `sessions` · `typert`
 - `source`: [`packages/client/ui-trajectory/src/index.ts:25`](../packages/client/ui-trajectory/src/index.ts)
@@ -740,12 +740,12 @@ export interface Config {
   maxResultsPerSession: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-client-ui-trajectory -->
+<!-- END GENERATED config-catalog:@fde2e/len-client-ui-trajectory -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-compaction-basic -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-compaction-basic -->
 <a id="deepseek-aidsh-compaction-basic"></a>
 
-## `@deepseek-ai/dsh-compaction-basic`
+## `@fde2e/len-compaction-basic`
 
 - `inject`: `llm` · `tokenMeter` · `sessions`
 - `source`: [`packages/compaction/compaction-basic/src/types.ts:46`](../packages/compaction/compaction-basic/src/types.ts)
@@ -789,12 +789,12 @@ export interface ModelCompactPolicyConfig extends CompactionPolicyConfig {
   model: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-compaction-basic -->
+<!-- END GENERATED config-catalog:@fde2e/len-compaction-basic -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-compaction-tool-result-pruner -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-compaction-tool-result-pruner -->
 <a id="deepseek-aidsh-compaction-tool-result-pruner"></a>
 
-## `@deepseek-ai/dsh-compaction-tool-result-pruner`
+## `@fde2e/len-compaction-tool-result-pruner`
 
 - `inject`: `tokenMeter`
 - `source`: [`packages/compaction/compaction-tool-result-pruner/src/types.ts:5`](../packages/compaction/compaction-tool-result-pruner/src/types.ts)
@@ -810,12 +810,12 @@ export interface ToolResultPruneConfig {
   tailChars?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-compaction-tool-result-pruner -->
+<!-- END GENERATED config-catalog:@fde2e/len-compaction-tool-result-pruner -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-cordis-host-runner -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-cordis-host-runner -->
 <a id="deepseek-aidsh-cordis-host-runner"></a>
 
-## `@deepseek-ai/dsh-cordis-host-runner`
+## `@fde2e/len-cordis-host-runner`
 
 - `inject`: `tools`
 - `source`: [`packages/extensions/cordis-host-runner/src/index.ts:103`](../packages/extensions/cordis-host-runner/src/index.ts)
@@ -829,12 +829,12 @@ export interface Config {
   clientInspectTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-cordis-host-runner -->
+<!-- END GENERATED config-catalog:@fde2e/len-cordis-host-runner -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-credentials-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-credentials-local -->
 <a id="deepseek-aidsh-credentials-local"></a>
 
-## `@deepseek-ai/dsh-credentials-local`
+## `@fde2e/len-credentials-local`
 
 - `source`: [`packages/credentials/credentials-local/src/index.ts:64`](../packages/credentials/credentials-local/src/index.ts)
 
@@ -851,12 +851,12 @@ export interface Config {
   debounceMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-credentials-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-credentials-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-deepseek-account-platform -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-deepseek-account-platform -->
 <a id="deepseek-aidsh-deepseek-account-platform"></a>
 
-## `@deepseek-ai/dsh-deepseek-account-platform`
+## `@fde2e/len-deepseek-account-platform`
 
 - `inject`: `credentials` · `authorization`
 - `source`: [`packages/credentials/deepseek-account-platform/src/index.ts:23`](../packages/credentials/deepseek-account-platform/src/index.ts)
@@ -892,12 +892,12 @@ export interface Config {
   attemptTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-deepseek-account-platform -->
+<!-- END GENERATED config-catalog:@fde2e/len-deepseek-account-platform -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-api-speech-to-text -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-api-speech-to-text -->
 <a id="deepseek-aidsh-experimental-api-speech-to-text"></a>
 
-## `@deepseek-ai/dsh-experimental-api-speech-to-text`
+## `@fde2e/len-experimental-api-speech-to-text`
 
 - `inject`: `speechToText` · `typert`
 - `source`: [`packages/experimental/api-speech-to-text/src/index.ts:20`](../packages/experimental/api-speech-to-text/src/index.ts)
@@ -911,42 +911,42 @@ export interface Config {
   maxDurationSeconds: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-api-speech-to-text -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-api-speech-to-text -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-browser-use-chrome-devtools-mcp -->
 <a id="deepseek-aidsh-experimental-browser-use-chrome-devtools-mcp"></a>
 
-## `@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp`
+## `@fde2e/len-experimental-browser-use-chrome-devtools-mcp`
 
 - `inject`: `browserUse` · `agents` · `tools` · `systemPrompt` · `workingDirectory`
-- `refs`: `BrowserMcpConfig` (`@deepseek-ai/dsh-experimental-browser-use-runtime/mcp`)
+- `refs`: `BrowserMcpConfig` (`@fde2e/len-experimental-browser-use-runtime/mcp`)
 - `source`: [`packages/experimental/browser-use-chrome-devtools-mcp/src/index.ts:15`](../packages/experimental/browser-use-chrome-devtools-mcp/src/index.ts)
 
 ```ts config-catalog
 /** Fixed Chromium launch or existing-browser attachment settings. */
 export type Config = BrowserMcpConfig
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-browser-use-chrome-devtools-mcp -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-browser-use-chrome-devtools-mcp -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-browser-use-playwright-mcp -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-browser-use-playwright-mcp -->
 <a id="deepseek-aidsh-experimental-browser-use-playwright-mcp"></a>
 
-## `@deepseek-ai/dsh-experimental-browser-use-playwright-mcp`
+## `@fde2e/len-experimental-browser-use-playwright-mcp`
 
 - `inject`: `browserUse` · `agents` · `tools` · `systemPrompt` · `workingDirectory`
-- `refs`: `BrowserMcpConfig` (`@deepseek-ai/dsh-experimental-browser-use-runtime/mcp`)
+- `refs`: `BrowserMcpConfig` (`@fde2e/len-experimental-browser-use-runtime/mcp`)
 - `source`: [`packages/experimental/browser-use-playwright-mcp/src/index.ts:16`](../packages/experimental/browser-use-playwright-mcp/src/index.ts)
 
 ```ts config-catalog
 /** Fixed Chromium launch or existing-browser attachment settings. */
 export type Config = BrowserMcpConfig
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-browser-use-playwright-mcp -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-browser-use-playwright-mcp -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-browser-use-stagehand-native -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-browser-use-stagehand-native -->
 <a id="deepseek-aidsh-experimental-browser-use-stagehand-native"></a>
 
-## `@deepseek-ai/dsh-experimental-browser-use-stagehand-native`
+## `@fde2e/len-experimental-browser-use-stagehand-native`
 
 - `inject`: `browserUse` · `agents` · `tools` · `systemPrompt`
 - `refs`: `ModelConfig` (`@browserbasehq/stagehand`)
@@ -983,12 +983,12 @@ export interface StagehandModelConfig {
   headers?: Record<string, string>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-browser-use-stagehand-native -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-browser-use-stagehand-native -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-claude-code-mods -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-claude-code-mods -->
 <a id="deepseek-aidsh-experimental-claude-code-mods"></a>
 
-## `@deepseek-ai/dsh-experimental-claude-code-mods`
+## `@fde2e/len-experimental-claude-code-mods`
 
 - `inject`: `workingDirectory` · `agents`
 - `source`: [`packages/experimental/claude-code-mods/src/index.ts:53`](../packages/experimental/claude-code-mods/src/index.ts)
@@ -1010,12 +1010,12 @@ export interface Config {
   bandRows?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-claude-code-mods -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-claude-code-mods -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-client-ui-cot-translation -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-client-ui-cot-translation -->
 <a id="deepseek-aidsh-experimental-client-ui-cot-translation"></a>
 
-## `@deepseek-ai/dsh-experimental-client-ui-cot-translation`
+## `@fde2e/len-experimental-client-ui-cot-translation`
 
 - `inject`: `translator` · `typert` · `sessionController`
 - `refs`: [`TranslationProvider`](subsystems/translation.md) · `Volatile` (`@deepseek-ai/cordis`)
@@ -1038,12 +1038,12 @@ export interface CotTranslationPreferences {
   targetLanguage: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-client-ui-cot-translation -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-client-ui-cot-translation -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-client-ui-forge -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-client-ui-forge -->
 <a id="deepseek-aidsh-experimental-client-ui-forge"></a>
 
-## `@deepseek-ai/dsh-experimental-client-ui-forge`
+## `@fde2e/len-experimental-client-ui-forge`
 
 - `inject`: `forge` · `forgeSession` · `sessionProjections` · `workingDirectory` · `fs` · `subprocess` · `sandbox` · `sandboxPolicy` · `agents`
 - `source`: [`packages/experimental/client-ui-forge/src/types.ts:318`](../packages/experimental/client-ui-forge/src/types.ts)
@@ -1076,12 +1076,12 @@ export interface Config {
   maxCachedDiffBytes?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-client-ui-forge -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-client-ui-forge -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-computer-use-cua-driver-mcp -->
 <a id="deepseek-aidsh-experimental-computer-use-cua-driver-mcp"></a>
 
-## `@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp`
+## `@fde2e/len-experimental-computer-use-cua-driver-mcp`
 
 - `inject`: `computerUse` · `tools`
 - `refs`: [`McpClient`](../packages/mcp/mcp-client/src/index.ts)
@@ -1100,12 +1100,12 @@ export interface Config {
   reconnect: McpClient.ReconnectConfig
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-computer-use-cua-driver-mcp -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-computer-use-cua-driver-mcp -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-cua-macos -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-cua-macos -->
 <a id="deepseek-aidsh-experimental-cua-macos"></a>
 
-## `@deepseek-ai/dsh-experimental-cua-macos`
+## `@fde2e/len-experimental-cua-macos`
 
 - `inject`: `computerUse` · `tools` · `systemPrompt` · `subprocess` · `agents`
 - `refs`: [`CuaConfig`](../packages/experimental/cua/src/index.ts)
@@ -1132,12 +1132,12 @@ export type SourceSigning = 'ad-hoc' | {
   keychain: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-cua-macos -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-cua-macos -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-forge -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-forge -->
 <a id="deepseek-aidsh-experimental-forge"></a>
 
-## `@deepseek-ai/dsh-experimental-forge`
+## `@fde2e/len-experimental-forge`
 
 - `source`: [`packages/experimental/forge/src/types.ts:232`](../packages/experimental/forge/src/types.ts)
 
@@ -1154,12 +1154,12 @@ export interface Config {
   fetchTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-forge -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-forge -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-forge-github -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-forge-github -->
 <a id="deepseek-aidsh-experimental-forge-github"></a>
 
-## `@deepseek-ai/dsh-experimental-forge-github`
+## `@fde2e/len-experimental-forge-github`
 
 - `inject`: `forge`
 - `source`: [`packages/experimental/forge-github/src/index.ts:14`](../packages/experimental/forge-github/src/index.ts)
@@ -1177,12 +1177,12 @@ export interface Config {
   maxOutputBytes?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-forge-github -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-forge-github -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-forge-session -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-forge-session -->
 <a id="deepseek-aidsh-experimental-forge-session"></a>
 
-## `@deepseek-ai/dsh-experimental-forge-session`
+## `@fde2e/len-experimental-forge-session`
 
 - `inject`: `forge` · `sessions` · `sessionProjections`
 - `source`: [`packages/experimental/forge-session/src/types.ts:91`](../packages/experimental/forge-session/src/types.ts)
@@ -1194,12 +1194,12 @@ export interface Config {
   discoveryTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-forge-session -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-forge-session -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-inspector -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-inspector -->
 <a id="deepseek-aidsh-experimental-inspector"></a>
 
-## `@deepseek-ai/dsh-experimental-inspector`
+## `@fde2e/len-experimental-inspector`
 
 - `inject`: `webServer` · `connection`
 - `source`: [`packages/experimental/inspector/src/index.ts:66`](../packages/experimental/inspector/src/index.ts)
@@ -1263,12 +1263,12 @@ export interface InspectorOptions {
   readonly maxDisconnectedCordisTrees?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-inspector -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-inspector -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-ptc-runtime-python -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-ptc-runtime-python -->
 <a id="deepseek-aidsh-experimental-ptc-runtime-python"></a>
 
-## `@deepseek-ai/dsh-experimental-ptc-runtime-python`
+## `@fde2e/len-experimental-ptc-runtime-python`
 
 - `inject`: `sandbox` · `sandboxPolicy`
 - `source`: [`packages/experimental/ptc-runtime-python/src/index.ts:45`](../packages/experimental/ptc-runtime-python/src/index.ts)
@@ -1332,12 +1332,12 @@ export interface Config {
   pythonBin?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-ptc-runtime-python -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-ptc-runtime-python -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-speech-to-text -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-speech-to-text -->
 <a id="deepseek-aidsh-experimental-speech-to-text"></a>
 
-## `@deepseek-ai/dsh-experimental-speech-to-text`
+## `@fde2e/len-experimental-speech-to-text`
 
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
 - `source`: [`packages/experimental/speech-to-text/src/index.ts:20`](../packages/experimental/speech-to-text/src/index.ts)
@@ -1351,12 +1351,12 @@ export interface Config {
   language: Volatile<string>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-speech-to-text -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-speech-to-text -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-speech-to-text-sensevoice -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-speech-to-text-sensevoice -->
 <a id="deepseek-aidsh-experimental-speech-to-text-sensevoice"></a>
 
-## `@deepseek-ai/dsh-experimental-speech-to-text-sensevoice`
+## `@fde2e/len-experimental-speech-to-text-sensevoice`
 
 - `inject`: `speechToText` · `subprocess`
 - `source`: [`packages/experimental/speech-to-text-sensevoice/src/config.ts:6`](../packages/experimental/speech-to-text-sensevoice/src/config.ts)
@@ -1412,12 +1412,12 @@ export interface Config {
   progressIntervalMs: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-speech-to-text-sensevoice -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-speech-to-text-sensevoice -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-subagent-oar -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-subagent-oar -->
 <a id="deepseek-aidsh-experimental-subagent-oar"></a>
 
-## `@deepseek-ai/dsh-experimental-subagent-oar`
+## `@fde2e/len-experimental-subagent-oar`
 
 - `inject`: `subagents`
 - `source`: [`packages/experimental/subagent-oar/src/index.ts:25`](../packages/experimental/subagent-oar/src/index.ts)
@@ -1441,12 +1441,12 @@ export interface Config {
   timeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-subagent-oar -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-subagent-oar -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-tool-subagent-oar -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-tool-subagent-oar -->
 <a id="deepseek-aidsh-experimental-tool-subagent-oar"></a>
 
-## `@deepseek-ai/dsh-experimental-tool-subagent-oar`
+## `@fde2e/len-experimental-tool-subagent-oar`
 
 - `inject`: `tools` · `subagents`
 - `source`: [`packages/experimental/tool-subagent-oar/src/index.ts:12`](../packages/experimental/tool-subagent-oar/src/index.ts)
@@ -1460,12 +1460,12 @@ export interface Config {
   toolName?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-tool-subagent-oar -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-tool-subagent-oar -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-translator -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-translator -->
 <a id="deepseek-aidsh-experimental-translator"></a>
 
-## `@deepseek-ai/dsh-experimental-translator`
+## `@fde2e/len-experimental-translator`
 
 - `source`: [`packages/experimental/translator/src/index.ts:25`](../packages/experimental/translator/src/index.ts)
 
@@ -1499,12 +1499,12 @@ export type AnonymousTranslationProvider = 'google' | 'bing'
 /** Explicit native DeepSeek credential route selected for paid translation. */
 export type PaidTranslationProvider = 'deepseek-account' | 'deepseek-official'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-translator -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-translator -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-experimental-worktree -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-experimental-worktree -->
 <a id="deepseek-aidsh-experimental-worktree"></a>
 
-## `@deepseek-ai/dsh-experimental-worktree`
+## `@fde2e/len-experimental-worktree`
 
 - `inject`: `workingDirectory` · `fs` · `subprocess` · `sandbox` · `sandboxPolicy`
 - `source`: [`packages/experimental/worktree/src/index.ts:21`](../packages/experimental/worktree/src/index.ts)
@@ -1528,12 +1528,12 @@ export interface Config {
   maxOutputBytes?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-experimental-worktree -->
+<!-- END GENERATED config-catalog:@fde2e/len-experimental-worktree -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-file-reference-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-file-reference-local -->
 <a id="deepseek-aidsh-file-reference-local"></a>
 
-## `@deepseek-ai/dsh-file-reference-local`
+## `@fde2e/len-file-reference-local`
 
 - `inject`: `agents` · `workingDirectory`
 - `source`: [`packages/context/file-reference-local/src/index.ts:35`](../packages/context/file-reference-local/src/index.ts)
@@ -1549,12 +1549,12 @@ export interface Config {
   excludedDirectories?: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-file-reference-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-file-reference-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-fs-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-fs-local -->
 <a id="deepseek-aidsh-fs-local"></a>
 
-## `@deepseek-ai/dsh-fs-local`
+## `@fde2e/len-fs-local`
 
 - `source`: [`packages/fs/fs-local/src/index.ts:51`](../packages/fs/fs-local/src/index.ts)
 
@@ -1570,12 +1570,12 @@ export interface Config {
   diffBasisMaxBytes?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-fs-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-fs-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-fs-sandbox -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-fs-sandbox -->
 <a id="deepseek-aidsh-fs-sandbox"></a>
 
-## `@deepseek-ai/dsh-fs-sandbox`
+## `@fde2e/len-fs-sandbox`
 
 - `inject`: `sandboxPolicy`
 - `refs`: [`LocalConfig`](#deepseek-aidsh-fs-local)
@@ -1590,12 +1590,12 @@ export interface Config {
  */
 export type Config = LocalConfig
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-fs-sandbox -->
+<!-- END GENERATED config-catalog:@fde2e/len-fs-sandbox -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-goal -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-goal -->
 <a id="deepseek-aidsh-goal"></a>
 
-## `@deepseek-ai/dsh-goal`
+## `@fde2e/len-goal`
 
 - `inject`: `agents` · `sessionProjections`
 - `source`: [`packages/goal/goal/src/index.ts:168`](../packages/goal/goal/src/index.ts)
@@ -1607,12 +1607,12 @@ export interface Config {
   defaultMaxGoalRounds?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-goal -->
+<!-- END GENERATED config-catalog:@fde2e/len-goal -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-headless -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-headless -->
 <a id="deepseek-aidsh-headless"></a>
 
-## `@deepseek-ai/dsh-headless`
+## `@fde2e/len-headless`
 
 - `inject`: `agentDefaultModel` · `agents` · `sessions`
 - `refs`: [`ApprovalPolicy`](subsystems/approval.md)
@@ -1633,12 +1633,12 @@ export interface Config {
   approvalPolicy?: ApprovalPolicy
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-headless -->
+<!-- END GENERATED config-catalog:@fde2e/len-headless -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-hmr -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-hmr -->
 <a id="deepseek-aidsh-hmr"></a>
 
-## `@deepseek-ai/dsh-hmr`
+## `@fde2e/len-hmr`
 
 - `refs`: `ChokidarOptions` (`chokidar`)
 - `source`: [`packages/boot/hmr/src/index.ts:56`](../packages/boot/hmr/src/index.ts)
@@ -1656,12 +1656,12 @@ export interface HmrConfig extends ChokidarOptions {
   ignored: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-hmr -->
+<!-- END GENERATED config-catalog:@fde2e/len-hmr -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-hooks-claude-code -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-hooks-claude-code -->
 <a id="deepseek-aidsh-hooks-claude-code"></a>
 
-## `@deepseek-ai/dsh-hooks-claude-code`
+## `@fde2e/len-hooks-claude-code`
 
 - `inject`: `shell` · `agents` · `workingDirectory`
 - `source`: [`packages/experimental/hooks-claude-code/src/index.ts:50`](../packages/experimental/hooks-claude-code/src/index.ts)
@@ -1695,12 +1695,12 @@ export interface Config {
   stderrSummaryMaxChars?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-hooks-claude-code -->
+<!-- END GENERATED config-catalog:@fde2e/len-hooks-claude-code -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-hooks-codex -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-hooks-codex -->
 <a id="deepseek-aidsh-hooks-codex"></a>
 
-## `@deepseek-ai/dsh-hooks-codex`
+## `@fde2e/len-hooks-codex`
 
 - `inject`: `shell` · `agents` · `workingDirectory`
 - `source`: [`packages/experimental/hooks-codex/src/index.ts:49`](../packages/experimental/hooks-codex/src/index.ts)
@@ -1723,12 +1723,12 @@ export interface Config {
   stderrSummaryMaxChars?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-hooks-codex -->
+<!-- END GENERATED config-catalog:@fde2e/len-hooks-codex -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-directory-picker-browse -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-host-directory-picker-browse -->
 <a id="deepseek-aidsh-host-directory-picker-browse"></a>
 
-## `@deepseek-ai/dsh-host-directory-picker-browse`
+## `@fde2e/len-host-directory-picker-browse`
 
 - `source`: [`packages/host/directory-picker-browse/src/index.ts:181`](../packages/host/directory-picker-browse/src/index.ts)
 
@@ -1739,12 +1739,12 @@ export interface Config {
   maxEntries: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-directory-picker-browse -->
+<!-- END GENERATED config-catalog:@fde2e/len-host-directory-picker-browse -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-frontend-static -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-host-frontend-static -->
 <a id="deepseek-aidsh-host-frontend-static"></a>
 
-## `@deepseek-ai/dsh-host-frontend-static`
+## `@fde2e/len-host-frontend-static`
 
 - `inject`: `webServer` · `connection`
 - `source`: [`packages/host/frontend-static/src/index.ts:34`](../packages/host/frontend-static/src/index.ts)
@@ -1756,12 +1756,12 @@ export interface Config {
   distIndex: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-frontend-static -->
+<!-- END GENERATED config-catalog:@fde2e/len-host-frontend-static -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-open-in-app -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-host-open-in-app -->
 <a id="deepseek-aidsh-host-open-in-app"></a>
 
-## `@deepseek-ai/dsh-host-open-in-app`
+## `@fde2e/len-host-open-in-app`
 
 - `inject`: `webServer` · `connection` · `subprocess`
 - `source`: [`packages/host/open-in-app/src/index.ts:50`](../packages/host/open-in-app/src/index.ts)
@@ -1788,12 +1788,12 @@ export interface Config {
   readonly launchWatchMs: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-open-in-app -->
+<!-- END GENERATED config-catalog:@fde2e/len-host-open-in-app -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-product-telemetry-otel -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-host-product-telemetry-otel -->
 <a id="deepseek-aidsh-host-product-telemetry-otel"></a>
 
-## `@deepseek-ai/dsh-host-product-telemetry-otel`
+## `@fde2e/len-host-product-telemetry-otel`
 
 - `inject`: `otel`
 - `source`: [`packages/host/product-telemetry-otel/src/index.ts:18`](../packages/host/product-telemetry-otel/src/index.ts)
@@ -1825,12 +1825,12 @@ export interface Config {
   shutdownTimeoutMillis: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-product-telemetry-otel -->
+<!-- END GENERATED config-catalog:@fde2e/len-host-product-telemetry-otel -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-host-webserver -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-host-webserver -->
 <a id="deepseek-aidsh-host-webserver"></a>
 
-## `@deepseek-ai/dsh-host-webserver`
+## `@fde2e/len-host-webserver`
 
 - `source`: [`packages/host/webserver/src/index.ts:97`](../packages/host/webserver/src/index.ts)
 
@@ -1878,12 +1878,12 @@ export interface TlsConfig {
   keyFile: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-host-webserver -->
+<!-- END GENERATED config-catalog:@fde2e/len-host-webserver -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-jobs-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-jobs-local -->
 <a id="deepseek-aidsh-jobs-local"></a>
 
-## `@deepseek-ai/dsh-jobs-local`
+## `@fde2e/len-jobs-local`
 
 - `source`: [`packages/jobs/jobs-local/src/index.ts:46`](../packages/jobs/jobs-local/src/index.ts)
 
@@ -1907,12 +1907,12 @@ export interface Config {
   pumpPollMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-jobs-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-jobs-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-llm-deepseek-account -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-llm-deepseek-account -->
 <a id="deepseek-aidsh-llm-deepseek-account"></a>
 
-## `@deepseek-ai/dsh-llm-deepseek-account`
+## `@fde2e/len-llm-deepseek-account`
 
 - `inject`: `llm`
 - `refs`: [`ModelListingConfig`](../packages/llm/llm-deepseek/src/index.ts) · [`ModelOverride`](../packages/llm/llm-deepseek/src/index.ts) · [`ProtocolConfig`](../packages/llm/llm-deepseek/src/index.ts) · `Volatile` (`@deepseek-ai/cordis`)
@@ -1925,12 +1925,12 @@ export interface Config extends Omit<ProtocolConfig, 'models'>, ModelListingConf
   modelOverrides: Volatile<Record<string, ModelOverride>>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-llm-deepseek-account -->
+<!-- END GENERATED config-catalog:@fde2e/len-llm-deepseek-account -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-llm-deepseek-api-key -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-llm-deepseek-api-key -->
 <a id="deepseek-aidsh-llm-deepseek-api-key"></a>
 
-## `@deepseek-ai/dsh-llm-deepseek-api-key`
+## `@fde2e/len-llm-deepseek-api-key`
 
 - `inject`: `llm`
 - `refs`: [`ModelListingConfig`](../packages/llm/llm-deepseek/src/index.ts) · [`ProtocolConfig`](../packages/llm/llm-deepseek/src/index.ts) · `Volatile` (`@deepseek-ai/cordis`)
@@ -1943,12 +1943,12 @@ export interface Config extends ProtocolConfig, ModelListingConfig {
   apiKeyEnv: Volatile<string>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-llm-deepseek-api-key -->
+<!-- END GENERATED config-catalog:@fde2e/len-llm-deepseek-api-key -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-llm-pi-ai -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-llm-pi-ai -->
 <a id="deepseek-aidsh-llm-pi-ai"></a>
 
-## `@deepseek-ai/dsh-llm-pi-ai`
+## `@fde2e/len-llm-pi-ai`
 
 - `inject`: `llm`
 - `refs`: `Api` (`@earendil-works/pi-ai`) · `CacheRetention` (`@earendil-works/pi-ai`) · `Model` (`@earendil-works/pi-ai`) · `ModelThinkingLevel` (`@earendil-works/pi-ai`) · `OpenAICompletionsCompat` (`@earendil-works/pi-ai`) · [`RetryPolicyConfig`](../packages/llm/llm/src/index.ts) · `ThinkingBudgets` (`@earendil-works/pi-ai`) · `Transport` (`@earendil-works/pi-ai`) · `Volatile` (`@deepseek-ai/cordis`)
@@ -2230,12 +2230,12 @@ export type PiAiThinkingFormat = NonNullable<OpenAICompletionsCompat['thinkingFo
 /** The reasoning-budget field spellings pi-ai accepts. */
 export type PiAiThinkingTokenBudgetField = NonNullable<OpenAICompletionsCompat['thinkingTokenBudgetField']>
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-llm-pi-ai -->
+<!-- END GENERATED config-catalog:@fde2e/len-llm-pi-ai -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-llm-replay -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-llm-replay -->
 <a id="deepseek-aidsh-llm-replay"></a>
 
-## `@deepseek-ai/dsh-llm-replay`
+## `@fde2e/len-llm-replay`
 
 - `inject`: `llm`
 - `refs`: [`LlmModelBadge`](../packages/llm/llm/src/index.ts) · [`ModelModality`](../packages/llm/llm/src/index.ts) · [`RetryPolicyConfig`](../packages/llm/llm/src/index.ts) · [`SystemPromptUpdate`](../packages/llm/llm/src/index.ts) · [`ToolUpdate`](../packages/llm/llm/src/index.ts)
@@ -2313,12 +2313,12 @@ export interface ReplayModelConfig {
   badge?: LlmModelBadge
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-llm-replay -->
+<!-- END GENERATED config-catalog:@fde2e/len-llm-replay -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-llm-retry -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-llm-retry -->
 <a id="deepseek-aidsh-llm-retry"></a>
 
-## `@deepseek-ai/dsh-llm-retry`
+## `@fde2e/len-llm-retry`
 
 - `inject`: `agents` · `sessionProjections`
 - `source`: [`packages/llm/llm-retry/src/index.ts:25`](../packages/llm/llm-retry/src/index.ts)
@@ -2327,12 +2327,12 @@ export interface ReplayModelConfig {
 /** This policy executor has no config; providers own `retryPolicy`. */
 export type Config = Readonly<Record<string, never>>
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-llm-retry -->
+<!-- END GENERATED config-catalog:@fde2e/len-llm-retry -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-lsp-stdio -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-lsp-stdio -->
 <a id="deepseek-aidsh-lsp-stdio"></a>
 
-## `@deepseek-ai/dsh-lsp-stdio`
+## `@fde2e/len-lsp-stdio`
 
 - `inject`: `fs` · `lsp` · `subprocess`
 - `source`: [`packages/lsp/lsp-stdio/src/index.ts:82`](../packages/lsp/lsp-stdio/src/index.ts)
@@ -2370,12 +2370,12 @@ export interface LspLocalServerConfig {
   killGraceMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-lsp-stdio -->
+<!-- END GENERATED config-catalog:@fde2e/len-lsp-stdio -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-mcp-client -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-mcp-client -->
 <a id="deepseek-aidsh-mcp-client"></a>
 
-## `@deepseek-ai/dsh-mcp-client`
+## `@fde2e/len-mcp-client`
 
 - `inject`: `tools`
 - `source`: [`packages/mcp/mcp-client/src/index.ts:138`](../packages/mcp/mcp-client/src/index.ts)
@@ -2460,12 +2460,12 @@ export interface ReconnectConfig {
   maxAttempts?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-mcp-client -->
+<!-- END GENERATED config-catalog:@fde2e/len-mcp-client -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-mcp-manager -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-mcp-manager -->
 <a id="deepseek-aidsh-mcp-manager"></a>
 
-## `@deepseek-ai/dsh-mcp-manager`
+## `@fde2e/len-mcp-manager`
 
 - `inject`: `tools`
 - `refs`: [`ReconnectConfig`](../packages/mcp/mcp-client/src/index.ts) · `Volatile` (`@deepseek-ai/cordis`)
@@ -2511,12 +2511,12 @@ export interface McpManagedServerEntry {
   reconnect: ReconnectConfig
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-mcp-manager -->
+<!-- END GENERATED config-catalog:@fde2e/len-mcp-manager -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-message-feedback -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-message-feedback -->
 <a id="deepseek-aidsh-message-feedback"></a>
 
-## `@deepseek-ai/dsh-message-feedback`
+## `@fde2e/len-message-feedback`
 
 - `inject`: `sessionPersistence` · `sessions`
 - `source`: [`packages/feedback/message-feedback/src/index.ts:40`](../packages/feedback/message-feedback/src/index.ts)
@@ -2528,12 +2528,12 @@ export interface Config {
   readonly maxNoteBytes: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-message-feedback -->
+<!-- END GENERATED config-catalog:@fde2e/len-message-feedback -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-office-to-pdf -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-office-to-pdf -->
 <a id="deepseek-aidsh-office-to-pdf"></a>
 
-## `@deepseek-ai/dsh-office-to-pdf`
+## `@fde2e/len-office-to-pdf`
 
 - `source`: [`packages/document/office-to-pdf/src/index.ts:31`](../packages/document/office-to-pdf/src/index.ts)
 
@@ -2580,12 +2580,12 @@ export interface Config {
   maxLoadedFontBytes: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-office-to-pdf -->
+<!-- END GENERATED config-catalog:@fde2e/len-office-to-pdf -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-permission-presets -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-permission-presets -->
 <a id="deepseek-aidsh-permission-presets"></a>
 
-## `@deepseek-ai/dsh-permission-presets`
+## `@fde2e/len-permission-presets`
 
 - `inject`: `shell` · `approval` · `sessions` · `agents` · `sessionProjections`
 - `refs`: [`ApprovalPolicy`](subsystems/approval.md) · [`SandboxMode`](subsystems/sandbox.md) · `Volatile` (`@deepseek-ai/cordis`)
@@ -2620,12 +2620,12 @@ export interface PresetSpec {
   description?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-permission-presets -->
+<!-- END GENERATED config-catalog:@fde2e/len-permission-presets -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-persona -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-persona -->
 <a id="deepseek-aidsh-persona"></a>
 
-## `@deepseek-ai/dsh-persona`
+## `@fde2e/len-persona`
 
 - `inject`: `systemPrompt`
 - `source`: [`packages/preset/persona/src/index.ts:30`](../packages/preset/persona/src/index.ts)
@@ -2650,12 +2650,12 @@ export interface Config {
   includeRuntimeContext?: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-persona -->
+<!-- END GENERATED config-catalog:@fde2e/len-persona -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-plan-mode -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-plan-mode -->
 <a id="deepseek-aidsh-plan-mode"></a>
 
-## `@deepseek-ai/dsh-plan-mode`
+## `@fde2e/len-plan-mode`
 
 - `inject`: `tools` · `systemPrompt` · `sessionProjections` · `agents`
 - `source`: [`packages/plan/plan-mode/src/index.ts:67`](../packages/plan/plan-mode/src/index.ts)
@@ -2667,12 +2667,12 @@ export interface PlanModeConfig {
   section: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-plan-mode -->
+<!-- END GENERATED config-catalog:@fde2e/len-plan-mode -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-plugin-manager -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-plugin-manager -->
 <a id="deepseek-aidsh-plugin-manager"></a>
 
-## `@deepseek-ai/dsh-plugin-manager`
+## `@fde2e/len-plugin-manager`
 
 - `inject`: `loader` · `profileContext`
 - `refs`: [`NpmFileSource`](subsystems/boot.md)
@@ -2717,12 +2717,12 @@ export interface Config {
   detailNpmFileSources?: NpmFileSource[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-plugin-manager -->
+<!-- END GENERATED config-catalog:@fde2e/len-plugin-manager -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-plugin-market -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-plugin-market -->
 <a id="deepseek-aidsh-plugin-market"></a>
 
-## `@deepseek-ai/dsh-plugin-market`
+## `@fde2e/len-plugin-market`
 
 - `inject`: `pluginManager`
 - `refs`: [`NpmFileSource`](subsystems/boot.md) · `Volatile` (`@deepseek-ai/cordis`)
@@ -2757,12 +2757,12 @@ export interface Config {
   detailGitlabHosts: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-plugin-market -->
+<!-- END GENERATED config-catalog:@fde2e/len-plugin-market -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-plugin-package-inventory-deepseek -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-plugin-package-inventory-deepseek -->
 <a id="deepseek-aidsh-plugin-package-inventory-deepseek"></a>
 
-## `@deepseek-ai/dsh-plugin-package-inventory-deepseek`
+## `@fde2e/len-plugin-package-inventory-deepseek`
 
 - `inject`: `agents` · `deepseekLlmApiExtensions` · `loader`
 - `source`: [`packages/llm/plugin-package-inventory-deepseek/src/index.ts:32`](../packages/llm/plugin-package-inventory-deepseek/src/index.ts)
@@ -2774,12 +2774,12 @@ export interface Config {
   enabled?: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-plugin-package-inventory-deepseek -->
+<!-- END GENERATED config-catalog:@fde2e/len-plugin-package-inventory-deepseek -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-ptc-runtime-node -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-ptc-runtime-node -->
 <a id="deepseek-aidsh-ptc-runtime-node"></a>
 
-## `@deepseek-ai/dsh-ptc-runtime-node`
+## `@fde2e/len-ptc-runtime-node`
 
 - `inject`: `fs` · `subprocess` · `sandbox` · `sandboxPolicy`
 - `source`: [`packages/ptc-runtime/ptc-runtime-node/src/config.ts:7`](../packages/ptc-runtime/ptc-runtime-node/src/config.ts)
@@ -2824,12 +2824,12 @@ export type LaunchConfig = {
   executable: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-ptc-runtime-node -->
+<!-- END GENERATED config-catalog:@fde2e/len-ptc-runtime-node -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-pwsh-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-pwsh-local -->
 <a id="deepseek-aidsh-pwsh-local"></a>
 
-## `@deepseek-ai/dsh-pwsh-local`
+## `@fde2e/len-pwsh-local`
 
 - `inject`: `subprocess`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -2859,12 +2859,12 @@ export interface Config {
   pwshPath: Volatile<string | undefined>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-pwsh-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-pwsh-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-pwsh-sandbox -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-pwsh-sandbox -->
 <a id="deepseek-aidsh-pwsh-sandbox"></a>
 
-## `@deepseek-ai/dsh-pwsh-sandbox`
+## `@fde2e/len-pwsh-sandbox`
 
 - `inject`: `subprocess` · `sandbox` · `sandboxPolicy`
 - `refs`: [`LocalConfig`](#deepseek-aidsh-pwsh-local)
@@ -2874,19 +2874,19 @@ export interface Config {
 /**
  * Plugin config: the local executor's knobs, verbatim. The sandbox policy —
  * the default mode and fallback `workspace-write` root — is NOT here: it lives
- * on `ctx.sandboxPolicy` (`@deepseek-ai/dsh-sandbox-policy`), which resolves
+ * on `ctx.sandboxPolicy` (`@fde2e/len-sandbox-policy`), which resolves
  * each calling session's mode and cwd for every enforcing capability. The
  * runner choice is likewise the `ctx.sandbox` provider's config, not this
  * executor's.
  */
 export type Config = LocalConfig
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-pwsh-sandbox -->
+<!-- END GENERATED config-catalog:@fde2e/len-pwsh-sandbox -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-repeat-tool-reminder -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-repeat-tool-reminder -->
 <a id="deepseek-aidsh-repeat-tool-reminder"></a>
 
-## `@deepseek-ai/dsh-repeat-tool-reminder`
+## `@fde2e/len-repeat-tool-reminder`
 
 - `source`: [`packages/guard/repeat-tool-reminder/src/index.ts:35`](../packages/guard/repeat-tool-reminder/src/index.ts)
 
@@ -2917,12 +2917,12 @@ export interface Config {
   argumentsPreviewChars?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-repeat-tool-reminder -->
+<!-- END GENERATED config-catalog:@fde2e/len-repeat-tool-reminder -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sandbox-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-sandbox-local -->
 <a id="deepseek-aidsh-sandbox-local"></a>
 
-## `@deepseek-ai/dsh-sandbox-local`
+## `@fde2e/len-sandbox-local`
 
 - `source`: [`packages/sandbox/sandbox-local/src/index.ts:45`](../packages/sandbox/sandbox-local/src/index.ts)
 
@@ -2951,12 +2951,12 @@ export interface Config {
   probeTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-sandbox-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-sandbox-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sandbox-policy -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-sandbox-policy -->
 <a id="deepseek-aidsh-sandbox-policy"></a>
 
-## `@deepseek-ai/dsh-sandbox-policy`
+## `@fde2e/len-sandbox-policy`
 
 - `inject`: `sessionProjections`
 - `refs`: [`SandboxMode`](subsystems/sandbox.md)
@@ -2989,12 +2989,12 @@ export interface Config {
   additionalWritableRoots?: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-sandbox-policy -->
+<!-- END GENERATED config-catalog:@fde2e/len-sandbox-policy -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-schedule -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-schedule -->
 <a id="deepseek-aidsh-schedule"></a>
 
-## `@deepseek-ai/dsh-schedule`
+## `@fde2e/len-schedule`
 
 - `inject`: `agents` · `sessions` · `storageDomain` · `sessionPersistence`
 - `source`: [`packages/schedule/schedule/src/index.ts:80`](../packages/schedule/schedule/src/index.ts)
@@ -3019,12 +3019,12 @@ export interface Config {
   newSessionIntervalSeconds?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-schedule -->
+<!-- END GENERATED config-catalog:@fde2e/len-schedule -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sdk-app -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-sdk-app -->
 <a id="deepseek-aidsh-sdk-app"></a>
 
-## `@deepseek-ai/dsh-sdk-app`
+## `@fde2e/len-sdk-app`
 
 - `inject`: `cmdlineArgs`
 - `source`: [`packages/bundle/sdk-app/src/index.ts:23`](../packages/bundle/sdk-app/src/index.ts)
@@ -3036,12 +3036,12 @@ export interface Config {
   profile?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-sdk-app -->
+<!-- END GENERATED config-catalog:@fde2e/len-sdk-app -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-sdk-jsonrpc-server -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-sdk-jsonrpc-server -->
 <a id="deepseek-aidsh-sdk-jsonrpc-server"></a>
 
-## `@deepseek-ai/dsh-sdk-jsonrpc-server`
+## `@fde2e/len-sdk-jsonrpc-server`
 
 - `inject`: `agents` · `workingDirectory`
 - `refs`: `Readable` (`node:stream`) · `Writable` (`node:stream`)
@@ -3060,12 +3060,12 @@ export interface JsonRpcConfig {
   exit?: (code: number) => void
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-sdk-jsonrpc-server -->
+<!-- END GENERATED config-catalog:@fde2e/len-sdk-jsonrpc-server -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-log-deepseek -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-log-deepseek -->
 <a id="deepseek-aidsh-session-log-deepseek"></a>
 
-## `@deepseek-ai/dsh-session-log-deepseek`
+## `@fde2e/len-session-log-deepseek`
 
 - `inject`: `deepseekLlmApiExtensions` · `sessions`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -3084,12 +3084,12 @@ export interface Config {
   maxBytes: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-log-deepseek -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-log-deepseek -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-log-export -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-log-export -->
 <a id="deepseek-aidsh-session-log-export"></a>
 
-## `@deepseek-ai/dsh-session-log-export`
+## `@fde2e/len-session-log-export`
 
 - `inject`: `commands` · `connection`
 - `source`: [`packages/session-query/session-log-export/src/index.ts:48`](../packages/session-query/session-log-export/src/index.ts)
@@ -3104,12 +3104,12 @@ export interface Config {
 /** Valid fflate DEFLATE levels accepted by session-log export. */
 export type SessionLogCompressionLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-log-export -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-log-export -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-persistence-jsonl -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-persistence-jsonl -->
 <a id="deepseek-aidsh-session-persistence-jsonl"></a>
 
-## `@deepseek-ai/dsh-session-persistence-jsonl`
+## `@fde2e/len-session-persistence-jsonl`
 
 - `source`: [`packages/session/session-persistence-jsonl/src/index.ts:94`](../packages/session/session-persistence-jsonl/src/index.ts)
 
@@ -3137,12 +3137,12 @@ export interface Config {
 /** Physical encoding selected for JSONL session artifacts. */
 export type JsonlCompression = 'zstd' | 'none'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-persistence-jsonl -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-persistence-jsonl -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-projection-cache -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-projection-cache -->
 <a id="deepseek-aidsh-session-projection-cache"></a>
 
-## `@deepseek-ai/dsh-session-projection-cache`
+## `@fde2e/len-session-projection-cache`
 
 - `inject`: `storageDomain` · `sessionProjections` · `sessions`
 - `source`: [`packages/session/session-projection-cache/src/index.ts:76`](../packages/session/session-projection-cache/src/index.ts)
@@ -3162,12 +3162,12 @@ export interface Config {
   writeIntervalMs: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-projection-cache -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-projection-cache -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-query-sqlite -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-query-sqlite -->
 <a id="deepseek-aidsh-session-query-sqlite"></a>
 
-## `@deepseek-ai/dsh-session-query-sqlite`
+## `@fde2e/len-session-query-sqlite`
 
 - `inject`: `sessions`
 - `refs`: [`SessionQueryConfig`](../packages/session-query/session-query/src/index.ts)
@@ -3210,12 +3210,12 @@ export type OpenAt = 'startup' | 'first-search' | 'never'
 /** Supported SQLite journal modes. */
 export type JournalMode = 'wal' | 'delete' | 'truncate' | 'persist'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-query-sqlite -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-query-sqlite -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-reference -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-reference -->
 <a id="deepseek-aidsh-session-reference"></a>
 
-## `@deepseek-ai/dsh-session-reference`
+## `@fde2e/len-session-reference`
 
 - `inject`: `sessionQuery`
 - `source`: [`packages/context/session-reference/src/config.ts:11`](../packages/context/session-reference/src/config.ts)
@@ -3233,12 +3233,12 @@ export interface Config {
   referenceContextFraction?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-reference -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-reference -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-telemetry-otel -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-telemetry-otel -->
 <a id="deepseek-aidsh-session-telemetry-otel"></a>
 
-## `@deepseek-ai/dsh-session-telemetry-otel`
+## `@fde2e/len-session-telemetry-otel`
 
 - `inject`: `sessions` · `otel`
 - `refs`: [`LogExporterOptions`](../packages/telemetry/otel/src/index.ts) · [`SessionLogProcessorOptions`](../packages/telemetry/otel/src/index.ts)
@@ -3280,12 +3280,12 @@ export enum SessionTelemetryMode {
   DISABLED = 'DISABLED',
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-telemetry-otel -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-telemetry-otel -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-title -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-title -->
 <a id="deepseek-aidsh-session-title"></a>
 
-## `@deepseek-ai/dsh-session-title`
+## `@fde2e/len-session-title`
 
 - `inject`: `sessions` · `sessionProjections` · `agents`
 - `source`: [`packages/session/session-title/src/index.ts:56`](../packages/session/session-title/src/index.ts)
@@ -3301,12 +3301,12 @@ export interface Config {
   readonly maxTitleBytes: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-title -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-title -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-title-all-prompts-llm -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-title-all-prompts-llm -->
 <a id="deepseek-aidsh-session-title-all-prompts-llm"></a>
 
-## `@deepseek-ai/dsh-session-title-all-prompts-llm`
+## `@fde2e/len-session-title-all-prompts-llm`
 
 - `inject`: `sessionTitle` · `llm` · `sessions`
 - `refs`: [`SessionTitleLlmConfig`](../packages/session/session-title-llm/src/index.ts)
@@ -3321,12 +3321,12 @@ export interface Config extends SessionTitleLlmConfig {
   readonly targetCjkCharacters: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-title-all-prompts-llm -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-title-all-prompts-llm -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-session-title-first-prompt-llm -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-session-title-first-prompt-llm -->
 <a id="deepseek-aidsh-session-title-first-prompt-llm"></a>
 
-## `@deepseek-ai/dsh-session-title-first-prompt-llm`
+## `@fde2e/len-session-title-first-prompt-llm`
 
 - `inject`: `sessionTitle` · `llm` · `sessions`
 - `refs`: [`SessionTitleLlmConfig`](../packages/session/session-title-llm/src/index.ts)
@@ -3341,12 +3341,12 @@ export interface Config extends SessionTitleLlmConfig {
   readonly targetCjkCharacters: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-session-title-first-prompt-llm -->
+<!-- END GENERATED config-catalog:@fde2e/len-session-title-first-prompt-llm -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-shell-env -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-shell-env -->
 <a id="deepseek-aidsh-shell-env"></a>
 
-## `@deepseek-ai/dsh-shell-env`
+## `@fde2e/len-shell-env`
 
 - `source`: [`packages/shell/shell-env/src/index.ts:30`](../packages/shell/shell-env/src/index.ts)
 
@@ -3357,12 +3357,12 @@ export interface Config {
   dshHome?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-shell-env -->
+<!-- END GENERATED config-catalog:@fde2e/len-shell-env -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-skill -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-skill -->
 <a id="deepseek-aidsh-skill"></a>
 
-## `@deepseek-ai/dsh-skill`
+## `@fde2e/len-skill`
 
 - `source`: [`packages/skill/skill/src/index.ts:278`](../packages/skill/skill/src/index.ts)
 
@@ -3373,12 +3373,12 @@ export interface Config {
   readonly collectCacheMaxEntries?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-skill -->
+<!-- END GENERATED config-catalog:@fde2e/len-skill -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-skill-filesystem -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-skill-filesystem -->
 <a id="deepseek-aidsh-skill-filesystem"></a>
 
-## `@deepseek-ai/dsh-skill-filesystem`
+## `@fde2e/len-skill-filesystem`
 
 - `inject`: `skills`
 - `source`: [`packages/skill/skill-filesystem/src/index.ts:48`](../packages/skill/skill-filesystem/src/index.ts)
@@ -3412,12 +3412,12 @@ export interface Config {
   bundledSkillDir?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-skill-filesystem -->
+<!-- END GENERATED config-catalog:@fde2e/len-skill-filesystem -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-skill-office -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-skill-office -->
 <a id="deepseek-aidsh-skill-office"></a>
 
-## `@deepseek-ai/dsh-skill-office`
+## `@fde2e/len-skill-office`
 
 - `inject`: `skills`
 - `source`: [`packages/skill/skill-office/src/index.ts:16`](../packages/skill/skill-office/src/index.ts)
@@ -3433,12 +3433,12 @@ export interface Config {
   cli?: string | false
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-skill-office -->
+<!-- END GENERATED config-catalog:@fde2e/len-skill-office -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-spill-local -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-spill-local -->
 <a id="deepseek-aidsh-spill-local"></a>
 
-## `@deepseek-ai/dsh-spill-local`
+## `@fde2e/len-spill-local`
 
 - `source`: [`packages/spill/spill-local/src/index.ts:31`](../packages/spill/spill-local/src/index.ts)
 
@@ -3464,12 +3464,12 @@ export interface Config {
   cleanupPeriodDays?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-spill-local -->
+<!-- END GENERATED config-catalog:@fde2e/len-spill-local -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-spill-policy -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-spill-policy -->
 <a id="deepseek-aidsh-spill-policy"></a>
 
-## `@deepseek-ai/dsh-spill-policy`
+## `@fde2e/len-spill-policy`
 
 - `inject`: `tools`
 - `source`: [`packages/spill/spill-policy/src/index.ts:26`](../packages/spill/spill-policy/src/index.ts)
@@ -3481,12 +3481,12 @@ export interface Config {
   maxInlineTokens?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-spill-policy -->
+<!-- END GENERATED config-catalog:@fde2e/len-spill-policy -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-ssh -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-ssh -->
 <a id="deepseek-aidsh-ssh"></a>
 
-## `@deepseek-ai/dsh-ssh`
+## `@fde2e/len-ssh`
 
 - `source`: [`packages/ssh/ssh/src/index.ts:33`](../packages/ssh/ssh/src/index.ts)
 
@@ -3528,12 +3528,12 @@ export type HelperLaunch = {
   kind: 'executable'
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-ssh -->
+<!-- END GENERATED config-catalog:@fde2e/len-ssh -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-storage-domain -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-storage-domain -->
 <a id="deepseek-aidsh-storage-domain"></a>
 
-## `@deepseek-ai/dsh-storage-domain`
+## `@fde2e/len-storage-domain`
 
 - `inject`: `storage`
 - `source`: [`packages/storage/storage-domain/src/index.ts:52`](../packages/storage/storage-domain/src/index.ts)
@@ -3552,12 +3552,12 @@ export interface Config {
   routes?: Record<string, string>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-storage-domain -->
+<!-- END GENERATED config-catalog:@fde2e/len-storage-domain -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-storage-json -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-storage-json -->
 <a id="deepseek-aidsh-storage-json"></a>
 
-## `@deepseek-ai/dsh-storage-json`
+## `@fde2e/len-storage-json`
 
 - `inject`: `storage`
 - `source`: [`packages/storage/storage-json/src/index.ts:28`](../packages/storage/storage-json/src/index.ts)
@@ -3574,12 +3574,12 @@ export interface Config {
   root: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-storage-json -->
+<!-- END GENERATED config-catalog:@fde2e/len-storage-json -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-storage-sqlite -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-storage-sqlite -->
 <a id="deepseek-aidsh-storage-sqlite"></a>
 
-## `@deepseek-ai/dsh-storage-sqlite`
+## `@fde2e/len-storage-sqlite`
 
 - `inject`: `storage`
 - `source`: [`packages/storage/storage-sqlite/src/index.ts:24`](../packages/storage/storage-sqlite/src/index.ts)
@@ -3615,12 +3615,12 @@ export interface Config {
  */
 export type JournalMode = 'wal' | 'delete' | 'truncate' | 'persist'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-storage-sqlite -->
+<!-- END GENERATED config-catalog:@fde2e/len-storage-sqlite -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-subagent -->
 <a id="deepseek-aidsh-subagent"></a>
 
-## `@deepseek-ai/dsh-subagent`
+## `@fde2e/len-subagent`
 
 - `inject`: `workingDirectory` · `sessionProjections`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -3635,12 +3635,12 @@ export interface Config {
   maxDepth: Volatile<number>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent -->
+<!-- END GENERATED config-catalog:@fde2e/len-subagent -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-acp -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-subagent-acp -->
 <a id="deepseek-aidsh-subagent-acp"></a>
 
-## `@deepseek-ai/dsh-subagent-acp`
+## `@fde2e/len-subagent-acp`
 
 - `inject`: `subagents` · `subprocess`
 - `source`: [`packages/subagent/subagent-acp/src/index.ts:25`](../packages/subagent/subagent-acp/src/index.ts)
@@ -3681,12 +3681,12 @@ export interface Config {
 /** Fixed response to child permission requests: reject by default, or select the first allow option. */
 export type PermissionPolicy = 'allow' | 'reject'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-acp -->
+<!-- END GENERATED config-catalog:@fde2e/len-subagent-acp -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-claude-code -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-subagent-claude-code -->
 <a id="deepseek-aidsh-subagent-claude-code"></a>
 
-## `@deepseek-ai/dsh-subagent-claude-code`
+## `@fde2e/len-subagent-claude-code`
 
 - `inject`: `subagents` · `subprocess`
 - `source`: [`packages/subagent/subagent-claude-code/src/index.ts:38`](../packages/subagent/subagent-claude-code/src/index.ts)
@@ -3717,12 +3717,12 @@ export interface Config {
 /** Profile-selectable non-interactive Claude Code permission mode. */
 export type ClaudeCodePermissionMode = typeof CLAUDE_CODE_PERMISSION_MODES[number]
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-claude-code -->
+<!-- END GENERATED config-catalog:@fde2e/len-subagent-claude-code -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-codex -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-subagent-codex -->
 <a id="deepseek-aidsh-subagent-codex"></a>
 
-## `@deepseek-ai/dsh-subagent-codex`
+## `@fde2e/len-subagent-codex`
 
 - `inject`: `subagents` · `subprocess`
 - `source`: [`packages/subagent/subagent-codex/src/index.ts:36`](../packages/subagent/subagent-codex/src/index.ts)
@@ -3751,12 +3751,12 @@ export type CodexPermissionMode =
   | 'approve-for-me'
   | 'dangerously-bypass-approvals-and-sandbox'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-codex -->
+<!-- END GENERATED config-catalog:@fde2e/len-subagent-codex -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-dsh-sdk -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-subagent-dsh-sdk -->
 <a id="deepseek-aidsh-subagent-dsh-sdk"></a>
 
-## `@deepseek-ai/dsh-subagent-dsh-sdk`
+## `@fde2e/len-subagent-dsh-sdk`
 
 - `inject`: `subagents`
 - `source`: [`packages/subagent/subagent-dsh-sdk/src/index.ts:34`](../packages/subagent/subagent-dsh-sdk/src/index.ts)
@@ -3799,12 +3799,12 @@ export interface Config {
   disposeGraceMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-dsh-sdk -->
+<!-- END GENERATED config-catalog:@fde2e/len-subagent-dsh-sdk -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-fork-in-process -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-subagent-fork-in-process -->
 <a id="deepseek-aidsh-subagent-fork-in-process"></a>
 
-## `@deepseek-ai/dsh-subagent-fork-in-process`
+## `@fde2e/len-subagent-fork-in-process`
 
 - `inject`: `subagents`
 - `source`: [`packages/subagent/subagent-fork-in-process/src/index.ts:29`](../packages/subagent/subagent-fork-in-process/src/index.ts)
@@ -3816,12 +3816,12 @@ export interface Config {
   providerName: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-fork-in-process -->
+<!-- END GENERATED config-catalog:@fde2e/len-subagent-fork-in-process -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-subagent-spawn-in-process -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-subagent-spawn-in-process -->
 <a id="deepseek-aidsh-subagent-spawn-in-process"></a>
 
-## `@deepseek-ai/dsh-subagent-spawn-in-process`
+## `@fde2e/len-subagent-spawn-in-process`
 
 - `inject`: `subagents`
 - `source`: [`packages/subagent/subagent-spawn-in-process/src/index.ts:23`](../packages/subagent/subagent-spawn-in-process/src/index.ts)
@@ -3833,12 +3833,12 @@ export interface Config {
   providerName: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-subagent-spawn-in-process -->
+<!-- END GENERATED config-catalog:@fde2e/len-subagent-spawn-in-process -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-system-prompt -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-system-prompt -->
 <a id="deepseek-aidsh-system-prompt"></a>
 
-## `@deepseek-ai/dsh-system-prompt`
+## `@fde2e/len-system-prompt`
 
 - `source`: [`packages/core/system-prompt/src/index.ts:264`](../packages/core/system-prompt/src/index.ts)
 
@@ -3867,12 +3867,12 @@ export interface Config {
   toolOrder?: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-system-prompt -->
+<!-- END GENERATED config-catalog:@fde2e/len-system-prompt -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-terminal-bash -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-terminal-bash -->
 <a id="deepseek-aidsh-terminal-bash"></a>
 
-## `@deepseek-ai/dsh-terminal-bash`
+## `@fde2e/len-terminal-bash`
 
 - `inject`: `terminals` · `sandboxPolicy` · `subprocess` · `workingDirectory`
 - `source`: [`packages/terminal/terminal-bash/src/config.ts:10`](../packages/terminal/terminal-bash/src/config.ts)
@@ -3927,12 +3927,12 @@ export interface Config {
 /** One supported interactive shell dialect. */
 export type ShellDialect = 'bash' | 'pwsh'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-terminal-bash -->
+<!-- END GENERATED config-catalog:@fde2e/len-terminal-bash -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-time-context -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-time-context -->
 <a id="deepseek-aidsh-time-context"></a>
 
-## `@deepseek-ai/dsh-time-context`
+## `@fde2e/len-time-context`
 
 - `inject`: `agents` · `sessionProjections`
 - `source`: [`packages/context/time-context/src/index.ts:52`](../packages/context/time-context/src/index.ts)
@@ -3946,12 +3946,12 @@ export interface Config {
   refreshIntervalMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-time-context -->
+<!-- END GENERATED config-catalog:@fde2e/len-time-context -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tmux-context -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tmux-context -->
 <a id="deepseek-aidsh-tmux-context"></a>
 
-## `@deepseek-ai/dsh-tmux-context`
+## `@fde2e/len-tmux-context`
 
 - `inject`: `agents` · `sessionProjections`
 - `source`: [`packages/context/tmux-context/src/index.ts:47`](../packages/context/tmux-context/src/index.ts)
@@ -3963,12 +3963,12 @@ export interface Config {
   refreshIntervalMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tmux-context -->
+<!-- END GENERATED config-catalog:@fde2e/len-tmux-context -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-token-meter -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-token-meter -->
 <a id="deepseek-aidsh-token-meter"></a>
 
-## `@deepseek-ai/dsh-token-meter`
+## `@fde2e/len-token-meter`
 
 - `inject`: `sessionProjections`
 - `source`: [`packages/llm/token-meter/src/types.ts:13`](../packages/llm/token-meter/src/types.ts)
@@ -3977,12 +3977,12 @@ export interface Config {
 /** Token-meter plugin configuration; the fixed estimator has no settings. */
 export type TokenMeterConfig = Record<string, never>
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-token-meter -->
+<!-- END GENERATED config-catalog:@fde2e/len-token-meter -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-agent-team -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-agent-team -->
 <a id="deepseek-aidsh-tool-agent-team"></a>
 
-## `@deepseek-ai/dsh-tool-agent-team`
+## `@fde2e/len-tool-agent-team`
 
 - `inject`: `agentTeams` · `subagents` · `tools` · `systemPrompt`
 - `source`: [`packages/team/tool-agent-team/src/index.ts:18`](../packages/team/tool-agent-team/src/index.ts)
@@ -3991,12 +3991,12 @@ export type TokenMeterConfig = Record<string, never>
 /** The Team tool plugin takes no configuration. */
 export type Config = Record<never, never>
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-agent-team -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-agent-team -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-ask-user -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-ask-user -->
 <a id="deepseek-aidsh-tool-ask-user"></a>
 
-## `@deepseek-ai/dsh-tool-ask-user`
+## `@fde2e/len-tool-ask-user`
 
 - `inject`: `tools` · `userQuestions`
 - `source`: [`packages/interaction/tool-ask-user/src/index.ts:16`](../packages/interaction/tool-ask-user/src/index.ts)
@@ -4010,12 +4010,12 @@ export interface Config {
   timeout?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-ask-user -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-ask-user -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-bash -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-bash -->
 <a id="deepseek-aidsh-tool-bash"></a>
 
-## `@deepseek-ai/dsh-tool-bash`
+## `@fde2e/len-tool-bash`
 
 - `inject`: `tools` · `shell` · `systemPrompt` · `shellEnv` · `workingDirectory`
 - `source`: [`packages/shell/tool-bash/src/index.ts:37`](../packages/shell/tool-bash/src/index.ts)
@@ -4040,12 +4040,12 @@ export interface Config {
   promoteOnTimeout?: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-bash -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-bash -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-bash-persistent -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-bash-persistent -->
 <a id="deepseek-aidsh-tool-bash-persistent"></a>
 
-## `@deepseek-ai/dsh-tool-bash-persistent`
+## `@fde2e/len-tool-bash-persistent`
 
 - `inject`: `tools` · `terminals` · `workingDirectory`
 - `source`: [`packages/shell/tool-bash-persistent/src/index.ts:447`](../packages/shell/tool-bash-persistent/src/index.ts)
@@ -4063,12 +4063,12 @@ export interface Config {
   description?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-bash-persistent -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-bash-persistent -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-executor-ptc -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-executor-ptc -->
 <a id="deepseek-aidsh-tool-executor-ptc"></a>
 
-## `@deepseek-ai/dsh-tool-executor-ptc`
+## `@fde2e/len-tool-executor-ptc`
 
 - `inject`: `tools` · `systemPrompt` · `ptcRuntime`
 - `source`: [`packages/core/tool-executor-ptc/src/config.ts:5`](../packages/core/tool-executor-ptc/src/config.ts)
@@ -4080,12 +4080,12 @@ export interface Config {
   maxParallelSubCalls: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-executor-ptc -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-executor-ptc -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-fs -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-fs -->
 <a id="deepseek-aidsh-tool-fs"></a>
 
-## `@deepseek-ai/dsh-tool-fs`
+## `@fde2e/len-tool-fs`
 
 - `inject`: `tools` · `fs` · `systemPrompt` · `workingDirectory`
 - `source`: [`packages/fs/tool-fs/src/index.ts:27`](../packages/fs/tool-fs/src/index.ts)
@@ -4113,12 +4113,12 @@ export interface Config {
   readStreamMinSize?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-fs -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-fs -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-fs-search -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-fs-search -->
 <a id="deepseek-aidsh-tool-fs-search"></a>
 
-## `@deepseek-ai/dsh-tool-fs-search`
+## `@fde2e/len-tool-fs-search`
 
 - `inject`: `tools` · `systemPrompt` · `subprocess` · `workingDirectory`
 - `source`: [`packages/fs/tool-fs-search/src/index.ts:74`](../packages/fs/tool-fs-search/src/index.ts)
@@ -4144,17 +4144,17 @@ export interface Config {
   stderrMaxBytes?: number
   /**
    * Cooperative tool-call timeout budget (ms) on both tools, enforced by
-   * `@deepseek-ai/dsh-tool-call-timeout-policy` through `exec.signal`.
+   * `@fde2e/len-tool-call-timeout-policy` through `exec.signal`.
    */
   timeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-fs-search -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-fs-search -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-goal -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-goal -->
 <a id="deepseek-aidsh-tool-goal"></a>
 
-## `@deepseek-ai/dsh-tool-goal`
+## `@fde2e/len-tool-goal`
 
 - `inject`: `agents` · `goals` · `tools` · `systemPrompt`
 - `source`: [`packages/goal/tool-goal/src/index.ts:32`](../packages/goal/tool-goal/src/index.ts)
@@ -4166,12 +4166,12 @@ export interface Config {
   blockedAfterConsecutiveRounds?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-goal -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-goal -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-jobs -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-jobs -->
 <a id="deepseek-aidsh-tool-jobs"></a>
 
-## `@deepseek-ai/dsh-tool-jobs`
+## `@fde2e/len-tool-jobs`
 
 - `inject`: `tools` · `jobs` · `systemPrompt`
 - `source`: [`packages/jobs/tool-jobs/src/index.ts:43`](../packages/jobs/tool-jobs/src/index.ts)
@@ -4210,12 +4210,12 @@ export interface Config {
  */
 export type CompletionDelivery = 'quiet' | 'wakeup'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-jobs -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-jobs -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-lsp -->
 <a id="deepseek-aidsh-tool-lsp"></a>
 
-## `@deepseek-ai/dsh-tool-lsp`
+## `@fde2e/len-tool-lsp`
 
 - `inject`: `tools` · `lsp` · `systemPrompt` · `workingDirectory`
 - `source`: [`packages/lsp/tool-lsp/src/index.ts:56`](../packages/lsp/tool-lsp/src/index.ts)
@@ -4231,12 +4231,12 @@ export interface Config {
   timeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-lsp -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-lsp -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-present -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-present -->
 <a id="deepseek-aidsh-tool-present"></a>
 
-## `@deepseek-ai/dsh-tool-present`
+## `@fde2e/len-tool-present`
 
 - `inject`: `tools` · `fs` · `agents` · `workingDirectory`
 - `source`: [`packages/deliverables/tool-present/src/index.ts:15`](../packages/deliverables/tool-present/src/index.ts)
@@ -4248,12 +4248,12 @@ export interface Config {
   maxFiles: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-present -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-present -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-pwsh -->
 <a id="deepseek-aidsh-tool-pwsh"></a>
 
-## `@deepseek-ai/dsh-tool-pwsh`
+## `@fde2e/len-tool-pwsh`
 
 - `inject`: `tools` · `shell` · `systemPrompt` · `shellEnv` · `workingDirectory`
 - `source`: [`packages/shell/tool-pwsh/src/index.ts:54`](../packages/shell/tool-pwsh/src/index.ts)
@@ -4278,12 +4278,12 @@ export interface Config {
   promoteOnTimeout?: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-pwsh -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh-persistent -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-pwsh-persistent -->
 <a id="deepseek-aidsh-tool-pwsh-persistent"></a>
 
-## `@deepseek-ai/dsh-tool-pwsh-persistent`
+## `@fde2e/len-tool-pwsh-persistent`
 
 - `inject`: `tools` · `terminals` · `workingDirectory`
 - `source`: [`packages/shell/tool-pwsh-persistent/src/index.ts:458`](../packages/shell/tool-pwsh-persistent/src/index.ts)
@@ -4301,12 +4301,12 @@ export interface Config {
   description?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-pwsh-persistent -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-pwsh-persistent -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-ralph -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-ralph -->
 <a id="deepseek-aidsh-tool-ralph"></a>
 
-## `@deepseek-ai/dsh-tool-ralph`
+## `@fde2e/len-tool-ralph`
 
 - `inject`: `tools` · `workflowEngine` · `subagents` · `systemPrompt`
 - `source`: [`packages/experimental/tool-ralph/src/index.ts:21`](../packages/experimental/tool-ralph/src/index.ts)
@@ -4324,12 +4324,12 @@ export interface Config {
   maxResultChars?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-ralph -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-ralph -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-session-query -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-session-query -->
 <a id="deepseek-aidsh-tool-session-query"></a>
 
-## `@deepseek-ai/dsh-tool-session-query`
+## `@fde2e/len-tool-session-query`
 
 - `inject`: `tools` · `systemPrompt` · `sessionQuery` · `agents`
 - `source`: [`packages/experimental/tool-session-query/src/index.ts:28`](../packages/experimental/tool-session-query/src/index.ts)
@@ -4343,12 +4343,12 @@ export interface Config {
   searchTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-session-query -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-session-query -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-skill -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-skill -->
 <a id="deepseek-aidsh-tool-skill"></a>
 
-## `@deepseek-ai/dsh-tool-skill`
+## `@fde2e/len-tool-skill`
 
 - `inject`: `agents` · `tools` · `skills` · `workingDirectory`
 - `source`: [`packages/skill/tool-skill/src/index.ts:64`](../packages/skill/tool-skill/src/index.ts)
@@ -4360,12 +4360,12 @@ export interface Config {
   catalogDescriptionMaxLength?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-skill -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-skill -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-str-replace-editor -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-str-replace-editor -->
 <a id="deepseek-aidsh-tool-str-replace-editor"></a>
 
-## `@deepseek-ai/dsh-tool-str-replace-editor`
+## `@fde2e/len-tool-str-replace-editor`
 
 - `inject`: `tools` · `fs`
 - `source`: [`packages/fs/tool-str-replace-editor/src/index.ts:506`](../packages/fs/tool-str-replace-editor/src/index.ts)
@@ -4379,12 +4379,12 @@ export interface Config {
   description?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-str-replace-editor -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-str-replace-editor -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-subagent -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-subagent -->
 <a id="deepseek-aidsh-tool-subagent"></a>
 
-## `@deepseek-ai/dsh-tool-subagent`
+## `@fde2e/len-tool-subagent`
 
 - `inject`: `tools` · `subagents` · `systemPrompt` · `sessionProjections`
 - `refs`: [`AgentOptions`](subsystems/core.md)
@@ -4437,12 +4437,12 @@ export interface PresetSelectionConfig {
   allowedAgentPresets?: string[] | undefined
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-subagent -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-subagent -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-subagent-control -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-subagent-control -->
 <a id="deepseek-aidsh-tool-subagent-control"></a>
 
-## `@deepseek-ai/dsh-tool-subagent-control`
+## `@fde2e/len-tool-subagent-control`
 
 - `inject`: `tools` · `subagents` · `agents` · `systemPrompt`
 - `source`: [`packages/subagent/tool-subagent-control/src/index.ts:26`](../packages/subagent/tool-subagent-control/src/index.ts)
@@ -4454,12 +4454,12 @@ export interface Config {
   interrupt?: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-subagent-control -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-subagent-control -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-terminal -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-terminal -->
 <a id="deepseek-aidsh-tool-terminal"></a>
 
-## `@deepseek-ai/dsh-tool-terminal`
+## `@fde2e/len-tool-terminal`
 
 - `inject`: `terminals` · `tools` · `systemPrompt` · `workingDirectory`
 - `source`: [`packages/experimental/tool-terminal/src/index.ts:38`](../packages/experimental/tool-terminal/src/index.ts)
@@ -4473,12 +4473,12 @@ export interface Config {
   maxResultBytes?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-terminal -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-terminal -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-todo -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-todo -->
 <a id="deepseek-aidsh-tool-todo"></a>
 
-## `@deepseek-ai/dsh-tool-todo`
+## `@fde2e/len-tool-todo`
 
 - `inject`: `tools` · `sessionProjections`
 - `source`: [`packages/todo/tool-todo/src/index.ts:29`](../packages/todo/tool-todo/src/index.ts)
@@ -4496,12 +4496,12 @@ export interface Config {
   allowParallelInProgress: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-todo -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-todo -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-web -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-web -->
 <a id="deepseek-aidsh-tool-web"></a>
 
-## `@deepseek-ai/dsh-tool-web`
+## `@fde2e/len-tool-web`
 
 - `inject`: `tools` · `web` · `systemPrompt`
 - `source`: [`packages/web/tool-web/src/index.ts:39`](../packages/web/tool-web/src/index.ts)
@@ -4527,12 +4527,12 @@ export interface Config {
   fetchMaxOutputChars?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-web -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-web -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-workflow -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-workflow -->
 <a id="deepseek-aidsh-tool-workflow"></a>
 
-## `@deepseek-ai/dsh-tool-workflow`
+## `@fde2e/len-tool-workflow`
 
 - `inject`: `tools` · `workflowEngine` · `systemPrompt`
 - `source`: [`packages/workflow/tool-workflow/src/index.ts:44`](../packages/workflow/tool-workflow/src/index.ts)
@@ -4554,12 +4554,12 @@ export interface Config {
   enableRunInBackground?: boolean
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-workflow -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-workflow -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-tool-workspace-dependencies -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-tool-workspace-dependencies -->
 <a id="deepseek-aidsh-tool-workspace-dependencies"></a>
 
-## `@deepseek-ai/dsh-tool-workspace-dependencies`
+## `@fde2e/len-tool-workspace-dependencies`
 
 - `inject`: `tools`
 - `source`: [`packages/skill/tool-workspace-dependencies/src/index.ts:15`](../packages/skill/tool-workspace-dependencies/src/index.ts)
@@ -4577,12 +4577,12 @@ export interface Config {
   readonly root?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-tool-workspace-dependencies -->
+<!-- END GENERATED config-catalog:@fde2e/len-tool-workspace-dependencies -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-typert-loader -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-typert-loader -->
 <a id="deepseek-aidsh-typert-loader"></a>
 
-## `@deepseek-ai/dsh-typert-loader`
+## `@fde2e/len-typert-loader`
 
 - `inject`: `typert` · `loader`
 - `source`: [`packages/typert/loader/src/index.ts:48`](../packages/typert/loader/src/index.ts)
@@ -4594,12 +4594,12 @@ export interface Config {
   packages?: string[]
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-typert-loader -->
+<!-- END GENERATED config-catalog:@fde2e/len-typert-loader -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-user-approval -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-user-approval -->
 <a id="deepseek-aidsh-user-approval"></a>
 
-## `@deepseek-ai/dsh-user-approval`
+## `@fde2e/len-user-approval`
 
 - `inject`: `sessionProjections`
 - `source`: [`packages/interaction/user-approval/src/index.ts:152`](../packages/interaction/user-approval/src/index.ts)
@@ -4628,12 +4628,12 @@ export interface Config {
  */
 export type ApprovalPolicy = 'ask' | 'never'
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-user-approval -->
+<!-- END GENERATED config-catalog:@fde2e/len-user-approval -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-web -->
 <a id="deepseek-aidsh-web"></a>
 
-## `@deepseek-ai/dsh-web`
+## `@fde2e/len-web`
 
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
 - `source`: [`packages/web/web/src/index.ts:62`](../packages/web/web/src/index.ts)
@@ -4654,12 +4654,12 @@ export interface WebRuntimeConfig {
   readonly fetchProvider: Volatile<string | undefined>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web -->
+<!-- END GENERATED config-catalog:@fde2e/len-web -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-app -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-web-app -->
 <a id="deepseek-aidsh-web-app"></a>
 
-## `@deepseek-ai/dsh-web-app`
+## `@fde2e/len-web-app`
 
 - `inject`: `webServer`
 - `source`: [`packages/bundle/web-app/src/index.ts:55`](../packages/bundle/web-app/src/index.ts)
@@ -4686,12 +4686,12 @@ export interface Config {
   publicUrl?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-app -->
+<!-- END GENERATED config-catalog:@fde2e/len-web-app -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-deepseek-api -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-web-deepseek-api -->
 <a id="deepseek-aidsh-web-deepseek-api"></a>
 
-## `@deepseek-ai/dsh-web-deepseek-api`
+## `@fde2e/len-web-deepseek-api`
 
 - `inject`: `web`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -4731,12 +4731,12 @@ export interface Config {
   fetchApiKeyEnv: Volatile<string | undefined>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-deepseek-api -->
+<!-- END GENERATED config-catalog:@fde2e/len-web-deepseek-api -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-fetch-http -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-web-fetch-http -->
 <a id="deepseek-aidsh-web-fetch-http"></a>
 
-## `@deepseek-ai/dsh-web-fetch-http`
+## `@fde2e/len-web-fetch-http`
 
 - `inject`: `web`
 - `source`: [`packages/web/web-fetch-http/src/index.ts:32`](../packages/web/web-fetch-http/src/index.ts)
@@ -4756,12 +4756,12 @@ export interface Config {
   userAgent?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-fetch-http -->
+<!-- END GENERATED config-catalog:@fde2e/len-web-fetch-http -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-web-search-deepseek -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-web-search-deepseek -->
 <a id="deepseek-aidsh-web-search-deepseek"></a>
 
-## `@deepseek-ai/dsh-web-search-deepseek`
+## `@fde2e/len-web-search-deepseek`
 
 - `inject`: `web`
 - `refs`: `Volatile` (`@deepseek-ai/cordis`)
@@ -4786,12 +4786,12 @@ export interface Config {
   maxUses: Volatile<number>
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-web-search-deepseek -->
+<!-- END GENERATED config-catalog:@fde2e/len-web-search-deepseek -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-webhook-github -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-webhook-github -->
 <a id="deepseek-aidsh-webhook-github"></a>
 
-## `@deepseek-ai/dsh-webhook-github`
+## `@fde2e/len-webhook-github`
 
 - `inject`: `webServer` · `webhookRuntime` · `credentials`
 - `source`: [`packages/experimental/webhook-github/src/index.ts:17`](../packages/experimental/webhook-github/src/index.ts)
@@ -4809,12 +4809,12 @@ export interface Config {
   readonly maxBodyBytes: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-webhook-github -->
+<!-- END GENERATED config-catalog:@fde2e/len-webhook-github -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-workflow-ptc -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-workflow-ptc -->
 <a id="deepseek-aidsh-workflow-ptc"></a>
 
-## `@deepseek-ai/dsh-workflow-ptc`
+## `@fde2e/len-workflow-ptc`
 
 - `inject`: `subagents` · `ptcRuntime` · `sandboxPolicy` · `workingDirectory`
 - `source`: [`packages/workflow/workflow-ptc/src/index.ts:33`](../packages/workflow/workflow-ptc/src/index.ts)
@@ -4834,12 +4834,12 @@ export interface Config {
   syncTimeoutMs?: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-workflow-ptc -->
+<!-- END GENERATED config-catalog:@fde2e/len-workflow-ptc -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-working-directory -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-working-directory -->
 <a id="deepseek-aidsh-working-directory"></a>
 
-## `@deepseek-ai/dsh-working-directory`
+## `@fde2e/len-working-directory`
 
 - `inject`: `fs` · `sessionProjections` · `systemPrompt`
 - `source`: [`packages/session/working-directory/src/index.ts:51`](../packages/session/working-directory/src/index.ts)
@@ -4851,12 +4851,12 @@ export interface Config {
   defaultDirectory?: string
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-working-directory -->
+<!-- END GENERATED config-catalog:@fde2e/len-working-directory -->
 
-<!-- BEGIN GENERATED config-catalog:@deepseek-ai/dsh-workspace-changes -->
+<!-- BEGIN GENERATED config-catalog:@fde2e/len-workspace-changes -->
 <a id="deepseek-aidsh-workspace-changes"></a>
 
-## `@deepseek-ai/dsh-workspace-changes`
+## `@fde2e/len-workspace-changes`
 
 - `inject`: `subprocess` · `fs`
 - `source`: [`packages/deliverables/workspace-changes/src/index.ts:34`](../packages/deliverables/workspace-changes/src/index.ts)
@@ -4879,7 +4879,7 @@ export interface Config {
   diffTimeoutMs: number
 }
 ```
-<!-- END GENERATED config-catalog:@deepseek-ai/dsh-workspace-changes -->
+<!-- END GENERATED config-catalog:@fde2e/len-workspace-changes -->
 
 ## Loadable plugins with no config
 
@@ -4888,125 +4888,125 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 <!-- BEGIN GENERATED config-catalog:no-config -->
 | `package` | `inject` | `source` |
 | --- | --- | --- |
-| `@deepseek-ai/dsh-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
-| `@deepseek-ai/dsh-agent` | `sessionProjections` | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
-| `@deepseek-ai/dsh-api-account-controller` | `deepseekAccount` · `agents` | [`packages/api/account-controller/src/index.ts`](../packages/api/account-controller/src/index.ts) |
-| `@deepseek-ai/dsh-api-remote-access` | — | [`packages/api/remote-access/src/index.ts`](../packages/api/remote-access/src/index.ts) |
-| `@deepseek-ai/dsh-api-remotes` | `typertGateway` | [`packages/api/remotes/src/index.ts`](../packages/api/remotes/src/index.ts) |
-| `@deepseek-ai/dsh-authorization` | `credentials` | [`packages/credentials/authorization/src/index.ts`](../packages/credentials/authorization/src/index.ts) |
-| `@deepseek-ai/dsh-browser-use` | — | [`packages/browser-use/browser-use/src/index.ts`](../packages/browser-use/browser-use/src/index.ts) |
-| `@deepseek-ai/dsh-client-file-upload` | `agents` · `attachments` · `commands` · `connection` | [`packages/client/file-upload/src/index.ts`](../packages/client/file-upload/src/index.ts) |
-| `@deepseek-ai/dsh-client-locale` | — | [`packages/client/locale/src/index.ts`](../packages/client/locale/src/index.ts) |
-| `@deepseek-ai/dsh-client-modules` | `loader` | [`packages/client/modules/src/index.ts`](../packages/client/modules/src/index.ts) |
-| `@deepseek-ai/dsh-client-resources` | — | [`packages/client/resources/src/index.ts`](../packages/client/resources/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-action-cards` | — | [`packages/experimental/client-ui-action-cards/src/index.ts`](../packages/experimental/client-ui-action-cards/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-agent-preset` | — | [`packages/client/ui-agent-preset/src/index.ts`](../packages/client/ui-agent-preset/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-agent-team` | — | [`packages/client/ui-agent-team/src/index.ts`](../packages/client/ui-agent-team/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-approval` | — | [`packages/client/ui-approval/src/index.ts`](../packages/client/ui-approval/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-attachment` | — | [`packages/client/ui-attachment/src/index.ts`](../packages/client/ui-attachment/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-brand-official` | — | [`packages/client/ui-brand-official/src/index.ts`](../packages/client/ui-brand-official/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-chat` | — | [`packages/client/ui-chat/src/index.ts`](../packages/client/ui-chat/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-commands` | — | [`packages/client/ui-commands/src/index.ts`](../packages/client/ui-commands/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-context-menu` | — | [`packages/client/ui-context-menu/src/index.ts`](../packages/client/ui-context-menu/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-conversation` | — | [`packages/client/ui-conversation/src/index.ts`](../packages/client/ui-conversation/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-cordis` | — | [`packages/extensions/ui-cordis/src/index.ts`](../packages/extensions/ui-cordis/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-creation-recommendations` | — | [`packages/experimental/client-ui-creation-recommendations/src/index.ts`](../packages/experimental/client-ui-creation-recommendations/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-deliverables` | `connection` · `sessionQuery` · `sessionController` · `workspaceFiles` · `fs` · `sandboxPolicy` · `workspaceChanges` | [`packages/client/ui-deliverables/src/index.ts`](../packages/client/ui-deliverables/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-directory-picker-browse` | — | [`packages/client/ui-directory-picker-browse/src/index.ts`](../packages/client/ui-directory-picker-browse/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-directory-picker-native` | — | [`packages/client/ui-directory-picker-native/src/index.ts`](../packages/client/ui-directory-picker-native/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-entry-customization` | — | [`packages/client/ui-entry-customization/src/index.ts`](../packages/client/ui-entry-customization/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-file-actions` | — | [`packages/client/ui-file-actions/src/index.ts`](../packages/client/ui-file-actions/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-file-drag` | — | [`packages/client/ui-file-drag/src/index.ts`](../packages/client/ui-file-drag/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-goal` | — | [`packages/client/ui-goal/src/index.ts`](../packages/client/ui-goal/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-input-trigger` | — | [`packages/client/ui-input-trigger/src/index.ts`](../packages/client/ui-input-trigger/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-jobs` | — | [`packages/client/ui-jobs/src/index.ts`](../packages/client/ui-jobs/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-layout` | — | [`packages/client/ui-layout/src/index.ts`](../packages/client/ui-layout/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-message-feedback` | — | [`packages/client/ui-message-feedback/src/index.ts`](../packages/client/ui-message-feedback/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-model-selection` | — | [`packages/client/ui-model-selection/src/index.ts`](../packages/client/ui-model-selection/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-open-in-app` | — | [`packages/client/ui-open-in-app/src/index.ts`](../packages/client/ui-open-in-app/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-permission-presets` | — | [`packages/client/ui-permission-presets/src/index.ts`](../packages/client/ui-permission-presets/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-plan` | — | [`packages/client/ui-plan/src/index.ts`](../packages/client/ui-plan/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-plugin-market` | — | [`packages/client/ui-plugin-market/src/index.ts`](../packages/client/ui-plugin-market/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-plugin-recommendations` | — | [`packages/experimental/client-ui-plugin-recommendations/src/index.ts`](../packages/experimental/client-ui-plugin-recommendations/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-reference` | — | [`packages/client/ui-reference/src/index.ts`](../packages/client/ui-reference/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-renderer` | — | [`packages/client/ui-renderer/src/index.ts`](../packages/client/ui-renderer/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-schedule` | — | [`packages/client/ui-schedule/src/index.ts`](../packages/client/ui-schedule/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-secret-mask` | — | [`packages/client/ui-secret-mask/src/index.ts`](../packages/client/ui-secret-mask/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-session` | — | [`packages/client/ui-session/src/index.ts`](../packages/client/ui-session/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings` | — | [`packages/client/ui-settings/src/index.ts`](../packages/client/ui-settings/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings-agent-loop` | — | [`packages/client/ui-settings-agent-loop/src/index.ts`](../packages/client/ui-settings-agent-loop/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings-general` | — | [`packages/client/ui-settings-general/src/index.ts`](../packages/client/ui-settings-general/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings-plugin-inventory` | — | [`packages/client/ui-settings-plugin-inventory/src/index.ts`](../packages/client/ui-settings-plugin-inventory/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings-plugins` | — | [`packages/client/ui-settings-plugins/src/index.ts`](../packages/client/ui-settings-plugins/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings-session-log` | — | [`packages/client/ui-settings-session-log/src/index.ts`](../packages/client/ui-settings-session-log/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings-shell` | — | [`packages/client/ui-settings-shell/src/index.ts`](../packages/client/ui-settings-shell/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings-subagent` | — | [`packages/client/ui-settings-subagent/src/index.ts`](../packages/client/ui-settings-subagent/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-settings-web-search` | — | [`packages/client/ui-settings-web-search/src/index.ts`](../packages/client/ui-settings-web-search/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-shortcuts` | — | [`packages/client/ui-shortcuts/src/index.ts`](../packages/client/ui-shortcuts/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-sidebar` | — | [`packages/client/ui-sidebar/src/index.ts`](../packages/client/ui-sidebar/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-sidebar-browser` | — | [`packages/client/ui-sidebar-browser/src/index.ts`](../packages/client/ui-sidebar-browser/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-sidebar-files` | — | [`packages/client/ui-sidebar-files/src/index.ts`](../packages/client/ui-sidebar-files/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-sidebar-right` | — | [`packages/client/ui-sidebar-right/src/index.ts`](../packages/client/ui-sidebar-right/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-sidebar-terminal` | — | [`packages/client/ui-sidebar-terminal/src/index.ts`](../packages/client/ui-sidebar-terminal/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-skill` | — | [`packages/client/ui-skill/src/index.ts`](../packages/client/ui-skill/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-subagent` | — | [`packages/client/ui-subagent/src/index.ts`](../packages/client/ui-subagent/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-tool` | — | [`packages/client/ui-tool/src/index.ts`](../packages/client/ui-tool/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-user-questions` | — | [`packages/client/ui-user-questions/src/index.ts`](../packages/client/ui-user-questions/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-workflow-run` | — | [`packages/client/ui-workflow-run/src/index.ts`](../packages/client/ui-workflow-run/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-workspace` | — | [`packages/client/ui-workspace/src/index.ts`](../packages/client/ui-workspace/src/index.ts) |
-| `@deepseek-ai/dsh-command-compact` | `commands` · `compaction` | [`packages/compaction/command-compact/src/index.ts`](../packages/compaction/command-compact/src/index.ts) |
-| `@deepseek-ai/dsh-command-feedback` | `commands` | [`packages/feedback/command-feedback/src/index.ts`](../packages/feedback/command-feedback/src/index.ts) |
-| `@deepseek-ai/dsh-command-goal` | `commands` · `goals` | [`packages/goal/command-goal/src/index.ts`](../packages/goal/command-goal/src/index.ts) |
-| `@deepseek-ai/dsh-commands` | — | [`packages/interaction/commands/src/index.ts`](../packages/interaction/commands/src/index.ts) |
-| `@deepseek-ai/dsh-compaction-image-offload` | `agents` · `sessions` | [`packages/compaction/compaction-image-offload/src/index.ts`](../packages/compaction/compaction-image-offload/src/index.ts) |
-| `@deepseek-ai/dsh-computer-use` | — | [`packages/computer-use/computer-use/src/index.ts`](../packages/computer-use/computer-use/src/index.ts) |
-| `@deepseek-ai/dsh-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
-| `@deepseek-ai/dsh-cordis-client-runner` | — | [`packages/extensions/cordis-client-runner/src/index.ts`](../packages/extensions/cordis-client-runner/src/index.ts) |
-| `@deepseek-ai/dsh-creation-recommendations` | `tools` · `pluginManager` · `agents` · `subagents` · `profileContext` · `skills` · `actionCards` | [`packages/experimental/creation-recommendations/src/index.ts`](../packages/experimental/creation-recommendations/src/index.ts) |
-| `@deepseek-ai/dsh-cua` | — | [`packages/experimental/cua/src/index.ts`](../packages/experimental/cua/src/index.ts) |
-| `@deepseek-ai/dsh-deepseek-llm-api-extensions` | — | [`packages/llm/deepseek-llm-api-extensions/src/index.ts`](../packages/llm/deepseek-llm-api-extensions/src/index.ts) |
-| `@deepseek-ai/dsh-deliverable-file-references` | `systemPrompt` | [`packages/deliverables/deliverable-file-references/src/index.ts`](../packages/deliverables/deliverable-file-references/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-auto-review` | `approval` · `llm` · `permissionPresets` · `sessions` · `tools` · `workingDirectory` | [`packages/experimental/auto-review/src/index.ts`](../packages/experimental/auto-review/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-client-ui-claude-code-mods` | — | [`packages/experimental/client-ui-claude-code-mods/src/index.ts`](../packages/experimental/client-ui-claude-code-mods/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-client-ui-stats` | — | [`packages/experimental/client-ui-stats/src/index.ts`](../packages/experimental/client-ui-stats/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-client-ui-voice-input` | — | [`packages/experimental/client-ui-voice-input/src/index.ts`](../packages/experimental/client-ui-voice-input/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-computer-use-cua-driver-native` | `computerUse` · `tools` · `systemPrompt` | [`packages/experimental/computer-use-cua-driver-native/src/index.ts`](../packages/experimental/computer-use-cua-driver-native/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-session-inspector` | — | [`packages/experimental/session-inspector/src/index.ts`](../packages/experimental/session-inspector/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-tool-worktree` | `tools` · `worktrees` | [`packages/experimental/tool-worktree/src/index.ts`](../packages/experimental/tool-worktree/src/index.ts) |
-| `@deepseek-ai/dsh-fs-observation-policy` | — | [`packages/fs/fs-observation-policy/src/index.ts`](../packages/fs/fs-observation-policy/src/index.ts) |
-| `@deepseek-ai/dsh-fs-ssh` | `ssh` · `sandboxPolicy` | [`packages/ssh/fs-ssh/src/index.ts`](../packages/ssh/fs-ssh/src/index.ts) |
-| `@deepseek-ai/dsh-goal-round-driver` | `agents` · `goals` · `sessions` | [`packages/goal/goal-round-driver/src/index.ts`](../packages/goal/goal-round-driver/src/index.ts) |
-| `@deepseek-ai/dsh-harness-dev-context` | `systemPrompt` · `sessionProjections` · `webApp` | [`packages/context/harness-dev-context/src/index.ts`](../packages/context/harness-dev-context/src/index.ts) |
-| `@deepseek-ai/dsh-host-directory-picker-auto` | `webServer` · `connection` · `loader` | [`packages/host/directory-picker-auto/src/index.ts`](../packages/host/directory-picker-auto/src/index.ts) |
-| `@deepseek-ai/dsh-host-directory-picker-native` | — | [`packages/host/directory-picker-native/src/index.ts`](../packages/host/directory-picker-native/src/index.ts) |
-| `@deepseek-ai/dsh-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
-| `@deepseek-ai/dsh-llm` | — | [`packages/llm/llm/src/index.ts`](../packages/llm/llm/src/index.ts) |
-| `@deepseek-ai/dsh-lsp` | — | [`packages/lsp/lsp/src/index.ts`](../packages/lsp/lsp/src/index.ts) |
-| `@deepseek-ai/dsh-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
-| `@deepseek-ai/dsh-message-quotes` | — | [`packages/session/message-quotes/src/index.ts`](../packages/session/message-quotes/src/index.ts) |
-| `@deepseek-ai/dsh-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
-| `@deepseek-ai/dsh-plugin-recommendations` | `pluginManager` · `agents` · `skills` · `actionCards` | [`packages/experimental/plugin-recommendations/src/index.ts`](../packages/experimental/plugin-recommendations/src/index.ts) |
-| `@deepseek-ai/dsh-sandbox-ssh` | `ssh` | [`packages/ssh/sandbox-ssh/src/index.ts`](../packages/ssh/sandbox-ssh/src/index.ts) |
-| `@deepseek-ai/dsh-session` | — | [`packages/core/session/src/index.ts`](../packages/core/session/src/index.ts) |
-| `@deepseek-ai/dsh-session-checkpoint-policy` | `llm` · `sessionPersistence` · `sessions` · `tools` | [`packages/session/session-checkpoint-policy/src/index.ts`](../packages/session/session-checkpoint-policy/src/index.ts) |
-| `@deepseek-ai/dsh-session-projection` | — | [`packages/session/session-projection/src/index.ts`](../packages/session/session-projection/src/index.ts) |
-| `@deepseek-ai/dsh-session-stats` | `sessionProjections` | [`packages/session/session-stats/src/index.ts`](../packages/session/session-stats/src/index.ts) |
-| `@deepseek-ai/dsh-session-turn-outline` | `sessionProjections` | [`packages/session/session-turn-outline/src/index.ts`](../packages/session/session-turn-outline/src/index.ts) |
-| `@deepseek-ai/dsh-settings` | `configEditor` · `profileContext` | [`packages/settings/settings/src/index.ts`](../packages/settings/settings/src/index.ts) |
-| `@deepseek-ai/dsh-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
-| `@deepseek-ai/dsh-storage` | — | [`packages/storage/storage/src/index.ts`](../packages/storage/storage/src/index.ts) |
-| `@deepseek-ai/dsh-subprocess-local` | — | [`packages/subprocess/subprocess-local/src/index.ts`](../packages/subprocess/subprocess-local/src/index.ts) |
-| `@deepseek-ai/dsh-subprocess-ssh` | `ssh` | [`packages/ssh/subprocess-ssh/src/index.ts`](../packages/ssh/subprocess-ssh/src/index.ts) |
-| `@deepseek-ai/dsh-terminal` | — | [`packages/terminal/terminal/src/index.ts`](../packages/terminal/terminal/src/index.ts) |
-| `@deepseek-ai/dsh-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
-| `@deepseek-ai/dsh-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
-| `@deepseek-ai/dsh-tool-executor-native` | `tools` | [`packages/core/tool-executor-native/src/index.ts`](../packages/core/tool-executor-native/src/index.ts) |
-| `@deepseek-ai/dsh-tool-schedule` | `tools` · `systemPrompt` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
-| `@deepseek-ai/dsh-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |
-| `@deepseek-ai/dsh-tools` | `systemPrompt` | [`packages/core/tools/src/index.ts`](../packages/core/tools/src/index.ts) |
-| `@deepseek-ai/dsh-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |
-| `@deepseek-ai/dsh-webhook` | `agents` · `agentDefaultModel` · `agentPresets` · `permissionPresets` · `sessionTitle` · `workspaceRegistry` | [`packages/experimental/webhook/src/index.ts`](../packages/experimental/webhook/src/index.ts) |
-| `@deepseek-ai/dsh-workspace` | `storageDomain` · `sessionPersistence` | [`packages/workspace/workspace/src/index.ts`](../packages/workspace/workspace/src/index.ts) |
+| `@fde2e/len-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
+| `@fde2e/len-agent` | `sessionProjections` | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
+| `@fde2e/len-api-account-controller` | `deepseekAccount` · `agents` | [`packages/api/account-controller/src/index.ts`](../packages/api/account-controller/src/index.ts) |
+| `@fde2e/len-api-remote-access` | — | [`packages/api/remote-access/src/index.ts`](../packages/api/remote-access/src/index.ts) |
+| `@fde2e/len-api-remotes` | `typertGateway` | [`packages/api/remotes/src/index.ts`](../packages/api/remotes/src/index.ts) |
+| `@fde2e/len-authorization` | `credentials` | [`packages/credentials/authorization/src/index.ts`](../packages/credentials/authorization/src/index.ts) |
+| `@fde2e/len-browser-use` | — | [`packages/browser-use/browser-use/src/index.ts`](../packages/browser-use/browser-use/src/index.ts) |
+| `@fde2e/len-client-file-upload` | `agents` · `attachments` · `commands` · `connection` | [`packages/client/file-upload/src/index.ts`](../packages/client/file-upload/src/index.ts) |
+| `@fde2e/len-client-locale` | — | [`packages/client/locale/src/index.ts`](../packages/client/locale/src/index.ts) |
+| `@fde2e/len-client-modules` | `loader` | [`packages/client/modules/src/index.ts`](../packages/client/modules/src/index.ts) |
+| `@fde2e/len-client-resources` | — | [`packages/client/resources/src/index.ts`](../packages/client/resources/src/index.ts) |
+| `@fde2e/len-client-ui-action-cards` | — | [`packages/experimental/client-ui-action-cards/src/index.ts`](../packages/experimental/client-ui-action-cards/src/index.ts) |
+| `@fde2e/len-client-ui-agent-preset` | — | [`packages/client/ui-agent-preset/src/index.ts`](../packages/client/ui-agent-preset/src/index.ts) |
+| `@fde2e/len-client-ui-agent-team` | — | [`packages/client/ui-agent-team/src/index.ts`](../packages/client/ui-agent-team/src/index.ts) |
+| `@fde2e/len-client-ui-approval` | — | [`packages/client/ui-approval/src/index.ts`](../packages/client/ui-approval/src/index.ts) |
+| `@fde2e/len-client-ui-attachment` | — | [`packages/client/ui-attachment/src/index.ts`](../packages/client/ui-attachment/src/index.ts) |
+| `@fde2e/len-client-ui-brand-official` | — | [`packages/client/ui-brand-official/src/index.ts`](../packages/client/ui-brand-official/src/index.ts) |
+| `@fde2e/len-client-ui-chat` | — | [`packages/client/ui-chat/src/index.ts`](../packages/client/ui-chat/src/index.ts) |
+| `@fde2e/len-client-ui-commands` | — | [`packages/client/ui-commands/src/index.ts`](../packages/client/ui-commands/src/index.ts) |
+| `@fde2e/len-client-ui-context-menu` | — | [`packages/client/ui-context-menu/src/index.ts`](../packages/client/ui-context-menu/src/index.ts) |
+| `@fde2e/len-client-ui-conversation` | — | [`packages/client/ui-conversation/src/index.ts`](../packages/client/ui-conversation/src/index.ts) |
+| `@fde2e/len-client-ui-cordis` | — | [`packages/extensions/ui-cordis/src/index.ts`](../packages/extensions/ui-cordis/src/index.ts) |
+| `@fde2e/len-client-ui-creation-recommendations` | — | [`packages/experimental/client-ui-creation-recommendations/src/index.ts`](../packages/experimental/client-ui-creation-recommendations/src/index.ts) |
+| `@fde2e/len-client-ui-deliverables` | `connection` · `sessionQuery` · `sessionController` · `workspaceFiles` · `fs` · `sandboxPolicy` · `workspaceChanges` | [`packages/client/ui-deliverables/src/index.ts`](../packages/client/ui-deliverables/src/index.ts) |
+| `@fde2e/len-client-ui-directory-picker-browse` | — | [`packages/client/ui-directory-picker-browse/src/index.ts`](../packages/client/ui-directory-picker-browse/src/index.ts) |
+| `@fde2e/len-client-ui-directory-picker-native` | — | [`packages/client/ui-directory-picker-native/src/index.ts`](../packages/client/ui-directory-picker-native/src/index.ts) |
+| `@fde2e/len-client-ui-entry-customization` | — | [`packages/client/ui-entry-customization/src/index.ts`](../packages/client/ui-entry-customization/src/index.ts) |
+| `@fde2e/len-client-ui-file-actions` | — | [`packages/client/ui-file-actions/src/index.ts`](../packages/client/ui-file-actions/src/index.ts) |
+| `@fde2e/len-client-ui-file-drag` | — | [`packages/client/ui-file-drag/src/index.ts`](../packages/client/ui-file-drag/src/index.ts) |
+| `@fde2e/len-client-ui-goal` | — | [`packages/client/ui-goal/src/index.ts`](../packages/client/ui-goal/src/index.ts) |
+| `@fde2e/len-client-ui-input-trigger` | — | [`packages/client/ui-input-trigger/src/index.ts`](../packages/client/ui-input-trigger/src/index.ts) |
+| `@fde2e/len-client-ui-jobs` | — | [`packages/client/ui-jobs/src/index.ts`](../packages/client/ui-jobs/src/index.ts) |
+| `@fde2e/len-client-ui-layout` | — | [`packages/client/ui-layout/src/index.ts`](../packages/client/ui-layout/src/index.ts) |
+| `@fde2e/len-client-ui-message-feedback` | — | [`packages/client/ui-message-feedback/src/index.ts`](../packages/client/ui-message-feedback/src/index.ts) |
+| `@fde2e/len-client-ui-model-selection` | — | [`packages/client/ui-model-selection/src/index.ts`](../packages/client/ui-model-selection/src/index.ts) |
+| `@fde2e/len-client-ui-open-in-app` | — | [`packages/client/ui-open-in-app/src/index.ts`](../packages/client/ui-open-in-app/src/index.ts) |
+| `@fde2e/len-client-ui-permission-presets` | — | [`packages/client/ui-permission-presets/src/index.ts`](../packages/client/ui-permission-presets/src/index.ts) |
+| `@fde2e/len-client-ui-plan` | — | [`packages/client/ui-plan/src/index.ts`](../packages/client/ui-plan/src/index.ts) |
+| `@fde2e/len-client-ui-plugin-market` | — | [`packages/client/ui-plugin-market/src/index.ts`](../packages/client/ui-plugin-market/src/index.ts) |
+| `@fde2e/len-client-ui-plugin-recommendations` | — | [`packages/experimental/client-ui-plugin-recommendations/src/index.ts`](../packages/experimental/client-ui-plugin-recommendations/src/index.ts) |
+| `@fde2e/len-client-ui-reference` | — | [`packages/client/ui-reference/src/index.ts`](../packages/client/ui-reference/src/index.ts) |
+| `@fde2e/len-client-ui-renderer` | — | [`packages/client/ui-renderer/src/index.ts`](../packages/client/ui-renderer/src/index.ts) |
+| `@fde2e/len-client-ui-schedule` | — | [`packages/client/ui-schedule/src/index.ts`](../packages/client/ui-schedule/src/index.ts) |
+| `@fde2e/len-client-ui-secret-mask` | — | [`packages/client/ui-secret-mask/src/index.ts`](../packages/client/ui-secret-mask/src/index.ts) |
+| `@fde2e/len-client-ui-session` | — | [`packages/client/ui-session/src/index.ts`](../packages/client/ui-session/src/index.ts) |
+| `@fde2e/len-client-ui-settings` | — | [`packages/client/ui-settings/src/index.ts`](../packages/client/ui-settings/src/index.ts) |
+| `@fde2e/len-client-ui-settings-agent-loop` | — | [`packages/client/ui-settings-agent-loop/src/index.ts`](../packages/client/ui-settings-agent-loop/src/index.ts) |
+| `@fde2e/len-client-ui-settings-general` | — | [`packages/client/ui-settings-general/src/index.ts`](../packages/client/ui-settings-general/src/index.ts) |
+| `@fde2e/len-client-ui-settings-plugin-inventory` | — | [`packages/client/ui-settings-plugin-inventory/src/index.ts`](../packages/client/ui-settings-plugin-inventory/src/index.ts) |
+| `@fde2e/len-client-ui-settings-plugins` | — | [`packages/client/ui-settings-plugins/src/index.ts`](../packages/client/ui-settings-plugins/src/index.ts) |
+| `@fde2e/len-client-ui-settings-session-log` | — | [`packages/client/ui-settings-session-log/src/index.ts`](../packages/client/ui-settings-session-log/src/index.ts) |
+| `@fde2e/len-client-ui-settings-shell` | — | [`packages/client/ui-settings-shell/src/index.ts`](../packages/client/ui-settings-shell/src/index.ts) |
+| `@fde2e/len-client-ui-settings-subagent` | — | [`packages/client/ui-settings-subagent/src/index.ts`](../packages/client/ui-settings-subagent/src/index.ts) |
+| `@fde2e/len-client-ui-settings-web-search` | — | [`packages/client/ui-settings-web-search/src/index.ts`](../packages/client/ui-settings-web-search/src/index.ts) |
+| `@fde2e/len-client-ui-shortcuts` | — | [`packages/client/ui-shortcuts/src/index.ts`](../packages/client/ui-shortcuts/src/index.ts) |
+| `@fde2e/len-client-ui-sidebar` | — | [`packages/client/ui-sidebar/src/index.ts`](../packages/client/ui-sidebar/src/index.ts) |
+| `@fde2e/len-client-ui-sidebar-browser` | — | [`packages/client/ui-sidebar-browser/src/index.ts`](../packages/client/ui-sidebar-browser/src/index.ts) |
+| `@fde2e/len-client-ui-sidebar-files` | — | [`packages/client/ui-sidebar-files/src/index.ts`](../packages/client/ui-sidebar-files/src/index.ts) |
+| `@fde2e/len-client-ui-sidebar-right` | — | [`packages/client/ui-sidebar-right/src/index.ts`](../packages/client/ui-sidebar-right/src/index.ts) |
+| `@fde2e/len-client-ui-sidebar-terminal` | — | [`packages/client/ui-sidebar-terminal/src/index.ts`](../packages/client/ui-sidebar-terminal/src/index.ts) |
+| `@fde2e/len-client-ui-skill` | — | [`packages/client/ui-skill/src/index.ts`](../packages/client/ui-skill/src/index.ts) |
+| `@fde2e/len-client-ui-subagent` | — | [`packages/client/ui-subagent/src/index.ts`](../packages/client/ui-subagent/src/index.ts) |
+| `@fde2e/len-client-ui-tool` | — | [`packages/client/ui-tool/src/index.ts`](../packages/client/ui-tool/src/index.ts) |
+| `@fde2e/len-client-ui-user-questions` | — | [`packages/client/ui-user-questions/src/index.ts`](../packages/client/ui-user-questions/src/index.ts) |
+| `@fde2e/len-client-ui-workflow-run` | — | [`packages/client/ui-workflow-run/src/index.ts`](../packages/client/ui-workflow-run/src/index.ts) |
+| `@fde2e/len-client-ui-workspace` | — | [`packages/client/ui-workspace/src/index.ts`](../packages/client/ui-workspace/src/index.ts) |
+| `@fde2e/len-command-compact` | `commands` · `compaction` | [`packages/compaction/command-compact/src/index.ts`](../packages/compaction/command-compact/src/index.ts) |
+| `@fde2e/len-command-feedback` | `commands` | [`packages/feedback/command-feedback/src/index.ts`](../packages/feedback/command-feedback/src/index.ts) |
+| `@fde2e/len-command-goal` | `commands` · `goals` | [`packages/goal/command-goal/src/index.ts`](../packages/goal/command-goal/src/index.ts) |
+| `@fde2e/len-commands` | — | [`packages/interaction/commands/src/index.ts`](../packages/interaction/commands/src/index.ts) |
+| `@fde2e/len-compaction-image-offload` | `agents` · `sessions` | [`packages/compaction/compaction-image-offload/src/index.ts`](../packages/compaction/compaction-image-offload/src/index.ts) |
+| `@fde2e/len-computer-use` | — | [`packages/computer-use/computer-use/src/index.ts`](../packages/computer-use/computer-use/src/index.ts) |
+| `@fde2e/len-config-editor` | `loader` · `profileContext` | [`packages/boot/config-editor/src/index.ts`](../packages/boot/config-editor/src/index.ts) |
+| `@fde2e/len-cordis-client-runner` | — | [`packages/extensions/cordis-client-runner/src/index.ts`](../packages/extensions/cordis-client-runner/src/index.ts) |
+| `@fde2e/len-creation-recommendations` | `tools` · `pluginManager` · `agents` · `subagents` · `profileContext` · `skills` · `actionCards` | [`packages/experimental/creation-recommendations/src/index.ts`](../packages/experimental/creation-recommendations/src/index.ts) |
+| `@fde2e/len-cua` | — | [`packages/experimental/cua/src/index.ts`](../packages/experimental/cua/src/index.ts) |
+| `@fde2e/len-deepseek-llm-api-extensions` | — | [`packages/llm/deepseek-llm-api-extensions/src/index.ts`](../packages/llm/deepseek-llm-api-extensions/src/index.ts) |
+| `@fde2e/len-deliverable-file-references` | `systemPrompt` | [`packages/deliverables/deliverable-file-references/src/index.ts`](../packages/deliverables/deliverable-file-references/src/index.ts) |
+| `@fde2e/len-experimental-auto-review` | `approval` · `llm` · `permissionPresets` · `sessions` · `tools` · `workingDirectory` | [`packages/experimental/auto-review/src/index.ts`](../packages/experimental/auto-review/src/index.ts) |
+| `@fde2e/len-experimental-client-ui-claude-code-mods` | — | [`packages/experimental/client-ui-claude-code-mods/src/index.ts`](../packages/experimental/client-ui-claude-code-mods/src/index.ts) |
+| `@fde2e/len-experimental-client-ui-stats` | — | [`packages/experimental/client-ui-stats/src/index.ts`](../packages/experimental/client-ui-stats/src/index.ts) |
+| `@fde2e/len-experimental-client-ui-voice-input` | — | [`packages/experimental/client-ui-voice-input/src/index.ts`](../packages/experimental/client-ui-voice-input/src/index.ts) |
+| `@fde2e/len-experimental-computer-use-cua-driver-native` | `computerUse` · `tools` · `systemPrompt` | [`packages/experimental/computer-use-cua-driver-native/src/index.ts`](../packages/experimental/computer-use-cua-driver-native/src/index.ts) |
+| `@fde2e/len-experimental-session-inspector` | — | [`packages/experimental/session-inspector/src/index.ts`](../packages/experimental/session-inspector/src/index.ts) |
+| `@fde2e/len-experimental-tool-worktree` | `tools` · `worktrees` | [`packages/experimental/tool-worktree/src/index.ts`](../packages/experimental/tool-worktree/src/index.ts) |
+| `@fde2e/len-fs-observation-policy` | — | [`packages/fs/fs-observation-policy/src/index.ts`](../packages/fs/fs-observation-policy/src/index.ts) |
+| `@fde2e/len-fs-ssh` | `ssh` · `sandboxPolicy` | [`packages/ssh/fs-ssh/src/index.ts`](../packages/ssh/fs-ssh/src/index.ts) |
+| `@fde2e/len-goal-round-driver` | `agents` · `goals` · `sessions` | [`packages/goal/goal-round-driver/src/index.ts`](../packages/goal/goal-round-driver/src/index.ts) |
+| `@fde2e/len-harness-dev-context` | `systemPrompt` · `sessionProjections` · `webApp` | [`packages/context/harness-dev-context/src/index.ts`](../packages/context/harness-dev-context/src/index.ts) |
+| `@fde2e/len-host-directory-picker-auto` | `webServer` · `connection` · `loader` | [`packages/host/directory-picker-auto/src/index.ts`](../packages/host/directory-picker-auto/src/index.ts) |
+| `@fde2e/len-host-directory-picker-native` | — | [`packages/host/directory-picker-native/src/index.ts`](../packages/host/directory-picker-native/src/index.ts) |
+| `@fde2e/len-host-plugin-inventory` | `loader` | [`packages/host/plugin-inventory/src/index.ts`](../packages/host/plugin-inventory/src/index.ts) |
+| `@fde2e/len-llm` | — | [`packages/llm/llm/src/index.ts`](../packages/llm/llm/src/index.ts) |
+| `@fde2e/len-lsp` | — | [`packages/lsp/lsp/src/index.ts`](../packages/lsp/lsp/src/index.ts) |
+| `@fde2e/len-mcp-resources` | `tools` | [`packages/mcp/mcp-resources/src/index.ts`](../packages/mcp/mcp-resources/src/index.ts) |
+| `@fde2e/len-message-quotes` | — | [`packages/session/message-quotes/src/index.ts`](../packages/session/message-quotes/src/index.ts) |
+| `@fde2e/len-otel` | — | [`packages/telemetry/otel/src/index.ts`](../packages/telemetry/otel/src/index.ts) |
+| `@fde2e/len-plugin-recommendations` | `pluginManager` · `agents` · `skills` · `actionCards` | [`packages/experimental/plugin-recommendations/src/index.ts`](../packages/experimental/plugin-recommendations/src/index.ts) |
+| `@fde2e/len-sandbox-ssh` | `ssh` | [`packages/ssh/sandbox-ssh/src/index.ts`](../packages/ssh/sandbox-ssh/src/index.ts) |
+| `@fde2e/len-session` | — | [`packages/core/session/src/index.ts`](../packages/core/session/src/index.ts) |
+| `@fde2e/len-session-checkpoint-policy` | `llm` · `sessionPersistence` · `sessions` · `tools` | [`packages/session/session-checkpoint-policy/src/index.ts`](../packages/session/session-checkpoint-policy/src/index.ts) |
+| `@fde2e/len-session-projection` | — | [`packages/session/session-projection/src/index.ts`](../packages/session/session-projection/src/index.ts) |
+| `@fde2e/len-session-stats` | `sessionProjections` | [`packages/session/session-stats/src/index.ts`](../packages/session/session-stats/src/index.ts) |
+| `@fde2e/len-session-turn-outline` | `sessionProjections` | [`packages/session/session-turn-outline/src/index.ts`](../packages/session/session-turn-outline/src/index.ts) |
+| `@fde2e/len-settings` | `configEditor` · `profileContext` | [`packages/settings/settings/src/index.ts`](../packages/settings/settings/src/index.ts) |
+| `@fde2e/len-skill-badge` | `skills` | [`packages/experimental/skill-badge/src/index.ts`](../packages/experimental/skill-badge/src/index.ts) |
+| `@fde2e/len-storage` | — | [`packages/storage/storage/src/index.ts`](../packages/storage/storage/src/index.ts) |
+| `@fde2e/len-subprocess-local` | — | [`packages/subprocess/subprocess-local/src/index.ts`](../packages/subprocess/subprocess-local/src/index.ts) |
+| `@fde2e/len-subprocess-ssh` | `ssh` | [`packages/ssh/subprocess-ssh/src/index.ts`](../packages/ssh/subprocess-ssh/src/index.ts) |
+| `@fde2e/len-terminal` | — | [`packages/terminal/terminal/src/index.ts`](../packages/terminal/terminal/src/index.ts) |
+| `@fde2e/len-tool-call-timeout-policy` | `tools` | [`packages/guard/timeout-policy/src/index.ts`](../packages/guard/timeout-policy/src/index.ts) |
+| `@fde2e/len-tool-cordis` | `tools` · `cordisInspect` | [`packages/extensions/tool-cordis/src/index.ts`](../packages/extensions/tool-cordis/src/index.ts) |
+| `@fde2e/len-tool-executor-native` | `tools` | [`packages/core/tool-executor-native/src/index.ts`](../packages/core/tool-executor-native/src/index.ts) |
+| `@fde2e/len-tool-schedule` | `tools` · `systemPrompt` | [`packages/schedule/tool-schedule/src/index.ts`](../packages/schedule/tool-schedule/src/index.ts) |
+| `@fde2e/len-tool-working-directory` | `tools` · `workingDirectory` | [`packages/session/tool-working-directory/src/index.ts`](../packages/session/tool-working-directory/src/index.ts) |
+| `@fde2e/len-tools` | `systemPrompt` | [`packages/core/tools/src/index.ts`](../packages/core/tools/src/index.ts) |
+| `@fde2e/len-user-questions` | — | [`packages/interaction/user-questions/src/index.ts`](../packages/interaction/user-questions/src/index.ts) |
+| `@fde2e/len-webhook` | `agents` · `agentDefaultModel` · `agentPresets` · `permissionPresets` · `sessionTitle` · `workspaceRegistry` | [`packages/experimental/webhook/src/index.ts`](../packages/experimental/webhook/src/index.ts) |
+| `@fde2e/len-workspace` | `storageDomain` · `sessionPersistence` | [`packages/workspace/workspace/src/index.ts`](../packages/workspace/workspace/src/index.ts) |
 <!-- END GENERATED config-catalog:no-config -->
 
 ## Seam packages (not directly loadable)
@@ -5016,22 +5016,22 @@ Abstract service classes — a deployment loads a concrete implementation packag
 <!-- BEGIN GENERATED config-catalog:seam -->
 | `package` | `class` | `inject` | `source` |
 | --- | --- | --- | --- |
-| `@deepseek-ai/dsh-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
-| `@deepseek-ai/dsh-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
-| `@deepseek-ai/dsh-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
-| `@deepseek-ai/dsh-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
-| `@deepseek-ai/dsh-file-reference` | `FileReferenceService` | — | [`packages/context/file-reference/src/index.ts`](../packages/context/file-reference/src/index.ts) |
-| `@deepseek-ai/dsh-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
-| `@deepseek-ai/dsh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
-| `@deepseek-ai/dsh-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
-| `@deepseek-ai/dsh-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
-| `@deepseek-ai/dsh-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
-| `@deepseek-ai/dsh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
-| `@deepseek-ai/dsh-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |
-| `@deepseek-ai/dsh-shell` | `ShellExecutor` | — | [`packages/shell/shell/src/index.ts`](../packages/shell/shell/src/index.ts) |
-| `@deepseek-ai/dsh-spill` | `SpillStore` | — | [`packages/spill/spill/src/index.ts`](../packages/spill/spill/src/index.ts) |
-| `@deepseek-ai/dsh-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
-| `@deepseek-ai/dsh-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
+| `@fde2e/len-attachment` | `AttachmentStore` | — | [`packages/attachment/attachment/src/index.ts`](../packages/attachment/attachment/src/index.ts) |
+| `@fde2e/len-compaction` | `CompactionEngine` | — | [`packages/compaction/compaction/src/index.ts`](../packages/compaction/compaction/src/index.ts) |
+| `@fde2e/len-credentials` | `CredentialProvider` | — | [`packages/credentials/credentials/src/index.ts`](../packages/credentials/credentials/src/index.ts) |
+| `@fde2e/len-deepseek-account` | `DeepSeekAccount` | — | [`packages/credentials/deepseek-account/src/index.ts`](../packages/credentials/deepseek-account/src/index.ts) |
+| `@fde2e/len-file-reference` | `FileReferenceService` | — | [`packages/context/file-reference/src/index.ts`](../packages/context/file-reference/src/index.ts) |
+| `@fde2e/len-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
+| `@fde2e/len-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
+| `@fde2e/len-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
+| `@fde2e/len-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
+| `@fde2e/len-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
+| `@fde2e/len-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |
+| `@fde2e/len-session-query` | `SessionQueryEngine` | — | [`packages/session-query/session-query/src/index.ts`](../packages/session-query/session-query/src/index.ts) |
+| `@fde2e/len-shell` | `ShellExecutor` | — | [`packages/shell/shell/src/index.ts`](../packages/shell/shell/src/index.ts) |
+| `@fde2e/len-spill` | `SpillStore` | — | [`packages/spill/spill/src/index.ts`](../packages/spill/spill/src/index.ts) |
+| `@fde2e/len-subprocess` | `SubprocessRuntime` | — | [`packages/subprocess/subprocess/src/index.ts`](../packages/subprocess/subprocess/src/index.ts) |
+| `@fde2e/len-workflow` | `WorkflowEngine` | — | [`packages/workflow/workflow/src/index.ts`](../packages/workflow/workflow/src/index.ts) |
 <!-- END GENERATED config-catalog:seam -->
 
 ## Library packages (no plugin entry)
@@ -5041,79 +5041,79 @@ Imported as libraries by other packages; a `cordis.yml` cannot load them.
 <!-- BEGIN GENERATED config-catalog:library -->
 | `package` | `inject` | `source` |
 | --- | --- | --- |
-| `@deepseek-ai/dsh-agent-loop-testkit` | — | [`packages/test-support/agent-loop-testkit/src/index.ts`](../packages/test-support/agent-loop-testkit/src/index.ts) |
-| `@deepseek-ai/dsh-anonymous-user-id` | — | [`packages/identity/anonymous-user-id/src/index.ts`](../packages/identity/anonymous-user-id/src/index.ts) |
-| `@deepseek-ai/dsh-app-boot` | — | [`packages/boot/app-boot/src/index.ts`](../packages/boot/app-boot/src/index.ts) |
-| `@deepseek-ai/dsh-atomic-write` | — | [`packages/util/atomic-write/src/index.ts`](../packages/util/atomic-write/src/index.ts) |
-| `@deepseek-ai/dsh-base` | — | [`packages/bundle/base/src/index.ts`](../packages/bundle/base/src/index.ts) |
-| `@deepseek-ai/dsh-brand` | — | [`packages/util/brand/src/index.ts`](../packages/util/brand/src/index.ts) |
-| `@deepseek-ai/dsh-chunked-list` | — | [`packages/util/chunked-list/src/index.ts`](../packages/util/chunked-list/src/index.ts) |
-| `@deepseek-ai/dsh-client-store` | — | [`packages/client/store/src/index.ts`](../packages/client/store/src/index.ts) |
-| `@deepseek-ai/dsh-client-test-runtime` | — | [`packages/test-support/client-runtime/src/index.ts`](../packages/test-support/client-runtime/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-dockkit` | — | [`packages/client/ui-dockkit/src/index.ts`](../packages/client/ui-dockkit/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-primitives` | — | [`packages/client/ui-primitives/src/index.ts`](../packages/client/ui-primitives/src/index.ts) |
-| `@deepseek-ai/dsh-client-ui-slots` | — | [`packages/client/ui-slots/src/index.ts`](../packages/client/ui-slots/src/index.ts) |
-| `@deepseek-ai/dsh-client-web` | — | [`packages/client/web/src/index.ts`](../packages/client/web/src/index.ts) |
-| `@deepseek-ai/dsh-cmdline` | — | [`packages/boot/cmdline/src/index.ts`](../packages/boot/cmdline/src/index.ts) |
-| `@deepseek-ai/dsh-cua-bundle` | — | [`packages/experimental/cua-bundle/src/index.ts`](../packages/experimental/cua-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-deque` | — | [`packages/util/deque/src/index.ts`](../packages/util/deque/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-badge-skill-bundle` | — | [`packages/experimental/badge-skill-bundle/src/index.ts`](../packages/experimental/badge-skill-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-browser-use-runtime` | — | [`packages/experimental/browser-use-runtime/src/index.ts`](../packages/experimental/browser-use-runtime/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-cot-translation-bundle` | — | [`packages/experimental/cot-translation-bundle/src/index.ts`](../packages/experimental/cot-translation-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-forge-bundle` | — | [`packages/experimental/forge-bundle/src/index.ts`](../packages/experimental/forge-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-inspector-profile` | — | [`packages/experimental/inspector-profile/src/index.ts`](../packages/experimental/inspector-profile/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-liveshare` | — | [`packages/experimental/liveshare/src/index.ts`](../packages/experimental/liveshare/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-liveshare-protocol` | — | [`packages/experimental/liveshare-protocol/src/index.ts`](../packages/experimental/liveshare-protocol/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-plugin-market-bundle` | — | [`packages/experimental/plugin-market-bundle/src/index.ts`](../packages/experimental/plugin-market-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-ralph-bundle` | — | [`packages/experimental/ralph-bundle/src/index.ts`](../packages/experimental/ralph-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-session-search` | — | [`packages/experimental/session-search/src/index.ts`](../packages/experimental/session-search/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-session-titles-bundle` | — | [`packages/experimental/session-titles-bundle/src/index.ts`](../packages/experimental/session-titles-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-terminal-bundle` | — | [`packages/experimental/terminal-bundle/src/index.ts`](../packages/experimental/terminal-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-voice-input-bundle` | — | [`packages/experimental/voice-input-bundle/src/index.ts`](../packages/experimental/voice-input-bundle/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-webworker-packer` | — | [`packages/experimental/webworker-packer/src/index.ts`](../packages/experimental/webworker-packer/src/index.ts) |
-| `@deepseek-ai/dsh-experimental-webworker-runtime` | — | [`packages/experimental/webworker-runtime/src/index.ts`](../packages/experimental/webworker-runtime/src/index.ts) |
-| `@deepseek-ai/dsh-fs-patch` | — | [`packages/fs/fs-patch/src/index.ts`](../packages/fs/fs-patch/src/index.ts) |
-| `@deepseek-ai/dsh-home-paths` | — | [`packages/util/home-paths/src/index.ts`](../packages/util/home-paths/src/index.ts) |
-| `@deepseek-ai/dsh-hook-protocol` | — | [`packages/experimental/hook-protocol/src/index.ts`](../packages/experimental/hook-protocol/src/index.ts) |
-| `@deepseek-ai/dsh-http-proxy` | — | [`packages/util/http-proxy/src/index.ts`](../packages/util/http-proxy/src/index.ts) |
-| `@deepseek-ai/dsh-launch-environment` | — | [`packages/util/launch-environment/src/index.ts`](../packages/util/launch-environment/src/index.ts) |
-| `@deepseek-ai/dsh-lazy-require` | — | [`packages/util/lazy-require/src/index.ts`](../packages/util/lazy-require/src/index.ts) |
-| `@deepseek-ai/dsh-llm-deepseek` | — | [`packages/llm/llm-deepseek/src/index.ts`](../packages/llm/llm-deepseek/src/index.ts) |
-| `@deepseek-ai/dsh-llm-mock-server` | — | [`packages/test-support/llm-mock-server/src/index.ts`](../packages/test-support/llm-mock-server/src/index.ts) |
-| `@deepseek-ai/dsh-loader-smoke` | — | [`packages/test-support/loader-smoke/src/index.ts`](../packages/test-support/loader-smoke/src/index.ts) |
-| `@deepseek-ai/dsh-native-command` | — | [`packages/util/native-command/src/index.ts`](../packages/util/native-command/src/index.ts) |
-| `@deepseek-ai/dsh-official-bundles` | — | [`packages/util/official-bundles/src/index.ts`](../packages/util/official-bundles/src/index.ts) |
-| `@deepseek-ai/dsh-output-retention` | — | [`packages/util/output-retention/src/index.ts`](../packages/util/output-retention/src/index.ts) |
-| `@deepseek-ai/dsh-package-manifest` | — | [`packages/util/package-manifest/src/index.ts`](../packages/util/package-manifest/src/index.ts) |
-| `@deepseek-ai/dsh-personalized-recommendations` | — | [`packages/experimental/personalized-recommendations/src/index.ts`](../packages/experimental/personalized-recommendations/src/index.ts) |
-| `@deepseek-ai/dsh-plugin-detail` | — | [`packages/util/plugin-detail/src/index.ts`](../packages/util/plugin-detail/src/index.ts) |
-| `@deepseek-ai/dsh-plugin-market-index` | — | [`packages/util/plugin-market-index/src/index.ts`](../packages/util/plugin-market-index/src/index.ts) |
-| `@deepseek-ai/dsh-remote-mock` | — | [`packages/test-support/remote-mock/src/index.ts`](../packages/test-support/remote-mock/src/index.ts) |
-| `@deepseek-ai/dsh-sandbox-windows-acl` | — | [`packages/sandbox/sandbox-windows-acl/src/index.ts`](../packages/sandbox/sandbox-windows-acl/src/index.ts) |
-| `@deepseek-ai/dsh-scope` | — | [`packages/core/scope/src/index.ts`](../packages/core/scope/src/index.ts) |
-| `@deepseek-ai/dsh-sdk-client` | — | [`packages/sdk/client/src/index.ts`](../packages/sdk/client/src/index.ts) |
-| `@deepseek-ai/dsh-sdk-minimal` | — | [`packages/bundle/sdk-minimal/src/index.ts`](../packages/bundle/sdk-minimal/src/index.ts) |
-| `@deepseek-ai/dsh-sdk-protocol` | — | [`packages/sdk/protocol/src/index.ts`](../packages/sdk/protocol/src/index.ts) |
-| `@deepseek-ai/dsh-session-format` | — | [`packages/session/session-format/src/index.ts`](../packages/session/session-format/src/index.ts) |
-| `@deepseek-ai/dsh-session-format-catalog` | — | [`packages/session/session-format-catalog/src/index.ts`](../packages/session/session-format-catalog/src/index.ts) |
-| `@deepseek-ai/dsh-session-format-v0-to-v1` | — | [`packages/session/session-format-v0-to-v1/src/index.ts`](../packages/session/session-format-v0-to-v1/src/index.ts) |
-| `@deepseek-ai/dsh-session-format-v1-to-v2` | — | [`packages/session/session-format-v1-to-v2/src/index.ts`](../packages/session/session-format-v1-to-v2/src/index.ts) |
-| `@deepseek-ai/dsh-session-format-v2-to-v3` | — | [`packages/session/session-format-v2-to-v3/src/index.ts`](../packages/session/session-format-v2-to-v3/src/index.ts) |
-| `@deepseek-ai/dsh-session-format-v3-to-v4` | — | [`packages/session/session-format-v3-to-v4/src/index.ts`](../packages/session/session-format-v3-to-v4/src/index.ts) |
-| `@deepseek-ai/dsh-session-snapshot` | — | [`packages/test-support/session-snapshot/src/index.ts`](../packages/test-support/session-snapshot/src/index.ts) |
-| `@deepseek-ai/dsh-session-telemetry` | — | [`packages/session/session-telemetry/src/index.ts`](../packages/session/session-telemetry/src/index.ts) |
-| `@deepseek-ai/dsh-session-title-llm` | — | [`packages/session/session-title-llm/src/index.ts`](../packages/session/session-title-llm/src/index.ts) |
-| `@deepseek-ai/dsh-ssh-helper-runtime` | — | [`packages/ssh/ssh-helper-runtime/src/index.ts`](../packages/ssh/ssh-helper-runtime/src/index.ts) |
-| `@deepseek-ai/dsh-timeout` | — | [`packages/util/timeout/src/index.ts`](../packages/util/timeout/src/index.ts) |
-| `@deepseek-ai/dsh-tool-testkit` | — | [`packages/test-support/tool-testkit/src/index.ts`](../packages/test-support/tool-testkit/src/index.ts) |
-| `@deepseek-ai/dsh-typert-generator` | — | [`packages/typert/generator/src/index.ts`](../packages/typert/generator/src/index.ts) |
-| `@deepseek-ai/dsh-typert-protocol` | — | [`packages/typert/protocol/src/index.ts`](../packages/typert/protocol/src/index.ts) |
-| `@deepseek-ai/dsh-typert-registry` | — | [`packages/typert/registry/src/index.ts`](../packages/typert/registry/src/index.ts) |
-| `@deepseek-ai/dsh-util-code-language` | — | [`packages/util/code-language/src/index.ts`](../packages/util/code-language/src/index.ts) |
-| `@deepseek-ai/dsh-util-crypto` | — | [`packages/util/crypto/src/index.ts`](../packages/util/crypto/src/index.ts) |
-| `@deepseek-ai/dsh-util-file-drag` | — | [`packages/util/file-drag/src/index.ts`](../packages/util/file-drag/src/index.ts) |
-| `@deepseek-ai/dsh-util-time` | — | [`packages/util/time/src/index.ts`](../packages/util/time/src/index.ts) |
-| `@deepseek-ai/dsh-util-values` | — | [`packages/util/values/src/index.ts`](../packages/util/values/src/index.ts) |
-| `@deepseek-ai/dsh-util-workspace-path` | — | [`packages/util/workspace-path/src/index.ts`](../packages/util/workspace-path/src/index.ts) |
-| `@deepseek-ai/dsh-win32-process` | — | [`packages/subprocess/win32-process/src/index.ts`](../packages/subprocess/win32-process/src/index.ts) |
+| `@fde2e/len-agent-loop-testkit` | — | [`packages/test-support/agent-loop-testkit/src/index.ts`](../packages/test-support/agent-loop-testkit/src/index.ts) |
+| `@fde2e/len-anonymous-user-id` | — | [`packages/identity/anonymous-user-id/src/index.ts`](../packages/identity/anonymous-user-id/src/index.ts) |
+| `@fde2e/len-app-boot` | — | [`packages/boot/app-boot/src/index.ts`](../packages/boot/app-boot/src/index.ts) |
+| `@fde2e/len-atomic-write` | — | [`packages/util/atomic-write/src/index.ts`](../packages/util/atomic-write/src/index.ts) |
+| `@fde2e/len-base` | — | [`packages/bundle/base/src/index.ts`](../packages/bundle/base/src/index.ts) |
+| `@fde2e/len-brand` | — | [`packages/util/brand/src/index.ts`](../packages/util/brand/src/index.ts) |
+| `@fde2e/len-chunked-list` | — | [`packages/util/chunked-list/src/index.ts`](../packages/util/chunked-list/src/index.ts) |
+| `@fde2e/len-client-store` | — | [`packages/client/store/src/index.ts`](../packages/client/store/src/index.ts) |
+| `@fde2e/len-client-test-runtime` | — | [`packages/test-support/client-runtime/src/index.ts`](../packages/test-support/client-runtime/src/index.ts) |
+| `@fde2e/len-client-ui-dockkit` | — | [`packages/client/ui-dockkit/src/index.ts`](../packages/client/ui-dockkit/src/index.ts) |
+| `@fde2e/len-client-ui-primitives` | — | [`packages/client/ui-primitives/src/index.ts`](../packages/client/ui-primitives/src/index.ts) |
+| `@fde2e/len-client-ui-slots` | — | [`packages/client/ui-slots/src/index.ts`](../packages/client/ui-slots/src/index.ts) |
+| `@fde2e/len-client-web` | — | [`packages/client/web/src/index.ts`](../packages/client/web/src/index.ts) |
+| `@fde2e/len-cmdline` | — | [`packages/boot/cmdline/src/index.ts`](../packages/boot/cmdline/src/index.ts) |
+| `@fde2e/len-cua-bundle` | — | [`packages/experimental/cua-bundle/src/index.ts`](../packages/experimental/cua-bundle/src/index.ts) |
+| `@fde2e/len-deque` | — | [`packages/util/deque/src/index.ts`](../packages/util/deque/src/index.ts) |
+| `@fde2e/len-experimental-badge-skill-bundle` | — | [`packages/experimental/badge-skill-bundle/src/index.ts`](../packages/experimental/badge-skill-bundle/src/index.ts) |
+| `@fde2e/len-experimental-browser-use-runtime` | — | [`packages/experimental/browser-use-runtime/src/index.ts`](../packages/experimental/browser-use-runtime/src/index.ts) |
+| `@fde2e/len-experimental-cot-translation-bundle` | — | [`packages/experimental/cot-translation-bundle/src/index.ts`](../packages/experimental/cot-translation-bundle/src/index.ts) |
+| `@fde2e/len-experimental-forge-bundle` | — | [`packages/experimental/forge-bundle/src/index.ts`](../packages/experimental/forge-bundle/src/index.ts) |
+| `@fde2e/len-experimental-inspector-profile` | — | [`packages/experimental/inspector-profile/src/index.ts`](../packages/experimental/inspector-profile/src/index.ts) |
+| `@fde2e/len-experimental-liveshare` | — | [`packages/experimental/liveshare/src/index.ts`](../packages/experimental/liveshare/src/index.ts) |
+| `@fde2e/len-experimental-liveshare-protocol` | — | [`packages/experimental/liveshare-protocol/src/index.ts`](../packages/experimental/liveshare-protocol/src/index.ts) |
+| `@fde2e/len-experimental-plugin-market-bundle` | — | [`packages/experimental/plugin-market-bundle/src/index.ts`](../packages/experimental/plugin-market-bundle/src/index.ts) |
+| `@fde2e/len-experimental-ralph-bundle` | — | [`packages/experimental/ralph-bundle/src/index.ts`](../packages/experimental/ralph-bundle/src/index.ts) |
+| `@fde2e/len-experimental-session-search` | — | [`packages/experimental/session-search/src/index.ts`](../packages/experimental/session-search/src/index.ts) |
+| `@fde2e/len-experimental-session-titles-bundle` | — | [`packages/experimental/session-titles-bundle/src/index.ts`](../packages/experimental/session-titles-bundle/src/index.ts) |
+| `@fde2e/len-experimental-terminal-bundle` | — | [`packages/experimental/terminal-bundle/src/index.ts`](../packages/experimental/terminal-bundle/src/index.ts) |
+| `@fde2e/len-experimental-voice-input-bundle` | — | [`packages/experimental/voice-input-bundle/src/index.ts`](../packages/experimental/voice-input-bundle/src/index.ts) |
+| `@fde2e/len-experimental-webworker-packer` | — | [`packages/experimental/webworker-packer/src/index.ts`](../packages/experimental/webworker-packer/src/index.ts) |
+| `@fde2e/len-experimental-webworker-runtime` | — | [`packages/experimental/webworker-runtime/src/index.ts`](../packages/experimental/webworker-runtime/src/index.ts) |
+| `@fde2e/len-fs-patch` | — | [`packages/fs/fs-patch/src/index.ts`](../packages/fs/fs-patch/src/index.ts) |
+| `@fde2e/len-home-paths` | — | [`packages/util/home-paths/src/index.ts`](../packages/util/home-paths/src/index.ts) |
+| `@fde2e/len-hook-protocol` | — | [`packages/experimental/hook-protocol/src/index.ts`](../packages/experimental/hook-protocol/src/index.ts) |
+| `@fde2e/len-http-proxy` | — | [`packages/util/http-proxy/src/index.ts`](../packages/util/http-proxy/src/index.ts) |
+| `@fde2e/len-launch-environment` | — | [`packages/util/launch-environment/src/index.ts`](../packages/util/launch-environment/src/index.ts) |
+| `@fde2e/len-lazy-require` | — | [`packages/util/lazy-require/src/index.ts`](../packages/util/lazy-require/src/index.ts) |
+| `@fde2e/len-llm-deepseek` | — | [`packages/llm/llm-deepseek/src/index.ts`](../packages/llm/llm-deepseek/src/index.ts) |
+| `@fde2e/len-llm-mock-server` | — | [`packages/test-support/llm-mock-server/src/index.ts`](../packages/test-support/llm-mock-server/src/index.ts) |
+| `@fde2e/len-loader-smoke` | — | [`packages/test-support/loader-smoke/src/index.ts`](../packages/test-support/loader-smoke/src/index.ts) |
+| `@fde2e/len-native-command` | — | [`packages/util/native-command/src/index.ts`](../packages/util/native-command/src/index.ts) |
+| `@fde2e/len-official-bundles` | — | [`packages/util/official-bundles/src/index.ts`](../packages/util/official-bundles/src/index.ts) |
+| `@fde2e/len-output-retention` | — | [`packages/util/output-retention/src/index.ts`](../packages/util/output-retention/src/index.ts) |
+| `@fde2e/len-package-manifest` | — | [`packages/util/package-manifest/src/index.ts`](../packages/util/package-manifest/src/index.ts) |
+| `@fde2e/len-personalized-recommendations` | — | [`packages/experimental/personalized-recommendations/src/index.ts`](../packages/experimental/personalized-recommendations/src/index.ts) |
+| `@fde2e/len-plugin-detail` | — | [`packages/util/plugin-detail/src/index.ts`](../packages/util/plugin-detail/src/index.ts) |
+| `@fde2e/len-plugin-market-index` | — | [`packages/util/plugin-market-index/src/index.ts`](../packages/util/plugin-market-index/src/index.ts) |
+| `@fde2e/len-remote-mock` | — | [`packages/test-support/remote-mock/src/index.ts`](../packages/test-support/remote-mock/src/index.ts) |
+| `@fde2e/len-sandbox-windows-acl` | — | [`packages/sandbox/sandbox-windows-acl/src/index.ts`](../packages/sandbox/sandbox-windows-acl/src/index.ts) |
+| `@fde2e/len-scope` | — | [`packages/core/scope/src/index.ts`](../packages/core/scope/src/index.ts) |
+| `@fde2e/len-sdk-client` | — | [`packages/sdk/client/src/index.ts`](../packages/sdk/client/src/index.ts) |
+| `@fde2e/len-sdk-minimal` | — | [`packages/bundle/sdk-minimal/src/index.ts`](../packages/bundle/sdk-minimal/src/index.ts) |
+| `@fde2e/len-sdk-protocol` | — | [`packages/sdk/protocol/src/index.ts`](../packages/sdk/protocol/src/index.ts) |
+| `@fde2e/len-session-format` | — | [`packages/session/session-format/src/index.ts`](../packages/session/session-format/src/index.ts) |
+| `@fde2e/len-session-format-catalog` | — | [`packages/session/session-format-catalog/src/index.ts`](../packages/session/session-format-catalog/src/index.ts) |
+| `@fde2e/len-session-format-v0-to-v1` | — | [`packages/session/session-format-v0-to-v1/src/index.ts`](../packages/session/session-format-v0-to-v1/src/index.ts) |
+| `@fde2e/len-session-format-v1-to-v2` | — | [`packages/session/session-format-v1-to-v2/src/index.ts`](../packages/session/session-format-v1-to-v2/src/index.ts) |
+| `@fde2e/len-session-format-v2-to-v3` | — | [`packages/session/session-format-v2-to-v3/src/index.ts`](../packages/session/session-format-v2-to-v3/src/index.ts) |
+| `@fde2e/len-session-format-v3-to-v4` | — | [`packages/session/session-format-v3-to-v4/src/index.ts`](../packages/session/session-format-v3-to-v4/src/index.ts) |
+| `@fde2e/len-session-snapshot` | — | [`packages/test-support/session-snapshot/src/index.ts`](../packages/test-support/session-snapshot/src/index.ts) |
+| `@fde2e/len-session-telemetry` | — | [`packages/session/session-telemetry/src/index.ts`](../packages/session/session-telemetry/src/index.ts) |
+| `@fde2e/len-session-title-llm` | — | [`packages/session/session-title-llm/src/index.ts`](../packages/session/session-title-llm/src/index.ts) |
+| `@fde2e/len-ssh-helper-runtime` | — | [`packages/ssh/ssh-helper-runtime/src/index.ts`](../packages/ssh/ssh-helper-runtime/src/index.ts) |
+| `@fde2e/len-timeout` | — | [`packages/util/timeout/src/index.ts`](../packages/util/timeout/src/index.ts) |
+| `@fde2e/len-tool-testkit` | — | [`packages/test-support/tool-testkit/src/index.ts`](../packages/test-support/tool-testkit/src/index.ts) |
+| `@fde2e/len-typert-generator` | — | [`packages/typert/generator/src/index.ts`](../packages/typert/generator/src/index.ts) |
+| `@fde2e/len-typert-protocol` | — | [`packages/typert/protocol/src/index.ts`](../packages/typert/protocol/src/index.ts) |
+| `@fde2e/len-typert-registry` | — | [`packages/typert/registry/src/index.ts`](../packages/typert/registry/src/index.ts) |
+| `@fde2e/len-util-code-language` | — | [`packages/util/code-language/src/index.ts`](../packages/util/code-language/src/index.ts) |
+| `@fde2e/len-util-crypto` | — | [`packages/util/crypto/src/index.ts`](../packages/util/crypto/src/index.ts) |
+| `@fde2e/len-util-file-drag` | — | [`packages/util/file-drag/src/index.ts`](../packages/util/file-drag/src/index.ts) |
+| `@fde2e/len-util-time` | — | [`packages/util/time/src/index.ts`](../packages/util/time/src/index.ts) |
+| `@fde2e/len-util-values` | — | [`packages/util/values/src/index.ts`](../packages/util/values/src/index.ts) |
+| `@fde2e/len-util-workspace-path` | — | [`packages/util/workspace-path/src/index.ts`](../packages/util/workspace-path/src/index.ts) |
+| `@fde2e/len-win32-process` | — | [`packages/subprocess/win32-process/src/index.ts`](../packages/subprocess/win32-process/src/index.ts) |
 <!-- END GENERATED config-catalog:library -->
