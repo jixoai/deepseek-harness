@@ -12796,25 +12796,6 @@ importers:
         specifier: workspace:*
         version: link:../../util/package-manifest
 
-  packages/llm/llm-anthropic:
-    dependencies:
-      '@deepseek-ai/schemastery':
-        specifier: link:../../../vendor/schemastery
-        version: link:../../../vendor/schemastery
-      '@fde2e/len-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
-      '@fde2e/len-llm':
-        specifier: workspace:*
-        version: link:../llm
-    devDependencies:
-      '@types/node':
-        specifier: ^24.0.0
-        version: 24.19.2
-      typescript:
-        specifier: ~5.9.3
-        version: 5.9.3
-
   packages/llm/llm-deepseek:
     dependencies:
       '@deepseek-ai/cosmokit':
@@ -21417,9 +21398,6 @@ packages:
   '@types/node@22.20.1':
     resolution: {integrity: sha512-EANqOCF9QFyra+4pfxUcX9STKJpCLjMbObVzljIJomAWSnuSIEAvyzEU53GaajbXJEgdh0iEcPL+DGvpUd4k1Q==}
 
-  '@types/node@24.19.2':
-    resolution: {integrity: sha512-93d49wCWJkCyN87MxLpNN6KXPCwFw7bVUg79mGUV1OS40JGWwVCr8n61DXCSqz7CV6/VfPkb7xec7uP2M+QHWQ==}
-
   '@types/node@26.4.1':
     resolution: {integrity: sha512-k97ENvZWtvA6yqz5/FS6a7duDgOPEeOQOc2iKS/nY6mX6qJUKtLnWzQS+Xj6tXweyj6ZcTAK2Qecetnvi9nCLA==}
 
@@ -25028,11 +25006,6 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
   typescript@6.0.3:
     resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
@@ -28145,10 +28118,6 @@ snapshots:
   '@types/node@22.20.1':
     dependencies:
       undici-types: 6.21.0
-
-  '@types/node@24.19.2':
-    dependencies:
-      undici-types: 7.24.6
 
   '@types/node@26.4.1':
     dependencies:
@@ -32166,8 +32135,6 @@ snapshots:
     dependencies:
       vscode-jsonrpc: 5.0.1
       vscode-languageserver-protocol: 3.18.2
-
-  typescript@5.9.3: {}
 
   typescript@6.0.3: {}
 
