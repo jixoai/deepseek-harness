@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-skill-badge",
-  "description": "Bundled dsh badge skill provider for DeepSeek Harness",
+  "description": "Bundled dsh badge skill provider for FDE2E LEN",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-fs-observation-policy",
-  "description": "File-context policy plugin for the DeepSeek Harness — observed-state, read-before-edit, and version-guarded write/edit added over the ctx.fs provider seam through the fs/* event gate (no service API)",
+  "description": "File-context policy plugin for the FDE2E LEN — observed-state, read-before-edit, and version-guarded write/edit added over the ctx.fs provider seam through the fs/* event gate (no service API)",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-tool-web",
-  "description": "Model-facing web tools (web_search, web_fetch) over the DeepSeek Harness web capability seam (ctx.web)",
+  "description": "Model-facing web tools (web_search, web_fetch) over the FDE2E LEN web capability seam (ctx.web)",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

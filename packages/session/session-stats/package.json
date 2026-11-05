@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-session-stats",
-  "description": "Whole-log conversation counts and wall times projection (sessionStats) for the DeepSeek Harness",
+  "description": "Whole-log conversation counts and wall times projection (sessionStats) for the FDE2E LEN",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

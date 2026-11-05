@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-token-meter",
-  "description": "Replay-aware token measurement service (ctx.tokenMeter) for the DeepSeek Harness",
+  "description": "Replay-aware token measurement service (ctx.tokenMeter) for the FDE2E LEN",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

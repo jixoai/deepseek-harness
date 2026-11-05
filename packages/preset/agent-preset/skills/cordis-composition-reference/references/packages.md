@@ -8,7 +8,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-acp` | yes | Automation-only Agent Client Protocol server for driving DeepSeek Harness agents over JSON-RPC stdio |
+| `@fde2e/len-acp` | yes | Automation-only Agent Client Protocol server for driving FDE2E LEN agents over JSON-RPC stdio |
 
 ## api
 
@@ -71,7 +71,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@fde2e/len-client-ui-agent-team` | no | Web shared task board for a subagent tree |
 | `@fde2e/len-client-ui-approval` | no | Approval composer takeover over the scoped Remote Event waterfall |
 | `@fde2e/len-client-ui-attachment` | no | Dynamic attachment presentation plugin for conversation input, message-image, and trajectory image slots |
-| `@fde2e/len-client-ui-brand-official` | no | Official DeepSeek Harness brand occupants for the Web client's sidebar slots |
+| `@fde2e/len-client-ui-brand-official` | no | Official FDE2E LEN brand occupants for the Web client's sidebar slots |
 | `@fde2e/len-client-ui-chat` | no | Chat Conversation target, node definitions, renderers, and details surface |
 | `@fde2e/len-client-ui-commands` | no | Client command surface: global directory cache, '/' source, three command UI kinds, popupSelect registry |
 | `@fde2e/len-client-ui-context-menu` | no | Typed, plugin-extensible context menus with captured targets and shared Web presentation |
@@ -130,7 +130,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | Package | Config | Description |
 |---|---|---|
 | `@fde2e/len-command-compact` | no | Human-facing slash command for explicit session compaction |
-| `@fde2e/len-compaction-basic` | yes | Token-meter-driven compaction policy and LLM summarization backend for the DeepSeek Harness |
+| `@fde2e/len-compaction-basic` | yes | Token-meter-driven compaction policy and LLM summarization backend for the FDE2E LEN |
 | `@fde2e/len-compaction-image-offload` | no | Durable image offload for image-capable routes: replace over-budget request images with placeholders and retry |
 | `@fde2e/len-compaction-tool-result-pruner` | yes | Replay-safe model-free head/middle/tail pruning for tool-result surface nodes |
 
@@ -146,7 +146,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 |---|---|---|
 | `@fde2e/len-agent-instructions` | yes | Workspace context loader for AGENTS.md/CLAUDE.md instruction files |
 | `@fde2e/len-file-reference-local` | yes | Local-filesystem ctx.fileReferences provider with bounded fuzzy indexes |
-| `@fde2e/len-harness-dev-context` | no | Model context naming the DeepSeek Harness checkout and Web GUI URL without letting either change the system prompt |
+| `@fde2e/len-harness-dev-context` | no | Model context naming the FDE2E LEN checkout and Web GUI URL without letting either change the system prompt |
 | `@fde2e/len-session-reference` | yes | Cross-session snapshot references and durable untrusted model context (ctx.sessionReferenceResolver) |
 | `@fde2e/len-time-context` | yes | Durable per-step context with the current time and elapsed time |
 | `@fde2e/len-tmux-context` | yes | Opt-in durable per-step context with this agent's tmux pane and window location |
@@ -155,31 +155,31 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-agent` | no | Agent interface, registry, initiator scope, and event vocabulary for the DeepSeek Harness |
+| `@fde2e/len-agent` | no | Agent interface, registry, initiator scope, and event vocabulary for the FDE2E LEN |
 | `@fde2e/len-agent-default-model` | yes | Default model selection shared by Agent entry points |
-| `@fde2e/len-agent-loop` | yes | The concrete agent loop plugin for the DeepSeek Harness |
+| `@fde2e/len-agent-loop` | yes | The concrete agent loop plugin for the FDE2E LEN |
 | `@fde2e/len-agent-tool-presentation` | yes | Deprecated tool presentation selector; use dsh-tool-executor-native or dsh-tool-executor-ptc directly |
-| `@fde2e/len-session` | no | Event-sourced session store for the DeepSeek Harness |
-| `@fde2e/len-system-prompt` | yes | System prompt assembly registry for the DeepSeek Harness |
+| `@fde2e/len-session` | no | Event-sourced session store for the FDE2E LEN |
+| `@fde2e/len-system-prompt` | yes | System prompt assembly registry for the FDE2E LEN |
 | `@fde2e/len-tool-executor-native` | no | Native tool execution plugin |
 | `@fde2e/len-tool-executor-ptc` | yes | PTC program execution, tool bindings, and generated SDK prompts |
-| `@fde2e/len-tools` | no | Tool registry and execution pipeline for the DeepSeek Harness |
+| `@fde2e/len-tools` | no | Tool registry and execution pipeline for the FDE2E LEN |
 
 ## credentials
 
 | Package | Config | Description |
 |---|---|---|
 | `@fde2e/len-authorization` | no | Authorization seam (ctx.authorization): plugin-owned flows that obtain a credential through a conversation with the human |
-| `@fde2e/len-credentials-local` | yes | File-backed credentials provider ($DSH_HOME/.env under the live process environment) for the DeepSeek Harness |
+| `@fde2e/len-credentials-local` | yes | File-backed credentials provider ($DSH_HOME/.env under the live process environment) for the FDE2E LEN |
 | `@fde2e/len-deepseek-account-platform` | yes | Authorize DeepSeek accounts through browser PKCE |
 
 ## deliverables
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-deliverable-file-references` | no | Shared model guidance for file links and deliverables across DeepSeek Harness hosts |
-| `@fde2e/len-tool-present` | yes | Explicit workspace file delivery declarations for the DeepSeek Harness |
-| `@fde2e/len-workspace-changes` | yes | Per-turn workspace file changes recorded from git working-tree snapshots and whole-file captures, with per-file comparisons, for the DeepSeek Harness |
+| `@fde2e/len-deliverable-file-references` | no | Shared model guidance for file links and deliverables across FDE2E LEN hosts |
+| `@fde2e/len-tool-present` | yes | Explicit workspace file delivery declarations for the FDE2E LEN |
+| `@fde2e/len-workspace-changes` | yes | Per-turn workspace file changes recorded from git working-tree snapshots and whole-file captures, with per-file comparisons, for the FDE2E LEN |
 
 ## document
 
@@ -198,11 +198,11 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@fde2e/len-creation-recommendations` | no | Create persistent removable interface plugins from explicit conversation needs |
 | `@fde2e/len-cua` | no | Shared Computer Use application objects, authorization, and logged tool execution |
 | `@fde2e/len-experimental-api-speech-to-text` | yes | Authenticated experimental speech transcription for browser clients |
-| `@fde2e/len-experimental-auto-review` | no | Per-tool LLM authorization review for the DeepSeek Harness Auto permission preset |
+| `@fde2e/len-experimental-auto-review` | no | Per-tool LLM authorization review for the FDE2E LEN Auto permission preset |
 | `@fde2e/len-experimental-browser-use-chrome-devtools-mcp` | yes | Experimental per-Session Chromium browser tools through chrome-devtools-mcp |
 | `@fde2e/len-experimental-browser-use-playwright-mcp` | yes | Experimental per-Session Chromium browser tools through @playwright/mcp |
 | `@fde2e/len-experimental-browser-use-stagehand-native` | yes | Experimental Stagehand browser tools with separately configured native models |
-| `@fde2e/len-experimental-claude-code-mods` | yes | Experimental bridge: load Claude Code mods (hooks modules) and run their hook chains on DeepSeek Harness extension points |
+| `@fde2e/len-experimental-claude-code-mods` | yes | Experimental bridge: load Claude Code mods (hooks modules) and run their hook chains on FDE2E LEN extension points |
 | `@fde2e/len-experimental-client-ui-claude-code-mods` | no | Web band above the prompt for Claude Code mods: draws each session's mod tree and sends button presses back to the bridge |
 | `@fde2e/len-experimental-client-ui-cot-translation` | yes | Optional machine translation of expanded reasoning, preserving original Session text |
 | `@fde2e/len-experimental-client-ui-forge` | yes | Sidebar panel for a Session's change requests, with a worktree option for new Sessions and its Host Remote |
@@ -215,7 +215,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@fde2e/len-experimental-forge-github` | yes | GitHub provider for the experimental forge registry, read through the GitHub CLI on the host |
 | `@fde2e/len-experimental-forge-session` | yes | Binds change requests to the Session that created, pushed, or tracked them |
 | `@fde2e/len-experimental-inspector` | yes | Experimental cross-realm CDP hub for Host debugging and Client Runtime inspection |
-| `@fde2e/len-experimental-ptc-runtime-python` | yes | CPython subprocess implementation of the DeepSeek Harness PTC execution seam |
+| `@fde2e/len-experimental-ptc-runtime-python` | yes | CPython subprocess implementation of the FDE2E LEN PTC execution seam |
 | `@fde2e/len-experimental-session-inspector` | no | Experimental virtualized Session log and live Chat group/node inspectors |
 | `@fde2e/len-experimental-speech-to-text` | yes | Experimental speech recognition with independently selectable providers |
 | `@fde2e/len-experimental-speech-to-text-sensevoice` | yes | Local SenseVoice ONNX transcription with a managed sherpa-onnx process |
@@ -224,16 +224,16 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@fde2e/len-experimental-tool-worktree` | no | Model tool that creates and enters a new Git worktree |
 | `@fde2e/len-experimental-translator` | yes | Machine translation with reusable Session results |
 | `@fde2e/len-experimental-worktree` | yes | Creates a named Git worktree and changes the calling Session working directory |
-| `@fde2e/len-hooks-claude-code` | yes | Bridge plugin: run a Claude Code hooks.json / settings hook config on the DeepSeek Harness interception seams |
-| `@fde2e/len-hooks-codex` | yes | Bridge plugin: run a Codex hooks.json hook config on the DeepSeek Harness interception seams |
+| `@fde2e/len-hooks-claude-code` | yes | Bridge plugin: run a Claude Code hooks.json / settings hook config on the FDE2E LEN interception seams |
+| `@fde2e/len-hooks-codex` | yes | Bridge plugin: run a Codex hooks.json hook config on the FDE2E LEN interception seams |
 | `@fde2e/len-plugin-recommendations` | no | Official plugin suggestions with explicit user activation and persistent conversation decisions |
-| `@fde2e/len-session-title-all-prompts-llm` | yes | All-user-messages LLM provider plugin for DeepSeek Harness session titles |
-| `@fde2e/len-skill-badge` | no | Bundled dsh badge skill provider for DeepSeek Harness |
+| `@fde2e/len-session-title-all-prompts-llm` | yes | All-user-messages LLM provider plugin for FDE2E LEN session titles |
+| `@fde2e/len-skill-badge` | no | Bundled dsh badge skill provider for FDE2E LEN |
 | `@fde2e/len-tool-ralph` | yes | Model-facing fresh-agent Ralph loop over the workflow and subagent seams |
 | `@fde2e/len-tool-session-query` | yes | Workspace-authorized model-facing session history search, trace, and event read tools |
 | `@fde2e/len-tool-terminal` | yes | Six model-facing persistent PTY tools with owner isolation and generic background-job integration |
-| `@fde2e/len-webhook` | no | Fire-and-forget webhook rule runtime that creates Workspace-backed DeepSeek Harness Sessions |
-| `@fde2e/len-webhook-github` | yes | Signed GitHub HTTP webhook adapter for the DeepSeek Harness webhook runtime |
+| `@fde2e/len-webhook` | no | Fire-and-forget webhook rule runtime that creates Workspace-backed FDE2E LEN Sessions |
+| `@fde2e/len-webhook-github` | yes | Signed GitHub HTTP webhook adapter for the FDE2E LEN webhook runtime |
 
 ## extensions
 
@@ -255,10 +255,10 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-fs-local` | yes | Local-filesystem implementation of the DeepSeek Harness filesystem seam (ctx.fs) |
-| `@fde2e/len-fs-observation-policy` | no | File-context policy plugin for the DeepSeek Harness — observed-state, read-before-edit, and version-guarded write/edit added over the ctx.fs provider seam through the fs/* event gate (no service API) |
-| `@fde2e/len-fs-sandbox` | yes | Sandbox-enforcing implementation of the DeepSeek Harness filesystem seam: fences write/edit by the per-call sandbox mode (read-only denies mutation, workspace-write contains it to the workspace + temp roots) while reads pass through |
-| `@fde2e/len-tool-fs` | yes | Model-facing filesystem tools (read, write, edit) over the DeepSeek Harness filesystem seam (ctx.fs) |
+| `@fde2e/len-fs-local` | yes | Local-filesystem implementation of the FDE2E LEN filesystem seam (ctx.fs) |
+| `@fde2e/len-fs-observation-policy` | no | File-context policy plugin for the FDE2E LEN — observed-state, read-before-edit, and version-guarded write/edit added over the ctx.fs provider seam through the fs/* event gate (no service API) |
+| `@fde2e/len-fs-sandbox` | yes | Sandbox-enforcing implementation of the FDE2E LEN filesystem seam: fences write/edit by the per-call sandbox mode (read-only denies mutation, workspace-write contains it to the workspace + temp roots) while reads pass through |
+| `@fde2e/len-tool-fs` | yes | Model-facing filesystem tools (read, write, edit) over the FDE2E LEN filesystem seam (ctx.fs) |
 | `@fde2e/len-tool-fs-search` | yes | Model-facing filesystem discovery tools (glob, grep) backed by the packaged ripgrep binary (@vscode/ripgrep) |
 | `@fde2e/len-tool-str-replace-editor` | yes | Model-facing view, create, literal replace, and line insert tool over the Harness filesystem service |
 
@@ -267,7 +267,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | Package | Config | Description |
 |---|---|---|
 | `@fde2e/len-command-goal` | no | Human-facing slash command for persisted same-session goals |
-| `@fde2e/len-goal` | yes | Event-sourced same-session goal state and lifecycle service for the DeepSeek Harness |
+| `@fde2e/len-goal` | yes | Event-sourced same-session goal state and lifecycle service for the FDE2E LEN |
 | `@fde2e/len-goal-round-driver` | no | Race-fenced same-session goal-round driver |
 | `@fde2e/len-tool-goal` | yes | Model-facing same-session goal tools with execution-time authority checks |
 
@@ -282,9 +282,9 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-host-directory-picker-auto` | no | Adaptive chooser of the directory-picker seam: resolves the host situation at boot and mounts the native or browse backend for the DeepSeek Harness web GUI host |
+| `@fde2e/len-host-directory-picker-auto` | no | Adaptive chooser of the directory-picker seam: resolves the host situation at boot and mounts the native or browse backend for the FDE2E LEN web GUI host |
 | `@fde2e/len-host-directory-picker-browse` | yes | In-app browsing backend of the directory-picker seam (listing/creation primitives over the host filesystem) |
-| `@fde2e/len-host-directory-picker-native` | no | Native-OS-chooser backend of the directory-picker seam for the DeepSeek Harness web GUI host |
+| `@fde2e/len-host-directory-picker-native` | no | Native-OS-chooser backend of the directory-picker seam for the FDE2E LEN web GUI host |
 | `@fde2e/len-host-frontend-static` | yes | SPA dist server for the Web shell: owns the webserver fallback seat, serving explicit index entries and static assets with traversal rejection and 404 misses |
 | `@fde2e/len-host-open-in-app` | yes | Host half of open-in-app: resolved application catalog, icons, and the launch endpoint as three webServer routes |
 | `@fde2e/len-host-plugin-inventory` | no | Read-only Remote projection of current Cordis Loader plugin state |
@@ -295,17 +295,17 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-commands` | no | Plugin-owned human command registry for DeepSeek Harness UIs |
-| `@fde2e/len-permission-presets` | yes | User-facing permission presets (ctx.permissionPresets) for the DeepSeek Harness: one product-level Permissions select bundling the sandbox-mode and approval-policy knobs, written through to their own session events |
+| `@fde2e/len-commands` | no | Plugin-owned human command registry for FDE2E LEN UIs |
+| `@fde2e/len-permission-presets` | yes | User-facing permission presets (ctx.permissionPresets) for the FDE2E LEN: one product-level Permissions select bundling the sandbox-mode and approval-policy knobs, written through to their own session events |
 | `@fde2e/len-tool-ask-user` | yes | Model-facing ask_user_question tool over the ctx.userQuestions seam |
-| `@fde2e/len-user-approval` | yes | User-approval seam (ctx.approval) for the DeepSeek Harness: one-shot permission decisions dispatched to composed answerers over the approval/request waterfall, fail-closed by default |
+| `@fde2e/len-user-approval` | yes | User-approval seam (ctx.approval) for the FDE2E LEN: one-shot permission decisions dispatched to composed answerers over the approval/request waterfall, fail-closed by default |
 | `@fde2e/len-user-questions` | no | Abstract user-questions seam (ctx.userQuestions) for asking the human during agent runs |
 
 ## jobs
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-jobs-local` | yes | Process-local implementation of the DeepSeek Harness background job registry seam |
+| `@fde2e/len-jobs-local` | yes | Process-local implementation of the FDE2E LEN background job registry seam |
 | `@fde2e/len-tool-jobs` | yes | Model-facing background job control tools (job_output, job_list, job_kill) over the ctx.jobs registry |
 
 ## llm
@@ -313,21 +313,21 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | Package | Config | Description |
 |---|---|---|
 | `@fde2e/len-deepseek-llm-api-extensions` | no | Additive request-field registry for the official DeepSeek LLM API adapter |
-| `@fde2e/len-llm` | no | Provider-neutral LLM service interface for the DeepSeek Harness |
+| `@fde2e/len-llm` | no | Provider-neutral LLM service interface for the FDE2E LEN |
 | `@fde2e/len-llm-deepseek-account` | yes | DeepSeek account provider authentication and discovery |
 | `@fde2e/len-llm-deepseek-api-key` | yes | DeepSeek api-key provider authentication and discovery |
-| `@fde2e/len-llm-pi-ai` | yes | pi-ai-backed DeepSeek adapter for the DeepSeek Harness LLM seam (design-verification twin of dsh-llm-deepseek) |
-| `@fde2e/len-llm-retry` | yes | Provider-routed LLM request retry policy for the DeepSeek Harness |
+| `@fde2e/len-llm-pi-ai` | yes | pi-ai-backed DeepSeek adapter for the FDE2E LEN LLM seam (design-verification twin of dsh-llm-deepseek) |
+| `@fde2e/len-llm-retry` | yes | Provider-routed LLM request retry policy for the FDE2E LEN |
 | `@fde2e/len-plugin-package-inventory-deepseek` | yes | Active Loader-backed plugin package inventory for official DeepSeek LLM API requests |
-| `@fde2e/len-token-meter` | yes | Replay-aware token measurement service (ctx.tokenMeter) for the DeepSeek Harness |
+| `@fde2e/len-token-meter` | yes | Replay-aware token measurement service (ctx.tokenMeter) for the FDE2E LEN |
 
 ## lsp
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-lsp` | no | Abstract LSP capability seam (ctx.lsp) for the DeepSeek Harness — language-server provider registry keyed by branded id and extension mapping, order-independent per-query selection, normalized definition/references/implementation/hover requests and results, and the LspError taxonomy |
-| `@fde2e/len-lsp-stdio` | yes | Generic stdio language-server provider for the DeepSeek Harness LSP capability seam (ctx.lsp) — spawns configured servers, translates JSON-RPC, and serves transient-open goToDefinition/findReferences/goToImplementation/hover queries in the host filesystem namespace |
-| `@fde2e/len-tool-lsp` | yes | Model-facing lsp tool over the DeepSeek Harness LSP capability seam (ctx.lsp) — one read-only tool with goToDefinition/findReferences/goToImplementation/hover operations, one-based UTF-16 cursor coordinates, bounded location rendering, and hover normalization |
+| `@fde2e/len-lsp` | no | Abstract LSP capability seam (ctx.lsp) for the FDE2E LEN — language-server provider registry keyed by branded id and extension mapping, order-independent per-query selection, normalized definition/references/implementation/hover requests and results, and the LspError taxonomy |
+| `@fde2e/len-lsp-stdio` | yes | Generic stdio language-server provider for the FDE2E LEN LSP capability seam (ctx.lsp) — spawns configured servers, translates JSON-RPC, and serves transient-open goToDefinition/findReferences/goToImplementation/hover queries in the host filesystem namespace |
+| `@fde2e/len-tool-lsp` | yes | Model-facing lsp tool over the FDE2E LEN LSP capability seam (ctx.lsp) — one read-only tool with goToDefinition/findReferences/goToImplementation/hover operations, one-based UTF-16 cursor coordinates, bounded location rendering, and hover normalization |
 
 ## mcp
 
@@ -349,7 +349,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 |---|---|---|
 | `@fde2e/len-agent-preset` | yes | Declare an Agent capability composition in Cordis YAML |
 | `@fde2e/len-agent-preset-registry` | yes | Declarative Agent preset registry and profile-backed editing |
-| `@fde2e/len-persona` | yes | Composition-authored deployment persona section for the DeepSeek Harness |
+| `@fde2e/len-persona` | yes | Composition-authored deployment persona section for the FDE2E LEN |
 
 ## ptc-runtime
 
@@ -361,7 +361,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-sandbox-local` | yes | Local process-sandbox backends for the DeepSeek Harness sandbox seam: bwrap, the npm-distributed landlock-run launcher, macOS Seatbelt, or the Windows ACL restricted-token runner — functionally probed, fail-closed |
+| `@fde2e/len-sandbox-local` | yes | Local process-sandbox backends for the FDE2E LEN sandbox seam: bwrap, the npm-distributed landlock-run launcher, macOS Seatbelt, or the Windows ACL restricted-token runner — functionally probed, fail-closed |
 | `@fde2e/len-sandbox-policy` | yes | Per-call sandbox policy resolver and current model context: deployment fallbacks plus each session's mode and workspace root, shared by every enforcing capability family |
 
 ## schedule
@@ -375,7 +375,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-sdk-jsonrpc-server` | yes | Stdio JSON-RPC server plugin for out-of-process DeepSeek Harness SDK clients |
+| `@fde2e/len-sdk-jsonrpc-server` | yes | Stdio JSON-RPC server plugin for out-of-process FDE2E LEN SDK clients |
 
 ## session
 
@@ -384,14 +384,14 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@fde2e/len-message-quotes` | no | Selected-text quotation and Markdown blockquote presentation |
 | `@fde2e/len-session-checkpoint-policy` | no | Semantic session durability checkpoints before model requests and tool side effects |
 | `@fde2e/len-session-log-deepseek` | yes | Incremental lossless session-log request extension for the official DeepSeek LLM API |
-| `@fde2e/len-session-persistence-jsonl` | yes | JSONL durable session persistence backend for the DeepSeek Harness |
+| `@fde2e/len-session-persistence-jsonl` | yes | JSONL durable session persistence backend for the FDE2E LEN |
 | `@fde2e/len-session-projection` | no | Session-projection seam: the merge-extensible projection type table, the provider contract, and the ctx.sessionProjections registry serving whole current values of log-derived per-session state |
 | `@fde2e/len-session-projection-cache` | yes | Persisted projection cache (ctx.sessionProjectionCache): durable per-session checkpoint records on the session_projcache storage domain (per-record layout), throttled write-behind, and the cached listing read |
-| `@fde2e/len-session-stats` | no | Whole-log conversation counts and wall times projection (sessionStats) for the DeepSeek Harness |
+| `@fde2e/len-session-stats` | no | Whole-log conversation counts and wall times projection (sessionStats) for the FDE2E LEN |
 | `@fde2e/len-session-telemetry-otel` | yes | Feedback-authorized Session logs over byte-bounded OpenTelemetry HTTP requests |
-| `@fde2e/len-session-title` | yes | Log-backed session title service and provider registry for the DeepSeek Harness |
-| `@fde2e/len-session-title-first-prompt-llm` | yes | First-message LLM provider plugin for DeepSeek Harness session titles |
-| `@fde2e/len-session-turn-outline` | no | Whole-log turn outline projection (turnOutline) for the DeepSeek Harness |
+| `@fde2e/len-session-title` | yes | Log-backed session title service and provider registry for the FDE2E LEN |
+| `@fde2e/len-session-title-first-prompt-llm` | yes | First-message LLM provider plugin for FDE2E LEN session titles |
+| `@fde2e/len-session-turn-outline` | no | Whole-log turn outline projection (turnOutline) for the FDE2E LEN |
 | `@fde2e/len-tool-working-directory` | no | Read and change the active Session working directory |
 | `@fde2e/len-working-directory` | yes | Session working directories with durable changes and model context |
 
@@ -406,16 +406,16 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-settings` | no | Abstract user-settings seam (ctx.settings) for the DeepSeek Harness |
+| `@fde2e/len-settings` | no | Abstract user-settings seam (ctx.settings) for the FDE2E LEN |
 
 ## shell
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-bash-local` | yes | Local-subprocess implementation of the DeepSeek Harness bash executor seam |
-| `@fde2e/len-bash-sandbox` | yes | Sandbox-consuming implementation of the DeepSeek Harness bash executor seam (confines every command via ctx.sandbox, reports denial/enforcement result facts) |
-| `@fde2e/len-pwsh-local` | yes | Local PowerShell implementation of the DeepSeek Harness bash executor seam |
-| `@fde2e/len-pwsh-sandbox` | yes | Sandbox-consuming implementation of the DeepSeek Harness PowerShell executor seam (confines every command via ctx.sandbox, reports denial/enforcement result facts) |
+| `@fde2e/len-bash-local` | yes | Local-subprocess implementation of the FDE2E LEN bash executor seam |
+| `@fde2e/len-bash-sandbox` | yes | Sandbox-consuming implementation of the FDE2E LEN bash executor seam (confines every command via ctx.sandbox, reports denial/enforcement result facts) |
+| `@fde2e/len-pwsh-local` | yes | Local PowerShell implementation of the FDE2E LEN bash executor seam |
+| `@fde2e/len-pwsh-sandbox` | yes | Sandbox-consuming implementation of the FDE2E LEN PowerShell executor seam (confines every command via ctx.sandbox, reports denial/enforcement result facts) |
 | `@fde2e/len-shell-env` | yes | Tool-independent managed DSH_* shell environment registry |
 | `@fde2e/len-tool-bash` | yes | Model-facing bash tool with optional generic background-job and sandbox-escalation support |
 | `@fde2e/len-tool-bash-persistent` | yes | Model-facing owner-scoped persistent Bash tool backed by the Harness PTY service |
@@ -426,17 +426,17 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-skill` | yes | Agent skill provider registry for the DeepSeek Harness |
-| `@fde2e/len-skill-filesystem` | yes | Local filesystem skill provider for the DeepSeek Harness |
+| `@fde2e/len-skill` | yes | Agent skill provider registry for the FDE2E LEN |
+| `@fde2e/len-skill-filesystem` | yes | Local filesystem skill provider for the FDE2E LEN |
 | `@fde2e/len-skill-office` | yes | Bundled Word, PowerPoint, and Excel workflows and LibreOffice Kit operations |
-| `@fde2e/len-tool-skill` | yes | Model-facing skill loading tool for the DeepSeek Harness |
+| `@fde2e/len-tool-skill` | yes | Model-facing skill loading tool for the FDE2E LEN |
 | `@fde2e/len-tool-workspace-dependencies` | yes | The load_workspace_dependencies tool: absolute paths into a bundled Python, Node.js, and pnpm payload |
 
 ## spill
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-spill-local` | yes | Local-filesystem implementation of the DeepSeek Harness spill storage seam (private session-scoped files) |
+| `@fde2e/len-spill-local` | yes | Local-filesystem implementation of the FDE2E LEN spill storage seam (private session-scoped files) |
 | `@fde2e/len-spill-policy` | yes | Token-budgeted tool-result retention with recoverable text and image paths |
 
 ## ssh
@@ -452,10 +452,10 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-storage` | no | Storage hub (ctx.storage): named backend registry plus mounted data-form facilities for the DeepSeek Harness |
-| `@fde2e/len-storage-domain` | yes | Domain data form (ctx.storage.domain): schema-validated, event-emitting KV domains over storage backends for the DeepSeek Harness |
-| `@fde2e/len-storage-json` | yes | JSON file KV storage backend for the DeepSeek Harness storage hub |
-| `@fde2e/len-storage-sqlite` | yes | SQLite storage backend (kv facet) for the DeepSeek Harness storage hub |
+| `@fde2e/len-storage` | no | Storage hub (ctx.storage): named backend registry plus mounted data-form facilities for the FDE2E LEN |
+| `@fde2e/len-storage-domain` | yes | Domain data form (ctx.storage.domain): schema-validated, event-emitting KV domains over storage backends for the FDE2E LEN |
+| `@fde2e/len-storage-json` | yes | JSON file KV storage backend for the FDE2E LEN storage hub |
+| `@fde2e/len-storage-sqlite` | yes | SQLite storage backend (kv facet) for the FDE2E LEN storage hub |
 
 ## subagent
 
@@ -465,7 +465,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@fde2e/len-subagent-acp` | yes | Out-of-process ACP subagent backend: drives a child agent in a spawned subprocess over the Agent Client Protocol |
 | `@fde2e/len-subagent-claude-code` | yes | One-shot Claude Code subagent provider over the official Agent SDK |
 | `@fde2e/len-subagent-codex` | yes | One-shot Codex subagent provider over the official app-server protocol |
-| `@fde2e/len-subagent-dsh-sdk` | yes | Out-of-process SDK subagent backend: drives a child DeepSeek Harness runtime subprocess over stdio JSON-RPC through the TypeScript SDK client |
+| `@fde2e/len-subagent-dsh-sdk` | yes | Out-of-process SDK subagent backend: drives a child FDE2E LEN runtime subprocess over stdio JSON-RPC through the TypeScript SDK client |
 | `@fde2e/len-subagent-fork-in-process` | yes | In-process fork subagent backend: runs a child agent seeded with a prefix of the parent's log |
 | `@fde2e/len-subagent-spawn-in-process` | yes | In-process spawn subagent backend: runs a fresh child agent on ctx.agents |
 | `@fde2e/len-tool-subagent` | yes | Model-facing subagent delegation tool over the ctx.subagents seam |
@@ -475,7 +475,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-subprocess-local` | no | Local-subprocess implementation of the DeepSeek Harness subprocess seam |
+| `@fde2e/len-subprocess-local` | no | Local-subprocess implementation of the FDE2E LEN subprocess seam |
 
 ## team
 
@@ -494,8 +494,8 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-terminal` | no | Persistent PTY session seam for the DeepSeek Harness — owner-scoped ids, backend registry, interactive sends, reads, signals, and awaited cleanup |
-| `@fde2e/len-terminal-bash` | yes | Persistent shell PTY backend over the DeepSeek Harness subprocess terminal primitive |
+| `@fde2e/len-terminal` | no | Persistent PTY session seam for the FDE2E LEN — owner-scoped ids, backend registry, interactive sends, reads, signals, and awaited cleanup |
+| `@fde2e/len-terminal-bash` | yes | Persistent shell PTY backend over the FDE2E LEN subprocess terminal primitive |
 
 ## test-support
 
@@ -507,7 +507,7 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-tool-todo` | yes | Model-facing todo_write tool over the DeepSeek Harness event-sourced session log |
+| `@fde2e/len-tool-todo` | yes | Model-facing todo_write tool over the FDE2E LEN event-sourced session log |
 
 ## typert
 
@@ -519,11 +519,11 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-tool-web` | yes | Model-facing web tools (web_search, web_fetch) over the DeepSeek Harness web capability seam (ctx.web) |
-| `@fde2e/len-web` | yes | Abstract web access capability seam (ctx.web) for the DeepSeek Harness — search/fetch provider registry, registration-order-independent selection, request/result vocabulary, and the WebError taxonomy |
-| `@fde2e/len-web-deepseek-api` | yes | DeepSeek Search and Fetch API providers for the DeepSeek Harness web capability seam (ctx.web) |
-| `@fde2e/len-web-fetch-http` | yes | Anonymous HTTP(S) fetch provider for the DeepSeek Harness web capability seam (ctx.web) |
-| `@fde2e/len-web-search-deepseek` | yes | DeepSeek-backed search provider (native web_search via the Anthropic-compatible API) for the DeepSeek Harness web capability seam (ctx.web) |
+| `@fde2e/len-tool-web` | yes | Model-facing web tools (web_search, web_fetch) over the FDE2E LEN web capability seam (ctx.web) |
+| `@fde2e/len-web` | yes | Abstract web access capability seam (ctx.web) for the FDE2E LEN — search/fetch provider registry, registration-order-independent selection, request/result vocabulary, and the WebError taxonomy |
+| `@fde2e/len-web-deepseek-api` | yes | DeepSeek Search and Fetch API providers for the FDE2E LEN web capability seam (ctx.web) |
+| `@fde2e/len-web-fetch-http` | yes | Anonymous HTTP(S) fetch provider for the FDE2E LEN web capability seam (ctx.web) |
+| `@fde2e/len-web-search-deepseek` | yes | DeepSeek-backed search provider (native web_search via the Anthropic-compatible API) for the FDE2E LEN web capability seam (ctx.web) |
 
 ## workflow
 
@@ -536,4 +536,4 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@fde2e/len-workspace` | no | Workspace entity registry (ctx.workspaceRegistry): durable workspace records with validated session attachment over the domain data form for the DeepSeek Harness |
+| `@fde2e/len-workspace` | no | Workspace entity registry (ctx.workspaceRegistry): durable workspace records with validated session attachment over the domain data form for the FDE2E LEN |

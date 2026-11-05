@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-agent",
-  "description": "Agent interface, registry, initiator scope, and event vocabulary for the DeepSeek Harness",
+  "description": "Agent interface, registry, initiator scope, and event vocabulary for the FDE2E LEN",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

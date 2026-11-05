@@ -83,7 +83,7 @@
 ## Office unavailable
 
 - DOC, DOCX, PPT, PPTX viewer menus: 0 | 0 | 0 | 0
-- Guidance: Read failed: Office previews are unavailable. Enable the document preview service on the computer running DeepSeek Harness.
+- Guidance: Read failed: Office previews are unavailable. Enable the document preview service on the computer running FDE2E LEN.
 - Binary text shown: false
 - Plain-text option and viewer picker: hidden
 

@@ -6,7 +6,7 @@ English | [中文](2026-07-24-single-harness-home-resolver.zh.md)
 
 ## Problem
 
-The harness had two inconsistent conventions for "where does DeepSeek Harness user data live":
+The harness had two inconsistent conventions for "where does FDE2E LEN user data live":
 
 - `@fde2e/len-home` resolved `configured ?? $DSH_HOME ?? ~/.dsh`.
 - `@fde2e/len-home-paths` shipped a **second** `resolveDshHome` with the same precedence plus tilde expansion — a near-duplicate of `dsh-home` that no gate flagged because the two lived in different packages and had already drifted (only one expanded tildes).

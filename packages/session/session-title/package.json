@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-session-title",
-  "description": "Log-backed session title service and provider registry for the DeepSeek Harness",
+  "description": "Log-backed session title service and provider registry for the FDE2E LEN",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

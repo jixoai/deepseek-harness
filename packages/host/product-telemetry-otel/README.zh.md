@@ -32,7 +32,7 @@ kind: "package-reference"
 - name: '@fde2e/len-host-product-telemetry-otel'
   config:
     endpoint: https://dsh-otel-collector.deepseeksvc.com/v1/logs
-    serviceName: deepseek-harness
+    serviceName: fde2e-len
     serviceVersion: !!js process.env.DSH_APP_VERSION
     compression: gzip
     scheduledDelayMillis: 30000

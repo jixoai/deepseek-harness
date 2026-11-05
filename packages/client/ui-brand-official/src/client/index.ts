@@ -1,4 +1,4 @@
-/** Official DeepSeek Harness occupants for the generic browser-brand slots. */
+/** Official FDE2E LEN occupants for the generic browser-brand slots. */
 import type { Context as ClientContext } from '@deepseek-ai/cordis'
 import type {} from '@fde2e/len-client-ui-renderer/client'
 import type {} from '@fde2e/len-client-ui-sidebar/client'

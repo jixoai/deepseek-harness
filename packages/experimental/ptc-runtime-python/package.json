@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-experimental-ptc-runtime-python",
-  "description": "CPython subprocess implementation of the DeepSeek Harness PTC execution seam",
+  "description": "CPython subprocess implementation of the FDE2E LEN PTC execution seam",
   "version": "0.2.2-alpha.3",
   "repository": {
     "type": "git",

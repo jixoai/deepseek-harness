@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-persona",
-  "description": "Composition-authored deployment persona section for the DeepSeek Harness",
+  "description": "Composition-authored deployment persona section for the FDE2E LEN",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

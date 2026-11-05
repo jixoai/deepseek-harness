@@ -1,14 +1,11 @@
-# DeepSeek Harness Python SDK
+# FDE2E LEN Python SDK
 
 English | [中文](README.zh.md)
 
-Python subprocess SDK for driving DeepSeek Harness over newline-delimited JSON-RPC on stdio. Install `deepseek-harness-sdk`; it installs the exact same-version `deepseek-harness-runtime-bin` wheel for the current platform.
+Python subprocess SDK for driving FDE2E LEN over newline-delimited JSON-RPC on stdio. Install `deepseek-harnefde2e-lenalls the exact same-version `deepseek-harnefde2e-lenwheel for the current platform.
 
 ```sh
-python -m pip install deepseek-harness-sdk
-```
-
-## Optional Office operations
+python -m pip install deepseek-harnefde2e-lenptional Office operations
 
 Download the Office runtime explicitly, then call the local API without an agent, Session, model request, API key, or Harness home:
 

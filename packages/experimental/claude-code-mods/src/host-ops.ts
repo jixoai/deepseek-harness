@@ -42,7 +42,7 @@ export interface AgentBinding {
 }
 
 /** The mods API version string `$.session.version()` reports. */
-export const MODS_API_VERSION: SessionVersion = Object.freeze({ version: 'claude-code-mods/0.1', engine: 'deepseek-harness' })
+export const MODS_API_VERSION: SessionVersion = Object.freeze({ version: 'claude-code-mods/0.1', engine: 'fde2e-len' })
 
 /** Largest file `$.fs.read` returns and `$.fs.write` accepts, Claude Code's own limit. */
 export const FS_MAX_BYTES = 4 * 1024 * 1024

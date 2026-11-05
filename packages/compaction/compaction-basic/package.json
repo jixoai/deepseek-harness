@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-compaction-basic",
-  "description": "Token-meter-driven compaction policy and LLM summarization backend for the DeepSeek Harness",
+  "description": "Token-meter-driven compaction policy and LLM summarization backend for the FDE2E LEN",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

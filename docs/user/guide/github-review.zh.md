@@ -26,7 +26,7 @@ printf '%s\n' "$DSH_GITHUB_WEBHOOK_SECRET"
 
 ```sh
 dsh plugin --profile web add @fde2e/len-webhook @fde2e/len-webhook-github
-export DSH_GITHUB_REVIEW_WORKSPACE=/path/to/deepseek-harness
+export DSH_GITHUB_REVIEW_WORKSPACE=/path/to/fde2e-len
 dsh web --patch "${DSH_HOME:-$HOME/.dsh}/profiles/web/node_modules/@fde2e/len-webhook-github/examples/github-review/cordis.yml"
 ```
 
@@ -86,8 +86,8 @@ if (!response.ok || (await response.json()).automaticReview !== true) return nul
 
 ```js
 const workspacePath = {
-  'deepseek-ai/deepseek-harness': '/path/to/deepseek-harness',
-  'deepseek-harness/dsh-sdk': '/path/to/dsh-sdk',
+  'deepseek-ai/deepseek-harness': '/path/to/fde2e-len',
+  'fde2e-len/dsh-sdk': '/path/to/dsh-sdk',
 }[payload.repository.full_name]
 if (workspacePath === undefined) return null
 ```

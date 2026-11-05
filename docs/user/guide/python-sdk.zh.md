@@ -23,18 +23,18 @@
 
 ```sh [Linux/macOS]
 git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
+cd fde2e-len
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install deepseek-harness-sdk
+python -m pip install fde2e-len-sdk
 ```
 
 ```powershell [Windows PowerShell]
 git clone https://github.com/deepseek-ai/deepseek-harness.git
-Set-Location deepseek-harness
+Set-Location fde2e-len
 py -3.10 -m venv .venv
 .venv\Scripts\Activate.ps1
-python -m pip install deepseek-harness-sdk
+python -m pip install fde2e-len-sdk
 ```
 
 :::

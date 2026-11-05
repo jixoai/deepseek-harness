@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-scope",
-  "description": "Scoped-context registration primitive (scope tags, scope-filtered event dispatch) for the DeepSeek Harness",
+  "description": "Scoped-context registration primitive (scope tags, scope-filtered event dispatch) for the FDE2E LEN",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

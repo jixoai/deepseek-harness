@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-terminal-bash",
-  "description": "Persistent shell PTY backend over the DeepSeek Harness subprocess terminal primitive",
+  "description": "Persistent shell PTY backend over the FDE2E LEN subprocess terminal primitive",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

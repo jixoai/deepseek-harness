@@ -17,7 +17,7 @@ const MODE = webSnapshotMode()
 
 /** DeepSeek fixture declarations pass through the production wire decoder before replay. */
 function listedModel(id: string, name: string, badge: unknown) {
-  const entry = parseModelListing({ data: [{ id, name, client_metadata: { 'deepseek-harness': { badge } } }] }).entries[0]!
+  const entry = parseModelListing({ data: [{ id, name, client_metadata: { 'fde2e-len': { badge } } }] }).entries[0]!
   return { id, name, ...(entry.badge?.kind === 'badge' ? { badge: entry.badge.badge } : {}) }
 }
 

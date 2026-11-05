@@ -1457,8 +1457,8 @@ describe('Weighted approval workflow', () => {
       with: {
         'client-id': '${{ vars.DSH_APPROVAL_APP_CLIENT_ID }}',
         'private-key': '${{ secrets.DSH_APPROVAL_APP_PRIVATE_KEY }}',
-        owner: 'deepseek-harness',
-        repositories: 'deepseek-harness',
+        owner: 'fde2e-len',
+        repositories: 'fde2e-len',
         'permission-checks': 'write',
       },
     })
@@ -1576,8 +1576,8 @@ describe('Issue lifecycle workflow', () => {
       with: {
         'client-id': '${{ vars.DSH_ISSUE_APP_CLIENT_ID }}',
         'private-key': '${{ secrets.DSH_ISSUE_APP_PRIVATE_KEY }}',
-        owner: 'deepseek-harness',
-        repositories: 'deepseek-harness',
+        owner: 'fde2e-len',
+        repositories: 'fde2e-len',
         'permission-issues': 'read',
         'permission-organization-projects': 'read',
       },
@@ -1794,7 +1794,7 @@ describe('Policy workflows', () => {
     expect(events).not.toHaveProperty('pull_request')
     expect(events).toHaveProperty('pull_request_target')
     for (const job of jobs) {
-      const check = stepsOf(workflowJob(workflow, job)).find(step => typeof step.uses === 'string' && step.uses.startsWith('deepseek-harness/deepseek-harness-check@'))
+      const check = stepsOf(workflowJob(workflow, job)).find(step => typeof step.uses === 'string' && step.uses.startsWith('fde2e-len/fde2e-len-check@'))
       if (check === undefined || !isRecord(check.env)) throw new TypeError(`${file} ${job} must run the check action with env`)
       expect(String(check.env.CHECK_MODE)).toContain('vars.MERGE_POLICY_')
     }
@@ -1822,7 +1822,7 @@ describe('Policy workflows', () => {
     if (!isRecord(job) || !isRecord(job.permissions)) throw new TypeError('the approve job must declare permissions')
     expect(job.name).toBe('Approve Check')
     expect(job.permissions.checks).toBe('write')
-    const check = stepsOf(job).find(step => typeof step.uses === 'string' && step.uses.startsWith('deepseek-harness/deepseek-harness-check@'))
+    const check = stepsOf(job).find(step => typeof step.uses === 'string' && step.uses.startsWith('fde2e-len/fde2e-len-check@'))
     if (check === undefined || !isRecord(check.env)) throw new TypeError('the job must run the check action with env')
     expect(String(check.env.CHECK_MODE)).toContain('vars.MERGE_POLICY_HEAD_DIFF')
     expect(JSON.stringify(workflow)).not.toContain('MERGE_POLICY_REVIEW')

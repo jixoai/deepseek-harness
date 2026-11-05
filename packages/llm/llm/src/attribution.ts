@@ -36,11 +36,17 @@ export interface AppIdentity {
  * that need a white-label identity pass their own {@link AppIdentity} to
  * {@link attributionHeaders} — omission falls back to this default; nothing
  * can suppress attribution entirely.
+ *
+ * This fork identifies as `fde2e-len`. The tradeoff is deliberate: the provider
+ * keys `client_requirements` and `client_metadata` by this product token, so
+ * entries declared for `fde2e-len` will not match. That degrades safely
+ * (a missing entry reads as "no requirement" rather than as a rejection), but
+ * it does mean provider-side minimum-version gating no longer applies to us.
  */
 export const APP_IDENTITY: AppIdentity = {
-  product: 'deepseek-harness',
+  product: 'fde2e-len',
   version,
-  url: 'https://github.com/deepseek-ai/deepseek-harness',
+  url: 'https://github.com/jixoai/fde2e-len',
 }
 
 /**

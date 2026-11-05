@@ -7,7 +7,7 @@
 import type { CredentialRef } from '@fde2e/len-credentials'
 import { WebError } from '@fde2e/len-web'
 
-const USER_AGENT = 'deepseek-harness/0.0.1'
+const USER_AGENT = 'fde2e-len/0.0.1'
 
 /** Account token tried before the API key of an operation. */
 interface DeepSeekWebAccountAuth {

@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-deliverable-file-references",
-  "description": "Shared model guidance for file links and deliverables across DeepSeek Harness hosts",
+  "description": "Shared model guidance for file links and deliverables across FDE2E LEN hosts",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

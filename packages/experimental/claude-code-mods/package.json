@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-experimental-claude-code-mods",
-  "description": "Experimental bridge: load Claude Code mods (hooks modules) and run their hook chains on DeepSeek Harness extension points",
+  "description": "Experimental bridge: load Claude Code mods (hooks modules) and run their hook chains on FDE2E LEN extension points",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

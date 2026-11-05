@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-webhook",
-  "description": "Fire-and-forget webhook rule runtime that creates Workspace-backed DeepSeek Harness Sessions",
+  "description": "Fire-and-forget webhook rule runtime that creates Workspace-backed FDE2E LEN Sessions",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"

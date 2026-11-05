@@ -1,6 +1,6 @@
 {
   "name": "@fde2e/len-sdk-jsonrpc-server",
-  "description": "Stdio JSON-RPC server plugin for out-of-process DeepSeek Harness SDK clients",
+  "description": "Stdio JSON-RPC server plugin for out-of-process FDE2E LEN SDK clients",
   "version": "0.2.2-alpha.3",
   "publishConfig": {
     "access": "public"
