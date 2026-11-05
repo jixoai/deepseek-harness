@@ -26,6 +26,14 @@ export interface AnthropicAdapterOptions {
   readonly maxTokens?: number
   /** 额外的请求头（代理鉴权等）。 */
   readonly headers?: () => Record<string, string>
+  /**
+   * 推理预算（token）。`undefined` 交给服务端默认；数字表示上限；
+   * `0` 表示关闭推理。
+   *
+   * 这个开关不是可选优化：推理模型不设界时会用光 `max_tokens` 全在思考，
+   * 正文为空，而调用方只会看到「零断言」这种下游症状。
+   */
+  readonly thinkingBudget?: number
 }
 
 /** 默认 max tokens：Anthropic 要求必填，缺省给一个够用的值。 */
@@ -33,6 +41,13 @@ const DEFAULT_MAX_TOKENS = 8192
 
 /** Anthropic 的 API 版本头。 */
 const ANTHROPIC_VERSION = '2023-06-01'
+
+/** 推理预算 → 请求字段。未配置时不发（交给服务端默认）。 */
+function thinkingField(budget: number | undefined): Pick<WireRequest, 'thinking'> | Record<string, never> {
+  if (budget === undefined) return {}
+  if (budget <= 0) return { thinking: { type: 'disabled' } }
+  return { thinking: { type: 'enabled', budget_tokens: budget } }
+}
 
 /** 把 Anthropic 的 stop_reason 翻成内核的 FinishReason。 */
 function toFinishReason(reason: string | null | undefined): FinishReason {
@@ -88,6 +103,7 @@ export class AnthropicAdapter extends LlmAdapter {
       ...(tools === undefined ? {} : { tools }),
       ...(options.temperature === undefined ? {} : { temperature: options.temperature }),
       ...(options.stop === undefined || options.stop.length === 0 ? {} : { stop_sequences: options.stop }),
+      ...thinkingField(this.options.thinkingBudget),
     }
 
     const apiKey = await this.options.apiKey()

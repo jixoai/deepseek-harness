@@ -36,6 +36,8 @@ export interface Config {
   apiKeyEnv: string
   /** 请求未指定时的 max tokens。 */
   maxTokens?: number
+  /** 推理预算（token）；0 关闭推理。不设则交给服务端默认。 */
+  thinkingBudget?: number
 }
 
 /** 配置 schema。 */
@@ -44,6 +46,7 @@ export const Config: z<Config> = z.object({
   baseURL: z.string().required(),
   apiKeyEnv: z.string().default('ANTHROPIC_API_KEY'),
   maxTokens: z.number().default(8192),
+  thinkingBudget: z.number(),
 })
 
 /**
@@ -81,6 +84,7 @@ export async function apply(ctx: Context, config: Config): Promise<void> {
     baseURL: config.baseURL,
     apiKey: keyResolver(ctx, config.apiKeyEnv),
     ...(config.maxTokens === undefined ? {} : { maxTokens: config.maxTokens }),
+    ...(config.thinkingBudget === undefined ? {} : { thinkingBudget: config.thinkingBudget }),
   })
 
   ctx.effect(() => {

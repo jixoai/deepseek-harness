@@ -32,6 +32,12 @@ export interface WireRequest {
   stop_sequences?: string[]
   stream?: boolean
   metadata?: { user_id?: string }
+  /**
+   * 扩展推理。`budget_tokens` 是**上限**而不是目标：推理模型会在写正文前
+   * 花掉任意多的 token，不设界就会一路想到 `max_tokens` 截断，正文一个字
+   * 都没有（实证：9118 字思考、零正文）。`disabled` 直接关掉。
+   */
+  thinking?: { type: 'enabled'; budget_tokens: number } | { type: 'disabled' }
 }
 
 /** 响应侧内容块。`thinking` 与 `redacted_thinking` 是推理模型的产物。 */
