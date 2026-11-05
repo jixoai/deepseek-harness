@@ -25,7 +25,7 @@ Archived: 2026-09-04
 
 ### `SDK` 只表示一件事
 
-`SDK` 表示受支持的 Python 和 TypeScript SDK 所使用、基于 JSON-RPC 的客户端／服务器协议。仓库保留 `@fde2e/len-sdk-client`、`@fde2e/len-sdk-protocol` 和协议身份 `deepseefde2e-lenntime`；JSON-RPC 服务器属于同一系列。FDE2E LEN 本身不是 SDK，已移除的项目生成器、启动器、辅助工具和启动器遥测包继续保持不存在。
+`SDK` 表示受支持的 Python 和 TypeScript SDK 所使用、基于 JSON-RPC 的客户端／服务器协议。仓库保留 `@fde2e/len-sdk-client`、`@fde2e/len-sdk-protocol` 和协议身份 `fde2e-len-sdk-runtime`；JSON-RPC 服务器属于同一系列。FDE2E LEN 本身不是 SDK，已移除的项目生成器、启动器、辅助工具和启动器遥测包继续保持不存在。
 
 本决策部分取代三项现行决策。它替换[包重新分组决策](2026-07-29-package-regrouping.zh.md)中保留的 `bash/`、`pty/` 和 `self-modification/` 组名，以及两项暂定包名。它只替换[移除 SDK 项目工具链](../simplification/2026-08-11-remove-sdk-project-toolchain.zh.md)中将整个仓库称为 SDK 的说法；后者仍负责说明删除范围和保留的运行时 SDK。它只替换[工具调用超时策略](2026-07-07-tool-call-timeout-policy.zh.md)中的包名理由；超时机制及其 `guard/timeout-policy/` 归属保持不变。
 
@@ -90,7 +90,7 @@ PascalCase 标识符中的首字母缩略词使用首字母大写格式：`Ui`�
 | `@fde2e/len-jsonrpc` | `@fde2e/len-sdk-jsonrpc-server` | 它是 SDK 协议的服务器端。单独使用 `jsonrpc` 只说明编码；`sdk-jsonrpc-server` 则同时说明所属系列、机制和职责。 |
 | `HarnessSdkServer` | `HarnessSdkJsonRpcServer` | 该类是 JSON-RPC 服务器的一种实现，并不代表所有可能的 SDK 服务器。 |
 
-保留 `@fde2e/len-sdk-client`、`@fde2e/len-sdk-protocol` 和 `deepseek-harness-sdk-fde2e-lenepseek-ai/create-sdk`、`@fde2e/len-scripts`、`@fde2e/len-helper` 和 `@fde2e/len-telemetry`；单独的移除决策负责删除这些包及其支撑依赖图。
+保留 `@fde2e/len-sdk-client`、`@fde2e/len-sdk-protocol` 和 `fde2e-len-sdk-runtime`。排除 `@deepseek-ai/create-sdk`、`@fde2e/len-scripts`、`@fde2e/len-helper` 和 `@fde2e/len-telemetry`；单独的移除决策负责删除这些包及其支撑依赖图。
 
 ### Shell 与终端
 

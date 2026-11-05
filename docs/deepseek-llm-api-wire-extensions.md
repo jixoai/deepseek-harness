@@ -10,7 +10,7 @@ The adapter sends the additions to its resolved `baseURL`, including a configure
 
 | Location | Naming | Examples |
 |---|---|---|
-| HTTP field names | Lowercase kebab-case; HTTP matching remains case-insensitive | `user-agent`, `x-deepseefde2e-lenn-id` |
+| HTTP field names | Lowercase kebab-case; HTTP matching remains case-insensitive | `user-agent`, `x-fde2e-len-session-id` |
 | DeepSeek request-body extension fields | Snake case with the reserved `dsh_` prefix | `dsh_plugin_packages`, `dsh_session_log` |
 | DSH-owned nested JSON members | Camel case | `afterSeq`, `throughSeq`, `sessionId` |
 | Tagged values | Kebab-case strings; durable events use `domain/action` | `session-log-deepseek/delivery-accepted` |
@@ -23,11 +23,12 @@ The [`DeepSeekLlmApiExtensionRegistry`](../packages/llm/deepseek-llm-api-extensi
 
 | Header | Presence | Value |
 |---|---|---|
-| `user-agent` | Every provider HTTP request, including Files API operations | Application identity in `product/version (+url)` form; the default product is `deepseefde2e-lenx-deepseefde2e-lend` | Every authorized model request | The stable anonymous UUID for the resolved Harness home |
-| `x-deepseefde2e-lenn-id` | Model requests carrying a Session id | The exact request `sessionId` string |
-| `x-deepseefde2e-lent` | Model requests whose purpose is `compaction` | The literal string `1` |
+| `user-agent` | Every provider HTTP request, including Files API operations | Application identity in `product/version (+url)` form; the default product is `fde2e-len` |
+| `x-fde2e-len-user-id` | Every authorized model request | The stable anonymous UUID for the resolved Harness home |
+| `x-fde2e-len-session-id` | Model requests carrying a Session id | The exact request `sessionId` string |
+| `x-fde2e-len-compact` | Model requests whose purpose is `compaction` | The literal string `1` |
 
-Credential failure happens before anonymous-user-id resolution, so an unauthorized request neither sends these headers nor creates the identity file. A direct request without a Session omits `x-deepseefde2e-lenn-id`. Session-title and Auto review requests have no additional purpose header; the ordinary Session-id rule still applies when one carries a `sessionId`.
+Credential failure happens before anonymous-user-id resolution, so an unauthorized request neither sends these headers nor creates the identity file. A direct request without a Session omits `x-fde2e-len-session-id`. Session-title and Auto review requests have no additional purpose header; the ordinary Session-id rule still applies when one carries a `sessionId`.
 
 ## Body-extension transaction
 

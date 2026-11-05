@@ -2,10 +2,13 @@
 
 English | [中文](README.zh.md)
 
-Python subprocess SDK for driving FDE2E LEN over newline-delimited JSON-RPC on stdio. Install `deepseek-harnefde2e-lenalls the exact same-version `deepseek-harnefde2e-lenwheel for the current platform.
+Python subprocess SDK for driving FDE2E LEN over newline-delimited JSON-RPC on stdio. Install `fde2e-len-sdk`; it installs the exact same-version `fde2e-len-runtime-bin` wheel for the current platform.
 
 ```sh
-python -m pip install deepseek-harnefde2e-lenptional Office operations
+python -m pip install fde2e-len-sdk
+```
+
+## Optional Office operations
 
 Download the Office runtime explicitly, then call the local API without an agent, Session, model request, API key, or Harness home:
 

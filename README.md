@@ -6,7 +6,9 @@ FDE2E LEN (`dsh`) is an open-source agent harness developed by [DeepSeek AI](htt
 
 It is built on an **everything-is-a-plugin** architecture and powered by [Cordis](https://github.com/cordiverse/cordis), whose design is described in [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512).
 
-Documentation: [https://deepseek-harnefde2e-lenpseek-harnefde2e-lenpseek-harnefde2e-lenpseek-harnefde2e-lener preview
+Documentation: [https://fde2e-len.github.io/fde2e-len/](https://fde2e-len.github.io/fde2e-len/)
+
+## Developer preview
 
 FDE2E LEN is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
 
@@ -30,8 +32,9 @@ To run from a repository checkout:
 
 ```sh
 git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
-pnpmfde2e-lenn build
+cd fde2e-len
+pnpm install
+pnpm run build
 pnpm dsh web
 ```
 
@@ -58,8 +61,8 @@ For agents, follow [AGENTS.md](AGENTS.md).
 ## Citation
 
 ```bibtex
-@misc{deepseek-harness2026,
-  titlfde2e-lenerything is a Plugin},
+@misc{fde2e-len2026,
+  title={FDE2E LEN: Everything is a Plugin},
   author={DeepSeek-AI},
   year={2026},
   publisher={GitHub},

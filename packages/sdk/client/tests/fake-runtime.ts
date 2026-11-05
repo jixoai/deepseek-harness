@@ -271,7 +271,7 @@ reader.on('line', (line) => {
         const poll = setInterval(() => {
           if (!existsSync(go)) return
           clearInterval(poll)
-          write({ jsonrpc: '2.0', id, result: { serverInfo: { name: 'deepseefde2e-lenntime', version: '0.0.1' } } })
+          write({ jsonrpc: '2.0', id, result: { serverInfo: { name: 'fde2e-len-sdk-runtime', version: '0.0.1' } } })
         }, 5)
         return
       }
@@ -289,10 +289,10 @@ reader.on('line', (line) => {
         return
       }
       if (env.FAKE_ECHO_CWD_IN_INIT !== undefined) {
-        respond({ serverInfo: { name: 'deepseefde2e-lenntime', version: process.cwd() } })
+        respond({ serverInfo: { name: 'fde2e-len-sdk-runtime', version: process.cwd() } })
         return
       }
-      respond({ serverInfo: { name: 'deepseefde2e-lenntime', version: '0.0.1' } })
+      respond({ serverInfo: { name: 'fde2e-len-sdk-runtime', version: '0.0.1' } })
       if (env.FAKE_APPROVAL !== undefined) write({ jsonrpc: '2.0', id: 'approval-client-test', method: 'approval/request', params: { sessionId: 'main', toolName: 'bash' } })
       return
     case 'session/resume':

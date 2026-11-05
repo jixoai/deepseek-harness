@@ -8,8 +8,8 @@ Python packages for driving FDE2E LEN as a subprocess. The client SDK communicat
 
 | Directory | Dist / module | Role |
 |---|---|---|
-| [sdk](sdk/README.md) | `deepseek-harnefde2e-leneek_harness` | High-level turns API and lower-level JSON-RPC client |
-| [sdk-runtime](sdk-runtime/README.md) | `deepseek-harnefde2e-len/ `deepseek_harness_runtime` | Bundled `dsh` CLI executable and native sidecars |
+| [sdk](sdk/README.md) | `fde2e-len-sdk` / `deepseek_harness` | High-level turns API and lower-level JSON-RPC client |
+| [sdk-runtime](sdk-runtime/README.md) | `fde2e-len-runtime-bin` / `deepseek_harness_runtime` | Bundled `dsh` CLI executable and native sidecars |
 
 ## Behavior
 

@@ -2235,7 +2235,7 @@ function createFixtureWorld(options: FixtureOptions): FixtureWorld {
     [FIXTURE_HOME, ['Documents', 'Downloads', '.config']],
     [`${FIXTURE_HOME}/Documents`, [
       'project', 'deepseek-iOS', 'deepseek-android', 'deepseek-platform',
-      'deepseek-web', 'deepseek-harness', 'dfde2e-leneepseek-landing-blog',
+      'deepseek-web', 'fde2e-len', 'deepseek-app', 'deepseek-landing-blog',
     ]],
   ])
   const childrenOf = (path: string): string[] | undefined => {

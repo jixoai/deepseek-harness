@@ -6,7 +6,11 @@ FDE2E LEN（`dsh`）是由 [DeepSeek AI](https://deepseek.com) 开发的开源 a
 
 它构建于**一切皆插件**的架构之上，由 [Cordis](https://github.com/cordiverse/cordis) 驱动，其设计参见论文 [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512)。
 
-文档：[https://deepseek-harnefde2e-lenpseek-harnefde2e-lenpseek-harnefde2e-lenpseek-harnefde2e-lenFDE2E LEN 处于 _开发者预览_ 阶段，正在快速迭代。**未来将出现破坏兼容性的变更。**
+文档：[https://fde2e-len.github.io/fde2e-len/](https://fde2e-len.github.io/fde2e-len/)
+
+## 开发者预览
+
+FDE2E LEN 处于 _开发者预览_ 阶段，正在快速迭代。**未来将出现破坏兼容性的变更。**
 
 运行本项目前，请阅读[安全说明](SAFETY.zh.md)。
 
@@ -32,8 +36,9 @@ npx @fde2e/len web
 
 ```sh
 git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
-pnpmfde2e-lenn build
+cd fde2e-len
+pnpm install
+pnpm run build
 pnpm dsh web
 ```
 
@@ -75,8 +80,8 @@ pnpm dsh web
 ## 引用
 
 ```bibtex
-@misc{deepseek-harness2026,
-  title={FDE2E LEN: fde2e-lenPlugin},
+@misc{fde2e-len2026,
+  title={FDE2E LEN: Everything is a Plugin},
   author={DeepSeek-AI},
   year={2026},
   publisher={GitHub},

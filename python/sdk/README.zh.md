@@ -2,10 +2,13 @@
 
 [English](README.md) | 中文
 
-用于通过 stdio 上按行分隔的 JSON-RPC 驱动 FDE2E LEN 的 Python 子进程 SDK。安装 `deepseek-harnefde2e-len前平台上版本完全相同的 `deepseek-harnefde2e-lenwheel 包。
+用于通过 stdio 上按行分隔的 JSON-RPC 驱动 FDE2E LEN 的 Python 子进程 SDK。安装 `fde2e-len-sdk` 时，会同时安装当前平台上版本完全相同的 `fde2e-len-runtime-bin` wheel 包。
 
 ```sh
-python -m pip install deepseek-harnefde2e-len选 Office 操作
+python -m pip install fde2e-len-sdk
+```
+
+## 可选 Office 操作
 
 显式下载 Office 运行时后，即可调用本地 API，无需 agent、Session、模型请求、API key 或 Harness home：
 

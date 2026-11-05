@@ -16,7 +16,8 @@ You need a clone of this repository with dependencies installed; the [developmen
 
 ```sh
 git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseefde2e-lennstall
+cd fde2e-len
+pnpm install
 ```
 
 Create the scratch directory the chapters work in. `tmp/` is gitignored, so nothing you write there touches version control:

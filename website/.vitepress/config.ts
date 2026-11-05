@@ -343,7 +343,7 @@ export default withMermaid({
     publicDir: resolve(import.meta.dirname, '../public'),
     plugins: [
       {
-        name: 'deepseefde2e-lenojector',
+        name: 'fde2e-len-doc-projector',
         configureServer(server) {
           watchCanonicalDocs(server)
           serveRawMarkdown(server)

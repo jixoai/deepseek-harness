@@ -22,7 +22,7 @@ The Web model selector showed `1017` beside `DeepSeek-V4.1-Flash` through a dedi
 
 **A top-level `badge` field.** The public `/models` fields describe model capabilities and limits for every client, while the badge is FDE2E LEN release and campaign copy. A top-level field reads as a model attribute that other clients could start rendering, after which the service could no longer change or retire it freely, and two clients could not show different badges.
 
-**`badge` inside `client_requirements["deepseek-harnefde2e-len no top-level field, and released builds ignore an extra key there. But an unreadable requirement hides its model on every build, released ones included, so a serializer that writes the emptied object as `null` after a badge is retired would hide the model. Requirements gate availability; display data must stay ignorable.
+**`badge` inside `client_requirements["fde2e-len"]`.** It adds no top-level field, and released builds ignore an extra key there. But an unreadable requirement hides its model on every build, released ones included, so a serializer that writes the emptied object as `null` after a badge is retired would hide the model. Requirements gate availability; display data must stay ignorable.
 
 **A narrower map such as `client_presentation` or `client_annotations`.** These names limit the object to display data or descriptive notes, so the next client-specific field of another kind, such as a default, would need another top-level field; `client_metadata` takes any field a build may ignore.
 

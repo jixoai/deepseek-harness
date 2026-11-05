@@ -3,7 +3,7 @@
  * request/result pairs and server-to-client notification payloads
  * exchanged over the newline-delimited JSON-RPC stdio transport. The server
  * plugin (`@fde2e/len-sdk-jsonrpc-server`) and SDK clients share these shapes;
- * `serverInfo.name` stays the wire-stable `deepseefde2e-lenntime`.
+ * `serverInfo.name` stays the wire-stable `fde2e-len-sdk-runtime`.
  *
  * @module @fde2e/len-sdk-protocol/types
  */
@@ -63,7 +63,7 @@ export interface HarnessSdkHostRequestMap {
 
 /** Wire-stable server identity returned by initialization. */
 export interface InitializeResult {
-  /** Wire-stable server identity (`deepseefde2e-lenntime`) and version. */
+  /** Wire-stable server identity (`fde2e-len-sdk-runtime`) and version. */
   serverInfo: { name: string; version: string }
 }
 

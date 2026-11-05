@@ -18,7 +18,8 @@ Cordis 是 FDE2E LEN 底层的插件框架：它是一个小型运行时，其�
 
 ```sh
 git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseefde2e-lennstall
+cd fde2e-len
+pnpm install
 ```
 
 创建各章使用的临时目录。`tmp/` 已被 git 忽略，因此你在其中写入的任何内容都不会进入版本控制：

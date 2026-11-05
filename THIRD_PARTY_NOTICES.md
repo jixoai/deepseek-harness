@@ -294,7 +294,8 @@ Direct dependencies of the `pyproject.toml` manifests, plus `uv` as the developm
 | --- | --- | --- |
 | [`hatchling`](https://github.com/pypa/hatch) | MIT | build backend |
 | [`pillow`](https://github.com/python-pillow/Pillow) | MIT-CMU | Python project dependency |
-| [`pydantic`](https://github.com/pydantic/pydantic) | MIT | runtime dependency of `deepseek-harnefde2e-lentest`](https://github.com/pytest-dev/pytest) | MIT | test-only |
+| [`pydantic`](https://github.com/pydantic/pydantic) | MIT | runtime dependency of `fde2e-len-sdk` |
+| [`pytest`](https://github.com/pytest-dev/pytest) | MIT | test-only |
 | [`uv`](https://github.com/astral-sh/uv) | MIT / Apache-2.0 | development workflow tool |
 
 ## Bundled Python distributions
