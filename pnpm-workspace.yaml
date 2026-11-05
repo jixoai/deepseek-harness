@@ -16,6 +16,12 @@ packages:
 
 overrides:
   'extract-zip>yauzl': '3.4.0'
+  # micromark-util-types is types-only (no runtime code). Two copies in the
+  # graph — 2.0.2 and 2.0.3 — make an Extension from one structurally
+  # incompatible with the other, which breaks the markdown parser's call to
+  # fromMarkdown(). Pinning to one copy removes the duplicate identity without
+  # changing any emitted type.
+  'micromark-util-types': '2.0.3'
   '@deepseek-ai/cosmokit': 'link:vendor/cosmokit'
   '@deepseek-ai/schemastery': 'link:vendor/schemastery'
 
