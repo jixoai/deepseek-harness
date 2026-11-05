@@ -25,7 +25,7 @@ from deepseek_harness_runtime import (
 
 def _resource_sidecars(executable: Path, native_targets: tuple[str, ...] = ("darwin-arm64", "darwin-x64", "win32-x64")) -> Path:
     office = executable.with_name(f"{executable.name.removesuffix('.exe')}-office")
-    tag = executable.name.removeprefix("deepseek-harness-sdk-runtime-").removesuffix(".exe")
+    tag = executable.name.removeprefix("fde2e-len-sdk-runtime-").removesuffix(".exe")
     native = tag.replace("win-", "win32-").replace("macos-", "darwin-")
     engine = native if native in native_targets else "wasm"
     for required in ("@deepseek-ai/libreoffice-kit/package.json", f"@deepseek-ai/libreoffice-kit-{engine}/prebuilds.json"):
@@ -71,7 +71,7 @@ def test_unknown_explicit_mode_fails_loud() -> None:
 @pytest.mark.parametrize("target", ["linux-x64", "linux-arm64", "macos-arm64", "macos-x64", "win-x64"])
 @pytest.mark.parametrize("invalid", [None, "manifest", "platform", "python", "skills", "packages", "mode", "node", "node-mode"])
 def test_authoring_resources_validate_installed_and_wheel_payloads(tmp_path: Path, target: str, invalid: str | None) -> None:
-    executable = tmp_path / f"deepseek-harness-sdk-runtime-{target}"
+    executable = tmp_path / f"fde2e-len-sdk-runtime-{target}"
     _resource_sidecars(executable)
     root = tmp_path / target
     python = root / "primary-runtime/dependencies/python" / ("python.exe" if target == "win-x64" else "bin/python3")
@@ -130,11 +130,11 @@ def test_runtime_requires_spawn_helper_only_on_macos(
 ) -> None:
     runtime_dir = tmp_path / "runtime"
     runtime_dir.mkdir()
-    linux = runtime_dir / "deepseek-harness-sdk-runtime-linux-x64"
+    linux = runtime_dir / "fde2e-len-sdk-runtime-linux-x64"
     linux.touch()
     Path(f"{linux}-rg").touch()
     _resource_sidecars(linux)
-    macos = runtime_dir / "deepseek-harness-sdk-runtime-macos-arm64"
+    macos = runtime_dir / "fde2e-len-sdk-runtime-macos-arm64"
     macos.touch()
     Path(f"{macos}-rg").touch()
     monkeypatch.setattr(runtime, "bundled_package_dir", lambda: tmp_path)
@@ -151,9 +151,9 @@ def test_windows_runtime_uses_exe_payload_and_exe_sidecar(
 ) -> None:
     runtime_dir = tmp_path / "runtime"
     runtime_dir.mkdir()
-    executable = runtime_dir / "deepseek-harness-sdk-runtime-win-x64.exe"
+    executable = runtime_dir / "fde2e-len-sdk-runtime-win-x64.exe"
     executable.touch()
-    (runtime_dir / "deepseek-harness-sdk-runtime-win-x64-rg.exe").touch()
+    (runtime_dir / "fde2e-len-sdk-runtime-win-x64-rg.exe").touch()
     _resource_sidecars(executable)
     monkeypatch.setattr(runtime, "bundled_package_dir", lambda: tmp_path)
     monkeypatch.setattr(runtime, "_current_platform_tag", lambda: "win-x64")
@@ -183,7 +183,7 @@ def test_runtime_requires_ripgrep_sidecar(
 ) -> None:
     runtime_dir = tmp_path / "runtime"
     runtime_dir.mkdir()
-    (runtime_dir / "deepseek-harness-sdk-runtime-linux-x64").touch()
+    (runtime_dir / "fde2e-len-sdk-runtime-linux-x64").touch()
     monkeypatch.setattr(runtime, "bundled_package_dir", lambda: tmp_path)
     monkeypatch.setattr(runtime, "_current_platform_tag", lambda: "linux-x64")
 
@@ -194,7 +194,7 @@ def test_runtime_requires_ripgrep_sidecar(
 def test_runtime_requires_complete_resource_sidecars(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    executable = tmp_path / "runtime" / "deepseek-harness-sdk-runtime-linux-x64"
+    executable = tmp_path / "runtime" / "fde2e-len-sdk-runtime-linux-x64"
     executable.parent.mkdir()
     executable.touch()
     Path(f"{executable}-rg").touch()
@@ -314,7 +314,7 @@ def test_runtime_starts_independently_of_office_engine(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch, target: str, native_targets: tuple[str, ...],
 ) -> None:
     extension = ".exe" if target.startswith("win-") else ""
-    executable = tmp_path / "runtime" / f"deepseek-harness-sdk-runtime-{target}{extension}"
+    executable = tmp_path / "runtime" / f"fde2e-len-sdk-runtime-{target}{extension}"
     executable.parent.mkdir()
     executable.touch()
     executable.with_name(f"{executable.stem}-rg{extension}").touch()
@@ -341,7 +341,7 @@ def test_explicit_download_uses_runtime_without_a_harness_home(
 ) -> None:
     root = tmp_path / "中文缓存"
     root.mkdir()
-    _resource_sidecars(root / "deepseek-harness-sdk-runtime-linux-x64")
+    _resource_sidecars(root / "fde2e-len-sdk-runtime-linux-x64")
     monkeypatch.setattr(runtime, "_current_platform_tag", lambda: "linux-x64")
     script = tmp_path / "download.py"
     destination = root / "linux-x64/primary-runtime" if resource == "primary" else root
@@ -374,7 +374,7 @@ def test_download_decodes_utf8_in_an_ascii_locale(tmp_path: Path) -> None:
 @pytest.mark.parametrize("missing", ["primary-runtime/runtime.json", "primary-runtime/dependencies/python/bin/python3",
                                      "primary-runtime/dependencies/node/bin/node", "office-skills/office-docx/SKILL.md"])
 def test_primary_download_rejects_an_incomplete_payload(tmp_path: Path, monkeypatch: pytest.MonkeyPatch, missing: str) -> None:
-    _resource_sidecars(tmp_path / "deepseek-harness-sdk-runtime-linux-x64")
+    _resource_sidecars(tmp_path / "fde2e-len-sdk-runtime-linux-x64")
     root = tmp_path / "linux-x64"
     (root / missing).unlink()
     monkeypatch.setattr(runtime, "_download", lambda resource: root / "primary-runtime")
@@ -386,7 +386,7 @@ def test_primary_download_rejects_an_incomplete_payload(tmp_path: Path, monkeypa
 def test_office_resolution_requires_explicit_download(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     from deepseek_harness_runtime._resources import office_launch_args
 
-    executable = tmp_path / "deepseek-harness-sdk-runtime-linux-x64"
+    executable = tmp_path / "fde2e-len-sdk-runtime-linux-x64"
     _resource_sidecars(executable)
     cache = tmp_path / "cache"
     monkeypatch.setenv("DSH_RESOURCE_CACHE", str(cache))
@@ -415,7 +415,7 @@ def test_office_resolution_requires_explicit_download(tmp_path: Path, monkeypatc
 def test_download_manifest_rejects_invalid_wheel_resources(tmp_path: Path, invalid: str) -> None:
     from deepseek_harness_runtime._resources import validate_downloads
 
-    _resource_sidecars(tmp_path / "deepseek-harness-sdk-runtime-linux-x64")
+    _resource_sidecars(tmp_path / "fde2e-len-sdk-runtime-linux-x64")
     root = tmp_path / "linux-x64"
     path = root / "downloads.json"
     manifest = json.loads(path.read_text(encoding="utf-8"))

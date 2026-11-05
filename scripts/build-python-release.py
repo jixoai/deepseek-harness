@@ -18,8 +18,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SDK_DISTRIBUTION = "deepseek-harness-sdk"
-RUNTIME_DISTRIBUTION = "deepseek-harness-runtime-bin"
+SDK_DISTRIBUTION = "fde2e-len-sdk"
+RUNTIME_DISTRIBUTION = "fde2e-len-runtime-bin"
 PLATFORM_MANIFEST = ROOT / "python" / "sdk-runtime" / "platforms.json"
 
 
@@ -201,8 +201,8 @@ def stage_sdk(destination: Path, version: str) -> None:
     pyproject = destination / "pyproject.toml"
     rewrite_version(pyproject, version)
     text, count = re.subn(
-        r'"deepseek-harness-runtime-bin==[^"]+"',
-        f'"deepseek-harness-runtime-bin=={version}"',
+        r'"fde2e-len-runtime-bin==[^"]+"',
+        f'"fde2e-len-runtime-bin=={version}"',
         pyproject.read_text(),
         count=1,
     )
@@ -224,7 +224,7 @@ def stage_runtime(destination: Path, version: str, executable: Path, executable_
     source_directory = executable.parent
     for filename in runtime_filenames(executable_name):
         shutil.copy2(source_directory / filename, runtime_dir / filename)
-    resources = executable_name.removeprefix("deepseek-harness-sdk-runtime-").removesuffix(".exe")
+    resources = executable_name.removeprefix("fde2e-len-sdk-runtime-").removesuffix(".exe")
     # Wheels materialize interpreter aliases because pip does not restore symlinks.
     shutil.copytree(source_directory / resources, runtime_dir / resources)
 
@@ -268,7 +268,7 @@ def verify_wheel(
         ]
         if package == "runtime":
             assert platform is not None
-            resources = platform[1].removeprefix("deepseek-harness-sdk-runtime-").removesuffix(".exe")
+            resources = platform[1].removeprefix("fde2e-len-sdk-runtime-").removesuffix(".exe")
             expected_files = sorted((*runtime_filenames(platform[1]), resources))
             found_files = sorted({name.split("/runtime/", 1)[1].split("/", 1)[0] for name in runtime_payload})
             if found_files != expected_files:

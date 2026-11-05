@@ -1199,5 +1199,5 @@ def test_client_reports_missing_bundled_runtime_dependency(monkeypatch: pytest.M
     monkeypatch.delitem(sys.modules, "deepseek_harness_runtime", raising=False)
     monkeypatch.setattr(sys, "path", [])
 
-    with pytest.raises(FileNotFoundError, match="Install deepseek-harness-runtime-bin"):
+    with pytest.raises(FileNotFoundError, match="Install fde2e-len-runtime-bin"):
         HarnessClient(HarnessConfig(dsh_home="/explicit/home")).start()

@@ -66,7 +66,7 @@ def validate_downloads(root: Path | zipfile.Path, target: str) -> dict:
 def office_launch_args(root: Path, target: str) -> tuple[str, str]:
     """Require an explicitly installed sidecar, including its independent Node interpreter."""
     metadata = validate_downloads(root, target)
-    cache = Path(os.environ.get("DSH_RESOURCE_CACHE", str(Path.home() / ".cache/deepseek-harness/resources")))
+    cache = Path(os.environ.get("DSH_RESOURCE_CACHE", str(Path.home() / ".cache/fde2e-len/resources")))
     if not cache.is_absolute():
         raise ValueError("DSH_RESOURCE_CACHE must be an absolute directory")
     office = Path(os.environ.get("DSH_OFFICE_SIDECAR", str(cache / metadata["identity"] / "office")))
