@@ -68,7 +68,7 @@ async function generateRemoteFaces(): Promise<void> {
   const { generateViewerRemoteFaces } = await import(/* @vite-ignore */ generatorModule) as RemoteFaceGenerator
   const faces = generateViewerRemoteFaces(workspaceRoot, dir)
   const assembly = readFileSync(join(workspaceRoot, 'packages/api/remotes/src/client/index.ts'), 'utf8')
-    .replace(/^(import \w+ from )'(@deepseek-ai\/[^']+)\/remote'$/gmu, (_line, head: string, name: string) => {
+    .replace(/^(import \w+ from )'(@fde2e\/[^']+)\/remote'$/gmu, (_line, head: string, name: string) => {
       const file = faces.get(name)
       if (file === undefined) throw new Error(`viewer page: no generated Remote face for ${name}`)
       return `${head}${JSON.stringify(file)}`

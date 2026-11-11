@@ -143,7 +143,7 @@ export function verifyDefaultProductIsolation(root: string): ProductIsolationRes
     const pkg = packages.get(packageName)
     if (pkg !== undefined) add(pkg, origin)
     else if (EXTERNAL_KIT_PACKAGES.has(packageName)) return
-    else if (packageName.startsWith('@deepseek-ai/')) failures.push(`${origin}: unknown workspace package ${name}`)
+    else if (packageName.startsWith('@fde2e/')) failures.push(`${origin}: unknown workspace package ${name}`)
   }
   const dependency = (name: string, range: string, owner: Package, origin: string): void => {
     reference(name, origin, owner)

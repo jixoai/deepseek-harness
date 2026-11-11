@@ -69,7 +69,7 @@ import { isSurfaceEligibleType } from '../../core/session/src/surface.ts'
 手写的 `external` 清单——以及在它旁边为单个包新造的 `tsconfig.foo.json`——让扫描无从推导，构建产物与清单随之不再一致。
 
 ```json
-{ "name": "@fde2e/len-example", "external": ["@deepseek-ai/*"] }
+{ "name": "@fde2e/len-example", "external": ["@fde2e/*"] }
 ```
 
 ## `package.json` `exports` 使用标准键集合
@@ -157,7 +157,7 @@ Restating a required-devDependency package list or the field rules on this page 
 - 复算：
 
 ```sh
-python3 -c "import json,glob,collections; c=collections.Counter(); [c.update([r]) for p in glob.glob('apps/*/package.json')+glob.glob('packages/*/*/package.json')+glob.glob('vendor/*/package.json') for s in ('dependencies','devDependencies','optionalDependencies','peerDependencies') for n,r in (json.load(open(p)).get(s) or {}).items() if n.startswith('@deepseek-ai/')]; print(c.most_common())"
+python3 -c "import json,glob,collections; c=collections.Counter(); [c.update([r]) for p in glob.glob('apps/*/package.json')+glob.glob('packages/*/*/package.json')+glob.glob('vendor/*/package.json') for s in ('dependencies','devDependencies','optionalDependencies','peerDependencies') for n,r in (json.load(open(p)).get(s) or {}).items() if n.startswith('@fde2e/')]; print(c.most_common())"
 ```
 
 每个包族各用其写法，非成员的例外保持普通版本范围。

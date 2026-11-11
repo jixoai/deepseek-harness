@@ -1247,9 +1247,9 @@ describe.skipIf(!existsSync(dshBin))('dsh BUILT bin (node lib/bin.js, no tsx)', 
       expect(code).toBe(0)
       expect(stderr).toBe('')
       expect(stdout).toContain("name: '@fde2e/len-headless'")
-      expect(stdout).not.toMatch(/name: '@deepseek-ai\/dsh-host-/)
+      expect(stdout).not.toMatch(/name: '@fde2e\/len-host-/)
       expect(stdout).not.toContain("name: '@fde2e/len-web-app'")
-      expect(stdout).not.toMatch(/name: '@deepseek-ai\/dsh-client-/)
+      expect(stdout).not.toMatch(/name: '@fde2e\/len-client-/)
     }, SPAWN_TIMEOUT_MS + 30_000)
 
     it('prints the exact standalone sdk-minimal tree without dsh-base', async () => {

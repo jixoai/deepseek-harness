@@ -173,7 +173,7 @@ it.each([['lib'], ['art', '!art/icon.webp']])('rejects an exported icon omitted 
 
 it.each([false, 1, '', './icon.gif', '/tmp/icon.svg', './missing.png', '../outside.svg'])('validates exported icon targets: %j', (icon) => {
   manifest({ exports: { './icon': icon } })
-  expect(packageMetaProblems(root).join('\n')).toMatch(/Plugin metadata for @deepseek-ai\/dsh-test-plugin:|exports\["\.\/icon"\] must resolve to a file/u)
+  expect(packageMetaProblems(root).join('\n')).toMatch(/Plugin metadata for @fde2e\/len-test-plugin:|exports\["\.\/icon"\] must resolve to a file/u)
 })
 
 it.each([['assets'], ['lib']])('checks publication of the Node-selected conditional icon: %j', (...files) => {

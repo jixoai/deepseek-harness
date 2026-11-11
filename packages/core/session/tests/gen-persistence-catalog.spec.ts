@@ -80,7 +80,7 @@ describe('gen-persistence-catalog collectLogEvents', () => {
       'packages/group/alien/package.json': '{ "name": "@fde2e/len-alien" }\n',
       'packages/group/alien/src/types.ts':
         'export interface SessionEventMap {\n  /** Not the real vocabulary. */\n  \'alien/event\': { turn: number }\n}\n',
-    }))).toThrow(/top-level interface SessionEventMap .* is outside @deepseek-ai\/dsh-session \(package @deepseek-ai\/dsh-alien\)/)
+    }))).toThrow(/top-level interface SessionEventMap .* is outside @fde2e\/len-session \(package @fde2e\/len-alien\)/)
   })
 
   it('hard-errors on a non-exported top-level interface even in the owning package', () => {

@@ -143,9 +143,9 @@ describe('release pack CLI', () => {
 
   it('overlaps two independent packs and keeps later packages within the concurrency limit', async () => {
     const root = fixture()
-    const names = ['alpha', 'bravo', 'charlie'].map(name => `@deepseek-ai/${name}`)
+    const names = ['alpha', 'bravo', 'charlie'].map(name => `@fde2e/${name}`)
     for (const name of names) {
-      const directory = `vendor/${name.slice('@deepseek-ai/'.length)}`
+      const directory = `vendor/${name.slice('@fde2e/'.length)}`
       packageFixture(root, directory, name, {
         scripts: { prepack: 'node hook.cjs start', postpack: 'node hook.cjs finish' },
       })

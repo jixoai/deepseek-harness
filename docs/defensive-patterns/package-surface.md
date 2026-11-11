@@ -69,7 +69,7 @@ A package in one of the two shapes, with the standard manifest fields and no han
 A hand-written `external` list — and a `tsconfig.foo.json` invented beside it for one package — leaves the scans nothing to derive, so build output and manifest stop agreeing.
 
 ```json
-{ "name": "@fde2e/len-example", "external": ["@deepseek-ai/*"] }
+{ "name": "@fde2e/len-example", "external": ["@fde2e/*"] }
 ```
 
 ## `package.json` `exports` uses the standard key set
@@ -157,7 +157,7 @@ Internal dependency syntax follows the package family: `@fde2e/len` and `@fde2e/
 - Recompute:
 
 ```sh
-python3 -c "import json,glob,collections; c=collections.Counter(); [c.update([r]) for p in glob.glob('apps/*/package.json')+glob.glob('packages/*/*/package.json')+glob.glob('vendor/*/package.json') for s in ('dependencies','devDependencies','optionalDependencies','peerDependencies') for n,r in (json.load(open(p)).get(s) or {}).items() if n.startswith('@deepseek-ai/')]; print(c.most_common())"
+python3 -c "import json,glob,collections; c=collections.Counter(); [c.update([r]) for p in glob.glob('apps/*/package.json')+glob.glob('packages/*/*/package.json')+glob.glob('vendor/*/package.json') for s in ('dependencies','devDependencies','optionalDependencies','peerDependencies') for n,r in (json.load(open(p)).get(s) or {}).items() if n.startswith('@fde2e/')]; print(c.most_common())"
 ```
 
 Each family in its form, with the non-member exception left as an ordinary version range.

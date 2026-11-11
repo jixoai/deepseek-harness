@@ -7,7 +7,7 @@ const shared = {
   fixedExtension: false,
   dts: false,
   deps: {
-    neverBundle: [/^@deepseek-ai\//],
+    neverBundle: [/^@fde2e\//],
     onlyBundle: false as const,
   },
 }
